@@ -1,0 +1,143 @@
+description = "feature navigation"
+
+[viewBag]
+==
+<section>
+    <div class="container">
+   <div class="row no-gutters">
+                    <div class="col-md-8 mx-auto pb-2 pt-5">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'We mean it when we say it’s <span class="line"><ins>all-in-one</ins></span>'|_ }}</h2>
+                        </div>
+                    </div>
+            </div>
+    <div class="row no-gutters">
+                                            <div class="col-md-12 pb-4">
+                                                <div class="row pt-2 no-gutters">
+                                                    <div class="col-md-12 mr-auto">
+                                                        {#<h6 class="intro">{{ 'Platform Modules'|_ }}</h6>#}
+                                                    </div>
+                                                </div>
+                                                <div class="row pb-5">
+                                                    <div class="col-md-3">
+                                                        <a class="dropdown-item with-icon d-flex py-4 px-4 h-100" href="{{ 'platform/crm'|page }}">
+                                                            <i class="icon-crm"></i>
+                                                            <span>{{ 'CRM'|_ }}<p class="small mb-0">{{ 'Manage all your contacts in one place and leverage analytics. '|_ }}</p></span>
+                                                            
+                                                        </a>
+            
+                                                        </a>
+                                                    </div>
+                                                     <div class="col-md-3">
+                                                        <a class="dropdown-item with-icon d-flex py-4 px-4 h-100" href="{{ 'platform/community'|page }}">
+                                                            <i class="icon-social-share"></i>
+                                                            <span>{{ 'Community'|_ }}<p class="small mb-0">{{ 'Give your community a digital place where they can engage.'|_ }}</p></span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a class="dropdown-item with-icon d-flex py-4 px-4 h-100" href="{{ 'platform/event-management'|page }}">
+                                                            <i class="icon-events"></i>
+                                                            <span>{{ 'Online & Offline Events'|_ }}<p class="small mb-0">{{ 'Plan, promote, execute and evaluate all your events. '|_ }}</p></span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a class="dropdown-item with-icon d-flex py-4 px-4 h-100" href="{{ 'platform/membership-management'|page }}">
+                                                            <i class="icon-memberships"></i>
+                                                            <span>{{ 'Memberships'|_ }}<p class="small mb-0">{{ 'Automate membership processes and provide members premium experience.'|_ }}</p></span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a class="dropdown-item with-icon d-flex py-4 px-4 h-100" href="{{ 'platform/email-campaigns'|page }}">
+                                                            <i class="icon-email-campaigns"></i>
+                                                            <span>{{ 'Email Campaigns'|_ }}<p class="small mb-0">{{ 'Create, send, and deliver professional email campaigns of any kind. '|_ }}</p></span>
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a class="dropdown-item with-icon d-flex py-4 px-4 h-100" href="{{ 'platform/finance'|page }}">
+                                                            <i class="icon-invoice"></i>
+                                                            <span>{{ 'Finance & Invoicing'|_ }}<p class="small mb-0">{{ 'Streamline all your finance-related processes and grow revenue.'|_ }}</p></span>
+                                
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a class="dropdown-item with-icon d-flex py-4 px-4 h-100" href="{{ 'platform/tasks'|page }}">
+                                                            <i class="icon-task-icon"></i>
+                                                            <span>{{ 'Tasks'|_ }}<p class="small mb-0">{{ 'Get things done from an idea to a successful completion.'|_ }}</p></span>
+                                    
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a class="dropdown-item with-icon d-flex py-4 px-4 h-100" href="{{ 'platform/surveys'|page }}">
+                                                            <i class="icon-thumb-full"></i>
+                                                            <span>{{ 'Surveys'|_ }}<p class="small mb-0">{{ 'Find answers to your questions with surveys, quizzes, and polls.'|_ }}</p></span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a class="dropdown-item with-icon d-flex py-4 px-4 h-100" href="{{ 'platform/cpe-cpd'|page }}">
+                                                            <i class="icon-event-tags"></i>
+                                                            <span>{{ 'CPE/CPD Credits'|_ }}<p class="small mb-0">{{ 'Manage and scale up your trainings and certification courses.'|_ }}</p></span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a class="dropdown-item with-icon d-flex py-4 px-4 h-100" href="{{ 'platform/website'|page }}">
+                                                            <i class="icon-article-left"></i>
+                                                            <span>{{ 'Website'|_ }}<p class="small mb-0">{{ 'Upgrade your online presence with a fully integrated website.'|_ }}</p></span>
+                                                        </a>
+                                                    </div>
+                                                    {#<div class="col-md-3">
+                                                        <a class="dropdown-item with-icon d-flex py-4 px-4 h-100" href="{{ 'platform/integrations'|page }}">
+                                                            <i class="icon-overview"></i>
+                                                            <span>{{ 'Integrations'|_ }}<p class="small mb-0">{{ 'Connect the tools you love and use every day with Glue Up.'|_ }}</p></span>
+                                                        </a>
+                                                    </div>#}
+                                                    {#<div class="col-md-3">
+                                                        <a class="dropdown-item with-icon d-flex py-4 px-4 h-100" href="{{ 'platform/payments'|page }}">
+                                                            <i class="icon-payments"></i>
+                                                            <span>{{ 'Payments'|_ }}<p class="small mb-0">{{ 'Facilitate online and offline payments connected to everything else.'|_ }}</p></span>
+                                                        </a>
+                                                    </div>#}
+                                                    <div class="col-md-3">
+                                                        <a class="dropdown-item with-icon d-flex py-4 px-4 h-100" href="{{ 'platform/glue-up-app'|page }}">
+                                                            <i class="icon-glue-up-app"></i>
+                                                            <span>{{ 'My Glue'|_ }}<p class="small mb-0">{{ 'Provide attendees and members mobile app to engage anywhere.'|_ }}</p></span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <a class="dropdown-item with-icon d-flex py-4 px-4 h-100" href="{{ 'platform/glue-up-manager-app'|page }}">
+                                                            <i class="icon-glue-up-manager-app"></i>
+                                                            <span>{{ 'Manager App'|_ }}<p class="small mb-0">{{ 'Manage your operations and stay in the know on the go.'|_ }}</p></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {#<div class="col-md-6 mx-auto bg-grey right">
+                                                <div class="row pt-2">
+                                                    <div class="col-md-6 mx-auto pb-4 pt-5">
+                                                    <div class="block text-center">
+                                                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Mobile Apps'|_ }}</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                  
+                                                <div class="row pb-5">
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item py-4 px-4" href="#">
+                                                        <img src="{{ ('assets/images/glueup-app-icon.svg') | theme }}" class="app-icon img-fluid" alt="logo" />
+                                                        <p class="link-title mt-3 mb-2">{{ 'Glue Up'|_ }}</p>
+                                                            <p class="small mb-0">{{ 'A payment gateway built for professional communities'|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item py-4 px-4" href="#">
+                                                        <img src="{{ ('assets/images/glueup-manager-icon.svg') | theme }}" class="app-icon img-fluid" alt="logo" />
+                                                        <p class="link-title mt-3 mb-2">{{ 'Glue Up Manager'|_ }}</p>
+                                                            <p class="small mb-0">{{ 'A payment gateway built for professional communities'|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>#}
+                                        </div>
+    </div>
+{#hello here nav#}
+</section>

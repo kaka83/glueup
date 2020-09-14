@@ -1,0 +1,115 @@
+1600066771a:1:{s:28:"elements/events-3-points.htm";a:6:{s:8:"fileName";s:28:"elements/events-3-points.htm";s:7:"content";s:3703:"description = "before during and after"
+==
+<section class="section">
+        <div class="container">
+            <div class="services__accordion row">
+    			<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+                                <span class="h6 text-color hideme">{{ 'Easy-to-use'|_ }}</span>
+                                <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'One tool to manage the whole event lifecycle'|_ }}</h2>
+                                <div class="about-content  hideme">
+        						     <p class="mb-4">{{ 'Easily create beautiful event pages optimized for maximum conversion that match your branding.'|_ }}<br>
+        						     {{ 'Set up VIP and other tickets, offer Coupons or Early-bird Pricing.'|_ }}
+        						     </p>
+                                 </div>
+    				<div class="services__accordion">
+    				    <div class="accordion pl-3 active small dropdown-item with-icon" tab-name="tab1-bullet">
+                            <i class="icon-overview"></i>
+                            <span>{{ 'Before'|_ }}</span>
+                            <div class="accordion__body firstshow " style="display:none;">
+    							<p class="pt-3 d-flex flex-column">{{ 'Ultimate toolkit that has everything you and your community needs for maximum engagement.'|_ }}
+    							 {#<a href="{{ 'blog'|page }}" class="read-more gourl pt-3">Learn More</a>#}</p>
+    						</div>
+                        </div>
+                        <div class="accordion pl-3 small dropdown-item with-icon" tab-name="tab2-bullet">
+                            <i class="icon-mobile-check"></i>
+                            <span>{{ 'During'|_ }}</span>
+                            <div class="accordion__body " style="display:none;">
+    							<p class="pt-3 d-flex flex-column">{{ 'One app for you to manage everything on the go, and one app for your community to stay connected.'|_ }}
+    							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+    						</div>
+                        </div>
+                        <div class="accordion pl-3 small dropdown-item with-icon" tab-name="tab3-bullet">
+                            <i class="icon-button"></i>
+                            <span>{{ 'After'|_ }}</span>
+                            <div class="accordion__body " style="display:none;">
+    							<p class="pt-3 d-flex flex-column">{{ 'Premium user experience battle-tested for your and all your audiences’s absolute comfort.'|_ }}
+    							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+    						</div>
+                        </div>
+    				</div>
+    			</div>
+    			<div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+    				<div class="accordion__img desktop">
+    				    <div id="tab1-bullet-img" class="firstshow">
+    				        <img class="feature-window desktop" src="https://get.eventbank.com/wp-content/uploads/2020/03/events@2x.png" alt="chat">
+    				        <p>Hello there this is a div div div</p>
+    				        <a href="{{ 'blog'|page }}" class="read-more gourl pt-3">Learn More</a>
+    				        
+    				    </div>
+    				    <div id="tab2-bullet-img">
+    				        <img class="feature-window deskto" src="https://get.eventbank.com/wp-content/uploads/2020/03/emails@2x.png" alt="chat">
+    				    </div>
+    			        <div id="tab3-bullet-img">
+        			        <img class="feature-window deskto" src="https://get.eventbank.com/wp-content/uploads/2020/03/crm@2x.png" alt="chat">
+        			    </div>
+    			     </div>
+    			</div>
+    		</div>
+    	</div>
+</section>";s:5:"mtime";i:1596786370;s:6:"markup";s:3660:"<section class="section">
+        <div class="container">
+            <div class="services__accordion row">
+    			<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+                                <span class="h6 text-color hideme">{{ 'Easy-to-use'|_ }}</span>
+                                <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'One tool to manage the whole event lifecycle'|_ }}</h2>
+                                <div class="about-content  hideme">
+        						     <p class="mb-4">{{ 'Easily create beautiful event pages optimized for maximum conversion that match your branding.'|_ }}<br>
+        						     {{ 'Set up VIP and other tickets, offer Coupons or Early-bird Pricing.'|_ }}
+        						     </p>
+                                 </div>
+    				<div class="services__accordion">
+    				    <div class="accordion pl-3 active small dropdown-item with-icon" tab-name="tab1-bullet">
+                            <i class="icon-overview"></i>
+                            <span>{{ 'Before'|_ }}</span>
+                            <div class="accordion__body firstshow " style="display:none;">
+    							<p class="pt-3 d-flex flex-column">{{ 'Ultimate toolkit that has everything you and your community needs for maximum engagement.'|_ }}
+    							 {#<a href="{{ 'blog'|page }}" class="read-more gourl pt-3">Learn More</a>#}</p>
+    						</div>
+                        </div>
+                        <div class="accordion pl-3 small dropdown-item with-icon" tab-name="tab2-bullet">
+                            <i class="icon-mobile-check"></i>
+                            <span>{{ 'During'|_ }}</span>
+                            <div class="accordion__body " style="display:none;">
+    							<p class="pt-3 d-flex flex-column">{{ 'One app for you to manage everything on the go, and one app for your community to stay connected.'|_ }}
+    							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+    						</div>
+                        </div>
+                        <div class="accordion pl-3 small dropdown-item with-icon" tab-name="tab3-bullet">
+                            <i class="icon-button"></i>
+                            <span>{{ 'After'|_ }}</span>
+                            <div class="accordion__body " style="display:none;">
+    							<p class="pt-3 d-flex flex-column">{{ 'Premium user experience battle-tested for your and all your audiences’s absolute comfort.'|_ }}
+    							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+    						</div>
+                        </div>
+    				</div>
+    			</div>
+    			<div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+    				<div class="accordion__img desktop">
+    				    <div id="tab1-bullet-img" class="firstshow">
+    				        <img class="feature-window desktop" src="https://get.eventbank.com/wp-content/uploads/2020/03/events@2x.png" alt="chat">
+    				        <p>Hello there this is a div div div</p>
+    				        <a href="{{ 'blog'|page }}" class="read-more gourl pt-3">Learn More</a>
+    				        
+    				    </div>
+    				    <div id="tab2-bullet-img">
+    				        <img class="feature-window deskto" src="https://get.eventbank.com/wp-content/uploads/2020/03/emails@2x.png" alt="chat">
+    				    </div>
+    			        <div id="tab3-bullet-img">
+        			        <img class="feature-window deskto" src="https://get.eventbank.com/wp-content/uploads/2020/03/crm@2x.png" alt="chat">
+        			    </div>
+    			     </div>
+    			</div>
+    		</div>
+    	</div>
+</section>";s:4:"code";N;s:11:"description";s:23:"before during and after";}}

@@ -1,0 +1,206 @@
+1600067169a:1:{s:29:"trash/testingtest-tabshtm.htm";a:11:{s:8:"fileName";s:29:"trash/testingtest-tabshtm.htm";s:7:"content";s:5365:"title = "test-tabs.htm"
+url = "/testing/testingtest-tabshtm"
+layout = "generic"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+==
+<div class="services__accordion row">
+<!-- /thirds - section - here --> 
+<div  class="container spaced">
+<div class="text-area center first">
+<h3><span  class="lighter">An All-in-One Platform</br> for all your </span>engagement needs</h3>
+<p  class="subtitle">Increase productivity and simplify all your marketing operations from the very first idea to follow up – all while learning deep insights on every contact in your database.</p>
+</div>
+</div>
+  <div class="column-30">
+  <div class="services__accordion">
+<!--      <div class="accordion active small" tab-name="all">
+	
+	<span class="feature-icons"><img class="feature-window firstshow" src="https://get.eventbank.com/wp-content/uploads/2020/03/all-1.svg" alt="chat"></span>
+      <h3 class="photo">All-in-one Solution</h3>
+      <div class="accordion__body" style="display:block;">
+        <p>Manage your entire operations and gather actionable insights with EventBank’s all-in-one software.</p>
+      </div>
+      <!-- /.accordion__body 
+    </div>-->
+	<div class="accordion active small" tab-name="event">
+
+	<span class="feature-icons"><img class="feature-window firstshow" src="https://get.eventbank.com/wp-content/uploads/2020/03/events.svg" alt="chat"></span>
+      <h3 class="photo">Event Management</h3>
+      <div class="accordion__body" style="display:none;">
+        <p>Plan, promote, execute, and evaluate one or hundreds of events from start to finish. </p>
+      </div>
+      <!-- /.accordion__body -->
+    </div>
+	  <div class="accordion small" tab-name="email">
+	
+	<span class="feature-icons"><img class="feature-window" src="https://get.eventbank.com/wp-content/uploads/2020/03/emails.svg" alt="chat"></span>
+      <h3 class="web">Email Marketing</h3>
+      <div class="accordion__body" style="display:none;">
+        <p>Send newsletters, branded event invitations and other emails in a few clicks and track performance.</p>
+      </div>
+      <!-- /.accordion__body -->
+    </div>
+ <div class="accordion small" tab-name="crm">
+	
+	<span class="feature-icons"><img class="feature-window" src="https://get.eventbank.com/wp-content/uploads/2020/03/crm.svg" alt="chat"></span>
+      <h3 class="web">CRM</h3>
+      <div class="accordion__body" style="display:none;">
+        <p>Understand your audience by having all contact information and activities centralized in one place.</p>
+      </div>
+      <!-- /.accordion__body -->
+    </div>
+     <div class="accordion small" tab-name="finance">
+	
+	<span class="feature-icons"><img class="feature-window" src="https://get.eventbank.com/wp-content/uploads/2020/03/finance.svg" alt="chat"></span>
+      <h3 class="web">Finance</h3>
+      <div class="accordion__body" style="display:none;">
+        <p>Collect money effortlessly and stay up to date with your financial performance in real-time. </p>
+      </div>
+      <!-- /.accordion__body -->
+    </div>
+     <div class="accordion small" tab-name="analytics">
+
+	<span class="feature-icons"><img class="feature-window" src="https://get.eventbank.com/wp-content/uploads/2020/03/analytics.svg" alt="chat"></span>
+      <h3 class="web">Analytics</h3>
+      <div class="accordion__body" style="display:none;">
+        <p>Make smart decisions faster by having a complete picture of your performance and engagement.</p>
+      </div>
+      <!-- /.accordion__body -->
+    </div>
+     <div class="accordion small" tab-name="mobile">
+
+	<span class="feature-icons"><img class="feature-window" src="https://get.eventbank.com/wp-content/uploads/2020/03/mobileapps.svg" alt="chat"></span>
+      <h3 class="web">Mobile Apps</h3>
+      <div class="accordion__body" style="display:none;">
+        <p>One app for you to manage your organization from anywhere, one app for your attendees & members.</p>
+      </div>
+      <!-- /.accordion__body -->
+    </div>
+  
+  </div>
+  
+
+
+</div>
+  <!-- /#services__acordion -->
+  <div class="column-70">
+
+<div class="accordion__img desktop">
+<!--<img id="all-img" class="feature-window firstshow" src="https://get.eventbank.com/wp-content/uploads/2020/03/all-in-one@2x.png" alt="chat">-->
+<img id="event-img" class="feature-window firstshow desktop" src="https://get.eventbank.com/wp-content/uploads/2020/03/events@2x.png" alt="chat">
+<img id="email-img" class="feature-window deskto" src="https://get.eventbank.com/wp-content/uploads/2020/03/emails@2x.png" alt="chat">
+<img id="crm-img" class="feature-window deskto" src="https://get.eventbank.com/wp-content/uploads/2020/03/crm@2x.png" alt="chat">
+<img id="finance-img" class="feature-window deskto" src="https://get.eventbank.com/wp-content/uploads/2020/03/finance@2x.png" alt="chat">
+<img id="analytics-img" class="feature-window deskto" src="https://get.eventbank.com/wp-content/uploads/2020/03/analytics@2x.png" alt="chat">
+<img id="mobile-img" class="feature-window" src="https://get.eventbank.com/wp-content/uploads/2020/03/mobile-apps@2x.png" alt="chat">
+  </div>
+    
+</div>
+<img id="mobile-img" class="mobile" src="https://get.eventbank.com/wp-content/uploads/2020/03/mobile-apps@2x.png" alt="chat" style="max-width:100%!important;">
+
+</div>
+</div>
+
+
+  <!-- /section end -->";s:5:"mtime";i:1597796524;s:6:"markup";s:5222:"<div class="services__accordion row">
+<!-- /thirds - section - here --> 
+<div  class="container spaced">
+<div class="text-area center first">
+<h3><span  class="lighter">An All-in-One Platform</br> for all your </span>engagement needs</h3>
+<p  class="subtitle">Increase productivity and simplify all your marketing operations from the very first idea to follow up – all while learning deep insights on every contact in your database.</p>
+</div>
+</div>
+  <div class="column-30">
+  <div class="services__accordion">
+<!--      <div class="accordion active small" tab-name="all">
+	
+	<span class="feature-icons"><img class="feature-window firstshow" src="https://get.eventbank.com/wp-content/uploads/2020/03/all-1.svg" alt="chat"></span>
+      <h3 class="photo">All-in-one Solution</h3>
+      <div class="accordion__body" style="display:block;">
+        <p>Manage your entire operations and gather actionable insights with EventBank’s all-in-one software.</p>
+      </div>
+      <!-- /.accordion__body 
+    </div>-->
+	<div class="accordion active small" tab-name="event">
+
+	<span class="feature-icons"><img class="feature-window firstshow" src="https://get.eventbank.com/wp-content/uploads/2020/03/events.svg" alt="chat"></span>
+      <h3 class="photo">Event Management</h3>
+      <div class="accordion__body" style="display:none;">
+        <p>Plan, promote, execute, and evaluate one or hundreds of events from start to finish. </p>
+      </div>
+      <!-- /.accordion__body -->
+    </div>
+	  <div class="accordion small" tab-name="email">
+	
+	<span class="feature-icons"><img class="feature-window" src="https://get.eventbank.com/wp-content/uploads/2020/03/emails.svg" alt="chat"></span>
+      <h3 class="web">Email Marketing</h3>
+      <div class="accordion__body" style="display:none;">
+        <p>Send newsletters, branded event invitations and other emails in a few clicks and track performance.</p>
+      </div>
+      <!-- /.accordion__body -->
+    </div>
+ <div class="accordion small" tab-name="crm">
+	
+	<span class="feature-icons"><img class="feature-window" src="https://get.eventbank.com/wp-content/uploads/2020/03/crm.svg" alt="chat"></span>
+      <h3 class="web">CRM</h3>
+      <div class="accordion__body" style="display:none;">
+        <p>Understand your audience by having all contact information and activities centralized in one place.</p>
+      </div>
+      <!-- /.accordion__body -->
+    </div>
+     <div class="accordion small" tab-name="finance">
+	
+	<span class="feature-icons"><img class="feature-window" src="https://get.eventbank.com/wp-content/uploads/2020/03/finance.svg" alt="chat"></span>
+      <h3 class="web">Finance</h3>
+      <div class="accordion__body" style="display:none;">
+        <p>Collect money effortlessly and stay up to date with your financial performance in real-time. </p>
+      </div>
+      <!-- /.accordion__body -->
+    </div>
+     <div class="accordion small" tab-name="analytics">
+
+	<span class="feature-icons"><img class="feature-window" src="https://get.eventbank.com/wp-content/uploads/2020/03/analytics.svg" alt="chat"></span>
+      <h3 class="web">Analytics</h3>
+      <div class="accordion__body" style="display:none;">
+        <p>Make smart decisions faster by having a complete picture of your performance and engagement.</p>
+      </div>
+      <!-- /.accordion__body -->
+    </div>
+     <div class="accordion small" tab-name="mobile">
+
+	<span class="feature-icons"><img class="feature-window" src="https://get.eventbank.com/wp-content/uploads/2020/03/mobileapps.svg" alt="chat"></span>
+      <h3 class="web">Mobile Apps</h3>
+      <div class="accordion__body" style="display:none;">
+        <p>One app for you to manage your organization from anywhere, one app for your attendees & members.</p>
+      </div>
+      <!-- /.accordion__body -->
+    </div>
+  
+  </div>
+  
+
+
+</div>
+  <!-- /#services__acordion -->
+  <div class="column-70">
+
+<div class="accordion__img desktop">
+<!--<img id="all-img" class="feature-window firstshow" src="https://get.eventbank.com/wp-content/uploads/2020/03/all-in-one@2x.png" alt="chat">-->
+<img id="event-img" class="feature-window firstshow desktop" src="https://get.eventbank.com/wp-content/uploads/2020/03/events@2x.png" alt="chat">
+<img id="email-img" class="feature-window deskto" src="https://get.eventbank.com/wp-content/uploads/2020/03/emails@2x.png" alt="chat">
+<img id="crm-img" class="feature-window deskto" src="https://get.eventbank.com/wp-content/uploads/2020/03/crm@2x.png" alt="chat">
+<img id="finance-img" class="feature-window deskto" src="https://get.eventbank.com/wp-content/uploads/2020/03/finance@2x.png" alt="chat">
+<img id="analytics-img" class="feature-window deskto" src="https://get.eventbank.com/wp-content/uploads/2020/03/analytics@2x.png" alt="chat">
+<img id="mobile-img" class="feature-window" src="https://get.eventbank.com/wp-content/uploads/2020/03/mobile-apps@2x.png" alt="chat">
+  </div>
+    
+</div>
+<img id="mobile-img" class="mobile" src="https://get.eventbank.com/wp-content/uploads/2020/03/mobile-apps@2x.png" alt="chat" style="max-width:100%!important;">
+
+</div>
+</div>
+
+
+  <!-- /section end -->";s:4:"code";N;s:5:"title";s:13:"test-tabs.htm";s:3:"url";s:28:"/testing/testingtest-tabshtm";s:6:"layout";s:7:"generic";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";}}

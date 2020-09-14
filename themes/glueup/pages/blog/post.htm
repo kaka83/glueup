@@ -1,0 +1,124 @@
+title = "Blog Post"
+url = "/blog/:slug"
+layout = "glueup-home"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+
+[shares]
+facebook = 1
+twitter = 1
+googleplus = 0
+tumblr = 0
+linkedin = 1
+reddit = 0
+digg = 0
+
+[SeoBlogPost]
+post = "post"
+==
+<?php
+function onStart(){    
+
+    // or you can get file object from your post or record 
+    // and get its absolute path and use it `getPath()`
+    //$imagePath = 'https://yoursite/image.jpeg';
+   // $modelP = Post::find($this->controller->vars['formModel']['id']);
+    //$featuredImage = $modelP->featured_images()->first();
+
+    //$baseUrl = url(Config::get('cms.storage.media.path'));
+    //$imagePath = getPath('app/media/glueup-membership.png');
+    //$imagePath = $baseUrl . '/meta/glueup-event.png';
+    //$this['postImage'] = $featuredImage; // image absolute path
+}
+?>
+==
+<div class="generic " id="generic">  
+        <div class="container">
+            <div class="row">
+            	<div class="col-md-8 pt-3 mx-auto text-left">
+            		<div class="row">	
+            		    <div class="col-md-12 pt-3 mx-auto text-left">
+            				<h1 class="pt-2 text-left">{{ post.title }}</h1>
+            				<p class="tagline ml-0">{{ this.page.description }}</p>
+            			</div>
+            	    </div>
+                 	<div class="row">
+            		    <div class="col-md-8 pt-1 text-left">
+                			<div class="d-flex">
+                    				    <img class="author-avatar mr-2" data-src="{{ post.user.avatar.file_name }}" src="{{ post.user.avatar.getThumb(120, 'auto') }}" alt="{{ post.user.first_name }}{{ post.user.last_name }}"/>
+                        				<div class="d-flex align-items-middle pt-2 flex-row"> 
+                        				<p class="font-weight-bold small pr-2">{{ post.user.first_name }}, </p>
+                        				<p class="sm-grey-text small pr-2"> {{ post.user.last_name }} </p>
+                        				<p class="px-1 sm-grey-text small">•</p>
+                        				<p class="text-black text-capitalize small pl-1 sm-grey-text">{{ post.published_at|date('M d, Y') }}</p>
+                    				</div>
+                    	    </div>
+                    	</div>
+                    	<div class="col-md-3 ml-auto text-right">
+                    	    <div class="d-flex pt-1">
+                    	    {% component 'shares' %}
+                    	    </div>
+                    	</div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-12 mb-5 mx-auto text-left">
+                                <!--<p>{{ post.timeToRead }} Min</p>-->
+                                {% if post.featured_images.count > 0 %}
+                                    <div class="featured-images text-center pt-2">
+                                        <img class="img-fluid rounded"
+                                                    data-src="{{ post.featured_images.first.filename  }}"
+                                                    src="{{ post.featured_images.first.getThumb(1920, 'auto') |default('glueup-generic.svg'|media) }}"
+                                                    alt="{{ post.featured_images.first.description }}"
+                                                    style="max-width: 100%; width:100%;" />
+                                    </div>
+                                {% else %}
+                                    <div class="featured-images text-center pt-2">
+                                                <img class="img-fluid rounded"
+                                                    data-src="{{ post.featured_images.first.filename  }}"
+                                                    src="{{ 'glueup-generic.svg'| media }}"
+                                                    alt="{{ post.featured_images.first.description }}"
+                                                    style="max-width: 100%; width:100%;" />
+                                    </div>
+                                {% endif %}  
+                            </div>
+            			</div>
+            		</div>
+		    </div>
+        </div>
+    </div>
+        		<div class="container" id="blog">
+            <div class="row">
+               <div class="col-md-8 align-self-center mx-auto"><!-- 
+                {% for category in post.categories %}
+                <span class="text-muted text-capitalize mr-3">
+                    <a href="{{ category.url }}">{{ category.name }}</a>
+                </span>
+                {% endfor %}-->
+                
+            {{ post.content_html|raw }}
+                </div>    
+                
+        </div>
+        <div class="row">
+            <div class="col-md-6 align-self-center mx-auto text-center py-5">
+            <p class="tagline">{{ 'Like the article? Share it with your friends!'|_ }} </p>
+                {% component 'shares' %}
+            </div>
+        </div>
+    </div>
+{% partial 'blog/footer-blog.htm' background=""%}
+<section class="section ">   
+    {% partial 'platform/features-nav.htm' %}
+</section>
+  {#% if post.categories %}
+
+           {% partial 'blog/related' categoryFilter = category.slug postFilter = post.slug %}
+
+        {% endif %#}
+
+{% partial 'solutions/footer-cta-mem.htm' %}

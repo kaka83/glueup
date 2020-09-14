@@ -1,0 +1,231 @@
+1600067169a:1:{s:9:"about.htm";a:14:{s:8:"fileName";s:9:"about.htm";s:7:"content";s:7415:"title = "About"
+url = "/about"
+layout = "glueup-home"
+meta_title = "About Us"
+meta_description = "See how are we transforming professional communities through digital solutions focusing on automation and engagement."
+is_hidden = 0
+seo_keywords = "about Glue Up, who is Glue Up?, what does Glue Up do?, EventBank is now Glue Up, where is Glue Up?"
+robot_index = "index"
+robot_follow = "follow"
+==
+<div class="generic " id="generic">  
+        <div class="container">
+            <div class="row pt-5">
+                
+                <div class="col-md-7 hero align-self-center text-center mx-auto pt-5">
+                      <h1>{{ 'We are <span class="line"><ins>Glue Up, </ins></span><br> your engagement management platform'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'See how are we transforming professional communities through digital solutions focusing on automation and engagement.'|_ }} </p>
+
+
+                </div>
+               <img class="col-md-offset-12 img-fluid hero-home" style="" src="{{ 'glueup-hero1.svg' | media }}" alt="Glue Up helps you with events, memberships, CRM, email campaigns, finance and marketing tools.">
+            </div>
+            <div class="row mx-auto">
+             <div class="col-md-7 hero align-self-center text-center mx-auto">
+                 
+                </div>
+            </div>
+        </div> 
+</div>
+
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-8 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'To <span class="line"><ins> transform </ins></span> the way professional communities enable and enrich relationships.'|_ }}</h2>
+                                {% content 'aboutus.htm' %}
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'How Glue Up can help'|_ }}</h2>
+                                {% content 'aboutus2.htm' %}
+                        </div>
+                    </div>
+            </div>
+            </div>
+        </div>
+</section>
+
+<section class="section pt-0">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-8 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'How we got here'|_ }}</h2>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-lg-6 mx-auto pb-4">
+                        {#<h2>Gl <span>1910–2000</span></h2>#}
+                        <div id="timeline" class="flex-parent">
+                        	<div  class="input-flex-container">
+                        		<input type="radio" name="timeline-dot" data-description="2013" checked>
+                        		<div class="dot-info" data-description="2013">
+                        			<span class="year">{{'2013'|_}}</span>
+                        			<span class="label">{{'EventBank'|_}}</span>
+                        		</div>
+                        		<input type="radio" name="timeline-dot" data-description="2015">
+                        		<div class="dot-info" data-description="2015">
+                        			<span class="year">{{'2015'|_}}</span>
+                        			<span class="label">{{'Research'|_}}</span>
+                        		</div>
+                        		<input type="radio" name="timeline-dot" data-description="2017">
+                        		<div class="dot-info" data-description="2017">
+                        			<span class="year">{{'2017'|_}}</span>
+                        			<span class="label">{{'Development'|_}}</span>
+                        		</div>
+                        		<input type="radio" name="timeline-dot" data-description="2018">
+                        		<div class="dot-info" data-description="2018">
+                        			<span class="year">{{'2018'|_}}</span>
+                        			<span class="label">{{'Expansion'|_}}</span>
+                        		</div>
+                        		<input type="radio" name="timeline-dot" data-description="2019">
+                        		<div class="dot-info" data-description="2019">
+                        			<span class="year">{{'2019'|_}}</span>
+                        			<span class="label">{{'Recognition'|_}}</span>
+                        		</div>
+                        		<input type="radio" name="timeline-dot" data-description="2020">
+                        		<div class="dot-info" data-description="2020">
+                        			<span class="year">{{'2020'|_}}</span>
+                        			<span class="label">{{'Innovation'|_}}</span>
+                        		</div>
+                        		<input type="radio" name="timeline-dot" data-description="20201">
+                        		<div class="dot-info" data-description="20201">
+                        			<span class="year">{{'August'|_}}</span>
+                        			<span class="label" style="color:#0d62fe;">{{'Glue Up'|_}}</span>
+                        		</div>
+                        		
+                        		<div id="timeline-descriptions-wrapper" class="text-center">
+                        			<div class="timeline-block" data-description="2013"><span><img src="{{ 'eventbank-logo.svg' | media }}" alt="paygage is accessible" class="img-fluid py-3 mx-auto paygage-visual lazy "></span><p>{{'Olivia and Eric launched EventBank to create an event management software that could help automating and leveraging the data from their events.'|_}}</p></div>
+                        			<div class="timeline-block" data-description="2015"><p>{{'Through partnership with the different Associations and Chambers of Commerce, EventBank develops its award winning Membership Management module.'|_}}</p></div>
+                        			<div class="timeline-block" data-description="2017"><p>{{'Mobile Apps bring EventBank all-in-one functionalities to mobile devices.'|_}}</p></div>
+                        			<div class="timeline-block" data-description="2018"><p>{{'EventBank expands its presence through APAC by opening offices in Singapore and Hong Kong and Russia via joint-venture.'|_}}</p></div>
+                        			<div class="timeline-block" data-description="2019"><p>{{'EventBank is recognized as leading tech company in Washington DC area'|_}}</p></div>
+                        			<div class="timeline-block" data-description="2020"><p>{{'Launched new “Community Engagement” modules'|_}}</p></div>
+                        			<div class="timeline-block" data-description="20201"><p>{{'Because paper currency is for noobs.'|_}}</p></div>
+                        		</div>
+                        	</div>
+                        </div>
+                 </div>
+            </div>
+        </div>
+</section>
+{% partial 'site/offices.htm' %}
+
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}";s:5:"mtime";i:1598568814;s:6:"markup";s:7019:"<div class="generic " id="generic">  
+        <div class="container">
+            <div class="row pt-5">
+                
+                <div class="col-md-7 hero align-self-center text-center mx-auto pt-5">
+                      <h1>{{ 'We are <span class="line"><ins>Glue Up, </ins></span><br> your engagement management platform'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'See how are we transforming professional communities through digital solutions focusing on automation and engagement.'|_ }} </p>
+
+
+                </div>
+               <img class="col-md-offset-12 img-fluid hero-home" style="" src="{{ 'glueup-hero1.svg' | media }}" alt="Glue Up helps you with events, memberships, CRM, email campaigns, finance and marketing tools.">
+            </div>
+            <div class="row mx-auto">
+             <div class="col-md-7 hero align-self-center text-center mx-auto">
+                 
+                </div>
+            </div>
+        </div> 
+</div>
+
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-8 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'To <span class="line"><ins> transform </ins></span> the way professional communities enable and enrich relationships.'|_ }}</h2>
+                                {% content 'aboutus.htm' %}
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'How Glue Up can help'|_ }}</h2>
+                                {% content 'aboutus2.htm' %}
+                        </div>
+                    </div>
+            </div>
+            </div>
+        </div>
+</section>
+
+<section class="section pt-0">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-8 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'How we got here'|_ }}</h2>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-lg-6 mx-auto pb-4">
+                        {#<h2>Gl <span>1910–2000</span></h2>#}
+                        <div id="timeline" class="flex-parent">
+                        	<div  class="input-flex-container">
+                        		<input type="radio" name="timeline-dot" data-description="2013" checked>
+                        		<div class="dot-info" data-description="2013">
+                        			<span class="year">{{'2013'|_}}</span>
+                        			<span class="label">{{'EventBank'|_}}</span>
+                        		</div>
+                        		<input type="radio" name="timeline-dot" data-description="2015">
+                        		<div class="dot-info" data-description="2015">
+                        			<span class="year">{{'2015'|_}}</span>
+                        			<span class="label">{{'Research'|_}}</span>
+                        		</div>
+                        		<input type="radio" name="timeline-dot" data-description="2017">
+                        		<div class="dot-info" data-description="2017">
+                        			<span class="year">{{'2017'|_}}</span>
+                        			<span class="label">{{'Development'|_}}</span>
+                        		</div>
+                        		<input type="radio" name="timeline-dot" data-description="2018">
+                        		<div class="dot-info" data-description="2018">
+                        			<span class="year">{{'2018'|_}}</span>
+                        			<span class="label">{{'Expansion'|_}}</span>
+                        		</div>
+                        		<input type="radio" name="timeline-dot" data-description="2019">
+                        		<div class="dot-info" data-description="2019">
+                        			<span class="year">{{'2019'|_}}</span>
+                        			<span class="label">{{'Recognition'|_}}</span>
+                        		</div>
+                        		<input type="radio" name="timeline-dot" data-description="2020">
+                        		<div class="dot-info" data-description="2020">
+                        			<span class="year">{{'2020'|_}}</span>
+                        			<span class="label">{{'Innovation'|_}}</span>
+                        		</div>
+                        		<input type="radio" name="timeline-dot" data-description="20201">
+                        		<div class="dot-info" data-description="20201">
+                        			<span class="year">{{'August'|_}}</span>
+                        			<span class="label" style="color:#0d62fe;">{{'Glue Up'|_}}</span>
+                        		</div>
+                        		
+                        		<div id="timeline-descriptions-wrapper" class="text-center">
+                        			<div class="timeline-block" data-description="2013"><span><img src="{{ 'eventbank-logo.svg' | media }}" alt="paygage is accessible" class="img-fluid py-3 mx-auto paygage-visual lazy "></span><p>{{'Olivia and Eric launched EventBank to create an event management software that could help automating and leveraging the data from their events.'|_}}</p></div>
+                        			<div class="timeline-block" data-description="2015"><p>{{'Through partnership with the different Associations and Chambers of Commerce, EventBank develops its award winning Membership Management module.'|_}}</p></div>
+                        			<div class="timeline-block" data-description="2017"><p>{{'Mobile Apps bring EventBank all-in-one functionalities to mobile devices.'|_}}</p></div>
+                        			<div class="timeline-block" data-description="2018"><p>{{'EventBank expands its presence through APAC by opening offices in Singapore and Hong Kong and Russia via joint-venture.'|_}}</p></div>
+                        			<div class="timeline-block" data-description="2019"><p>{{'EventBank is recognized as leading tech company in Washington DC area'|_}}</p></div>
+                        			<div class="timeline-block" data-description="2020"><p>{{'Launched new “Community Engagement” modules'|_}}</p></div>
+                        			<div class="timeline-block" data-description="20201"><p>{{'Because paper currency is for noobs.'|_}}</p></div>
+                        		</div>
+                        	</div>
+                        </div>
+                 </div>
+            </div>
+        </div>
+</section>
+{% partial 'site/offices.htm' %}
+
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}";s:4:"code";N;s:5:"title";s:5:"About";s:3:"url";s:6:"/about";s:6:"layout";s:11:"glueup-home";s:10:"meta_title";s:8:"About Us";s:16:"meta_description";s:117:"See how are we transforming professional communities through digital solutions focusing on automation and engagement.";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:98:"about Glue Up, who is Glue Up?, what does Glue Up do?, EventBank is now Glue Up, where is Glue Up?";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";}}

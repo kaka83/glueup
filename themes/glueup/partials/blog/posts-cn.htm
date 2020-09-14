@@ -1,0 +1,119 @@
+description = "blog posts chinese"
+==
+{##}
+{#
+$locale = 'cn';
+$posts =  RainLab\Blog\Models\Post::whereHas('translations', function ($query) use ($locale) {
+    $query->where('locale', $locale)->whereRaw("attribute_data not like '%\"content\":\"\"%'");
+})->get();
+
+#}
+{% set posts = blogPosts.posts.slice(1, All) %}
+    <section class="section blog">
+                <div class="container">
+                <div class="row">
+    {#% for post in posts if post.locale == activeLocale #}  
+    {# if posts.lang == '~ activeLocale ~' #}
+    {% for post in posts if post.translations.locale == 'activeLocale'  %}
+    {% if posts.count < 3 %}
+        <div class="col-md-6 hero align-self-center">
+                    <h1 class="">
+                        <a href="{{ post.url }}">{{ post.title }}</a>
+                    </h1>
+                    {{ post }}
+                    --
+                    {{ dump() }}
+                    {% if post.excerpt %}
+                    <p class="excerpt">{{ post.excerpt }}</p>
+                    {% else %}
+                    <div class="content">{{ post.content_html|raw }}</div>
+                    {% endif %}
+                     <a href="{{ post.url }}" class="read-more">Turn the page <span class="read-more-icon icon-arrow"></span></a>
+                </div>
+                <div class="col-lg-6 col-md-4 mb-5 align-self-center highlight">
+                    <div class="blog-item">
+                        <a href="{{ post.url }}" class="">
+                            {% if post.featured_images.count > 0 %}
+                            <img class="rounded highlight-img" src="{{ post.featured_images.last.getThumb( auto, 540 ) }}" />
+                            {% else %}
+                            <img class="media-object img-fluid rounded" src="{{ 'paygage-meta-2.png'|media }}" />
+                            {% endif %}
+                        </a>
+                        <div class="blog-item-content bg-white">
+                            <!--	<div class="blog-item-meta bg-gray py-1 px-2">-->
+    
+                            {% for category in post.categories %}
+                            <!-- <span class="text-muted text-capitalize mr-3">
+                                        <a href="{{ category.url }}">{{ category.name }}</a>
+                                    </span> -->
+                            {% endfor %}
+                            <!--  <span class="text-black text-capitalize mr-3"><i class="ti-time mr-1"></i> {{ post.published_at|date('M d, Y') }}</span>-->
+                            <!--</div> -->
+    
+                            <!-- <a href="{{ post.url }}" class="btn btn-small btn-main btn-round-full">Turn the page </a>-->
+                        </div>
+                    </div>
+                </div>
+    {% else %}
+    
+                <div class="col-lg-4 col-md-4 mb-5 hideme">
+                    <div class="blog-item">
+                        <a href="{{ post.url }}" class="">
+                        {% if post.featured_images.count > 0 %}
+                        <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                        {% else %}
+                        <img class="media-object img-fluid rounded" src="{{ 'paygage-meta-2.png'|media }}" />
+                        {% endif %}
+                         </a>
+                        <div class="blog-item-content bg-white">
+            			<!--	<div class="blog-item-meta bg-gray py-1 px-2">-->
+            			
+                            {% for category in post.categories %}
+                               <!-- <span class="text-muted text-capitalize mr-3">
+                                    <a href="{{ category.url }}">{{ category.name }}</a>
+                                </span> -->
+                            {% endfor %}
+            				  <!--  <span class="text-black text-capitalize mr-3"><i class="ti-time mr-1"></i> {{ post.published_at|date('M d, Y') }}</span>-->
+            			<!--</div> -->
+                            <h3 class="mt-3 mb-3">
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+                            </h3>
+            
+                            {% if post.excerpt %}
+                                <p class="excerpt animated fadeInUp">{{ post.excerpt }}</p>
+                            {% else %}
+                                <div class="content">{{ post.content_html|raw }}</div>
+                            {% endif %}
+                           <!-- <a href="{{ post.url }}" class="btn btn-small btn-main btn-round-full">Learn More</a> -->
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+    {% else %}
+        {#<div class="no-data">
+        {{posts.count}}
+            <p>{{ noPostsMessage }}</p>
+        </div>#}
+    {% endfor %}
+</div>
+{% if posts.lastPage > 1 %}
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-6 text-center">
+        <nav class="navigation pagination d-inline-block">
+            <div class="nav-links">
+                {% if posts.currentPage > 1 %}
+                <a class="prev page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">Prev</a>
+                {% endif %}
+
+                {% for page in 1..posts.lastPage %}
+                <a class="page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                {% endfor %}
+
+                {% if posts.lastPage > posts.currentPage %}
+                <a class="next page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next</a>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+</div>
+{% endif %}

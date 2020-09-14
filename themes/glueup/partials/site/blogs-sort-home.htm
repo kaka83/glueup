@@ -1,0 +1,156 @@
+[viewBag]
+
+[blogPosts events]
+pageNumber = "{{ :page }}"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+exceptCategories = "success-stories"
+
+[blogPosts event]
+pageNumber = "{{ :page }}"
+categoryFilter = "event-management"
+postsPerPage = 1
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+exceptCategories = "success-stories"
+
+[blogPosts assoc]
+pageNumber = "{{ :page }}"
+categoryFilter = "associations"
+postsPerPage = 1
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+exceptCategories = "event, success-stories"
+==
+{##}
+    <section class="section">
+                <div class="container">
+                	<div class="row flex-row-reverse">
+		                <div class="col-lg-8 d-flex align-items-center text-center mx-auto">
+		                    <p class="mb-4 sentence mx-auto text-center pb-3">{{ "Get more out of Glue Up"|_ }}</p>
+		                </div>
+		            </div>
+                <div class="row">
+         {# In the loop we excluded the post being displayed list of related posts by variable postFilter passed by the partial #}
+         {% set events = events.posts.slice(0, 3) %}
+         {% for post in events %}
+                              
+                                                <div class="col-md-4 hero mx-auto pb-2">
+                                                <a href="{{ url('/blog/') }}/{{ post.slug }}" class="">
+                                                {% if post.featured_images.count > 0 %}
+                                                <img class="media-object img-fluid rounded hideme" src="{{ post.featured_images.last.getThumb(291, 'auto') }}" alt="{{ post.title }}"/>
+                                                {% else %}
+                                                <img class="media-object img-fluid rounded hideme" src="{{ 'glueup-generic.svg'|media }}" alt="{{ post.title }}"/>
+                                                {% endif %}
+                                                 </a>
+                                                {% for category in post.categories %}
+                                                        <span class="sm-grey-text text-capitalize mt-1 d-flex category-badge">    
+                                                            {% if post.categories.index == loop.first %}
+                                                            <a href="{{ url('/blog/category/') }}/{{ category.slug }}"><i class=" icon-events"></i> {{ category.name }}</a>
+                                            			    {#<p class="px-3 sm-grey-text">•</p>#}
+                                            			    {% else %}
+                                            			    {% endif %}
+                                            			</span>
+                                                {% endfor %}
+                                                <h5 class="my-2">
+                                                    <a href="{{ url('/blog/') }}/{{ post.slug }}">{{ post.title }}</a>
+                                                </h5>
+                                                
+                                                <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                
+                                                {#<a href="{{ url('/blog/') }}/{{ post.slug }}" class="read-more d-flex">{{'Read More'|_}} <i class="read-more-icon icon-arrow"></i></a>#}
+                                                </div>
+                                                
+                      
+    {% else %}
+    {% endfor %}{#
+    {% set featured = featured.posts.slice(0, 1) %}
+         {% for post in event %}
+                              
+                                                <div class="col-md-4 hero mx-auto pb-2">
+                                                <a href="{{ url('/blog/') }}/{{ post.slug }}" class="">
+                                                {% if post.featured_images.count > 0 %}
+                                                <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                                                {% else %}
+                                                <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+                                                {% endif %}
+                                                 </a>
+                                                {% for category in post.categories %}
+                                                        <span class="sm-grey-text text-capitalize mt-1 d-flex category-badge">    
+                                                            {% if post.categories.index == loop.first %}
+                                                            <a href="{{ url('/blog/category/') }}/{{ category.slug }}"><i class=" icon-content"></i> {{ category.name }}</a>
+                                            			    
+                                            			    {% else %}
+                                            			    {% endif %}
+                                            			</span>
+                                                {% endfor %}
+                                                <h5 class="my-2">
+                                                    <a href="{{ url('/blog/') }}/{{ post.slug }}">{{ post.title }}</a>
+                                                </h5>
+                                                
+                                                <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %}
+                                                
+                                                <a href="{{ url('/blog/') }}/{{ post.slug }}" class="read-more d-flex">Join Us <i class="read-more-icon icon-arrow"></i></a>
+                                                </div>
+                                                
+                      
+    {% else %}
+    {% endfor %}
+    {% set assoc = assoc.posts.slice(0, 1) %}
+         {% for post in assoc %}
+                              
+                                                <div class="col-md-4 hero mx-auto pb-2">
+                                                <a href="{{ url('/blog/') }}/{{ post.slug }}" class="">
+                                                {% if post.featured_images.count > 0 %}
+                                                <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                                                {% else %}
+                                                <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+                                                {% endif %}
+                                                 </a>
+                                                {% for category in post.categories %}
+                                                        <span class="sm-grey-text text-capitalize mt-1 d-flex category-badge">    
+                                                            {% if post.categories.index == loop.first %}
+                                                            <a href="{{ url('/blog/category/') }}/{{ category.slug }}"><i class=" icon-star-full"></i> {{ category.name }}</a>
+                                            			   
+                                            			    {% else %}
+                                            			    {% endif %}
+                                            			</span>
+                                                {% endfor %}
+                                                <h5 class="my-2">
+                                                    <a href="{{ url('/blog/') }}/{{ post.slug }}">{{ post.title }}</a>
+                                                </h5>
+                                                
+                                                <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %}
+                                                
+                                                <a href="{{ url('/blog/') }}/{{ post.slug }}" class="read-more d-flex">Join Us <i class="read-more-icon icon-arrow"></i></a>
+                                                </div>
+                                                
+                      
+    {% else %}
+    {% endfor %}#}
+   
+</div>
+</div>
+</section>

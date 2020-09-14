@@ -1,0 +1,97 @@
+1600066771a:1:{s:24:"platform/crm-bullets.htm";a:6:{s:8:"fileName";s:24:"platform/crm-bullets.htm";s:7:"content";s:2695:"description = "crm bullets for platform features"
+==
+<div class="col-lg-10 align-self-center mx-auto">
+    <div class="services__accordion row flex-row-reverse">
+            <div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+				<div class="accordion__img desktop">
+				    <div id="tab1-bullet-img" class="firstshow">
+				        <img class="feature-window desktop" src="{{ 'all-in-one.svg' | media }}" alt="chat">
+				         
+				    </div>
+				    <div id="tab2-bullet-img">
+				        <img class="feature-window deskto" src="{{ 'assets/images/preview.svg' | theme }}" alt="chat">
+				    </div>
+			        <div id="tab3-bullet-img">
+    			        <img class="feature-window deskto" src="{{ 'assets/images/preview.svg' | theme }}" alt="chat">
+    			    </div>
+			     </div>
+			</div>
+			<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+				<div class="services__accordion">
+				  
+                    <div class="accordion pl-3 active small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+                        <i class="icon-contacts"></i>
+                        <span>{{ 'Contacts & Pipeline'|_ }}</span>
+                        <div class="accordion__body firstshow" style="display:none;">
+							<p class="pt-3 d-flex flex-column">{{ 'Manage your audiences and opportunities with easy-to-use tools. '|_ }}
+							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+						</div>
+                    </div>
+                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+                        <i class="icon-analytics"></i>
+                        <span>{{ 'Dashboard & Insights'|_ }}</span>
+                        <div class="accordion__body " style="display:none;">
+							<p class="pt-3 d-flex flex-column">{{ 'Gain instant visibility into engagement with interactive dashboards and profiles. '|_ }}
+							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+						</div>
+                    </div>
+                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab3-bullet">
+                        <i class="icon-invisible"></i>
+                        <span>{{ 'Privacy & Security'|_ }}</span>
+                        <div class="accordion__body " style="display:none;">
+							<p class="pt-3 d-flex flex-column">{{ 'We take care of security, so you can focus on serving your community. '|_ }}
+							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+						</div>
+                    </div>
+				</div>
+			</div>
+			
+		</div>
+</div>";s:5:"mtime";i:1596786370;s:6:"markup";s:2642:"<div class="col-lg-10 align-self-center mx-auto">
+    <div class="services__accordion row flex-row-reverse">
+            <div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+				<div class="accordion__img desktop">
+				    <div id="tab1-bullet-img" class="firstshow">
+				        <img class="feature-window desktop" src="{{ 'all-in-one.svg' | media }}" alt="chat">
+				         
+				    </div>
+				    <div id="tab2-bullet-img">
+				        <img class="feature-window deskto" src="{{ 'assets/images/preview.svg' | theme }}" alt="chat">
+				    </div>
+			        <div id="tab3-bullet-img">
+    			        <img class="feature-window deskto" src="{{ 'assets/images/preview.svg' | theme }}" alt="chat">
+    			    </div>
+			     </div>
+			</div>
+			<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+				<div class="services__accordion">
+				  
+                    <div class="accordion pl-3 active small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+                        <i class="icon-contacts"></i>
+                        <span>{{ 'Contacts & Pipeline'|_ }}</span>
+                        <div class="accordion__body firstshow" style="display:none;">
+							<p class="pt-3 d-flex flex-column">{{ 'Manage your audiences and opportunities with easy-to-use tools. '|_ }}
+							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+						</div>
+                    </div>
+                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+                        <i class="icon-analytics"></i>
+                        <span>{{ 'Dashboard & Insights'|_ }}</span>
+                        <div class="accordion__body " style="display:none;">
+							<p class="pt-3 d-flex flex-column">{{ 'Gain instant visibility into engagement with interactive dashboards and profiles. '|_ }}
+							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+						</div>
+                    </div>
+                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab3-bullet">
+                        <i class="icon-invisible"></i>
+                        <span>{{ 'Privacy & Security'|_ }}</span>
+                        <div class="accordion__body " style="display:none;">
+							<p class="pt-3 d-flex flex-column">{{ 'We take care of security, so you can focus on serving your community. '|_ }}
+							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+						</div>
+                    </div>
+				</div>
+			</div>
+			
+		</div>
+</div>";s:4:"code";N;s:11:"description";s:33:"crm bullets for platform features";}}

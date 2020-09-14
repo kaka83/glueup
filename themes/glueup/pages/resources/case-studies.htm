@@ -1,0 +1,107 @@
+title = "Case Studies"
+url = "/case-studies"
+layout = "glueup-home"
+meta_title = "Case Studies"
+meta_description = "Find out what makes our customers stick with Glue Up."
+is_hidden = 0
+seo_keywords = "Glue Up pricing, Glue Up reviews, Glue Up testiominals, how much does Glue Up cost?, Glue Up experience, Glue Up fees, EventBank is Glue Up"
+robot_index = "index"
+robot_follow = "follow"
+
+[blogPosts featured]
+pageNumber = "{{ :page }}"
+categoryFilter = "success-stories"
+postsPerPage = 99
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+
+[blogCategories]
+slug = "success-stories"
+displayEmpty = 0
+categoryPage = "blog/category"
+==
+<?php
+function onEnd(){
+    $this->page->nav_highlight = 'resources';
+ }
+?>
+==
+<div class="generic" id="generic">  
+        <div class="container">
+            <div class="row pt-5">
+                
+                <div class="col-md-7 hero align-self-center text-center mx-auto pt-5">
+                      <h1>{{ 'Case <span class="line"><ins> Studies </ins></span>'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Find out why customers stick with Glue Up. '|_ }} </p>
+
+
+                </div>
+               
+            </div>
+        </div> 
+</div>
+
+<section class="section pt-0">
+        <div class="container">
+             <div class="row">
+            	 {#<div class="col-md-3">
+               		{% component 'blogCategories' %}
+            	</div>#}
+                <div class="col-md-9 align-self-center mx-auto">
+                {#{% component 'featured' %}#}
+                	<div class="row">
+                {% set featured = featured.posts %}
+				{% for post in featured %}  
+	           
+	                                                
+	                    <div class="col-md-4 hero pb-2">
+	                     <a href="{{ post.url }}" class="" style="">
+	                        {% if post.featured_images.count > 0 %}
+	                        <img class="media-object img-fluid rounded" style="padding:4rem;  mix-blend-mode: multiply;" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+	                        {% else %}
+	                        <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+	                        {% endif %}
+	                         </a>
+	                     <h5 class="pt-2">
+	                         <a href="{{ post.url }}">{{ post.title }}</a>
+	                     </h5>
+	                     <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+	                     {#% if post.excerpt %}
+	                     <p class="excerpt">{{ post.excerpt }}</p>
+	                     {% else %}
+	                     <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+	                     {% endif %#}
+	                     </div>
+	             {% endfor %}
+	             </div>
+	             
+{% if posts.lastPage > 1 %}
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-6 text-center">
+        <nav class="navigation pagination d-inline-block">
+            <div class="nav-links">
+                {% if posts.currentPage > 1 %}
+                <a class="prev page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">Prev</a>
+                {% endif %}
+
+                {% for page in 1..posts.lastPage %}
+                <a class="page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                {% endfor %}
+
+                {% if posts.lastPage > posts.currentPage %}
+                <a class="next page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next</a>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+</div>
+{% endif %}
+            </div>
+            
+        </div>
+    </div>
+</section>
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}

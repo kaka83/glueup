@@ -1,0 +1,27 @@
+description = "generic layout"
+==
+{##}
+<!doctype html>
+<html lang="en">
+<head>
+{% partial 'site/meta.htm' %}
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="80" data-gr-c-s-loaded="true">
+{# Header with TopBar #}
+{% partial 'site/header-generic.htm' %}
+{% partial 'site/generic_hero.htm' %}
+<!--<div class="main-wrapper">{# Main Wrapper #}-->
+{% page %}
+
+{% partial 'site/footer.htm' %}
+</div>{# End Main Wrapper #}
+<div class="modal-wrapper">
+{% partial 'site/success-modal.htm' %}
+{% partial 'site/signup-modal.htm' %}
+</div>
+{# JavaScripts #}
+{% partial 'site/scripts.htm' %}
+{% component 'hubspotTrackingCode' %}
+</body>
+</html>

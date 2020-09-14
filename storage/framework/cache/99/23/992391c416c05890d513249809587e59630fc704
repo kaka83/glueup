@@ -1,0 +1,89 @@
+1600067169a:1:{s:25:"resources/whitepapers.htm";a:14:{s:8:"fileName";s:25:"resources/whitepapers.htm";s:7:"content";s:2318:"title = "Whitepapers"
+url = "/whitepapers"
+layout = "glueup-home"
+meta_title = "Whitepapers"
+meta_description = "Download the latest Glue Up whitepapers for associations, event organizers, and other industries."
+is_hidden = 0
+seo_keywords = "Glue Up whitepapers, Glue Up resources, Glue Up research on associations, read the latest Glue Up whitepapers, industry reports"
+robot_index = "index"
+robot_follow = "follow"
+==
+<?php
+function onEnd(){
+    $this->page->nav_highlight = 'resources';
+ }
+?>
+==
+<div class="generic" id="generic">  
+        <div class="container">
+            <div class="row pt-5">
+                
+                <div class="col-md-7 hero align-self-center text-center mx-auto pt-5">
+                      <h1>{{ 'Whitepapers'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Broaden your knowledge with industry whitepapers.'|_ }} </p>
+
+
+                </div>
+               
+            </div>
+        </div> 
+</div>
+
+<section class="section pt-0">
+ 	<div class="container paygage-hero-container">
+            <div class="row flex-row">
+                <div class="col-md-6 hero align-self-center text-left">
+                    <a href="{{ '/whitepapers/How-Digital-Transformation-Enables-Professional-Communities-to-Thrive'| app }}"><img src="{{ 'Whitepaper1@2x.png' | media }}" class="paygage-visual rounded" alt="logo"></a>
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-left">
+                	<h2 class="pt-3"> {{'How Digital Transformation Enables Professional Communities to Thrive'|_}}</h2>
+                    <p class="tagline pb-3">{{ 'Professional communities globally are feeling the impact of the COVID-19 pandemic.'|_}} {{' Staying connected as well as keeping members informed are increasingly challenging as communities are not able to meet in person.'|_ }}
+                   </p><br>
+                   <a href="{{ '/whitepapers/How-Digital-Transformation-Enables-Professional-Communities-to-Thrive'| app }}" class="read-more d-flex"> {{'Get your copy'|_}}<i class="read-more-icon icon-arrow"></i></a>
+
+                </div>
+                
+            </div>
+        </div> 
+</section>
+    
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}";s:5:"mtime";i:1598240557;s:6:"markup";s:1817:"<div class="generic" id="generic">  
+        <div class="container">
+            <div class="row pt-5">
+                
+                <div class="col-md-7 hero align-self-center text-center mx-auto pt-5">
+                      <h1>{{ 'Whitepapers'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Broaden your knowledge with industry whitepapers.'|_ }} </p>
+
+
+                </div>
+               
+            </div>
+        </div> 
+</div>
+
+<section class="section pt-0">
+ 	<div class="container paygage-hero-container">
+            <div class="row flex-row">
+                <div class="col-md-6 hero align-self-center text-left">
+                    <a href="{{ '/whitepapers/How-Digital-Transformation-Enables-Professional-Communities-to-Thrive'| app }}"><img src="{{ 'Whitepaper1@2x.png' | media }}" class="paygage-visual rounded" alt="logo"></a>
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-left">
+                	<h2 class="pt-3"> {{'How Digital Transformation Enables Professional Communities to Thrive'|_}}</h2>
+                    <p class="tagline pb-3">{{ 'Professional communities globally are feeling the impact of the COVID-19 pandemic.'|_}} {{' Staying connected as well as keeping members informed are increasingly challenging as communities are not able to meet in person.'|_ }}
+                   </p><br>
+                   <a href="{{ '/whitepapers/How-Digital-Transformation-Enables-Professional-Communities-to-Thrive'| app }}" class="read-more d-flex"> {{'Get your copy'|_}}<i class="read-more-icon icon-arrow"></i></a>
+
+                </div>
+                
+            </div>
+        </div> 
+</section>
+    
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}";s:4:"code";s:68:"function onEnd(){
+    $this->page->nav_highlight = 'resources';
+ }";s:5:"title";s:11:"Whitepapers";s:3:"url";s:12:"/whitepapers";s:6:"layout";s:11:"glueup-home";s:10:"meta_title";s:11:"Whitepapers";s:16:"meta_description";s:97:"Download the latest Glue Up whitepapers for associations, event organizers, and other industries.";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:127:"Glue Up whitepapers, Glue Up resources, Glue Up research on associations, read the latest Glue Up whitepapers, industry reports";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";}}

@@ -1,0 +1,35 @@
+1600067169a:1:{s:30:"legal/declaration-of-risks.htm";a:15:{s:8:"fileName";s:30:"legal/declaration-of-risks.htm";s:7:"content";s:910:"title = "Declaration of Risks"
+url = "/legal/declaration-of-risks"
+layout = "generic"
+meta_title = "Privacy Policy"
+meta_description = "Glue Up takes your privacy and security seriously. Please read the following to learn more about Glue Up's privacy policy. This policy describes how we collect, use and disclose personal and other information."
+is_hidden = 0
+seo_keywords = "Glue Up's privacy policy, what data does Glue Up collect?"
+robot_index = "noindex"
+robot_follow = "nofollow"
+
+[viewBag]
+localeTitle[ru] = "ДЕКЛАРАЦИЯ О РИСКАХ"
+localeUrl[ru] = "/deklaraciya-o-riskah"
+==
+<section class="legal" id="terms_org">
+<div class="pt-0">
+        <div class="container">
+        <div class="row">
+        <div class="col-md-8 align-self-center mx-auto pb-5">
+            {% content 'declaration-of-risks' %}
+           </div>
+           </div>
+        </div>
+        </div>
+</section>";s:5:"mtime";i:1598959168;s:6:"markup";s:313:"<section class="legal" id="terms_org">
+<div class="pt-0">
+        <div class="container">
+        <div class="row">
+        <div class="col-md-8 align-self-center mx-auto pb-5">
+            {% content 'declaration-of-risks' %}
+           </div>
+           </div>
+        </div>
+        </div>
+</section>";s:4:"code";N;s:5:"title";s:20:"Declaration of Risks";s:3:"url";s:27:"/legal/declaration-of-risks";s:6:"layout";s:7:"generic";s:10:"meta_title";s:14:"Privacy Policy";s:16:"meta_description";s:209:"Glue Up takes your privacy and security seriously. Please read the following to learn more about Glue Up's privacy policy. This policy describes how we collect, use and disclose personal and other information.";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:57:"Glue Up's privacy policy, what data does Glue Up collect?";s:11:"robot_index";s:7:"noindex";s:12:"robot_follow";s:8:"nofollow";s:7:"viewBag";a:2:{s:11:"localeTitle";a:1:{s:2:"ru";s:36:"ДЕКЛАРАЦИЯ О РИСКАХ";}s:9:"localeUrl";a:1:{s:2:"ru";s:21:"/deklaraciya-o-riskah";}}}}

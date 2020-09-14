@@ -1,0 +1,112 @@
+1600067169a:1:{s:29:"platform/download-my-glue.htm";a:16:{s:8:"fileName";s:29:"platform/download-my-glue.htm";s:7:"content";s:6302:"title = "Download My Glue"
+url = "/download-my-glue"
+layout = "glueup-home"
+description = "Give your community an easy-to-use Glue Up App to engage and receive important information from anywhere."
+meta_title = "My Glue for attendees and members"
+meta_description = "Streamline processes and manage your community from palm of your hand with a mobile app that consolidates all your operations and engagement."
+is_hidden = 0
+seo_keywords = "manager app, manage operations on the go, whitelabel mobile app, run events remotely, send campaigns from the pone, manage events on the phone, mobile app for managers, mobile app for member-based organizations, manager app to manage events and memberships, community management mobile app"
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeMeta_title[es_la] = "Ejecuta Tus Operaciones desde Cualquier Lugar"
+localeMeta_title[Pt_br] = "Gerenciador Glue Up"
+localeMeta_title[ru] = "Glue Up Manager"
+localeMeta_title[tk] = "Yönetici Uygulaması"
+localeMeta_title[zh] = "Glue Up 管理者 App"
+localeMeta_description[es_la] = "Optimiza procesos y administra tu comunidad desde la palma de tu mano con la aplicación móvil que consolida todas tus operaciones e interacciones."
+localeMeta_description[Pt_br] = "Simplifique processos e gerencie sua comunidade na palma da sua mão com um aplicativo móvel que consolida todas as suas operações e engajamento."
+localeMeta_description[ru] = "Оптимизируйте процессы и управляйте своим сообществом с помощью мобильного приложения, которое объединяет все ваши процессы и взаимодействия."
+localeMeta_description[tk] = "Operasyonlarınızı yönetin ve her yerden haberdar olun."
+localeMeta_description[zh] = "Glue Up 云平台移动端 App，让您可以随时随地高效管理您的社群运营及互动。"
+==
+<?php
+function onEnd(){
+    $this->page->nav_highlight = 'features';
+ }
+?>
+==
+<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container text-center">
+           <div class="row flex-row">
+                <div class="col-md-6 hero align-self-center text-left">
+                   <p class="tagline mb-4">{{'My Glue'|_}}</p>
+                      <h1>{{ 'Network and <br> Engage <span class="line"><ins> Anywhere </ins></span>'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Transform your event and membership experience from the palm of your hand with the "My Glue" app.'|_ }}{{'<br>Join communities, manage connections, share business cards, discuss various topics, and stay social on the go.'|_ }} </p><br>
+                       				       <div class="row">
+  <div class="col-md-8 mr-auto">
+
+  {% if activeLocale is same as('zh') %}
+
+	 <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto" style="padding: .5rem 1rem; max-width:243px;" href="https://apps.apple.com/us/app/eventbank/id958545893"><i class="icon-apple" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在AppStore下载My Glue</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto mt-3"  style="padding: .5rem 1rem; max-width:243px;" href="https://play.google.com/store/apps/details?id=com.eventbank.android.attendee"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在GooglePlay下载My Glue</span></a>
+   <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto mt-3"  style="padding: .5rem 1rem; max-width:243px;" href="https://www.wandoujia.com/apps/6654640"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在豌豆荚下载My Glue</span></a>
+{% else %}
+{% if Location in ['CN']%}
+	 <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto" style="padding: .5rem 1rem; max-width:243px;" href="https://apps.apple.com/us/app/eventbank/id958545893"><i class="icon-apple" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在AppStore下载My Glue</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto mt-3"  style="padding: .5rem 1rem; max-width:243px;" href="https://play.google.com/store/apps/details?id=com.eventbank.android.attendee"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在GooglePlay下载My Glue</span></a>
+   <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto mt-3"  style="padding: .5rem 1rem; max-width:243px;" href="https://www.wandoujia.com/apps/6654640"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在豌豆荚下载My Glue</span></a>
+{% else %}
+
+   <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto" style="padding: .5rem 1rem; max-width:243px;" href="https://apps.apple.com/us/app/eventbank/id958545893"><i class="icon-apple" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">Download My Glue for iOS</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto mt-3"  style="padding: .5rem 1rem; max-width:273px;" href="https://play.google.com/store/apps/details?id=com.eventbank.android.attendee"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">Download My Glue for Android</span></a>
+{% endif %}
+{% endif %}
+  
+  </div>
+  </div>
+					
+                </div>
+                <div class="col-md-6 hero align-self-center text-left">
+                <img src="{{ 'features/glueup-myglue-3some.svg' | media }}" class="paygage-visual" alt="logo">
+                </div>
+            </div>
+        </div> 
+</header>
+
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}";s:5:"mtime";i:1599547778;s:6:"markup";s:4291:"<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container text-center">
+           <div class="row flex-row">
+                <div class="col-md-6 hero align-self-center text-left">
+                   <p class="tagline mb-4">{{'My Glue'|_}}</p>
+                      <h1>{{ 'Network and <br> Engage <span class="line"><ins> Anywhere </ins></span>'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Transform your event and membership experience from the palm of your hand with the "My Glue" app.'|_ }}{{'<br>Join communities, manage connections, share business cards, discuss various topics, and stay social on the go.'|_ }} </p><br>
+                       				       <div class="row">
+  <div class="col-md-8 mr-auto">
+
+  {% if activeLocale is same as('zh') %}
+
+	 <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto" style="padding: .5rem 1rem; max-width:243px;" href="https://apps.apple.com/us/app/eventbank/id958545893"><i class="icon-apple" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在AppStore下载My Glue</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto mt-3"  style="padding: .5rem 1rem; max-width:243px;" href="https://play.google.com/store/apps/details?id=com.eventbank.android.attendee"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在GooglePlay下载My Glue</span></a>
+   <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto mt-3"  style="padding: .5rem 1rem; max-width:243px;" href="https://www.wandoujia.com/apps/6654640"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在豌豆荚下载My Glue</span></a>
+{% else %}
+{% if Location in ['CN']%}
+	 <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto" style="padding: .5rem 1rem; max-width:243px;" href="https://apps.apple.com/us/app/eventbank/id958545893"><i class="icon-apple" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在AppStore下载My Glue</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto mt-3"  style="padding: .5rem 1rem; max-width:243px;" href="https://play.google.com/store/apps/details?id=com.eventbank.android.attendee"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在GooglePlay下载My Glue</span></a>
+   <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto mt-3"  style="padding: .5rem 1rem; max-width:243px;" href="https://www.wandoujia.com/apps/6654640"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在豌豆荚下载My Glue</span></a>
+{% else %}
+
+   <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto" style="padding: .5rem 1rem; max-width:243px;" href="https://apps.apple.com/us/app/eventbank/id958545893"><i class="icon-apple" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">Download My Glue for iOS</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto mt-3"  style="padding: .5rem 1rem; max-width:273px;" href="https://play.google.com/store/apps/details?id=com.eventbank.android.attendee"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">Download My Glue for Android</span></a>
+{% endif %}
+{% endif %}
+  
+  </div>
+  </div>
+					
+                </div>
+                <div class="col-md-6 hero align-self-center text-left">
+                <img src="{{ 'features/glueup-myglue-3some.svg' | media }}" class="paygage-visual" alt="logo">
+                </div>
+            </div>
+        </div> 
+</header>
+
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}";s:4:"code";s:67:"function onEnd(){
+    $this->page->nav_highlight = 'features';
+ }";s:5:"title";s:16:"Download My Glue";s:3:"url";s:17:"/download-my-glue";s:6:"layout";s:11:"glueup-home";s:11:"description";s:105:"Give your community an easy-to-use Glue Up App to engage and receive important information from anywhere.";s:10:"meta_title";s:33:"My Glue for attendees and members";s:16:"meta_description";s:141:"Streamline processes and manage your community from palm of your hand with a mobile app that consolidates all your operations and engagement.";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:289:"manager app, manage operations on the go, whitelabel mobile app, run events remotely, send campaigns from the pone, manage events on the phone, mobile app for managers, mobile app for member-based organizations, manager app to manage events and memberships, community management mobile app";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:7:"viewBag";a:2:{s:16:"localeMeta_title";a:5:{s:5:"es_la";s:45:"Ejecuta Tus Operaciones desde Cualquier Lugar";s:5:"Pt_br";s:19:"Gerenciador Glue Up";s:2:"ru";s:15:"Glue Up Manager";s:2:"tk";s:21:"Yönetici Uygulaması";s:2:"zh";s:21:"Glue Up 管理者 App";}s:22:"localeMeta_description";a:5:{s:5:"es_la";s:148:"Optimiza procesos y administra tu comunidad desde la palma de tu mano con la aplicación móvil que consolida todas tus operaciones e interacciones.";s:5:"Pt_br";s:148:"Simplifique processos e gerencie sua comunidade na palma da sua mão com um aplicativo móvel que consolida todas as suas operações e engajamento.";s:2:"ru";s:264:"Оптимизируйте процессы и управляйте своим сообществом с помощью мобильного приложения, которое объединяет все ваши процессы и взаимодействия.";s:2:"tk";s:58:"Operasyonlarınızı yönetin ve her yerden haberdar olun.";s:2:"zh";s:99:"Glue Up 云平台移动端 App，让您可以随时随地高效管理您的社群运营及互动。";}}}}

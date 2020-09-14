@@ -1,0 +1,32 @@
+1600067169a:1:{s:36:"legal/terms-and-conditions-users.htm";a:15:{s:8:"fileName";s:36:"legal/terms-and-conditions-users.htm";s:7:"content";s:797:"title = "User Terms and Conditions"
+url = "/legal/user-agreement"
+layout = "generic"
+description = "User terms and conditions for Glue Up"
+meta_title = "Terms and Conditions for Users"
+meta_description = "Please read the following to learn more about Glue Up's terms and conditions for users. This policy describes the terms and conditions for the end-users of Glue Up."
+is_hidden = 0
+seo_keywords = "Glue Up's Terms and Conditions for Users"
+robot_index = "index"
+robot_follow = "follow"
+==
+<section class="legal" id="terms_org">
+<div class="pt-0">
+        <div class="container">
+        <div class="row pt-4">
+        <div class="col-md-8 align-self-center mx-auto pb-5">
+          {% content 'terms-user'%}
+           </div>
+           </div>
+        </div>
+        </div>
+</section>";s:5:"mtime";i:1597830317;s:6:"markup";s:305:"<section class="legal" id="terms_org">
+<div class="pt-0">
+        <div class="container">
+        <div class="row pt-4">
+        <div class="col-md-8 align-self-center mx-auto pb-5">
+          {% content 'terms-user'%}
+           </div>
+           </div>
+        </div>
+        </div>
+</section>";s:4:"code";N;s:5:"title";s:25:"User Terms and Conditions";s:3:"url";s:21:"/legal/user-agreement";s:6:"layout";s:7:"generic";s:11:"description";s:37:"User terms and conditions for Glue Up";s:10:"meta_title";s:30:"Terms and Conditions for Users";s:16:"meta_description";s:164:"Please read the following to learn more about Glue Up's terms and conditions for users. This policy describes the terms and conditions for the end-users of Glue Up.";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:40:"Glue Up's Terms and Conditions for Users";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";}}

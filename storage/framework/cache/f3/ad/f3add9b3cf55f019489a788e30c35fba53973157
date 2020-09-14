@@ -1,0 +1,21 @@
+1600066771a:1:{s:24:"generic/hero-generic.htm";a:6:{s:8:"fileName";s:24:"generic/hero-generic.htm";s:7:"content";s:411:"description = "generic hero section"
+==
+<div class="generic bg-1" id="generic">
+        <div class="container">
+         	<div class="row">
+    			<div class="col-md-8 align-self-center align-items-center mx-auto align-self-center">
+    				<h1 class="title pt-5">{{ this.page.title }}</h1>
+    				<p class="tagline">{{ this.page.description }}</p>
+    			</div>
+		    </div>
+        </div>
+    </div>";s:5:"mtime";i:1596786370;s:6:"markup";s:371:"<div class="generic bg-1" id="generic">
+        <div class="container">
+         	<div class="row">
+    			<div class="col-md-8 align-self-center align-items-center mx-auto align-self-center">
+    				<h1 class="title pt-5">{{ this.page.title }}</h1>
+    				<p class="tagline">{{ this.page.description }}</p>
+    			</div>
+		    </div>
+        </div>
+    </div>";s:4:"code";N;s:11:"description";s:20:"generic hero section";}}

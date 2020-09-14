@@ -1,0 +1,26 @@
+1600067169a:1:{s:27:"trash/testing-no-follow.htm";a:11:{s:8:"fileName";s:27:"trash/testing-no-follow.htm";s:7:"content";s:485:"title = "testing-no-follow"
+url = "/testing/testing-no-follow"
+layout = "glueup-home"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+==
+{% partial 'home/hero.htm' %}
+{% partial 'elements/logobar.htm' %}
+{% partial 'home/intro.htm' %}
+{% partial 'home/counter.htm' %}
+{% partial 'home/left-1.htm' %}
+{% partial 'home/right-1.htm' %}
+{% partial 'home/left-2.htm' %}
+{% partial 'home/faq.htm' %}
+{% partial 'home/blog-home.htm' %}
+{% partial 'site/footer-cta.htm' %}";s:5:"mtime";i:1597796547;s:6:"markup";s:336:"{% partial 'home/hero.htm' %}
+{% partial 'elements/logobar.htm' %}
+{% partial 'home/intro.htm' %}
+{% partial 'home/counter.htm' %}
+{% partial 'home/left-1.htm' %}
+{% partial 'home/right-1.htm' %}
+{% partial 'home/left-2.htm' %}
+{% partial 'home/faq.htm' %}
+{% partial 'home/blog-home.htm' %}
+{% partial 'site/footer-cta.htm' %}";s:4:"code";N;s:5:"title";s:17:"testing-no-follow";s:3:"url";s:26:"/testing/testing-no-follow";s:6:"layout";s:11:"glueup-home";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";}}

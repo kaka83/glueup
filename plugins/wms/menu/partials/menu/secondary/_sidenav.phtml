@@ -1,0 +1,81 @@
+<?php
+    $mainMenuCode = 'main';
+    $sideMainMenuItems = BackendMenu::listSideMenuItems();
+    if (!isset($context)) {
+        $context = BackendMenu::getContext();
+    }
+?>
+<?php if ($sideMainMenuItems): ?>
+    <div class="layout-cell layout-sidenav-container wms-menu">
+        <div class="layout-relative">
+            <nav
+                id="layout-sidenav"
+                class="layout-sidenav bg-p"
+                data-active-class="active"
+                data-control="sidenav">
+                <ul class="nav">
+                    <?php foreach ($sideMainMenuItems as $sideItemCode => $item): ?>
+                        <li
+                            class="<?= $context->mainMenuCode == $sideItemCode ? 'active' : null ?>"
+                            <?= Html::attributes($item->attributes) ?>
+                        >
+                            <a href="<?= $item->url ?>">
+                                <span class="nav-icon">
+                                    <?php if ($item->iconSvg): ?>
+                                        <img class="svg-icon" src="<?= Url::asset($item->iconSvg) ?>">
+                                    <?php endif ?>
+
+                                    <i class="<?= $item->iconSvg ? 'svg-replace' : null ?> <?= $item->icon ?>"></i>
+                                </span>
+                                <span class="nav-label">
+                                    <?= e(trans($item->label)) ?>
+                                </span>
+                            </a>
+                            <span
+                                class="counter <?= $item->counter === null ? 'empty' : null ?>"
+                                data-menu-id="<?= e($mainMenuCode.'/'.$sideItemCode) ?>"
+                                <?php if ($item->counterLabel): ?>title="<?= e(trans($item->counterLabel)) ?>"<?php endif ?>
+                                >
+                                <?= e($item->counter) ?>
+                            </span>
+                        </li>
+                    <?php endforeach ?>
+                </ul>
+            </nav>
+        </div>
+    </div>
+<?php endif ?>
+<div class="layout-cell sidenav-tree bg-p" data-control="sidenav-tree" data-search-input="#settings-search-input">
+    <a class="back-link" href="<?= Backend::url('wms/menu' . (empty($context->sideMenuCode) ? '' : "/{$context->mainMenuCode}")) ?>">
+        <i class="icon-angle-left"></i><?= e(trans($context->mainMenuCode == $mainMenuCode || empty($context->sideMenuCode)
+            ? 'wms.menu::plugin.name'
+            : "wms.site::lang.{$context->mainMenuCode}.title"
+        )) ?>
+    </a>
+    <div class="layout">
+        <a class="back-link wms-menu-back-link" href="<?= Backend::url('wms/menu' . (empty($context->sideMenuCode) ? '' : "/{$context->mainMenuCode}")) ?>">
+            <i class="icon-angle-left"></i><?= e(trans($context->mainMenuCode == $mainMenuCode || empty($context->sideMenuCode)
+                ? 'wms.menu::plugin.name'
+                : "wms.site::lang.{$context->mainMenuCode}.title"
+            )) ?>
+        </a>
+        <div class="layout-row min-size">
+            <?= $this->makePartial(__DIR__ . '/../main/_system_sidebar_menu_toolbar.phtml'); ?>
+        </div>
+
+        <div class="layout-row">
+            <div class="layout-cell">
+                <div class="layout-relative">
+
+                    <div class="layout-absolute">
+                        <div class="control-scrollbar" data-control="scrollbar">
+                            <?= $this->makePartial(__DIR__ . '/_sidenav_sidebar_menu.phtml', [
+                                'context' => $context,
+                            ]) ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

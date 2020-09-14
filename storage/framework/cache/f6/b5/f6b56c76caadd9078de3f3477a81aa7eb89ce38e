@@ -1,0 +1,54 @@
+1600066771a:1:{s:31:"landing/whitepaper-scaffold.htm";a:7:{s:8:"fileName";s:31:"landing/whitepaper-scaffold.htm";s:7:"content";s:1062:"[viewBag]
+
+[genericForm whitepaperform]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<header id="hero" style="min-height:100vh; height:100%;">
+	<div class="container pt-5">
+		<div class="row">
+			<div class="col-md-6 hero align-self-top text-md-left text-center">
+				<p class="tagline pb-3 primary">Whitepaper</p>
+				<h1>{{ whitepapertitle }}</h1>
+
+				{{ whitepaperdes |raw }}
+				
+				</div>
+			<div class="col-md-6 hero align-self-top text-md-left text-center">
+				<div class="glue-up-form shadow-sm px-5 py-5" style="background:#fff;">
+					{% component 'whitepaperform' %}
+				</div></div></div></div>
+</header>
+{#<div class="container pt-5">
+	<div class="col-lg-10 mx-auto">
+		<div class="row">
+			<!--{% partial 'elements/logobar.htm' %}-->
+			<br>
+		</div></div></div>#}";s:5:"mtime";i:1598113042;s:6:"markup";s:716:"<header id="hero" style="min-height:100vh; height:100%;">
+	<div class="container pt-5">
+		<div class="row">
+			<div class="col-md-6 hero align-self-top text-md-left text-center">
+				<p class="tagline pb-3 primary">Whitepaper</p>
+				<h1>{{ whitepapertitle }}</h1>
+
+				{{ whitepaperdes |raw }}
+				
+				</div>
+			<div class="col-md-6 hero align-self-top text-md-left text-center">
+				<div class="glue-up-form shadow-sm px-5 py-5" style="background:#fff;">
+					{% component 'whitepaperform' %}
+				</div></div></div></div>
+</header>
+{#<div class="container pt-5">
+	<div class="col-lg-10 mx-auto">
+		<div class="row">
+			<!--{% partial 'elements/logobar.htm' %}-->
+			<br>
+		</div></div></div>#}";s:4:"code";N;s:7:"viewBag";a:0:{}s:26:"genericForm whitepaperform";a:9:{s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:13:"inline_errors";s:8:"disabled";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}}}

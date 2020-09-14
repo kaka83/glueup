@@ -1,0 +1,199 @@
+title = "Security"
+url = "/security"
+layout = "glueup-home"
+description = "Give your communithy a place where they can connect with you and your mission 365 days a year even when meeting face to face isn’t possible."
+meta_title = "Security"
+meta_description = "At Glue Up, customer satisfaction is our highest priority and we are working tirelessly to not only meet, but 
+exceed our clients’ expectations."
+is_hidden = 0
+seo_keywords = "security of Glue Up software, how secure is Glue Up?, Glue Up GDPR Compliance, Glue up security, Glue Up protection, SSL certificate Glue Up, admin rights, roles and permissions"
+robot_index = "index"
+robot_follow = "follow"
+==
+<?php
+function onEnd(){
+    $this->page->nav_highlight = 'resources';
+ }
+?>
+==
+<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+        	<div class="row flex-row-reverse">
+                <div class="col-md-6 hero align-self-center text-left">
+                     <img src="{{ 'glueup-security-feature.svg' | media }}" class="Glue Up is secure for you and your users" alt="glue up hero section">
+                </div>
+                <div class="col-md-6 hero align-self-center text-md-left text-center">
+                    <p class="tagline mb-4">{{'Security'|_}} </p>
+                      <h1>{{ 'Stay Protected<br> at <span class="line"><ins> All Times </ins></span>'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Your and your communities’ security is our top priority.'|_ }} </p><br>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+            </div>
+        </div> 
+</header>
+<section class="section pt-0">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-8 d-flex align-items-center text-center align-self-center mx-auto pb-3 pb-md-0">
+                    <div>
+                            <span class="h6 text-color text-center mx-auto ">{{ 'Development Philosphy'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title ">{{ 'Customer satisfaction is our highest priority and we are working tirelessly to not only meet, but <span class="line"><ins> exceed </ins></span> our clients’ expectations. '|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{' These are our guiding principles on our mission to transform our clients’ communities around the world and ultimately provide solutions that are flexible, scalable, and efficient.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact"></i>
+                                        <p class=" text-center pt-4">{{ 'Users First'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-settings"></i>
+                                        <p class=" text-center pt-4">{{ 'Operations before features'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-anchor"></i>
+                                        <p class=" text-center pt-4">{{ 'Be bold, code safe'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class=" text-center pt-4">{{ 'Open feedback'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+
+<section class="section pb-0">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-7 mx-auto pb-4">
+                        <div class="block text-center">
+                            <small>{{ 'Glue Up'|_ }}</small>
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'You Can Count on Us'|_ }}</h2>
+                             <p class="tagline">{{ 'Focus on growing and engaging your community while we take care of the security.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+             <div class="row mx-auto">
+                        <div class="col-md-4 py-3 ml-auto">
+                            <div class="card text-center h-100 hideme">
+                              <div class="card-body pt-4 ">
+                                <img src="{{ 'capterra-top-20-img.png' | media }}" alt="Glue Up Top 20 Rated in Capterra" class="pt-2 img-fluid mx-auto lazy fadeIn" style="max-height: 150px;">
+                                <h5 class="card-title mt-3">{{ 'Capterra Top 20'|_ }}</h5>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3 mr-auto">
+                            <div class="card text-center h-100 hideme">
+                              <div class="card-body pt-4">
+                                 <img src="{{ 'gdpr-ready-glueup.png' | media }}" alt="Glue Up is fully GDPR Compliant" class="img-fluid mx-auto lazy fadeIn" style="max-height: 70px; margin-top: 39px; margin-bottom: 38px;">
+                                <h5 class="card-title mt-3">{{ 'GDPR Compliance'|_ }}</h5>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3 ml-auto">
+                            <div class="card text-center h-100 hideme">
+                              <div class="card-body pt-4 ">
+                                <div style="margin-top: 30px; margin-bottom: 61px;"><i class="bullet-icon shadow-sm align-middle icon-clock-outlined" style="font-size: 72px;"></i></div>
+                                <h5 class="card-title mt-3">{{ 'Daily Backups'|_ }}</h5>
+                              </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+</section>
+{#engagement 1#}
+<section class="section bg-grey">
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-7 mx-auto text-center pb-4">
+                        <span class="h6 text-color hideme text-center mx-auto pt-5">{{ 'Product Updates'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'It Gets Better Every Week'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Glue Up solutions are constantly evolving and improving. We release new features, updates and bug fixes every week so you can have better experience with our software everytime you log in.  '|_ }}
+    						     </p>
+                        </div>
+                    </div>
+            </div>
+            {#<div class="col-lg-10 mx-auto">#}
+                <div class="row mx-auto">
+                        <div class="col-md-4 py-3 ml-auto">
+                            <div class="card text-center h-100 hideme shadow-sm">
+                              <div class="card-body pt-4 ">
+                                 <i class="bullet-icon align-middle icon-buildings"></i>
+                                <h5 class="card-title mt-3">{{ 'Servers '|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'All servers that run Glue Up software in production are recent, continuously patched Linux systems following the latest industry standards.'|_}}{{' Depending on domain your account is on, your data is stored following specific regulations in a given country (i.e. GDPR or China Cybersecurity Law). '|_ }}</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3 ml-auto">
+                            <div class="card text-center h-100 hideme shadow-sm">
+                              <div class="card-body pt-4 ">
+                                 <i class="bullet-icon align-middle icon-lock"></i>
+                                <h5 class="card-title mt-3">{{ 'Storage & Encryption  '|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'Glue Up stores document data such as metadata, activity, original files, and customer’s data in different locations while also compiling and generating documents when requested. '|_}}{{'All data in each location is encrypted at rest with AES-256 and sophisticated encryption keys management. '|_ }}</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3 ml-auto">
+                            <div class="card text-center h-100 hideme shadow-sm">
+                              <div class="card-body pt-4 ">
+                                 <i class="bullet-icon align-middle icon-cheque"></i>
+                                <h5 class="card-title mt-3">{{ 'Customer payment information'|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'Glue Up integrates with many payment gateways, all of which are compliant with PCI DSS and does not process, store, or transmit any payment card data. '|_}}</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3 ml-auto">
+                            <div class="card text-center h-100 hideme shadow-sm">
+                              <div class="card-body pt-4 ">
+                                 <i class="bullet-icon align-middle icon-view"></i>
+                                <h5 class="card-title mt-3">{{ 'System monitoring and alerting'|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'The production application and underlying infrastructure components are monitored 24/7/365 days a year, by dedicated monitoring systems.'|_}}{{' Critical alerts generated by these systems are sent to 24/7/365 on-call DevOps team members and escalated appropriately to operations management. '|_}}</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3 ml-auto">
+                            <div class="card text-center h-100 hideme shadow-sm">
+                              <div class="card-body pt-4 ">
+                                 <i class="bullet-icon align-middle icon-download"></i>
+                                <h5 class="card-title mt-3">{{ 'Service levels and backups'|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'Glue Up infrastructure utilizes many layered techniques for increasingly reliable uptime (<99.9%).'|_}}{{' Including the use of auto-scaling, load balancing, task queues, and rolling deployments. We do full daily automated backups of our databases. All backups are encrypted. '|_}}</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3 ml-auto">
+                            <div class="card text-center h-100 hideme shadow-sm">
+                              <div class="card-body pt-4 ">
+                                 <i class="bullet-icon align-middle icon-code"></i>
+                                <h5 class="card-title mt-3">{{ 'Vulnerability testing'|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'Web application security is evaluated by the development team in sync with the application release cycle.'|_}}{{' This vulnerability testing includes the use of commonly known web application security toolkits and scanners to identify application vulnerabilities before they are released into production.'|_}}</p>
+                              </div>
+                            </div>
+                        </div>
+                       
+                        
+                {#</div>#}
+            </div>
+            {#<div class="row">
+                <div class="col-lg-4 text-center mx-auto mt-3">
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contact-paygage">See it in Action</a>
+                </div>
+            </div>#}
+        </div>
+
+</section>
+{#engagement 1#}
+
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}

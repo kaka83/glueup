@@ -1,0 +1,777 @@
+1600067169a:1:{s:14:"rebranding.htm";a:14:{s:8:"fileName";s:14:"rebranding.htm";s:7:"content";s:26905:"title = "EventBank is now Glue Up!"
+url = "/rebranding"
+layout = "glueup-home"
+meta_title = "EventBank is now Glue Up!"
+meta_description = "Learn why we have changed our identity and what it means to you and your community."
+is_hidden = 0
+seo_keywords = "EventBank, Glue Up, rebranding, new logo, new identity, more for your community, management, simple, automated, all-in-one"
+robot_index = "index"
+robot_follow = "follow"
+==
+<?php
+function onStart(){    
+
+    // or you can get file object from your post or record 
+    // and get its absolute path and use it `getPath()`
+    //$imagePath = 'https://yoursite/image.jpeg';
+    $baseUrl = url(Config::get('cms.storage.media.path'));
+    //$imagePath = getPath('app/media/glueup-membership.png');
+    $imagePath = $baseUrl . '/eventbank is now glueup.png';
+    $this['fbImage'] = $imagePath; // image absolute path
+}
+function onEnd(){
+    $this->page->nav_highlight = 'resources';
+ }
+?>
+==
+<div class="generic " id="generic">  
+        <div class="container">
+            <div class="row pt-5">
+                
+                <div class="col-md-8 hero align-self-center text-left mx-auto pt-5">
+                      <h1 class="pb-5 text-center">{{ 'EventBank is now <span class="line"><ins>Glue Up!</ins></span>'|_ }}</h1>
+                       {#<p class="tagline pb-3"> {{ 'Find the right plan for your organization, request a demo and start managing your operations and engaging your community today. '|_ }} </p>#}
+
+					{#	{% content 'brand-toolkit' %}#}
+						{#<section class="section py-0 ">
+						        <div class="container">
+						            <div class="row flex-row">
+						                <div class="col-lg-12 d-flex align-items-center text-center mx-auto">
+						                    <p class="mb-4 sentence mx-auto">{{ '<span class="line"><ins> Transform </ins></span> the way professional communities enable and enrich relationships.'|_ }}</p>
+						                </div>
+						            </div>
+						        </div>
+						</section>#}
+{% if activeLocale is same as('zh') %}
+<iframe width="100%" height="411px" src="//player.bilibili.com/player.html?aid=669430745&bvid=BV1ga4y1E7oP&cid=229098143&autoplay=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+{% else %}
+{%if Location in ['CN']%}
+<iframe width="100%" height="411px" src="//player.bilibili.com/player.html?aid=669430745&bvid=BV1ga4y1E7oP&cid=229098143&autoplay=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+{% else %}
+						<iframe width="100%" height="411px" src="https://www.youtube.com/embed/3A7VFKEiod4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> {% endif %}
+{% endif %}						{% content 'brand-toolkit-2' %}
+					
+                </div>
+               
+            </div>
+        </div> 
+</div>
+{% if activeLocale is same as('zh') %}
+	{% partial 'landing/toolkit.zh.htm'%}
+{% elseif activeLocale is same as('es_la') %}
+	{% partial 'landing/toolkit.es_la.htm' %}
+{% elseif activeLocale is same as('ru') %}
+	{% partial 'landing/toolkit.ru.htm' %}
+{% else %}
+	{% partial 'landing/toolkit'%}
+{% endif %}
+
+{#
+<section class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+            	<div class="col-md-4 pt-4">
+            	<nav id="navbar-example3" class="navbar sticky-top navbar-light">
+  
+  <nav class="nav nav-pills flex-column">
+    <a class="nav-link" href="#item-1">What are we changing? </a>
+    <nav class="nav nav-pills flex-column">
+      <a class="nav-link ml-3 my-1" href="#item-1-1">Our Name</a>
+      <a class="nav-link ml-3 my-1" href="#item-1-2">Our Logo</a>
+      <a class="nav-link ml-3 my-1" href="#item-1-3">Our Website</a>
+    </nav>
+    <a class="nav-link" href="#item-2">What changes for you as an organization?</a>
+    <nav class="nav nav-pills flex-column">
+      <a class="nav-link ml-3 my-1" href="#item-2-1">How will this affect my organization? </a>
+      <a class="nav-link ml-3 my-1" href="#item-2-2">What happens with my published events?</a>
+      <a class="nav-link ml-3 my-1" href="#item-2-3">What happens if I have linked certain pages of EventBank on my website?</a>
+      <a class="nav-link ml-3 my-1" href="#item-2-4">What happens if I have integrated other apps such as Xero, Quickbooks, Zoom, or Google Analytics?</a>
+      <a class="nav-link ml-3 my-1" href="#item-2-5">What if I am using an EventBank sender domain? (i.e. info@companyname.eventbankmail.com)</a>
+      <a class="nav-link ml-3 my-1" href="#item-2-6">What will happen to my contract with EventBank?</a>
+      <a class="nav-link ml-3 my-1" href="#item-2-7">Mobile Apps</a>
+      <a class="nav-link ml-3 my-1" href="#item-2-8">What if I am using API connections?</a>
+    </nav>
+    <a class="nav-link" href="#item-3">What changes for your users?</a>
+    <nav class="nav nav-pills flex-column">
+      <a class="nav-link ml-3 my-1" href="#item-3-1">What should I tell my members/registered attendees/other stakeholders?</a>
+      <a class="nav-link ml-3 my-1" href="#item-3-2">How to communicate this change with my members, attendees and other stakeholders?</a>
+      <a class="nav-link ml-3 my-1" href="#item-3-3">If I am a member of an organization, what happens to my profile?</a>
+      <a class="nav-link ml-3 my-1" href="#item-3-4">If I have registered for an event, what happens to my future and past event registrations?</a>
+      <a class="nav-link ml-3 my-1" href="#item-3-5">Changes to the attendee/member app My Glue (formerly EventBank App): </a>
+      
+      
+    </nav>
+    <a class="nav-link" href="#item-2">{{'What does not change'|_}}</a>
+  </nav>
+</nav>
+            	{#<ol id="sidenav" class="nav navpills sticky-top" style="display: list-item; list-style: none;">
+            	  <li class="nav-item">
+				    
+				    	<ul class="nav sticky-top" class="ml-2" style="display: list-item; list-style: none; ">
+				    	<a class="nav-link active" href="#section1">{{"What is changing ? "|_}}</a>
+				    	 <li class="nav-item pl-2">
+						    <a class="nav-link" href="#section11">{{"Our new name"|_}}</a>
+						  </li>
+						   <li class="nav-item pl-2">
+						    <a class="nav-link" href="#section12">{{"Our new visual identity"|_}}</a>
+						  </li>
+						  <li class="nav-item pl-2">
+						    <a class="nav-link" href="#section13">{{"Our website"|_}}</a>
+						  </li>
+						  </ul>
+				  </li>
+				  <li class="nav-item">
+				  	<ul class="nav sticky-top" class="ml-2" style="display: list-item; list-style: none; ">
+				    <a class="nav-link" href="#section2">{{"What changes for you as client?"|_}}</a>
+				    <li class="nav-item pl-2">
+						    <a class="nav-link" href="#section21">{{"Our new name"|_}}</a>
+						  </li>
+						   <li class="nav-item pl-2">
+						    <a class="nav-link" href="#section22">{{"Our new visual identity"|_}}</a>
+						  </li>
+						  <li class="nav-item pl-2">
+						    <a class="nav-link" href="#section23">{{"Our website"|_}}</a>
+						  </li>
+						  </ul>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"What will change for the users?"|_}}</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link active" href="#section1">{{"How will this affect my organization? "|_}}</a>
+				  </li>
+				  
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"What visible changes will there be on the platform?"|_}}</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"Login Information"|_}}</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"Update your API"|_}}</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"What visible changes will there be on the platform?"|_}}</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"What visible changes will there be on the platform?"|_}}</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"What visible changes will there be on the platform?"|_}}</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"What visible changes will there be on the platform?"|_}}</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"What visible changes will there be on the platform?"|_}}</a>
+				  </li>
+				  
+				  
+				</ol>
+				
+
+            	</div>
+            	<div class="col-md-8 pt-4">
+	            		
+<div data-spy="scroll" data-target="#navbar-example3" data-offset="80">
+<h4 id="item-1">What changes for us?</h4>
+
+<h5 id="item-1-1">A new brand </h5>
+
+<p>Counting from August 24th we will deploy a new domain for our platform, and update our branding on the platform. Our sender address for system emails will be sent out from no-reply@eventbank.com</p>
+
+
+<h5 id="item-1-2">Glue Up logo </h5>
+
+<p>The logo will be updated on the platform and our mobile apps. Our system emails will also include our new Glue Up logo. 
+Download web-friendly versions of our logo in black, white, and color in multiple formats and learn more about how to use our logos in our new branding guidelines.</p>
+<Download here>
+
+
+<h5 id="item-1-3">My Glue </h5>
+
+<p>We have updated your personal page (formerly My EventBank) where you can manage your personal Settings and Preferences and particularly find the activities and informations enabled for the organizations you follow. Discover it here (https://www.glueup.com/my/home/).</p>
+
+
+<h4 id="item-2" class="py-5">What changes for you as a client (organization account)</h4>
+
+<h5 id="item-2-1">How will this affect your organization? </h5>
+
+<p>All event pages, campaigns, and other links will be automatically redirected to the new corresponding page in the new domain to ensure there is no disruption in the service. If users try to access the service using former EventBank links, they will be redirected to the new page on Glue Up instead.</p>
+
+<p>Only if you are currently using our API, you will have to take action (check below point).</p>
+
+
+<h5 id="item-2-2">Update your API - take action!</h5>
+
+<p>If you have integrated certain parts of our platform with your website via EventBank API, make sure to update your endpoints from EventBank to Glue Up (the page will be redirecting to the corresponding server on .COM / .CN / .RU). Make sure to update your end-points by November 24, 2020, as the temporary redirection of end-points will be discontinued after that date.</p>
+
+<p>Find here the Glue Up API documentation (https://glueupapi.docs.apiary.io/). Please reach out to support@glueup.com or support@eventbank.com if you require any further assistance.</p>
+
+<h5 id="item-2-3">What happens with my published events?</h5>
+<p>All published events will be automatically redirected to new links. You don’t need to amend any links even if you have promoted your events on your official website, on a third party website or on your social media.</p>
+<h5 id="item-2-4">What happens if I have linked certain pages of EventBank on my website?</h5>
+<p>Your visitors will automatically be redirected to the corresponding page on Glue Up. If you prefer, you may update the links, but this is not a mandatory step.</p>
+<h5 id="item-2-5">What happens if I have integrated other apps such as Xero, Quickbooks, Zoom, or Google Analytics?</h5>
+<p>If you are using any of the integrations on EventBank, these will not require to be updated, you can continue utilizing them without amending the setup.</p>
+<h5 id="item-2-6">What if I am using an EventBank sender domain? (i.e. info@companyname.eventbankmail.com)</h5>
+<p>This sender domain will be automatically updated to info@companyname.glueupmail.com. This change will come to effect on September 7th, 2020. </p>
+<h5 id="item-2-7">Moble App: Glue Up Manager:</h5> <p>The EventBank Manager App is now Glue Up Manager. If you have downloaded the EventBank Manager App before, you don’t need to install or download anything again, simply update the EventBank Manager App from the App Store or Google Play. Then, log back in, choose your corresponding server and start managing your community from the palm of your hand.
+     <Download Glue Up Manager: iOS Store (https://apps.apple.com/us/app/eventbank-manager/id740353437) / Google Play (https://play.google.com/store/apps/details?id=com.eventbank.android)</p>
+<h5 id="item-2-8">What will happen to my contract with EventBank?</h5>
+<p>No changes are required, as our legal entity stays the same. </p>
+<h5 id="item-2-9">What if I am using API?</h5>
+
+<p>If you have integrated certain parts of our platform with your website via EventBank’s API, make sure to update your endpoints from EventBank to Glue Up. Make sure to update your end-points by November 24, 2020, as the temporary redirection of end-points will be discontinued after that date. -</p>
+
+<h4 id="item-3" class="py-5">What changes for your users</h4>
+
+<h5 id="item-3-1">Login Information</h5>
+
+<p>On August 24th, 2020 all users will be logged out of the platform. To log back in you simply need to go to Glue Up (https://glueup.com/account/login) and use your former login credentials. All your data stored on ‘My EventBank’ such as previous events, newsletters and memberships will be available in your personal engagement hub ‘My Glue’, and the same will apply for all registered users.</p>
+
+
+<h5 id="item-3-2">How to communicate this change with my members, attendees and other stakeholders?</h5>
+
+<p>As with every change, it’s important to explain the impact of the transition to your community and answer any questions they might have. To make it easier for you, we have prepared a draft of an email campaign (https://www.eventbank.com/organization/170/campaign/50739/) with the most relevant information that you can use to update your community about Glue Up and what it means to them. Feel free to use and edit this content to address them the announcement.</p>
+
+<h5 id="item-3-3">Mobile App: My Glue (end-user app): </h5>
+<p>The EventBank App for attendees and members is now My Glue. If you have downloaded the EventBank App before, you don’t need to install or download anything again, simply update the EventBank App from the App Store or Google Play. Then, log back in, choose your corresponding server and engage with your organization from anywhere.
+<Download My Glue>: iOS Store (https://apps.apple.com/us/app/eventbank/id958545893) / Google Play (https://play.google.com/store/apps/details?id=com.eventbank.android.attendee)</p>
+
+<h5 id="item-3-4">What should I tell my members/registered attendees/other stakeholders?</h5>
+<p>On August 24, 2020, your members, event attendees, and all other registered users will be logged out of EventBank and redirected to the new login page on Glue Up (https://glueup.com/account/login) that will display the information about the changes, and from where users can log in using their former login credentials they used on EventBank. The redirection will be automatic, so you don’t need to take any action.</p>
+<h5 id="item-3-5">I am a member of an organization, what happens to my profile?</h5>
+<p>If you are a member of an organization, you will have to log in from the Glue Up page (https://glueup.com/account/login). Your member details and access to the information from organizations you are a member of will be available there. If you have received emails to apply or renew a membership, you can still click on those links, and you will be redirected to the corresponding page on Glue Up to complete the remaining steps.</p>
+<h5 id="item-3-6">I have registered for an event, what happens to my future and past event registrations?</h5>
+<p>If you have registered for an event, you can still access your registrations via My Glue. You will have to log in from Glue Up (https://glueup.com/account/login), where your profile and all information related to your account such as previous events, memberships, subscriptions will be available.</p>
+
+</div>
+	            	
+	            	{#	<ul class="" style="list-style: none;">
+	            			
+							<li><h4 class="pb-4">{{"How will this affect my organization? "|_}}</h4>
+							<div id="section1">
+		            		<p>All event pages, campaigns, and other links will be automatically redirected to the new corresponding page in the new domain to ensure there is no disruption in the service. If users try to access the service using former EventBank links, they will be redirected to the new page on Glue Up instead.</p>
+							</div></li>
+							
+		            		<li><h4 class="py-4">{{"What visible changes will there be on the platform?"|_}}</h4>
+		            		<div id="section11">
+		            		<p>The logo will be updated on the platform and our mobile apps. Our system emails will also include our new Glue Up logo. </p>
+							</p>
+							</div></li>
+							
+							<li><h4 class="py-4">{{"Login Information"|_}}</h4>
+							<div id="section12">
+		            		<p>On August 24th, 2020 all users will be logged out of the platform. To log back in you simply need to go to Glue Up <a href="">https://glueup.com/account/login</a> and use your former login credentials.</p>
+							
+							<p> All your data stored on ‘My EventBank’ such as previous events, newsletters and memberships will be available in your personal engagement hub ‘My Glue’, and the same will apply for all registered users.</p>
+							</p>
+							</div></li>
+							
+							<li><h4 class="py-4">{{"Update your API"|_}}</h4>
+							<div id="section13">
+							<div class="alert alert-warning" role="alert">
+								  <i class="bullet-icon icon-alert px-0" style="background-color:transparent; color:#FF8100; position: absolute; align-self: center; margin: -20px 0 0 -5px;"></i>    
+							<span class="font-weight-light" style="margin-left: 40px;">Only if you are currently using our API, you will have to take action.</span>
+							</div>
+		            		<p>If you have integrated certain parts of our platform with your website via EventBank API, make sure to update your endpoints from EventBank to Glue Up (the page will be redirecting to the corresponding server on .COM / .CN / .RU). Make sure to update your end-points by November 24, 2020, as the temporary redirection of end-points will be discontinued after that date.</p>
+
+							<p>Find more information related to the <a href="https://glueupapi.docs.apiary.io">Glue Up API documentation (https://glueupapi.docs.apiary.io/)</a>.</p>
+							</p>
+							</div></li>
+							<li><h4 class="py-4">{{"How to communicate this change with my members, attendees and other stakeholders?"|_}}</h4>
+							<div id="section2">
+		            		<p>As with every change, it’s important to explain the impact of the transition to your community and answer any questions they might have. To make it easier for you, we have prepared a <a href="https://www.eventbank.com/organization/170/campaign/50739/" target="_blank">draft of an email campaign</a> with the most important details that you can use to update your community about Glue Up and what it means to them. Feel free to use and edit this content to address them the announcement.</p>
+							</div></li>
+							
+							<li><h4 class="py-4">{{"Glue Up logo"|_}}</h4>
+							<div id="section21">
+		            		<p>Download web-friendly or high-resolution versions of new our logo in black, white, color in multiple formats and learn more about how to use our logos in our new branding guidelines.</p>
+		            		<div class="alert alert-primary" role="alert">
+								  <i class="bullet-icon icon-documents px-0" style="background-color:transparent; color:#0D62FE; position: absolute; align-self: center; margin: -20px 0 0 -5px;"></i>    
+							<span style="margin-left: 40px; color:#0D62FE;"> <a style="color:#0D62FE;" href="">Download Glue Up Visual Identity Guidelines and Logo Formats</a></span>
+							</div>
+							</div></li>
+							
+							<li><h4 class="py-4">{{"Mobile Apps"|_}}</h4>
+							<div id="section22">
+		            		<p>*Glue Up Manager:* The EventBank Manager App is now Glue Up Manager. If you have downloaded the EventBank Manager App before, you don’t need to install or download anything again, simply update the EventBank Manager App from the App Store or Google Play. Then, log back in, choose your corresponding server and start managing your community from the palm of your hand.
+<Download Glue Up Manager: iOS Store (https://apps.apple.com/us/app/eventbank-manager/id740353437) / Google Play (https://play.google.com/store/apps/details?id=com.eventbank.android)
+</p>
+<p>
+* My Glue (end-user app)*: The EventBank App for attendees and members is now My Glue. If you have downloaded the EventBank App before, you don’t need to install or download anything again, simply update the EventBank App from the App Store or Google Play. Then, log back in, choose your corresponding server and engage with your organization from anywhere.
+<Download My Glue: iOS Store (https://apps.apple.com/us/app/eventbank/id958545893) / Google Play (https://play.google.com/store/apps/details?id=com.eventbank.android.attendee)
+</p>
+							</div></li>
+							
+							<li><h4 class="py-4">{{"How to communicate this change with my members, attendees and other stakeholders?"|_}}</h4>
+							<div id="section2">
+		            		<p>As with every change, it’s important to explain the impact of the transition to your community and answer any questions they might have. To make it easier for you, we have prepared a <a href="https://www.eventbank.com/organization/170/campaign/50739/">draft of an email campaign</a> with the most important details that you can use to update your community about Glue Up and what it means to them. Feel free to use and edit this content to address them the announcement.</p>
+							</div></li>
+							
+							<li>
+							<h4 class="py-4">{{"What happens with my published events?"|_}}</h4>
+							<div id="section2">
+		            		<p>All published events will be automatically redirected to new links. You don’t need to amend any links even if you have promoted your events on your official website, on a third party website or on your social media.
+		            		</p>
+							</div>
+							</li>
+							
+							<li>
+							<h4 class="py-4">{{"What happens if I have linked certain pages of EventBank on my website?"|_}}</h4>
+							<div id="section2">
+		            		<p>Your visitors will automatically be redirected to the corresponding page on Glue Up. If you prefer, you may update the links, but this is not a mandatory step.
+		            		</p>
+							</div>
+							</li>
+							<li>
+							<h4 class="py-4">{{"What happens if I have integrated other apps such as Xero, Quickbooks, Zoom, or Google Analytics?"|_}}</h4>
+							<div id="section2">
+		            		<p>If you are using any of the integrations on EventBank, these will not require to be updated, you can continue utilizing them without amending the setup.
+		            		</p>
+							</div>
+							</li>
+							<li>
+							<h4 class="py-4">{{"What if I am using an EventBank sender domain? (i.e. info@companyname.eventbankmail.com)"|_}}</h4>
+							<div id="section2">
+		            		<p>This sender domain will be automatically updated to info@companyname.glueupmail.com. This change will come to effect on September 7th, 2020. 
+		            		</p>
+							</div>
+							</li>
+							<li>
+							<h4 class="py-4">{{"What should I tell my members/registered attendees/other stakeholders?"|_}}</h4>
+							<div id="section2">
+		            		<p>On August 24, 2020, your members, event attendees, and all other registered users will be logged out of EventBank and redirected to the new login page on Glue Up (https://glueup.com/account/login) that will display the information about the changes, and from where users can log in using their former login credentials they used on EventBank. The redirection will be automatic, so you don’t need to take any action.
+		            		</p>
+							</div>
+							</li>
+							<li>
+							<h4 class="py-4">{{"What if I am using API?"|_}}</h4>
+							<div id="section2">
+		            		<p>If you have integrated certain parts of our platform with your website via EventBank’s API, make sure to update your endpoints from EventBank to Glue Up. Make sure to update your end-points by November 24, 2020, as the temporary redirection of end-points will be discontinued after that date. Please reach out to support@glueup.com or support@eventbank.com if you require any further assistance.
+		            		</p>
+							</div>
+							</li>
+							<li>
+							<h4 class="py-4">{{"What will happen to my contract with EventBank?"|_}}</h4>
+							<div id="section2">
+		            		<p>No changes are required, as our legal entity stays the same. 
+		            		</p>
+							</div>
+							</li>
+							<li>
+							<h4 class="py-4">{{"I am a member of an organization, what happens to my profile?"|_}}</h4>
+							<div id="section2">
+		            		<p>If you are a member of an organization, you will have to log in from the Glue Up page (https://glueup.com/account/login). Your member details and access to the information from organizations you are a member of will be available there. If you have received emails to apply or renew a membership, you can still click on those links, and you will be redirected to the corresponding page on Glue Up to complete the remaining steps.
+		            		</p>
+							</div>
+							</li>
+							<li>
+							<h4 class="py-4">{{"I have registered for an event, what happens to my future and past event registrations?"|_}}</h4>
+							<div id="section2">
+		            		<p>If you have registered for an event, you can still access your registrations via My Glue. You will have to log in from Glue Up (https://glueup.com/account/login), where your profile and all information related to your account such as previous events, memberships, subscriptions will be available.
+		            		</p>
+							</div>
+							</li>
+							{#
+							<h4 class="py-4">{{""|_}}</h4>
+							<div id="section2">
+		            		<p>
+		            		</p>
+							</div>
+							</li>
+							#}{#
+							</ul>
+	            	</div>
+            	</div>
+            				
+           	</div>
+        </div>
+</section>
+#}
+
+{% partial 'site/pricing-modal' %}
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}";s:5:"mtime";i:1598515723;s:6:"markup";s:25953:"<div class="generic " id="generic">  
+        <div class="container">
+            <div class="row pt-5">
+                
+                <div class="col-md-8 hero align-self-center text-left mx-auto pt-5">
+                      <h1 class="pb-5 text-center">{{ 'EventBank is now <span class="line"><ins>Glue Up!</ins></span>'|_ }}</h1>
+                       {#<p class="tagline pb-3"> {{ 'Find the right plan for your organization, request a demo and start managing your operations and engaging your community today. '|_ }} </p>#}
+
+					{#	{% content 'brand-toolkit' %}#}
+						{#<section class="section py-0 ">
+						        <div class="container">
+						            <div class="row flex-row">
+						                <div class="col-lg-12 d-flex align-items-center text-center mx-auto">
+						                    <p class="mb-4 sentence mx-auto">{{ '<span class="line"><ins> Transform </ins></span> the way professional communities enable and enrich relationships.'|_ }}</p>
+						                </div>
+						            </div>
+						        </div>
+						</section>#}
+{% if activeLocale is same as('zh') %}
+<iframe width="100%" height="411px" src="//player.bilibili.com/player.html?aid=669430745&bvid=BV1ga4y1E7oP&cid=229098143&autoplay=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+{% else %}
+{%if Location in ['CN']%}
+<iframe width="100%" height="411px" src="//player.bilibili.com/player.html?aid=669430745&bvid=BV1ga4y1E7oP&cid=229098143&autoplay=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+{% else %}
+						<iframe width="100%" height="411px" src="https://www.youtube.com/embed/3A7VFKEiod4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> {% endif %}
+{% endif %}						{% content 'brand-toolkit-2' %}
+					
+                </div>
+               
+            </div>
+        </div> 
+</div>
+{% if activeLocale is same as('zh') %}
+	{% partial 'landing/toolkit.zh.htm'%}
+{% elseif activeLocale is same as('es_la') %}
+	{% partial 'landing/toolkit.es_la.htm' %}
+{% elseif activeLocale is same as('ru') %}
+	{% partial 'landing/toolkit.ru.htm' %}
+{% else %}
+	{% partial 'landing/toolkit'%}
+{% endif %}
+
+{#
+<section class="section">
+        <div class="container">
+            <div class="row justify-content-center">
+            	<div class="col-md-4 pt-4">
+            	<nav id="navbar-example3" class="navbar sticky-top navbar-light">
+  
+  <nav class="nav nav-pills flex-column">
+    <a class="nav-link" href="#item-1">What are we changing? </a>
+    <nav class="nav nav-pills flex-column">
+      <a class="nav-link ml-3 my-1" href="#item-1-1">Our Name</a>
+      <a class="nav-link ml-3 my-1" href="#item-1-2">Our Logo</a>
+      <a class="nav-link ml-3 my-1" href="#item-1-3">Our Website</a>
+    </nav>
+    <a class="nav-link" href="#item-2">What changes for you as an organization?</a>
+    <nav class="nav nav-pills flex-column">
+      <a class="nav-link ml-3 my-1" href="#item-2-1">How will this affect my organization? </a>
+      <a class="nav-link ml-3 my-1" href="#item-2-2">What happens with my published events?</a>
+      <a class="nav-link ml-3 my-1" href="#item-2-3">What happens if I have linked certain pages of EventBank on my website?</a>
+      <a class="nav-link ml-3 my-1" href="#item-2-4">What happens if I have integrated other apps such as Xero, Quickbooks, Zoom, or Google Analytics?</a>
+      <a class="nav-link ml-3 my-1" href="#item-2-5">What if I am using an EventBank sender domain? (i.e. info@companyname.eventbankmail.com)</a>
+      <a class="nav-link ml-3 my-1" href="#item-2-6">What will happen to my contract with EventBank?</a>
+      <a class="nav-link ml-3 my-1" href="#item-2-7">Mobile Apps</a>
+      <a class="nav-link ml-3 my-1" href="#item-2-8">What if I am using API connections?</a>
+    </nav>
+    <a class="nav-link" href="#item-3">What changes for your users?</a>
+    <nav class="nav nav-pills flex-column">
+      <a class="nav-link ml-3 my-1" href="#item-3-1">What should I tell my members/registered attendees/other stakeholders?</a>
+      <a class="nav-link ml-3 my-1" href="#item-3-2">How to communicate this change with my members, attendees and other stakeholders?</a>
+      <a class="nav-link ml-3 my-1" href="#item-3-3">If I am a member of an organization, what happens to my profile?</a>
+      <a class="nav-link ml-3 my-1" href="#item-3-4">If I have registered for an event, what happens to my future and past event registrations?</a>
+      <a class="nav-link ml-3 my-1" href="#item-3-5">Changes to the attendee/member app My Glue (formerly EventBank App): </a>
+      
+      
+    </nav>
+    <a class="nav-link" href="#item-2">{{'What does not change'|_}}</a>
+  </nav>
+</nav>
+            	{#<ol id="sidenav" class="nav navpills sticky-top" style="display: list-item; list-style: none;">
+            	  <li class="nav-item">
+				    
+				    	<ul class="nav sticky-top" class="ml-2" style="display: list-item; list-style: none; ">
+				    	<a class="nav-link active" href="#section1">{{"What is changing ? "|_}}</a>
+				    	 <li class="nav-item pl-2">
+						    <a class="nav-link" href="#section11">{{"Our new name"|_}}</a>
+						  </li>
+						   <li class="nav-item pl-2">
+						    <a class="nav-link" href="#section12">{{"Our new visual identity"|_}}</a>
+						  </li>
+						  <li class="nav-item pl-2">
+						    <a class="nav-link" href="#section13">{{"Our website"|_}}</a>
+						  </li>
+						  </ul>
+				  </li>
+				  <li class="nav-item">
+				  	<ul class="nav sticky-top" class="ml-2" style="display: list-item; list-style: none; ">
+				    <a class="nav-link" href="#section2">{{"What changes for you as client?"|_}}</a>
+				    <li class="nav-item pl-2">
+						    <a class="nav-link" href="#section21">{{"Our new name"|_}}</a>
+						  </li>
+						   <li class="nav-item pl-2">
+						    <a class="nav-link" href="#section22">{{"Our new visual identity"|_}}</a>
+						  </li>
+						  <li class="nav-item pl-2">
+						    <a class="nav-link" href="#section23">{{"Our website"|_}}</a>
+						  </li>
+						  </ul>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"What will change for the users?"|_}}</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link active" href="#section1">{{"How will this affect my organization? "|_}}</a>
+				  </li>
+				  
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"What visible changes will there be on the platform?"|_}}</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"Login Information"|_}}</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"Update your API"|_}}</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"What visible changes will there be on the platform?"|_}}</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"What visible changes will there be on the platform?"|_}}</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"What visible changes will there be on the platform?"|_}}</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"What visible changes will there be on the platform?"|_}}</a>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link" href="#section2">{{"What visible changes will there be on the platform?"|_}}</a>
+				  </li>
+				  
+				  
+				</ol>
+				
+
+            	</div>
+            	<div class="col-md-8 pt-4">
+	            		
+<div data-spy="scroll" data-target="#navbar-example3" data-offset="80">
+<h4 id="item-1">What changes for us?</h4>
+
+<h5 id="item-1-1">A new brand </h5>
+
+<p>Counting from August 24th we will deploy a new domain for our platform, and update our branding on the platform. Our sender address for system emails will be sent out from no-reply@eventbank.com</p>
+
+
+<h5 id="item-1-2">Glue Up logo </h5>
+
+<p>The logo will be updated on the platform and our mobile apps. Our system emails will also include our new Glue Up logo. 
+Download web-friendly versions of our logo in black, white, and color in multiple formats and learn more about how to use our logos in our new branding guidelines.</p>
+<Download here>
+
+
+<h5 id="item-1-3">My Glue </h5>
+
+<p>We have updated your personal page (formerly My EventBank) where you can manage your personal Settings and Preferences and particularly find the activities and informations enabled for the organizations you follow. Discover it here (https://www.glueup.com/my/home/).</p>
+
+
+<h4 id="item-2" class="py-5">What changes for you as a client (organization account)</h4>
+
+<h5 id="item-2-1">How will this affect your organization? </h5>
+
+<p>All event pages, campaigns, and other links will be automatically redirected to the new corresponding page in the new domain to ensure there is no disruption in the service. If users try to access the service using former EventBank links, they will be redirected to the new page on Glue Up instead.</p>
+
+<p>Only if you are currently using our API, you will have to take action (check below point).</p>
+
+
+<h5 id="item-2-2">Update your API - take action!</h5>
+
+<p>If you have integrated certain parts of our platform with your website via EventBank API, make sure to update your endpoints from EventBank to Glue Up (the page will be redirecting to the corresponding server on .COM / .CN / .RU). Make sure to update your end-points by November 24, 2020, as the temporary redirection of end-points will be discontinued after that date.</p>
+
+<p>Find here the Glue Up API documentation (https://glueupapi.docs.apiary.io/). Please reach out to support@glueup.com or support@eventbank.com if you require any further assistance.</p>
+
+<h5 id="item-2-3">What happens with my published events?</h5>
+<p>All published events will be automatically redirected to new links. You don’t need to amend any links even if you have promoted your events on your official website, on a third party website or on your social media.</p>
+<h5 id="item-2-4">What happens if I have linked certain pages of EventBank on my website?</h5>
+<p>Your visitors will automatically be redirected to the corresponding page on Glue Up. If you prefer, you may update the links, but this is not a mandatory step.</p>
+<h5 id="item-2-5">What happens if I have integrated other apps such as Xero, Quickbooks, Zoom, or Google Analytics?</h5>
+<p>If you are using any of the integrations on EventBank, these will not require to be updated, you can continue utilizing them without amending the setup.</p>
+<h5 id="item-2-6">What if I am using an EventBank sender domain? (i.e. info@companyname.eventbankmail.com)</h5>
+<p>This sender domain will be automatically updated to info@companyname.glueupmail.com. This change will come to effect on September 7th, 2020. </p>
+<h5 id="item-2-7">Moble App: Glue Up Manager:</h5> <p>The EventBank Manager App is now Glue Up Manager. If you have downloaded the EventBank Manager App before, you don’t need to install or download anything again, simply update the EventBank Manager App from the App Store or Google Play. Then, log back in, choose your corresponding server and start managing your community from the palm of your hand.
+     <Download Glue Up Manager: iOS Store (https://apps.apple.com/us/app/eventbank-manager/id740353437) / Google Play (https://play.google.com/store/apps/details?id=com.eventbank.android)</p>
+<h5 id="item-2-8">What will happen to my contract with EventBank?</h5>
+<p>No changes are required, as our legal entity stays the same. </p>
+<h5 id="item-2-9">What if I am using API?</h5>
+
+<p>If you have integrated certain parts of our platform with your website via EventBank’s API, make sure to update your endpoints from EventBank to Glue Up. Make sure to update your end-points by November 24, 2020, as the temporary redirection of end-points will be discontinued after that date. -</p>
+
+<h4 id="item-3" class="py-5">What changes for your users</h4>
+
+<h5 id="item-3-1">Login Information</h5>
+
+<p>On August 24th, 2020 all users will be logged out of the platform. To log back in you simply need to go to Glue Up (https://glueup.com/account/login) and use your former login credentials. All your data stored on ‘My EventBank’ such as previous events, newsletters and memberships will be available in your personal engagement hub ‘My Glue’, and the same will apply for all registered users.</p>
+
+
+<h5 id="item-3-2">How to communicate this change with my members, attendees and other stakeholders?</h5>
+
+<p>As with every change, it’s important to explain the impact of the transition to your community and answer any questions they might have. To make it easier for you, we have prepared a draft of an email campaign (https://www.eventbank.com/organization/170/campaign/50739/) with the most relevant information that you can use to update your community about Glue Up and what it means to them. Feel free to use and edit this content to address them the announcement.</p>
+
+<h5 id="item-3-3">Mobile App: My Glue (end-user app): </h5>
+<p>The EventBank App for attendees and members is now My Glue. If you have downloaded the EventBank App before, you don’t need to install or download anything again, simply update the EventBank App from the App Store or Google Play. Then, log back in, choose your corresponding server and engage with your organization from anywhere.
+<Download My Glue>: iOS Store (https://apps.apple.com/us/app/eventbank/id958545893) / Google Play (https://play.google.com/store/apps/details?id=com.eventbank.android.attendee)</p>
+
+<h5 id="item-3-4">What should I tell my members/registered attendees/other stakeholders?</h5>
+<p>On August 24, 2020, your members, event attendees, and all other registered users will be logged out of EventBank and redirected to the new login page on Glue Up (https://glueup.com/account/login) that will display the information about the changes, and from where users can log in using their former login credentials they used on EventBank. The redirection will be automatic, so you don’t need to take any action.</p>
+<h5 id="item-3-5">I am a member of an organization, what happens to my profile?</h5>
+<p>If you are a member of an organization, you will have to log in from the Glue Up page (https://glueup.com/account/login). Your member details and access to the information from organizations you are a member of will be available there. If you have received emails to apply or renew a membership, you can still click on those links, and you will be redirected to the corresponding page on Glue Up to complete the remaining steps.</p>
+<h5 id="item-3-6">I have registered for an event, what happens to my future and past event registrations?</h5>
+<p>If you have registered for an event, you can still access your registrations via My Glue. You will have to log in from Glue Up (https://glueup.com/account/login), where your profile and all information related to your account such as previous events, memberships, subscriptions will be available.</p>
+
+</div>
+	            	
+	            	{#	<ul class="" style="list-style: none;">
+	            			
+							<li><h4 class="pb-4">{{"How will this affect my organization? "|_}}</h4>
+							<div id="section1">
+		            		<p>All event pages, campaigns, and other links will be automatically redirected to the new corresponding page in the new domain to ensure there is no disruption in the service. If users try to access the service using former EventBank links, they will be redirected to the new page on Glue Up instead.</p>
+							</div></li>
+							
+		            		<li><h4 class="py-4">{{"What visible changes will there be on the platform?"|_}}</h4>
+		            		<div id="section11">
+		            		<p>The logo will be updated on the platform and our mobile apps. Our system emails will also include our new Glue Up logo. </p>
+							</p>
+							</div></li>
+							
+							<li><h4 class="py-4">{{"Login Information"|_}}</h4>
+							<div id="section12">
+		            		<p>On August 24th, 2020 all users will be logged out of the platform. To log back in you simply need to go to Glue Up <a href="">https://glueup.com/account/login</a> and use your former login credentials.</p>
+							
+							<p> All your data stored on ‘My EventBank’ such as previous events, newsletters and memberships will be available in your personal engagement hub ‘My Glue’, and the same will apply for all registered users.</p>
+							</p>
+							</div></li>
+							
+							<li><h4 class="py-4">{{"Update your API"|_}}</h4>
+							<div id="section13">
+							<div class="alert alert-warning" role="alert">
+								  <i class="bullet-icon icon-alert px-0" style="background-color:transparent; color:#FF8100; position: absolute; align-self: center; margin: -20px 0 0 -5px;"></i>    
+							<span class="font-weight-light" style="margin-left: 40px;">Only if you are currently using our API, you will have to take action.</span>
+							</div>
+		            		<p>If you have integrated certain parts of our platform with your website via EventBank API, make sure to update your endpoints from EventBank to Glue Up (the page will be redirecting to the corresponding server on .COM / .CN / .RU). Make sure to update your end-points by November 24, 2020, as the temporary redirection of end-points will be discontinued after that date.</p>
+
+							<p>Find more information related to the <a href="https://glueupapi.docs.apiary.io">Glue Up API documentation (https://glueupapi.docs.apiary.io/)</a>.</p>
+							</p>
+							</div></li>
+							<li><h4 class="py-4">{{"How to communicate this change with my members, attendees and other stakeholders?"|_}}</h4>
+							<div id="section2">
+		            		<p>As with every change, it’s important to explain the impact of the transition to your community and answer any questions they might have. To make it easier for you, we have prepared a <a href="https://www.eventbank.com/organization/170/campaign/50739/" target="_blank">draft of an email campaign</a> with the most important details that you can use to update your community about Glue Up and what it means to them. Feel free to use and edit this content to address them the announcement.</p>
+							</div></li>
+							
+							<li><h4 class="py-4">{{"Glue Up logo"|_}}</h4>
+							<div id="section21">
+		            		<p>Download web-friendly or high-resolution versions of new our logo in black, white, color in multiple formats and learn more about how to use our logos in our new branding guidelines.</p>
+		            		<div class="alert alert-primary" role="alert">
+								  <i class="bullet-icon icon-documents px-0" style="background-color:transparent; color:#0D62FE; position: absolute; align-self: center; margin: -20px 0 0 -5px;"></i>    
+							<span style="margin-left: 40px; color:#0D62FE;"> <a style="color:#0D62FE;" href="">Download Glue Up Visual Identity Guidelines and Logo Formats</a></span>
+							</div>
+							</div></li>
+							
+							<li><h4 class="py-4">{{"Mobile Apps"|_}}</h4>
+							<div id="section22">
+		            		<p>*Glue Up Manager:* The EventBank Manager App is now Glue Up Manager. If you have downloaded the EventBank Manager App before, you don’t need to install or download anything again, simply update the EventBank Manager App from the App Store or Google Play. Then, log back in, choose your corresponding server and start managing your community from the palm of your hand.
+<Download Glue Up Manager: iOS Store (https://apps.apple.com/us/app/eventbank-manager/id740353437) / Google Play (https://play.google.com/store/apps/details?id=com.eventbank.android)
+</p>
+<p>
+* My Glue (end-user app)*: The EventBank App for attendees and members is now My Glue. If you have downloaded the EventBank App before, you don’t need to install or download anything again, simply update the EventBank App from the App Store or Google Play. Then, log back in, choose your corresponding server and engage with your organization from anywhere.
+<Download My Glue: iOS Store (https://apps.apple.com/us/app/eventbank/id958545893) / Google Play (https://play.google.com/store/apps/details?id=com.eventbank.android.attendee)
+</p>
+							</div></li>
+							
+							<li><h4 class="py-4">{{"How to communicate this change with my members, attendees and other stakeholders?"|_}}</h4>
+							<div id="section2">
+		            		<p>As with every change, it’s important to explain the impact of the transition to your community and answer any questions they might have. To make it easier for you, we have prepared a <a href="https://www.eventbank.com/organization/170/campaign/50739/">draft of an email campaign</a> with the most important details that you can use to update your community about Glue Up and what it means to them. Feel free to use and edit this content to address them the announcement.</p>
+							</div></li>
+							
+							<li>
+							<h4 class="py-4">{{"What happens with my published events?"|_}}</h4>
+							<div id="section2">
+		            		<p>All published events will be automatically redirected to new links. You don’t need to amend any links even if you have promoted your events on your official website, on a third party website or on your social media.
+		            		</p>
+							</div>
+							</li>
+							
+							<li>
+							<h4 class="py-4">{{"What happens if I have linked certain pages of EventBank on my website?"|_}}</h4>
+							<div id="section2">
+		            		<p>Your visitors will automatically be redirected to the corresponding page on Glue Up. If you prefer, you may update the links, but this is not a mandatory step.
+		            		</p>
+							</div>
+							</li>
+							<li>
+							<h4 class="py-4">{{"What happens if I have integrated other apps such as Xero, Quickbooks, Zoom, or Google Analytics?"|_}}</h4>
+							<div id="section2">
+		            		<p>If you are using any of the integrations on EventBank, these will not require to be updated, you can continue utilizing them without amending the setup.
+		            		</p>
+							</div>
+							</li>
+							<li>
+							<h4 class="py-4">{{"What if I am using an EventBank sender domain? (i.e. info@companyname.eventbankmail.com)"|_}}</h4>
+							<div id="section2">
+		            		<p>This sender domain will be automatically updated to info@companyname.glueupmail.com. This change will come to effect on September 7th, 2020. 
+		            		</p>
+							</div>
+							</li>
+							<li>
+							<h4 class="py-4">{{"What should I tell my members/registered attendees/other stakeholders?"|_}}</h4>
+							<div id="section2">
+		            		<p>On August 24, 2020, your members, event attendees, and all other registered users will be logged out of EventBank and redirected to the new login page on Glue Up (https://glueup.com/account/login) that will display the information about the changes, and from where users can log in using their former login credentials they used on EventBank. The redirection will be automatic, so you don’t need to take any action.
+		            		</p>
+							</div>
+							</li>
+							<li>
+							<h4 class="py-4">{{"What if I am using API?"|_}}</h4>
+							<div id="section2">
+		            		<p>If you have integrated certain parts of our platform with your website via EventBank’s API, make sure to update your endpoints from EventBank to Glue Up. Make sure to update your end-points by November 24, 2020, as the temporary redirection of end-points will be discontinued after that date. Please reach out to support@glueup.com or support@eventbank.com if you require any further assistance.
+		            		</p>
+							</div>
+							</li>
+							<li>
+							<h4 class="py-4">{{"What will happen to my contract with EventBank?"|_}}</h4>
+							<div id="section2">
+		            		<p>No changes are required, as our legal entity stays the same. 
+		            		</p>
+							</div>
+							</li>
+							<li>
+							<h4 class="py-4">{{"I am a member of an organization, what happens to my profile?"|_}}</h4>
+							<div id="section2">
+		            		<p>If you are a member of an organization, you will have to log in from the Glue Up page (https://glueup.com/account/login). Your member details and access to the information from organizations you are a member of will be available there. If you have received emails to apply or renew a membership, you can still click on those links, and you will be redirected to the corresponding page on Glue Up to complete the remaining steps.
+		            		</p>
+							</div>
+							</li>
+							<li>
+							<h4 class="py-4">{{"I have registered for an event, what happens to my future and past event registrations?"|_}}</h4>
+							<div id="section2">
+		            		<p>If you have registered for an event, you can still access your registrations via My Glue. You will have to log in from Glue Up (https://glueup.com/account/login), where your profile and all information related to your account such as previous events, memberships, subscriptions will be available.
+		            		</p>
+							</div>
+							</li>
+							{#
+							<h4 class="py-4">{{""|_}}</h4>
+							<div id="section2">
+		            		<p>
+		            		</p>
+							</div>
+							</li>
+							#}{#
+							</ul>
+	            	</div>
+            	</div>
+            				
+           	</div>
+        </div>
+</section>
+#}
+
+{% partial 'site/pricing-modal' %}
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}";s:4:"code";s:511:"function onStart(){    
+
+    // or you can get file object from your post or record 
+    // and get its absolute path and use it `getPath()`
+    //$imagePath = 'https://yoursite/image.jpeg';
+    $baseUrl = url(Config::get('cms.storage.media.path'));
+    //$imagePath = getPath('app/media/glueup-membership.png');
+    $imagePath = $baseUrl . '/eventbank is now glueup.png';
+    $this['fbImage'] = $imagePath; // image absolute path
+}
+function onEnd(){
+    $this->page->nav_highlight = 'resources';
+ }";s:5:"title";s:25:"EventBank is now Glue Up!";s:3:"url";s:11:"/rebranding";s:6:"layout";s:11:"glueup-home";s:10:"meta_title";s:25:"EventBank is now Glue Up!";s:16:"meta_description";s:83:"Learn why we have changed our identity and what it means to you and your community.";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:122:"EventBank, Glue Up, rebranding, new logo, new identity, more for your community, management, simple, automated, all-in-one";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";}}

@@ -1,0 +1,17 @@
+description = "footerblog"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+{##}
+{% set posts = blogPosts.posts %}
+     <h4 class="text-capitalize mb-2">{{ 'Latest from Glue Up Blog'|_ }}</h4>
+        <ul class="list-unstyled footer-menu lh-35 list-break">
+        {% for post in posts %} 
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}

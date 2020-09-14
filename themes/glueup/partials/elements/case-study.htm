@@ -1,0 +1,80 @@
+description = "case study"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+<?php
+use RainLab\Blog\Models\Post as BlogPost;
+
+function onStart(){
+    //This is where you list the categories you want to display
+    $categories = ['success-stories', 'event-management'];
+    $posts = [];
+    
+    foreach(BlogPost::all() as $blog){
+        $catList = [];
+        foreach($blog->categories as $cat){
+            $catList[] = $cat->slug;
+        }
+       // var_dump($catList);
+        if( in_array('associations',$catList ) && in_array('event',$catList) ){
+                array_push($posts, $blog);
+                break;
+        }
+    }
+    
+   $this['filteredPosts'] = $posts;
+}
+?>
+==
+{##}
+    <section class="section">
+                <div class="container">
+                <div class="row">
+         {# In the loop we excluded the post being displayed list of related posts by variable postFilter passed by the partial #}
+         {% for post in filteredPosts %}        
+                <div class="col-lg-4 col-md-4 mb-5">
+                    <div class="blog-item blog-home border-1 rounded shadow-sm">
+                        <a href="{{ url('/blog/') }}/{{ post.slug }}" class="">
+                        {% if post.featured_images.count > 0 %}
+                        <img class="media-object img-fluid rounded-top" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                        {% else %}
+                        <img class="media-object img-fluid rounded-top" src="{{ 'glueup-generic.svg'|media }}" />
+                        {% endif %}
+                         </a>
+                        <div class="blog-item-content">
+            			<!--	<div class="blog-item-meta bg-gray py-1 px-2">-->
+            			
+                            {% for category in post.categories %}
+                                    <span class="sm-grey-text text-capitalize mr-3">    
+                                        <a href="{{ category.url }}">{{ category.name }}</a>
+                                        {% if post.categories.index == loop.last %}
+                        			    <p class="px-3 sm-grey-text">•</p>
+                        			    {% else %}
+                        			    {% endif %}
+                        			</span>
+                            {% endfor %}
+                            
+            				  <!--  <span class="text-black text-capitalize mr-3"><i class="ti-time mr-1"></i> {{ post.published_at|date('M d, Y') }}</span>-->
+            			<!--</div> -->
+                            <h5 class="my-4 mx-4">
+                                <a href="{{ url('/blog/') }}/{{ post.slug }}">{{ post.title }}</a>
+                            </h5>
+                            {#{% if post.excerpt %}
+                                <p class="excerpt animated fadeInUp">{{ post.excerpt }}</p>
+                            {% else %}
+                                <p class="excerpt animated fadeInUp">{{ str_limit(post.content_html|striptags|raw, 166) }}</p>
+                            {% endif %}#}
+                           <!-- <a href="{{ post.url }}" class="btn btn-small btn-main btn-round-full">Learn More</a> -->
+                        </div>
+                    </div>
+                </div>
+    {% else %}
+    {% endfor %}
+</div>
+</section>

@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+    .layout-cell.layout-sidenav-container.wms-menu {
+        display: none;
+    }
+    .sidenav-tree-root .sidenav-tree .back-link.wms-menu-back-link {
+        display: block !important;
+    }
+    .layout-cell.layout-sidenav-container ~ .layout-cell.sidenav-tree {
+        border: none;
+    }
+}

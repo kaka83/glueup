@@ -1,0 +1,123 @@
+1600066771a:1:{s:24:"landing/meta-landing.htm";a:6:{s:8:"fileName";s:24:"landing/meta-landing.htm";s:7:"content";s:3451:"[viewBag]
+==
+{##}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no">
+<link rel="preconnect" href="https://vsa98.tawk.to" />
+<link rel="preconnect" href="https://hscollectedforms.net" />
+<link rel="preconnect" href="https://forms.hubspot.com" />
+<link rel="preconnect" href="https://track.hubspot.com" />
+<link rel="preconnect" href="https://embed.tawk.to" />
+<link rel="preconnect" href="https://tawk.to" />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://js.hs-analytics.net" />
+<link rel="preconnect" href="https://js.hscollectedforms.net" />
+<link rel="preconnect" href="https://js.hs-banner.com" />
+<link rel="preconnect" href="https://www.google-analytics.com" />
+<link rel="preconnect" href="https://static-v.tawk.to" />
+<link rel="preconnect" href="https://js.hs-scripts.com" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://vsa98.tawk.to" />
+{#<link rel="preload" href="{{'assets/js/bootstrap.bundle.min.js'| theme}}" as="script">#}
+
+<meta http-equiv="X-UA-Compatible">
+<meta name="description" content="{{ this.page.meta_description|default(this.theme.config.description) }}">
+<meta name="title" content="{{ this.page.meta_title|default(this.page.title)}} - Glue Up">
+<meta name="author" content="{{ this.theme.theme_site_author }}">
+<meta name="robots" content="index, follow">
+<meta name="generator" content="{{ this.theme.theme_site_name }}">
+{% if fbImage %}
+        <meta property="og:image" content="{{ fbImage }}" /> 
+        <meta property="og:image:secure_url" content="{{ fbImage }}">
+        <meta property="twitter:image" content="{{ fbImage }}" />
+{% else %}
+        <meta property="og:image" content="{{ '/meta/glueup-event.png'|media }}" /> 
+        <meta property="og:image:secure_url" content="{{ '/meta/glueup-event.png'|media }}">
+        <meta property="twitter:image" content="{{ '/meta/glueup-event.png'|media }}" />
+{% endif %}
+{#<meta property="og:image" content="{{ 'glueup-generic.svg'|media }}">#}
+{#<meta property="og:image:secure_url" content="{{ 'glueup-generic.svg'|media }}">#}
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ this.page.meta_title|default(this.page.title) }}">
+<meta property="og:description" content="{{ this.page.meta_description|default(this.theme.config.description) }}">
+<meta property="og:url" content="{{ 'home'|page }}">
+<title>{{ this.page.meta_title|default(this.page.title) }} - Glue Up</title>
+ <meta property="twitter:card" content="summary_large_image" />
+   <!-- <meta property="twitter:site" content="@intercom" />-->
+    <meta property="twitter:title" content="{{ this.theme.theme_site_name }}" />
+    {#<meta property="twitter:image" content="{{ 'glueup-generic.svg'|media }}" />#}
+    <meta property="twitter:description" content="{{ this.page.meta_description|default(this.page.description) }}" />
+    <link rel="canonical" href="https://www.glueup.com" />
+   
+{# Favicon #}
+<link rel="icon" type="image/png" href="{{ 'assets/images/Glueup-symbol.svg'| theme }}">
+{# CSS #}
+<link href="{{ [
+  'assets/css/bootstrap.min.css',
+   'assets/css/glueup.css',
+   'assets/css/style.css',
+   'assets/css/cookiealert.css'
+]|theme }}" rel="stylesheet">
+
+{# Style SCSS #}
+{% partial 'site/googletag.htm' %}";s:5:"mtime";i:1597217396;s:6:"markup";s:3438:"{##}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no">
+<link rel="preconnect" href="https://vsa98.tawk.to" />
+<link rel="preconnect" href="https://hscollectedforms.net" />
+<link rel="preconnect" href="https://forms.hubspot.com" />
+<link rel="preconnect" href="https://track.hubspot.com" />
+<link rel="preconnect" href="https://embed.tawk.to" />
+<link rel="preconnect" href="https://tawk.to" />
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://js.hs-analytics.net" />
+<link rel="preconnect" href="https://js.hscollectedforms.net" />
+<link rel="preconnect" href="https://js.hs-banner.com" />
+<link rel="preconnect" href="https://www.google-analytics.com" />
+<link rel="preconnect" href="https://static-v.tawk.to" />
+<link rel="preconnect" href="https://js.hs-scripts.com" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://vsa98.tawk.to" />
+{#<link rel="preload" href="{{'assets/js/bootstrap.bundle.min.js'| theme}}" as="script">#}
+
+<meta http-equiv="X-UA-Compatible">
+<meta name="description" content="{{ this.page.meta_description|default(this.theme.config.description) }}">
+<meta name="title" content="{{ this.page.meta_title|default(this.page.title)}} - Glue Up">
+<meta name="author" content="{{ this.theme.theme_site_author }}">
+<meta name="robots" content="index, follow">
+<meta name="generator" content="{{ this.theme.theme_site_name }}">
+{% if fbImage %}
+        <meta property="og:image" content="{{ fbImage }}" /> 
+        <meta property="og:image:secure_url" content="{{ fbImage }}">
+        <meta property="twitter:image" content="{{ fbImage }}" />
+{% else %}
+        <meta property="og:image" content="{{ '/meta/glueup-event.png'|media }}" /> 
+        <meta property="og:image:secure_url" content="{{ '/meta/glueup-event.png'|media }}">
+        <meta property="twitter:image" content="{{ '/meta/glueup-event.png'|media }}" />
+{% endif %}
+{#<meta property="og:image" content="{{ 'glueup-generic.svg'|media }}">#}
+{#<meta property="og:image:secure_url" content="{{ 'glueup-generic.svg'|media }}">#}
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ this.page.meta_title|default(this.page.title) }}">
+<meta property="og:description" content="{{ this.page.meta_description|default(this.theme.config.description) }}">
+<meta property="og:url" content="{{ 'home'|page }}">
+<title>{{ this.page.meta_title|default(this.page.title) }} - Glue Up</title>
+ <meta property="twitter:card" content="summary_large_image" />
+   <!-- <meta property="twitter:site" content="@intercom" />-->
+    <meta property="twitter:title" content="{{ this.theme.theme_site_name }}" />
+    {#<meta property="twitter:image" content="{{ 'glueup-generic.svg'|media }}" />#}
+    <meta property="twitter:description" content="{{ this.page.meta_description|default(this.page.description) }}" />
+    <link rel="canonical" href="https://www.glueup.com" />
+   
+{# Favicon #}
+<link rel="icon" type="image/png" href="{{ 'assets/images/Glueup-symbol.svg'| theme }}">
+{# CSS #}
+<link href="{{ [
+  'assets/css/bootstrap.min.css',
+   'assets/css/glueup.css',
+   'assets/css/style.css',
+   'assets/css/cookiealert.css'
+]|theme }}" rel="stylesheet">
+
+{# Style SCSS #}
+{% partial 'site/googletag.htm' %}";s:4:"code";N;s:7:"viewBag";a:0:{}}}

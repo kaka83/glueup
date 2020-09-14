@@ -1,0 +1,813 @@
+1600067169a:1:{s:20:"platform/finance.htm";a:16:{s:8:"fileName";s:20:"platform/finance.htm";s:7:"content";s:30257:"title = "Finance & Payments"
+url = "/features/finance-management"
+layout = "glueup-home"
+description = "Manage invoices, deliver receipts, grow revenue, and accept payments in multiple currencies with credit cards, bank transfers, or other online payments."
+meta_title = "Finance Management Solution"
+meta_description = "Manage invoices, deliver receipts, grow revenue, and accept payments in multiple currencies with credit cards, bank transfers, or other online payments."
+is_hidden = 0
+seo_keywords = "payment processing, payment gateways, xero integration, quickbooks integration, collect money online, event tickets, transaction management, invoicing, financial journey, credit card payments, recurring payments, mobile money"
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeMeta_title[es_la] = "Automatiza todos tus procesos de finanzas e incrementa ingresos"
+localeMeta_title[Pt_br] = "Automatize todos os seus Processos Financeiros e Aumente sua Receita"
+localeMeta_title[ru] = "Финансы и платежи"
+localeMeta_title[tk] = "Finans ve Ödemeler"
+localeMeta_title[zh] = "财务 & 支付"
+localeMeta_description[es_la] = "Administra facturas, da recibos, crece tus ingresos, acepta pagos en multiples monedas con tarjetas de crédito, transferencias bancarias y otros tipos de pagos en línea."
+localeMeta_description[Pt_br] = "Gerencie faturas, entregue recibos, aumente a receita e aceite pagamentos em várias moedas com cartões de crédito, transferências bancárias ou outros pagamentos online."
+localeMeta_description[ru] = "Управляйте счетами, отправляйте квитанции, увеличивайте выручку и принимайте платежи в нескольких валютах с помощью кредитных карт, банковских переводов или других платежей."
+localeMeta_description[tk] = "Faturaları yönetin, makbuzları teslim edin, geliri artırın ve kredi kartları, banka havaleleri veya diğer çevrimiçi ödemelerle birden çok para biriminde ödeme kabul edin."
+localeMeta_description[zh] = "Glue Up 一体化云平台助力您实现多币种支付，多渠道支付（如信用卡、银行转账、线上支付等），自动化管理发票、账单与支付，提升管理效率与收益。"
+==
+<?php
+function onEnd(){
+    $this->page->nav_highlight = 'features';
+ }
+?>
+==
+<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+           <div class="row flex-row-reverse">
+                <div class="col-md-6 hero align-self-center text-left">
+                    <img src="{{ 'glueup-finance-feature.svg' | media }}" class="Glue Up helps you manage and automate your finance and invoicing tasks" alt="logo">
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-left">
+                    <p class="tagline mb-4">{{'Finance & Payments'|_}}</p>
+                      <h1>{{ 'Automate All Your<br>Finance Processes and <span class="line"><ins> Grow </ins></span> Revenue '|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Manage invoices, deliver receipts, grow revenue, and accept payments in multiple currencies with credit cards, bank transfers, or other online payments.'|_ }} </p>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+            </div>
+        </div> 
+</header>
+{#{% partial 'elements/logobar.htm' %}#}
+
+<section class="section pt-0">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-7 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'A Complete Finance Toolkit'|_ }}</h2>
+                             <p class="tagline">{{ 'Streamline the entire transaction experience for your organization and for every member of your community. '|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+	            <div class="col-lg-10 align-self-center mx-auto">
+					    <div class="services__accordion row flex-row-reverse">
+					            <div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+									<div class="accordion__img desktop">
+									    <div id="tab1-bullet-img" class="firstshow">
+									        <img class="feature-window desktop" src="{{ 'features/glueup-automate.svg' | media }}" alt="Glue Up helps you automate">
+									         
+									    </div>
+									    <div id="tab2-bullet-img">
+									        <img class="feature-window deskto" src="{{ 'features/glueup-top-financials.svg' | media }}" alt="Glue Up helps you stay on top of your financials">
+									    </div>
+								        <div id="tab3-bullet-img">
+					    			        <img class="feature-window deskto" src="{{ 'features/glueup-easy-members.svg' | media }}" alt="Glue Up is easy for everyone">
+					    			    </div>
+								     </div>
+								</div>
+								<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+									<div class="services__accordion">
+									  
+					                    <div class="accordion pl-3 active small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+					                        <i class="icon-power-switch"></i>
+					                        <span>{{ 'Automate manual tasks'|_ }}</span>
+					                        <div class="accordion__body firstshow" style="display:none;">
+												<p class="pt-3 d-flex flex-column">{{ 'Simplify all payment processes from beginning to end without compromising on security. '|_ }}
+												{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+											</div>
+					                    </div>
+					                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab2-bullet">
+					                        <i class="icon-analytics"></i>
+					                        <span>{{ 'Stay on top of your financials'|_ }}</span>
+					                        <div class="accordion__body " style="display:none;">
+												<p class="pt-3 d-flex flex-column">{{ 'With the mobile app, you can access P&L and other financial reports from anywhere. '|_ }}
+												{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+											</div>
+					                    </div>
+					                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab3-bullet">
+					                        <i class="icon-button"></i>
+					                        <span>{{ 'Make it simple for everyone'|_ }}</span>
+					                        <div class="accordion__body " style="display:none;">
+												<p class="pt-3 d-flex flex-column">{{ 'Premium user experience battle-tested for your and all your audiences’s absolute comfort.'|_ }}
+												{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+											</div>
+					                    </div>
+									</div>
+								</div>
+								
+							</div>
+					</div>
+            </div>
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-currencies.svg' | media }}" alt="Glue Up helps you collect revenue in multiple currencies" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Collect Money'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Drive Revenue in Multiple Currencies'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Meet the needs of your community by accepting payments in 100+ currencies, including:'|_ }}{{' US Dollar, Chinese RMB, Hong Kong Dollar, Euro, Taiwan Dollar, Singapore Dollar, Malaysian Ringgit,'|_ }}{{' British Pound, South Korean Won, Japanese Yen, Indonesian Rupiah, Indian Rupee, Russian Ruble, and other currencies.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-translation-switch"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Multi-currency Support'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-home"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Local Payment Methods'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'In-person Payments'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-speaker"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Dispute Handling'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-payment-methods.svg' | media }}" alt="Glue Up helps you drive revenue with secure and smooth payments in any method" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Security '|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Enable Secure & Smooth Payments'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Facilitate easy, secure payments with online digital payment gateways, credit cards, and bank transfers over encrypted SSL connections.'|_ }}{{' Credit card numbers and other electronic financial data are not stored in any form.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-key"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Roles & Permissions'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-lock"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'SSL Protected'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-checked-in"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'GDPR Compliant'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-credits"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'PCI DSS Certified'|_ }}</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-automatic-invoices.svg' | media }}" alt="Glue Up helps you automate your finance processes" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Financial Journey'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Manage Your Finances Effortlessly '|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Automate your complete financial journey from online payments through ticketing and invoice generation all the way until your taxes are due.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-invoice"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Automatic Invoicing'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-notifications"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Reminders & Notifications'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-edit-update"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Customizable Tax Setup'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-ticket"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Coupons & Discounts'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-reports.svg' | media }}" alt="Glue Up helps you centralize and track all payments" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Analytics & Reports'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Centralize and Track All Payments'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Keep your payment processing centralized in one place. Stay up to date on all your online and offline revenue streams with automated tracking, analytics, and reports.'|_ }}<br>
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-analytics"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'P&L Reports'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-refresh"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Real-time Analytics'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-dash-2"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Customizable Dashboards'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-download"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Easy Export'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}{#
+<section class="section">
+        <div class="container">
+            <div class="row flex-row mx-auto">
+                <div class="col-lg-7 align-self-center mx-auto">
+                    <div class="text-center mx-auto align-items-center">
+                            <span class="h6 text-color text-center mx-auto hideme">{{ 'Payment Gateways'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title text-center  hideme">{{ 'Let Your Community Pay the Way They Like'|_ }}</h2>
+                            <div class="about-content text-center  hideme">
+    						     <p class="mb-4">{{ 'Enable your community to pay you securely and conveniently using their preferred credit, debit or prepaid cards.'|_ }}{{' Via bank transfer, digital wallets, mobile money or cash thanks to our wide payment gateway oferring.'|_ }}
+    						     </p>
+                             </div>
+                            
+                  </div>
+                </div>
+                
+            </div>
+            
+    <div class="row">
+                                            <div class="col-md-12 pb-4">
+                                                <div class="row pb-5">
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/alipay.png' | media }}" alt="Recieve payments through Alipay with GlueUp" class="img-fluid mx-auto px-4 paygage-visual lazy fadeIn">
+                                                            <span>{{ 'Alipay'|_ }}<p class="small mb-0">{{ 'Mainland China & Hong Kong'|_ }}</p></span>
+                                                    </div>
+                                                     <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/braintree.png' | media }}" alt="Recieve payments through Braintree with GlueUp" class="img-fluid px-4 mx-auto paygage-visual lazy fadeIn">
+                                                            <span>{{ 'Braintree'|_ }}<p class="small mb-0">{{ 'Globally'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/flutterwave.png' | media }}" alt="Recieve payments through Flutterwave with GlueUp" class="img-fluid px-4 mx-auto paygage-visual lazy fadeIn">
+                                                            <span>{{ 'Flutterwave'|_ }}<p class="small mb-0">{{ 'mPesa - Across the African continent'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/globalpayments.png' | media }}" alt="Recieve payments through GlobalPayment with GlueUp " class="img-fluid mx-auto px-4 paygage-visual lazy fadeIn">
+                                                            <span>{{ 'GlobalPayment'|_ }}<p class="small mb-0">{{ 'Globally'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/inicis.png' | media }}" alt="Recieve payments through Inicis with GlueUp" class="img-fluid mx-auto px-4 paygage-visual lazy fadeIn">
+                                                            <span>{{ 'Inicis'|_ }}<p class="small mb-0">{{ 'Korea'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/instamojo.png' | media }}" alt="Recieve payments through InstaMojo with GlueUp" class="img-fluid px-4 mx-auto paygage-visual lazy fadeIn">
+                                                            <span>{{ 'InstaMojo'|_ }}<p class="small mb-0">{{ 'India'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/paymaya.png' | media }}" alt="Recieve payments through PayMaya with GlueUp" class="img-fluid px-4 mx-auto paygage-visual lazy fadeIn">
+                                                            <span>{{ 'PayMaya'|_ }}<p class="small mb-0">{{ 'The Philippines'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/paypal.png' | media }}" alt="Recieve payments through Paypal with GlueUp" class="img-fluid mx-auto px-4 paygage-visual lazy fadeIn">
+                                                            <span>{{ 'Paypal'|_ }}<p class="small mb-0">{{ 'Globally'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/payfort.png' | media }}" alt="Recieve payments through PayFort with GlueUp" class="img-fluid px-4 mx-auto paygage-visual lazy fadeIn">
+                                                            <span>{{ 'PayFort'|_ }}<p class="small mb-0">{{ 'United Arab Emirates, Egypt, Saudi Arabia, Jordan, Lebanon and Qatar.'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/paygage.png' | media }}" alt="Recieve payments through Paygage with GlueUp" class="img-fluid px-4 mx-auto paygage-visual lazy fadeIn">
+                                                            <span>{{ 'Paygage'|_ }}<p class="small mb-0">{{ 'USA and Canada'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/stripe.png' | media }}" alt="Recieve payments through Stripe with GlueUp" class="img-fluid mx-auto px-4 paygage-visual lazy fadeIn">
+                                                            <span>{{ 'Stripe'|_ }}<p class="small mb-0">{{ 'Globally'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/wechatpay.png' | media }}" alt="Recieve payments through WeChat Pay with GlueUp" class="img-fluid px-4 mx-auto paygage-visual lazy fadeIn">
+                                                            <span>{{ 'WeChat Pay'|_ }}<p class="small mb-0">{{ 'Globally'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/yandex.png' | media }}" alt="Recieve payments through Yandex with GlueUp" class="img-fluid mx-auto px-4 paygage-visual lazy fadeIn">
+                                                            <span>{{ 'Yandex'|_ }}<p class="small mb-0">{{ 'Globally'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/yeepay.png' | media }}" alt="Recieve payments through YeePay with GlueUp" class="img-fluid mx-auto px-4 paygage-visual lazy fadeIn">
+                                                            <span>{{ 'YeePay'|_ }}<p class="small mb-0">{{ 'Mainland China & Hong Kong'|_ }}</p></span>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+    </div>
+
+        </div>
+</section>#}
+{#engagement 1#}
+<section class="section pt-0">
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-8 mx-auto pb-4">
+                        <div class="block text-center">
+                            <span class="h6 text-color text-center mx-auto hideme">{{ 'Advanced Integrations'|_ }}</span>
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Maximize Your Financial Workflows'|_ }}</h2>
+                             <p class="tagline"> {{ 'Save time and eliminate manual tasks by connecting Glue Up to your favorite accounting software.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            {#<div class="col-lg-10 mx-auto">#}
+                <div class="row">
+                        <div class="col-md-2 py-3">
+                        </div>
+                        <div class="col-md-4 py-3">
+                            <div class="card text-center h-100 hideme shadow-sm">
+                              <div class="card-body pt-4">
+                                <i class="align-middle icon-overview pt-5"></i>
+                                <h5 class="card-title mt-3">{{ 'QuickBooks'|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'Get a full accounting experience by combining the best of Glue Up’s all-in-one engagement management software with easy plug&play QuickBooks integration that can be set up in a few clicks.'|_ }}</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3">
+                            <div class="card text-center h-100 hideme shadow-sm">
+                              <div class="card-body pt-4">
+                                <i class="align-middle icon-mobile-check pt-5"></i>
+                                <h5 class="card-title mt-3">{{ 'Xero '|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'Synchronize and update your invoices from both apps, collect tickets and memberships as line-items and manage both finance systems effortlessly. '|_ }}</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 py-3">
+                        </div>
+                {#</div>#}
+            </div>
+            <div class="row">
+                <div class="col-lg-4 text-center mx-auto mt-1">
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contact-paygage">See it in Action</a>
+                </div>
+            </div>
+        </div>
+
+</section>
+{#engagement 1#}
+
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}
+";s:5:"mtime";i:1598253916;s:6:"markup";s:27839:"<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+           <div class="row flex-row-reverse">
+                <div class="col-md-6 hero align-self-center text-left">
+                    <img src="{{ 'glueup-finance-feature.svg' | media }}" class="Glue Up helps you manage and automate your finance and invoicing tasks" alt="logo">
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-left">
+                    <p class="tagline mb-4">{{'Finance & Payments'|_}}</p>
+                      <h1>{{ 'Automate All Your<br>Finance Processes and <span class="line"><ins> Grow </ins></span> Revenue '|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Manage invoices, deliver receipts, grow revenue, and accept payments in multiple currencies with credit cards, bank transfers, or other online payments.'|_ }} </p>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+            </div>
+        </div> 
+</header>
+{#{% partial 'elements/logobar.htm' %}#}
+
+<section class="section pt-0">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-7 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'A Complete Finance Toolkit'|_ }}</h2>
+                             <p class="tagline">{{ 'Streamline the entire transaction experience for your organization and for every member of your community. '|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+	            <div class="col-lg-10 align-self-center mx-auto">
+					    <div class="services__accordion row flex-row-reverse">
+					            <div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+									<div class="accordion__img desktop">
+									    <div id="tab1-bullet-img" class="firstshow">
+									        <img class="feature-window desktop" src="{{ 'features/glueup-automate.svg' | media }}" alt="Glue Up helps you automate">
+									         
+									    </div>
+									    <div id="tab2-bullet-img">
+									        <img class="feature-window deskto" src="{{ 'features/glueup-top-financials.svg' | media }}" alt="Glue Up helps you stay on top of your financials">
+									    </div>
+								        <div id="tab3-bullet-img">
+					    			        <img class="feature-window deskto" src="{{ 'features/glueup-easy-members.svg' | media }}" alt="Glue Up is easy for everyone">
+					    			    </div>
+								     </div>
+								</div>
+								<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+									<div class="services__accordion">
+									  
+					                    <div class="accordion pl-3 active small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+					                        <i class="icon-power-switch"></i>
+					                        <span>{{ 'Automate manual tasks'|_ }}</span>
+					                        <div class="accordion__body firstshow" style="display:none;">
+												<p class="pt-3 d-flex flex-column">{{ 'Simplify all payment processes from beginning to end without compromising on security. '|_ }}
+												{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+											</div>
+					                    </div>
+					                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab2-bullet">
+					                        <i class="icon-analytics"></i>
+					                        <span>{{ 'Stay on top of your financials'|_ }}</span>
+					                        <div class="accordion__body " style="display:none;">
+												<p class="pt-3 d-flex flex-column">{{ 'With the mobile app, you can access P&L and other financial reports from anywhere. '|_ }}
+												{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+											</div>
+					                    </div>
+					                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab3-bullet">
+					                        <i class="icon-button"></i>
+					                        <span>{{ 'Make it simple for everyone'|_ }}</span>
+					                        <div class="accordion__body " style="display:none;">
+												<p class="pt-3 d-flex flex-column">{{ 'Premium user experience battle-tested for your and all your audiences’s absolute comfort.'|_ }}
+												{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+											</div>
+					                    </div>
+									</div>
+								</div>
+								
+							</div>
+					</div>
+            </div>
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-currencies.svg' | media }}" alt="Glue Up helps you collect revenue in multiple currencies" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Collect Money'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Drive Revenue in Multiple Currencies'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Meet the needs of your community by accepting payments in 100+ currencies, including:'|_ }}{{' US Dollar, Chinese RMB, Hong Kong Dollar, Euro, Taiwan Dollar, Singapore Dollar, Malaysian Ringgit,'|_ }}{{' British Pound, South Korean Won, Japanese Yen, Indonesian Rupiah, Indian Rupee, Russian Ruble, and other currencies.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-translation-switch"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Multi-currency Support'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-home"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Local Payment Methods'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'In-person Payments'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-speaker"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Dispute Handling'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-payment-methods.svg' | media }}" alt="Glue Up helps you drive revenue with secure and smooth payments in any method" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Security '|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Enable Secure & Smooth Payments'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Facilitate easy, secure payments with online digital payment gateways, credit cards, and bank transfers over encrypted SSL connections.'|_ }}{{' Credit card numbers and other electronic financial data are not stored in any form.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-key"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Roles & Permissions'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-lock"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'SSL Protected'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-checked-in"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'GDPR Compliant'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-credits"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'PCI DSS Certified'|_ }}</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-automatic-invoices.svg' | media }}" alt="Glue Up helps you automate your finance processes" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Financial Journey'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Manage Your Finances Effortlessly '|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Automate your complete financial journey from online payments through ticketing and invoice generation all the way until your taxes are due.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-invoice"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Automatic Invoicing'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-notifications"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Reminders & Notifications'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-edit-update"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Customizable Tax Setup'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-ticket"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Coupons & Discounts'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-reports.svg' | media }}" alt="Glue Up helps you centralize and track all payments" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Analytics & Reports'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Centralize and Track All Payments'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Keep your payment processing centralized in one place. Stay up to date on all your online and offline revenue streams with automated tracking, analytics, and reports.'|_ }}<br>
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-analytics"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'P&L Reports'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-refresh"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Real-time Analytics'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-dash-2"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Customizable Dashboards'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-download"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Easy Export'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}{#
+<section class="section">
+        <div class="container">
+            <div class="row flex-row mx-auto">
+                <div class="col-lg-7 align-self-center mx-auto">
+                    <div class="text-center mx-auto align-items-center">
+                            <span class="h6 text-color text-center mx-auto hideme">{{ 'Payment Gateways'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title text-center  hideme">{{ 'Let Your Community Pay the Way They Like'|_ }}</h2>
+                            <div class="about-content text-center  hideme">
+    						     <p class="mb-4">{{ 'Enable your community to pay you securely and conveniently using their preferred credit, debit or prepaid cards.'|_ }}{{' Via bank transfer, digital wallets, mobile money or cash thanks to our wide payment gateway oferring.'|_ }}
+    						     </p>
+                             </div>
+                            
+                  </div>
+                </div>
+                
+            </div>
+            
+    <div class="row">
+                                            <div class="col-md-12 pb-4">
+                                                <div class="row pb-5">
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/alipay.png' | media }}" alt="Recieve payments through Alipay with GlueUp" class="img-fluid mx-auto px-4 paygage-visual lazy fadeIn">
+                                                            <span>{{ 'Alipay'|_ }}<p class="small mb-0">{{ 'Mainland China & Hong Kong'|_ }}</p></span>
+                                                    </div>
+                                                     <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/braintree.png' | media }}" alt="Recieve payments through Braintree with GlueUp" class="img-fluid px-4 mx-auto paygage-visual lazy fadeIn">
+                                                            <span>{{ 'Braintree'|_ }}<p class="small mb-0">{{ 'Globally'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/flutterwave.png' | media }}" alt="Recieve payments through Flutterwave with GlueUp" class="img-fluid px-4 mx-auto paygage-visual lazy fadeIn">
+                                                            <span>{{ 'Flutterwave'|_ }}<p class="small mb-0">{{ 'mPesa - Across the African continent'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/globalpayments.png' | media }}" alt="Recieve payments through GlobalPayment with GlueUp " class="img-fluid mx-auto px-4 paygage-visual lazy fadeIn">
+                                                            <span>{{ 'GlobalPayment'|_ }}<p class="small mb-0">{{ 'Globally'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/inicis.png' | media }}" alt="Recieve payments through Inicis with GlueUp" class="img-fluid mx-auto px-4 paygage-visual lazy fadeIn">
+                                                            <span>{{ 'Inicis'|_ }}<p class="small mb-0">{{ 'Korea'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/instamojo.png' | media }}" alt="Recieve payments through InstaMojo with GlueUp" class="img-fluid px-4 mx-auto paygage-visual lazy fadeIn">
+                                                            <span>{{ 'InstaMojo'|_ }}<p class="small mb-0">{{ 'India'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/paymaya.png' | media }}" alt="Recieve payments through PayMaya with GlueUp" class="img-fluid px-4 mx-auto paygage-visual lazy fadeIn">
+                                                            <span>{{ 'PayMaya'|_ }}<p class="small mb-0">{{ 'The Philippines'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/paypal.png' | media }}" alt="Recieve payments through Paypal with GlueUp" class="img-fluid mx-auto px-4 paygage-visual lazy fadeIn">
+                                                            <span>{{ 'Paypal'|_ }}<p class="small mb-0">{{ 'Globally'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/payfort.png' | media }}" alt="Recieve payments through PayFort with GlueUp" class="img-fluid px-4 mx-auto paygage-visual lazy fadeIn">
+                                                            <span>{{ 'PayFort'|_ }}<p class="small mb-0">{{ 'United Arab Emirates, Egypt, Saudi Arabia, Jordan, Lebanon and Qatar.'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/paygage.png' | media }}" alt="Recieve payments through Paygage with GlueUp" class="img-fluid px-4 mx-auto paygage-visual lazy fadeIn">
+                                                            <span>{{ 'Paygage'|_ }}<p class="small mb-0">{{ 'USA and Canada'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/stripe.png' | media }}" alt="Recieve payments through Stripe with GlueUp" class="img-fluid mx-auto px-4 paygage-visual lazy fadeIn">
+                                                            <span>{{ 'Stripe'|_ }}<p class="small mb-0">{{ 'Globally'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/wechatpay.png' | media }}" alt="Recieve payments through WeChat Pay with GlueUp" class="img-fluid px-4 mx-auto paygage-visual lazy fadeIn">
+                                                            <span>{{ 'WeChat Pay'|_ }}<p class="small mb-0">{{ 'Globally'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/yandex.png' | media }}" alt="Recieve payments through Yandex with GlueUp" class="img-fluid mx-auto px-4 paygage-visual lazy fadeIn">
+                                                            <span>{{ 'Yandex'|_ }}<p class="small mb-0">{{ 'Globally'|_ }}</p></span>
+                                                    </div>
+                                                    <div class="col-md-3 text-center client-logo">
+                                                        <img src="{{ 'payment-gateways/yeepay.png' | media }}" alt="Recieve payments through YeePay with GlueUp" class="img-fluid mx-auto px-4 paygage-visual lazy fadeIn">
+                                                            <span>{{ 'YeePay'|_ }}<p class="small mb-0">{{ 'Mainland China & Hong Kong'|_ }}</p></span>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+    </div>
+
+        </div>
+</section>#}
+{#engagement 1#}
+<section class="section pt-0">
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-8 mx-auto pb-4">
+                        <div class="block text-center">
+                            <span class="h6 text-color text-center mx-auto hideme">{{ 'Advanced Integrations'|_ }}</span>
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Maximize Your Financial Workflows'|_ }}</h2>
+                             <p class="tagline"> {{ 'Save time and eliminate manual tasks by connecting Glue Up to your favorite accounting software.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            {#<div class="col-lg-10 mx-auto">#}
+                <div class="row">
+                        <div class="col-md-2 py-3">
+                        </div>
+                        <div class="col-md-4 py-3">
+                            <div class="card text-center h-100 hideme shadow-sm">
+                              <div class="card-body pt-4">
+                                <i class="align-middle icon-overview pt-5"></i>
+                                <h5 class="card-title mt-3">{{ 'QuickBooks'|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'Get a full accounting experience by combining the best of Glue Up’s all-in-one engagement management software with easy plug&play QuickBooks integration that can be set up in a few clicks.'|_ }}</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3">
+                            <div class="card text-center h-100 hideme shadow-sm">
+                              <div class="card-body pt-4">
+                                <i class="align-middle icon-mobile-check pt-5"></i>
+                                <h5 class="card-title mt-3">{{ 'Xero '|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'Synchronize and update your invoices from both apps, collect tickets and memberships as line-items and manage both finance systems effortlessly. '|_ }}</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 py-3">
+                        </div>
+                {#</div>#}
+            </div>
+            <div class="row">
+                <div class="col-lg-4 text-center mx-auto mt-1">
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contact-paygage">See it in Action</a>
+                </div>
+            </div>
+        </div>
+
+</section>
+{#engagement 1#}
+
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}";s:4:"code";s:65:"function onEnd(){
+    $this->page->nav_highlight = 'features';
+ }";s:5:"title";s:18:"Finance & Payments";s:3:"url";s:28:"/features/finance-management";s:6:"layout";s:11:"glueup-home";s:11:"description";s:152:"Manage invoices, deliver receipts, grow revenue, and accept payments in multiple currencies with credit cards, bank transfers, or other online payments.";s:10:"meta_title";s:27:"Finance Management Solution";s:16:"meta_description";s:152:"Manage invoices, deliver receipts, grow revenue, and accept payments in multiple currencies with credit cards, bank transfers, or other online payments.";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:225:"payment processing, payment gateways, xero integration, quickbooks integration, collect money online, event tickets, transaction management, invoicing, financial journey, credit card payments, recurring payments, mobile money";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:7:"viewBag";a:2:{s:16:"localeMeta_title";a:5:{s:5:"es_la";s:63:"Automatiza todos tus procesos de finanzas e incrementa ingresos";s:5:"Pt_br";s:68:"Automatize todos os seus Processos Financeiros e Aumente sua Receita";s:2:"ru";s:32:"Финансы и платежи";s:2:"tk";s:19:"Finans ve Ödemeler";s:2:"zh";s:15:"财务 & 支付";}s:22:"localeMeta_description";a:5:{s:5:"es_la";s:171:"Administra facturas, da recibos, crece tus ingresos, acepta pagos en multiples monedas con tarjetas de crédito, transferencias bancarias y otros tipos de pagos en línea.";s:5:"Pt_br";s:173:"Gerencie faturas, entregue recibos, aumente a receita e aceite pagamentos em várias moedas com cartões de crédito, transferências bancárias ou outros pagamentos online.";s:2:"ru";s:322:"Управляйте счетами, отправляйте квитанции, увеличивайте выручку и принимайте платежи в нескольких валютах с помощью кредитных карт, банковских переводов или других платежей.";s:2:"tk";s:182:"Faturaları yönetin, makbuzları teslim edin, geliri artırın ve kredi kartları, banka havaleleri veya diğer çevrimiçi ödemelerle birden çok para biriminde ödeme kabul edin.";s:2:"zh";s:200:"Glue Up 一体化云平台助力您实现多币种支付，多渠道支付（如信用卡、银行转账、线上支付等），自动化管理发票、账单与支付，提升管理效率与收益。";}}}}

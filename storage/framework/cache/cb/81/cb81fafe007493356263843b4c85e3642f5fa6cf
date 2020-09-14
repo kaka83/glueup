@@ -1,0 +1,185 @@
+1600067169a:1:{s:26:"resources/case-studies.htm";a:16:{s:8:"fileName";s:26:"resources/case-studies.htm";s:7:"content";s:4106:"title = "Case Studies"
+url = "/case-studies"
+layout = "glueup-home"
+meta_title = "Case Studies"
+meta_description = "Find out what makes our customers stick with Glue Up."
+is_hidden = 0
+seo_keywords = "Glue Up pricing, Glue Up reviews, Glue Up testiominals, how much does Glue Up cost?, Glue Up experience, Glue Up fees, EventBank is Glue Up"
+robot_index = "index"
+robot_follow = "follow"
+
+[blogPosts featured]
+pageNumber = "{{ :page }}"
+categoryFilter = "success-stories"
+postsPerPage = 99
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+
+[blogCategories]
+slug = "success-stories"
+displayEmpty = 0
+categoryPage = "blog/category"
+==
+<?php
+function onEnd(){
+    $this->page->nav_highlight = 'resources';
+ }
+?>
+==
+<div class="generic" id="generic">  
+        <div class="container">
+            <div class="row pt-5">
+                
+                <div class="col-md-7 hero align-self-center text-center mx-auto pt-5">
+                      <h1>{{ 'Case <span class="line"><ins> Studies </ins></span>'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Find out why customers stick with Glue Up. '|_ }} </p>
+
+
+                </div>
+               
+            </div>
+        </div> 
+</div>
+
+<section class="section pt-0">
+        <div class="container">
+             <div class="row">
+            	 {#<div class="col-md-3">
+               		{% component 'blogCategories' %}
+            	</div>#}
+                <div class="col-md-9 align-self-center mx-auto">
+                {#{% component 'featured' %}#}
+                	<div class="row">
+                {% set featured = featured.posts %}
+				{% for post in featured %}  
+	           
+	                                                
+	                    <div class="col-md-4 hero pb-2">
+	                     <a href="{{ post.url }}" class="" style="">
+	                        {% if post.featured_images.count > 0 %}
+	                        <img class="media-object img-fluid rounded" style="padding:4rem;  mix-blend-mode: multiply;" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+	                        {% else %}
+	                        <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+	                        {% endif %}
+	                         </a>
+	                     <h5 class="pt-2">
+	                         <a href="{{ post.url }}">{{ post.title }}</a>
+	                     </h5>
+	                     <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+	                     {#% if post.excerpt %}
+	                     <p class="excerpt">{{ post.excerpt }}</p>
+	                     {% else %}
+	                     <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+	                     {% endif %#}
+	                     </div>
+	             {% endfor %}
+	             </div>
+	             
+{% if posts.lastPage > 1 %}
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-6 text-center">
+        <nav class="navigation pagination d-inline-block">
+            <div class="nav-links">
+                {% if posts.currentPage > 1 %}
+                <a class="prev page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">Prev</a>
+                {% endif %}
+
+                {% for page in 1..posts.lastPage %}
+                <a class="page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                {% endfor %}
+
+                {% if posts.lastPage > posts.currentPage %}
+                <a class="next page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next</a>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+</div>
+{% endif %}
+            </div>
+            
+        </div>
+    </div>
+</section>
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}";s:5:"mtime";i:1598199505;s:6:"markup";s:3321:"<div class="generic" id="generic">  
+        <div class="container">
+            <div class="row pt-5">
+                
+                <div class="col-md-7 hero align-self-center text-center mx-auto pt-5">
+                      <h1>{{ 'Case <span class="line"><ins> Studies </ins></span>'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Find out why customers stick with Glue Up. '|_ }} </p>
+
+
+                </div>
+               
+            </div>
+        </div> 
+</div>
+
+<section class="section pt-0">
+        <div class="container">
+             <div class="row">
+            	 {#<div class="col-md-3">
+               		{% component 'blogCategories' %}
+            	</div>#}
+                <div class="col-md-9 align-self-center mx-auto">
+                {#{% component 'featured' %}#}
+                	<div class="row">
+                {% set featured = featured.posts %}
+				{% for post in featured %}  
+	           
+	                                                
+	                    <div class="col-md-4 hero pb-2">
+	                     <a href="{{ post.url }}" class="" style="">
+	                        {% if post.featured_images.count > 0 %}
+	                        <img class="media-object img-fluid rounded" style="padding:4rem;  mix-blend-mode: multiply;" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+	                        {% else %}
+	                        <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+	                        {% endif %}
+	                         </a>
+	                     <h5 class="pt-2">
+	                         <a href="{{ post.url }}">{{ post.title }}</a>
+	                     </h5>
+	                     <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+	                     {#% if post.excerpt %}
+	                     <p class="excerpt">{{ post.excerpt }}</p>
+	                     {% else %}
+	                     <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+	                     {% endif %#}
+	                     </div>
+	             {% endfor %}
+	             </div>
+	             
+{% if posts.lastPage > 1 %}
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-6 text-center">
+        <nav class="navigation pagination d-inline-block">
+            <div class="nav-links">
+                {% if posts.currentPage > 1 %}
+                <a class="prev page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">Prev</a>
+                {% endif %}
+
+                {% for page in 1..posts.lastPage %}
+                <a class="page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                {% endfor %}
+
+                {% if posts.lastPage > posts.currentPage %}
+                <a class="next page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next</a>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+</div>
+{% endif %}
+            </div>
+            
+        </div>
+    </div>
+</section>
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}";s:4:"code";s:68:"function onEnd(){
+    $this->page->nav_highlight = 'resources';
+ }";s:5:"title";s:12:"Case Studies";s:3:"url";s:13:"/case-studies";s:6:"layout";s:11:"glueup-home";s:10:"meta_title";s:12:"Case Studies";s:16:"meta_description";s:53:"Find out what makes our customers stick with Glue Up.";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:139:"Glue Up pricing, Glue Up reviews, Glue Up testiominals, how much does Glue Up cost?, Glue Up experience, Glue Up fees, EventBank is Glue Up";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:18:"blogPosts featured";a:7:{s:10:"pageNumber";s:11:"{{ :page }}";s:14:"categoryFilter";s:15:"success-stories";s:12:"postsPerPage";s:2:"99";s:14:"noPostsMessage";s:14:"No posts found";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:13:"blog/category";s:8:"postPage";s:9:"blog/post";}s:14:"blogCategories";a:3:{s:4:"slug";s:15:"success-stories";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:13:"blog/category";}}}

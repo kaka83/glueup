@@ -1,0 +1,286 @@
+title = "Tasks"
+url = "/features/tasks"
+layout = "glueup-home"
+description = "Give your communithy a place where they can connect with you and your mission 365 days a year even when meeting face to face isn’t possible."
+meta_title = "Project Management Solution"
+meta_description = "Plan, organize, execute and evaluate all your projects from Glue Up platform."
+is_hidden = 0
+seo_keywords = "project management, scheduling tool, calendar tool, marketing management software, Event planning, team collaboration, event management, remote work"
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeMeta_title[es_la] = "Alcanza tus Metas"
+localeMeta_title[Pt_br] = "Finalize Seu Trabalho"
+localeMeta_title[ru] = "Задачи"
+localeMeta_title[tk] = "Görevler"
+localeMeta_title[zh] = "任务管理"
+localeMeta_description[es_la] = "Planea, promociona, ejecuta y evalúa todos tus proyectos desde una sola plataforma."
+localeMeta_description[Pt_br] = "Planeje, organize, execute e avalie todos os seus projetos a partir de uma plataforma."
+localeMeta_description[ru] = "Планируйте, организуйте, выполняйте и анализируйте все свои проекты на одной платформе."
+localeMeta_description[tk] = "Tüm projelerinizi tek bir platformdan planlayın, düzenleyin, yürütün ve değerlendirin."
+localeMeta_description[zh] = "助力您所有活动的策划、推广、落地、管理、跟进、评估等工作。"
+==
+<?php
+function onEnd(){
+    $this->page->nav_highlight = 'features';
+ }
+?>
+==
+<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+            <div class="row flex-row-reverse">
+                <div class="col-md-6 hero align-self-center text-left">
+                    <img src="{{ 'glueup-tasks-feature.svg' | media }}" class="paygage-visual" alt="logo">
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-left">
+                    <p class="tagline mb-4">{{'Tasks'|_}} </p>
+                      <h1>{{ 'Get Work <span class="line"><ins>Done </ins></span>'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Plan, organize, execute and evaluate all your projects from one platform. '|_ }} </p>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+            </div>
+        </div> 
+</header>
+<section class="section pt-0">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-7 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Collaborate Effectively'|_ }}</h2>
+                             <p class="tagline">{{ 'Manage your projects and your teams from start to finish. Get things done from an idea to a successful completion.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+	            <div class="col-lg-10 align-self-center mx-auto">
+					    <div class="services__accordion row flex-row-reverse">
+					            <div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+									<div class="accordion__img desktop">
+									    <div id="tab1-bullet-img" class="firstshow">
+									        <img class="feature-window desktop" src="{{ 'glueup-all-in-one.svg' | media }}" alt="Glue Up is all-in-one">
+									         
+									    </div>
+									    <div id="tab2-bullet-img">
+									        <img class="feature-window deskto" src="{{ 'features/glueup-automate.svg' | media }}" alt="Glue Up helps you automate manual tasks">
+									    </div>
+								        <div id="tab3-bullet-img">
+					    			        <img class="feature-window deskto" src="{{ 'features/glueup-easy-members.svg' | media }}" alt="Glue Up is easy for everyone">
+					    			    </div>
+								     </div>
+								</div>
+								<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+									<div class="services__accordion">
+									  
+					                    <div class="accordion pl-3 active small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+					                        <i class="icon-engagement"></i>
+					                        <span>{{ 'Do it all from one place'|_ }}</span>
+					                        <div class="accordion__body firstshow" style="display:none;">
+												<p class="pt-3 d-flex flex-column">{{ 'Ultimate toolkit that has everything you and your community needs for maximum engagement.'|_ }}
+												{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+											</div>
+					                    </div>
+					                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab2-bullet">
+					                        <i class="icon-power-switch"></i>
+					                        <span>{{ 'Automate manual tasks'|_ }}</span>
+					                        <div class="accordion__body " style="display:none;">
+												<p class="pt-3 d-flex flex-column">{{ 'Streamline your processes and become the best version of yourself.'|_ }}
+												{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+											</div>
+					                    </div>
+					                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab3-bullet">
+					                        <i class="icon-button"></i>
+					                        <span>{{ 'Make it simple for everyone'|_ }}</span>
+					                        <div class="accordion__body " style="display:none;">
+												<p class="pt-3 d-flex flex-column">{{ 'Premium user experience battle-tested for your and all your audiences’s absolute comfort.'|_ }}
+												{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+											</div>
+					                    </div>
+									</div>
+								</div>
+								
+							</div>
+					</div>
+            </div>
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-tasks.svg' | media }}" alt="Glue Up helps you plan tasks across your team" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Tasks'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Spend Less Time Planning'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Collaborate across teams on multiple projects at once and centralize all your tasks in one dashboard for easy access. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-task-icon"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Task Lists'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-object-forward"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Kanban Boards'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-clock-outlined"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Reminders'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-notifications"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Push Notifications'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-tasks-team.svg' | media }}" alt="Glue Up helps you keep your team focused" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Team Work'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Keep Your Team Focused'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Focus on your projects and automate manual routine tasks that might be slowing down your progress. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-power-switch"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Workflow Automation'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-events"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Calendar'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-atsymbol"></i>
+                                        <p class="bullet-small text-center pt-4">{{ '@Mentioning'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-view"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Visualizations'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-scaleup.svg' | media }}" alt="Glue Up hels you automate tasks" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Event Management'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Simplify Event Planning'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Optimize the lifecycle of your offline and online events from initial planning through follow-up to surveys.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-events"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Calendar'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-website-dev"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Pages'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-email-campaigns"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Email Campaigns'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-ticket"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-analyze.svg' | media }}" alt="Glue Up helps you analyze your results" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Analytics'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Make Smart Decisions'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Stay up to date on all your projects with automated tracking, analytics, and reports.'|_ }}<br>
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-menu-section-lemontea"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Real-Time Insights'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-add-dashboard"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Customizable Dashboards'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-hierarchy"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Roles & Permissions'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-analytics"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'P&L Reports'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}

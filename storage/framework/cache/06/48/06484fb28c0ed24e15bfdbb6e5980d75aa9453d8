@@ -1,0 +1,567 @@
+1600067353a:1:{s:16:"site/offices.htm";a:7:{s:8:"fileName";s:16:"site/offices.htm";s:7:"content";s:19671:"description = "offices"
+
+[viewBag]
+==
+<?php
+use Raccoon\GeoLocation\Facades\Geo;
+//use October\Rain\Router\Router as RainRouter;
+//use Cms\Classes\ComponentBase;
+protected $redirect;
+
+protected $translator;
+
+function onStart() {
+$background = $this->background;
+
+$ipAddress = $_SERVER['REMOTE_ADDR']?:($_SERVER['HTTP_X_FORWARDED_FOR']?:$_SERVER['HTTP_CLIENT_IP']);   
+$geoLocation = Geo::getLocation($ipAddress);  
+	$this['Location'] = $geoLocation->countryCode; 
+
+//$this['string'] = $string; 
+}
+?>
+==
+<section id="offices" class="section {{ background }}">
+        <div class="container">
+			
+            <div class="row pb-5">
+                    <div class="col-lg-8 mx-auto ">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Glue Up Office Locations'|_ }}</h2>
+                             <p class="tagline">{{ 'Glue Up is present in more than 40 countries and has offices across Asia, Europe, and North and Latin America.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            {#{% if (Location is same as('CN')) or (Location is same as('KR')) or (Location is same as('HK')) or (Location is same as('PH')) %}#}
+            {%if Location in ['AF', 'AU', 'AW', 'AZ', 'BD', 'BH', 'KH', 'CN', 'CX', 'CC', 'FJ', 'FK', 'FM', 'FO', 'HK', 'ID', 'IN', 'JP', 'KG', 'KP', 'KR', 'KZ', 'LA', 'LK', 'MO', 'MG', 'MY', 'MN', 'MM', 'NP', 'NZ', 'OM', 'PH', 'PK', 'PW', 'QA', 'SG', 'SY', 'TW', 'TJ', 'TH', 'TM', 'AE', 'UZ', 'VU', 'VN']%}
+             {% set active3 = 'show active' %}
+             {% set active2 = '' %}
+             {% set active1 = '' %}
+            <div class="row justify-content-center">
+            	<ul class="nav nav-pills pills-dark justify-content-center mx-auto mb-3" id="pills-tab" role="tablist">
+				  <li class="nav-item">
+					 <a class="nav-link" id="pills-america-tab" data-toggle="pill" href="#pills-america" role="tab" aria-controls="pills-america" aria-selected="false">{{'The Americas'|_}}</a>
+				  </li>
+				  <li class="nav-item">
+					 <a class="nav-link" id="pills-emea-tab" data-toggle="pill" href="#pills-emea" role="tab" aria-controls="pills-emea" aria-selected="false">{{'Africa, Europe, the Middle East and Russia'|_}}</a>
+				  </li>
+				  <li class="nav-item">
+					 <a class="nav-link active" id="pills-asia-tab" data-toggle="pill" href="#pills-asia" role="tab" aria-controls="pills-asia" aria-selected="true">{{'Asia and the Pacific'|_}}</a>
+				  </li>
+				</ul>
+            </div>
+            {% elseif Location in ['AL', 'DZ', 'BF', 'BW', 'CZ', 'CM', 'CF', 'TD', 'CG', 'CI', 'CD', 'DJ', 'EG', 'TP', 'GQ', 'ER', 'ET', 'GA', 'GM', 'GH', 'IR', 'JO', 'KE', 'LR', 'LS', 'LY', 'MZ', 'NA', 'NE', 'NG', 'RU', 'RW', 'SN', 'SL', 'SO', 'ZA', 'SD', 'SR', 'SJ', 'SZ', 'TZ', 'TL', 'TG', 'TK', 'TO', 'TT', 'TN', 'TR', 'TC', 'TV', 'UA', 'UG', 'EH', 'YE', 'ZM', 'ZW']%}
+             {% set active2 = 'show active' %}
+             {% set active3 = '' %}
+             {% set active1 = '' %}
+            <div class="row justify-content-center">
+            	<ul class="nav nav-pills pills-dark justify-content-center mx-auto mb-3" id="pills-tab" role="tablist">
+				  <li class="nav-item">
+					 <a class="nav-link" id="pills-america-tab" data-toggle="pill" href="#pills-america" role="tab" aria-controls="pills-america" aria-selected="false">{{'The Americas'|_}}</a>
+				  </li>
+				  <li class="nav-item">
+					 <a class="nav-link active" id="pills-emea-tab" data-toggle="pill" href="#pills-emea" role="tab" aria-controls="pills-emea" aria-selected="true">{{'Africa, Europe, the Middle East and Russia'|_}}</a>
+				  </li>
+				  <li class="nav-item">
+					 <a class="nav-link" id="pills-asia-tab" data-toggle="pill" href="#pills-asia" role="tab" aria-controls="pills-asia" aria-selected="false">{{'Asia and the Pacific'|_}}</a>
+				  </li>
+				</ul>
+            </div>
+            {% else %}
+            {% set active1 = 'show active' %}
+             {% set active3 = '' %}
+             {% set active2 = '' %}
+            <div class="row justify-content-center">
+            	<ul class="nav nav-pills pills-dark justify-content-center mx-auto mb-3" id="pills-tab" role="tablist">
+				  <li class="nav-item">
+					 <a class="nav-link active" id="pills-america-tab" data-toggle="pill" href="#pills-america" role="tab" aria-controls="pills-america" aria-selected="true">{{'The Americas'|_}}</a>
+				  </li>
+				  <li class="nav-item">
+					 <a class="nav-link" id="pills-emea-tab" data-toggle="pill" href="#pills-emea" role="tab" aria-controls="pills-emea" aria-selected="false">{{'Africa, Europe, the Middle East and Russia'|_}}</a>
+				  </li>
+				  <li class="nav-item">
+					 <a class="nav-link" id="pills-asia-tab" data-toggle="pill" href="#pills-asia" role="tab" aria-controls="pills-asia" aria-selected="false">{{'Asia and the Pacific'|_}}</a>
+				  </li>
+				</ul>
+            </div>
+            {% endif %}
+            <div class="row justify-content-center">
+            	<div class="tab-content" id="pills-tabContent">
+				  <div class="tab-pane fade {{ active1 }}" id="pills-america" role="tabpanel" aria-labelledby="pills-america-tab">
+				  		<div class="row justify-content-center">
+				  			<div class="col-md-4 pt-4">
+				            	<div class="card h-100 shadow-sm">
+								  <img class="card-img-top" src="{{ 'offices/usa.png' | media }}" alt="Glue Up Office in the USA">
+								  <div class="card-body d-flex flex-column">
+								    <h4 class="card-title link-title">{{'Washington DC'|_}}</h4>
+								    <p class="card-text pb-2">{{'1775 Tysons Blvd, 5th Floor<br>Tysons, VA 22102'|_}}</p>
+								    <a href="tel:1-888-218-1354" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">1-888-218-1354</span></a>
+								    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+								  </div>
+								</div>
+							</div>
+							<div class="col-md-4 pt-4">
+				            	<div class="card h-100 shadow-sm">
+								  <img class="card-img-top" src="{{ 'offices/mexico.png'|media }}" alt="Glue Up Office in Mexico">
+								  <div class="card-body d-flex flex-column">
+								    <h4 class="card-title link-title">{{'Mexico City'|_}}</h4>
+								    {#<p class="card-text pb-2">{{'Opening Soon'|_}}</p> #}
+								    <a href="mailto:salesmx@glueup.com" class="pb-4"><i class="icon-email-campaigns" style="font-size: 22px; position: absolute;"></i><span class="pl-4">salesmx@glueup.com</span></a>
+								    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+								  </div>
+								</div>
+							</div>
+							<div class="col-md-4 pt-4">
+				            	<div class="card h-100 shadow-sm">
+								  <img class="card-img-top" src="{{ 'offices/brazil.png'|media }}" alt="Glue Up Office in Brazil">
+								  <div class="card-body d-flex flex-column">
+								    <h4 class="card-title link-title">{{'Sâo Paulo'|_}}</h4>
+								    {#<p class="card-text pb-2">{{'Opening Soon'|_}}</p>#}
+								    <a href="mailto:salesbr@glueup.com" class="pb-4"><i class="icon-email-campaigns" style="font-size: 22px; position: absolute;"></i><span class="pl-4">salesbr@glueup.com</span></a>
+								    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+								  </div>
+								</div>
+							</div>
+						
+						</div>
+				  </div>
+				  <div class="tab-pane fade {{ active2 }}" id="pills-emea" role="tabpanel" aria-labelledby="pills-emea-tab">
+				  		
+						<div class="row justify-content-center">
+							<div class="col-md-4 pt-4">
+								<div class="card h-100 shadow-sm">
+								  <img class="card-img-top" src="{{ 'offices/nairobi.png' | media }}" alt="Glue Up Office in Kenya">
+								  <div class="card-body d-flex flex-column">
+								    <h4 class="card-title link-title">{{'Nairobi'|_}}</h4>
+								    <p class="card-text pb-2">{{'Mirage Towers, Waiyaki Way <br> Westlands, Floor M2 <br> Nairobi <br> Kenya'|_}}</p>
+								    <a href="tel:+254 734-698-114" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+254 734-698-114</span></a>
+								    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+								  </div>
+								</div>
+							</div>
+							<div class="col-md-4 pt-4">
+							<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/moscow.png' | media }}" alt="Glue Up Office in the USA">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Moscow'|_}}</h4>
+							    <p class="card-text pb-2">{{'Aviamotornaya Street 8,<br>Moscow'|_}}</p>
+							    <a href="tel:+7(495)260-14-25" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+7(495)260-14-25</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>
+							<div class="col-md-4 pt-4">
+								<div class="card h-100 shadow-sm">
+								  <img class="card-img-top" src="{{ 'offices/za.png' | media }}" alt="Glue Up Office in South Africa">
+								  <div class="card-body d-flex flex-column">
+								    <h4 class="card-title link-title">{{'Cape Town'|_}}</h4>
+								    <p class="card-text pb-2">{{'1 Bridgeway Road, Bridgeways Precinct,<br>Century City<br>Cape Town 7441<br>South Africa'|_}}</p>
+								    <a href="tel:+27 62-971-3405" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+27 62-971-3405</span></a>
+								    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+								  </div>
+								</div>
+							</div>
+							<div class="col-md-4 pt-4">
+								<div class="card h-100 shadow-sm">
+								  <img class="card-img-top" src="{{ 'offices/istanbul.png' | media }}" alt="Glue Up Office in Turkey">
+								  <div class="card-body d-flex flex-column">
+								    <h4 class="card-title link-title">{{'Istanbul'|_}}</h4>
+								    <p class="card-text pb-2">{{'Göktürk Cad. No:9 Kat:3 D:13,<br>Neo Yaşam İş Merkezi, Göktürk,<br>Istanbul, Turkey'|_}}</p>
+								    <a href="tel:+90 212 322 9210" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+90 212 322 9210</span></a>
+								    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+								  </div>
+								</div>
+							</div>
+							
+						</div>{#end of row#}
+				  </div>
+				  <div class="tab-pane fade {{ active3 }}" id="pills-asia" role="tabpanel" aria-labelledby="pills-asia-tab">
+				  		<div class="row justify-content-center">
+				  		<div class="col-md-4 pt-4">
+							<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/beijing.png' | media }}" alt="Glue Up Office in Beijing, China">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Beijing'|_}}</h4>
+							    <p class="card-text pb-2">{{'Room 3-1, Tower D,<br>Guanghualu SOHO2<br>No. 9 Guanghua Road,<br>Chaoyang District<br>Beijing 100020'|_}}</p>
+							    <a href="tel:010 5642 1015" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">010 - 5642 1015</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-4 pt-4">
+							<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/shanghai.png' | media }}" alt="Glue Up Office in Shanghai, China">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Shanghai'|_}}</h4>
+							    <p class="card-text pb-2">{{'9th Floor, Tower B<br>China Overseas Building<br>838 S. Huangpi Road<br>Huangpu District<br>Shanghai 200025'|_}}</p>
+							    <a href="tel:(+86) 152-2117-7322" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">(+86) 152-2117-7322</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>
+				  			
+			            <div class="col-md-4 pt-4">
+			            	<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/hk.png' | media }}" alt="Glue Up Office in the Hong Kong">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Hong Kong'|_}}</h4>
+							    <p class="card-text pb-2">{{'10/F, YF Life Tower,<br>33 Lockhart Road, Unit 7114,<br>Wanchai, Hong Kong'|_}}</p>
+							    <a href="tel:+852 3905 2030" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+852 3905 2030</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-4 pt-4">
+							<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/jakarta.png' | media }}" alt="Glue Up Office in the Jakarta Indonesia">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Jakarta'|_}}</h4>
+							    <p class="card-text pb-2">{{'The Plaza Office Tower 41F,<br>Jl. M. H. Thamrin Kav. 28-30,<br>Jakarta, 10350,<br>Indonesia'|_}}</p>
+							    <a href="tel:+62 21 2992 6654" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+62 21 2992 6654</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-4 pt-4">
+							<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/seoul.png' | media }}" alt="Glue Up Office in the Seoul Korea">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Seoul'|_}}</h4>
+							    <p class="card-text pb-2">{{'5, Yongmasan-ro 32 gil,<br>Gwangjin-gu<br>Seoul 04938,<br>South Korea'|_}}</p>
+							    <a href="tel:+82-02-455-3700" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+82-02-455-3700</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>
+						{#<div class="col-md-4 pt-4">
+							<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/kl.png' | media }}" alt="Glue Up Office in the Kuala Lumpur Malaysia">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Kuala Lumpur'|_}}</h4>
+							    <p class="card-text pb-2">{{'1775 Tysons Blvd, 5th Floor<br>Tysons, VA 22102'|_}}</p>
+							    <a href="tel:" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">1-888-218-1354</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>#}
+			            <div class="col-md-4 pt-4">
+			            	<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/manila.png' | media }}" alt="Glue Up Office in The Philippines">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Manila'|_}}</h4>
+							    <p class="card-text pb-2">{{'928 Arnaiz Avenue<br>Barangay San Lorenzo<br>Makati City<br>Manila, 1223<br>Philippines'|_}}</p>
+							    <a href="tel:+63 (2) 8396-5621" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+63 (2) 8396-5621</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-4 pt-4">
+							<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/singapore.png' | media }}" alt="Glue Up Office in Singapore">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Singapore'|_}}</h4>
+							    <p class="card-text pb-2">{{'9 Battery Road<br>MYP Centre<br>Office #27-107<br>Singapore 049910'|_}}</p>
+							    <a href="tel:+65 6815 0656" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+65 6815 0656</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-4 pt-4">
+							<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/bangalore.png' | media }}" alt="Glue Up Office in India">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Bangalore'|_}}</h4>
+							    <p class="card-text pb-2">{{'43 - Residency Rd, Shanthala Nagar,<br>Ashok Nagar, Bengaluru,<br>Karnataka 560025 India'|_}}</p>
+							    <a href="tel:+91-984-414-1817" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+91-984-414-1817</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>					
+				  </div>
+				  </div>
+				</div>
+	            
+            </div>
+            </div>
+       </div>
+   </div>
+</section>";s:5:"mtime";i:1599615042;s:6:"markup";s:19153:"<section id="offices" class="section {{ background }}">
+        <div class="container">
+			
+            <div class="row pb-5">
+                    <div class="col-lg-8 mx-auto ">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Glue Up Office Locations'|_ }}</h2>
+                             <p class="tagline">{{ 'Glue Up is present in more than 40 countries and has offices across Asia, Europe, and North and Latin America.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            {#{% if (Location is same as('CN')) or (Location is same as('KR')) or (Location is same as('HK')) or (Location is same as('PH')) %}#}
+            {%if Location in ['AF', 'AU', 'AW', 'AZ', 'BD', 'BH', 'KH', 'CN', 'CX', 'CC', 'FJ', 'FK', 'FM', 'FO', 'HK', 'ID', 'IN', 'JP', 'KG', 'KP', 'KR', 'KZ', 'LA', 'LK', 'MO', 'MG', 'MY', 'MN', 'MM', 'NP', 'NZ', 'OM', 'PH', 'PK', 'PW', 'QA', 'SG', 'SY', 'TW', 'TJ', 'TH', 'TM', 'AE', 'UZ', 'VU', 'VN']%}
+             {% set active3 = 'show active' %}
+             {% set active2 = '' %}
+             {% set active1 = '' %}
+            <div class="row justify-content-center">
+            	<ul class="nav nav-pills pills-dark justify-content-center mx-auto mb-3" id="pills-tab" role="tablist">
+				  <li class="nav-item">
+					 <a class="nav-link" id="pills-america-tab" data-toggle="pill" href="#pills-america" role="tab" aria-controls="pills-america" aria-selected="false">{{'The Americas'|_}}</a>
+				  </li>
+				  <li class="nav-item">
+					 <a class="nav-link" id="pills-emea-tab" data-toggle="pill" href="#pills-emea" role="tab" aria-controls="pills-emea" aria-selected="false">{{'Africa, Europe, the Middle East and Russia'|_}}</a>
+				  </li>
+				  <li class="nav-item">
+					 <a class="nav-link active" id="pills-asia-tab" data-toggle="pill" href="#pills-asia" role="tab" aria-controls="pills-asia" aria-selected="true">{{'Asia and the Pacific'|_}}</a>
+				  </li>
+				</ul>
+            </div>
+            {% elseif Location in ['AL', 'DZ', 'BF', 'BW', 'CZ', 'CM', 'CF', 'TD', 'CG', 'CI', 'CD', 'DJ', 'EG', 'TP', 'GQ', 'ER', 'ET', 'GA', 'GM', 'GH', 'IR', 'JO', 'KE', 'LR', 'LS', 'LY', 'MZ', 'NA', 'NE', 'NG', 'RU', 'RW', 'SN', 'SL', 'SO', 'ZA', 'SD', 'SR', 'SJ', 'SZ', 'TZ', 'TL', 'TG', 'TK', 'TO', 'TT', 'TN', 'TR', 'TC', 'TV', 'UA', 'UG', 'EH', 'YE', 'ZM', 'ZW']%}
+             {% set active2 = 'show active' %}
+             {% set active3 = '' %}
+             {% set active1 = '' %}
+            <div class="row justify-content-center">
+            	<ul class="nav nav-pills pills-dark justify-content-center mx-auto mb-3" id="pills-tab" role="tablist">
+				  <li class="nav-item">
+					 <a class="nav-link" id="pills-america-tab" data-toggle="pill" href="#pills-america" role="tab" aria-controls="pills-america" aria-selected="false">{{'The Americas'|_}}</a>
+				  </li>
+				  <li class="nav-item">
+					 <a class="nav-link active" id="pills-emea-tab" data-toggle="pill" href="#pills-emea" role="tab" aria-controls="pills-emea" aria-selected="true">{{'Africa, Europe, the Middle East and Russia'|_}}</a>
+				  </li>
+				  <li class="nav-item">
+					 <a class="nav-link" id="pills-asia-tab" data-toggle="pill" href="#pills-asia" role="tab" aria-controls="pills-asia" aria-selected="false">{{'Asia and the Pacific'|_}}</a>
+				  </li>
+				</ul>
+            </div>
+            {% else %}
+            {% set active1 = 'show active' %}
+             {% set active3 = '' %}
+             {% set active2 = '' %}
+            <div class="row justify-content-center">
+            	<ul class="nav nav-pills pills-dark justify-content-center mx-auto mb-3" id="pills-tab" role="tablist">
+				  <li class="nav-item">
+					 <a class="nav-link active" id="pills-america-tab" data-toggle="pill" href="#pills-america" role="tab" aria-controls="pills-america" aria-selected="true">{{'The Americas'|_}}</a>
+				  </li>
+				  <li class="nav-item">
+					 <a class="nav-link" id="pills-emea-tab" data-toggle="pill" href="#pills-emea" role="tab" aria-controls="pills-emea" aria-selected="false">{{'Africa, Europe, the Middle East and Russia'|_}}</a>
+				  </li>
+				  <li class="nav-item">
+					 <a class="nav-link" id="pills-asia-tab" data-toggle="pill" href="#pills-asia" role="tab" aria-controls="pills-asia" aria-selected="false">{{'Asia and the Pacific'|_}}</a>
+				  </li>
+				</ul>
+            </div>
+            {% endif %}
+            <div class="row justify-content-center">
+            	<div class="tab-content" id="pills-tabContent">
+				  <div class="tab-pane fade {{ active1 }}" id="pills-america" role="tabpanel" aria-labelledby="pills-america-tab">
+				  		<div class="row justify-content-center">
+				  			<div class="col-md-4 pt-4">
+				            	<div class="card h-100 shadow-sm">
+								  <img class="card-img-top" src="{{ 'offices/usa.png' | media }}" alt="Glue Up Office in the USA">
+								  <div class="card-body d-flex flex-column">
+								    <h4 class="card-title link-title">{{'Washington DC'|_}}</h4>
+								    <p class="card-text pb-2">{{'1775 Tysons Blvd, 5th Floor<br>Tysons, VA 22102'|_}}</p>
+								    <a href="tel:1-888-218-1354" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">1-888-218-1354</span></a>
+								    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+								  </div>
+								</div>
+							</div>
+							<div class="col-md-4 pt-4">
+				            	<div class="card h-100 shadow-sm">
+								  <img class="card-img-top" src="{{ 'offices/mexico.png'|media }}" alt="Glue Up Office in Mexico">
+								  <div class="card-body d-flex flex-column">
+								    <h4 class="card-title link-title">{{'Mexico City'|_}}</h4>
+								    {#<p class="card-text pb-2">{{'Opening Soon'|_}}</p> #}
+								    <a href="mailto:salesmx@glueup.com" class="pb-4"><i class="icon-email-campaigns" style="font-size: 22px; position: absolute;"></i><span class="pl-4">salesmx@glueup.com</span></a>
+								    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+								  </div>
+								</div>
+							</div>
+							<div class="col-md-4 pt-4">
+				            	<div class="card h-100 shadow-sm">
+								  <img class="card-img-top" src="{{ 'offices/brazil.png'|media }}" alt="Glue Up Office in Brazil">
+								  <div class="card-body d-flex flex-column">
+								    <h4 class="card-title link-title">{{'Sâo Paulo'|_}}</h4>
+								    {#<p class="card-text pb-2">{{'Opening Soon'|_}}</p>#}
+								    <a href="mailto:salesbr@glueup.com" class="pb-4"><i class="icon-email-campaigns" style="font-size: 22px; position: absolute;"></i><span class="pl-4">salesbr@glueup.com</span></a>
+								    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+								  </div>
+								</div>
+							</div>
+						
+						</div>
+				  </div>
+				  <div class="tab-pane fade {{ active2 }}" id="pills-emea" role="tabpanel" aria-labelledby="pills-emea-tab">
+				  		
+						<div class="row justify-content-center">
+							<div class="col-md-4 pt-4">
+								<div class="card h-100 shadow-sm">
+								  <img class="card-img-top" src="{{ 'offices/nairobi.png' | media }}" alt="Glue Up Office in Kenya">
+								  <div class="card-body d-flex flex-column">
+								    <h4 class="card-title link-title">{{'Nairobi'|_}}</h4>
+								    <p class="card-text pb-2">{{'Mirage Towers, Waiyaki Way <br> Westlands, Floor M2 <br> Nairobi <br> Kenya'|_}}</p>
+								    <a href="tel:+254 734-698-114" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+254 734-698-114</span></a>
+								    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+								  </div>
+								</div>
+							</div>
+							<div class="col-md-4 pt-4">
+							<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/moscow.png' | media }}" alt="Glue Up Office in the USA">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Moscow'|_}}</h4>
+							    <p class="card-text pb-2">{{'Aviamotornaya Street 8,<br>Moscow'|_}}</p>
+							    <a href="tel:+7(495)260-14-25" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+7(495)260-14-25</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>
+							<div class="col-md-4 pt-4">
+								<div class="card h-100 shadow-sm">
+								  <img class="card-img-top" src="{{ 'offices/za.png' | media }}" alt="Glue Up Office in South Africa">
+								  <div class="card-body d-flex flex-column">
+								    <h4 class="card-title link-title">{{'Cape Town'|_}}</h4>
+								    <p class="card-text pb-2">{{'1 Bridgeway Road, Bridgeways Precinct,<br>Century City<br>Cape Town 7441<br>South Africa'|_}}</p>
+								    <a href="tel:+27 62-971-3405" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+27 62-971-3405</span></a>
+								    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+								  </div>
+								</div>
+							</div>
+							<div class="col-md-4 pt-4">
+								<div class="card h-100 shadow-sm">
+								  <img class="card-img-top" src="{{ 'offices/istanbul.png' | media }}" alt="Glue Up Office in Turkey">
+								  <div class="card-body d-flex flex-column">
+								    <h4 class="card-title link-title">{{'Istanbul'|_}}</h4>
+								    <p class="card-text pb-2">{{'Göktürk Cad. No:9 Kat:3 D:13,<br>Neo Yaşam İş Merkezi, Göktürk,<br>Istanbul, Turkey'|_}}</p>
+								    <a href="tel:+90 212 322 9210" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+90 212 322 9210</span></a>
+								    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+								  </div>
+								</div>
+							</div>
+							
+						</div>{#end of row#}
+				  </div>
+				  <div class="tab-pane fade {{ active3 }}" id="pills-asia" role="tabpanel" aria-labelledby="pills-asia-tab">
+				  		<div class="row justify-content-center">
+				  		<div class="col-md-4 pt-4">
+							<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/beijing.png' | media }}" alt="Glue Up Office in Beijing, China">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Beijing'|_}}</h4>
+							    <p class="card-text pb-2">{{'Room 3-1, Tower D,<br>Guanghualu SOHO2<br>No. 9 Guanghua Road,<br>Chaoyang District<br>Beijing 100020'|_}}</p>
+							    <a href="tel:010 5642 1015" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">010 - 5642 1015</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-4 pt-4">
+							<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/shanghai.png' | media }}" alt="Glue Up Office in Shanghai, China">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Shanghai'|_}}</h4>
+							    <p class="card-text pb-2">{{'9th Floor, Tower B<br>China Overseas Building<br>838 S. Huangpi Road<br>Huangpu District<br>Shanghai 200025'|_}}</p>
+							    <a href="tel:(+86) 152-2117-7322" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">(+86) 152-2117-7322</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>
+				  			
+			            <div class="col-md-4 pt-4">
+			            	<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/hk.png' | media }}" alt="Glue Up Office in the Hong Kong">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Hong Kong'|_}}</h4>
+							    <p class="card-text pb-2">{{'10/F, YF Life Tower,<br>33 Lockhart Road, Unit 7114,<br>Wanchai, Hong Kong'|_}}</p>
+							    <a href="tel:+852 3905 2030" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+852 3905 2030</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-4 pt-4">
+							<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/jakarta.png' | media }}" alt="Glue Up Office in the Jakarta Indonesia">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Jakarta'|_}}</h4>
+							    <p class="card-text pb-2">{{'The Plaza Office Tower 41F,<br>Jl. M. H. Thamrin Kav. 28-30,<br>Jakarta, 10350,<br>Indonesia'|_}}</p>
+							    <a href="tel:+62 21 2992 6654" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+62 21 2992 6654</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-4 pt-4">
+							<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/seoul.png' | media }}" alt="Glue Up Office in the Seoul Korea">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Seoul'|_}}</h4>
+							    <p class="card-text pb-2">{{'5, Yongmasan-ro 32 gil,<br>Gwangjin-gu<br>Seoul 04938,<br>South Korea'|_}}</p>
+							    <a href="tel:+82-02-455-3700" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+82-02-455-3700</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>
+						{#<div class="col-md-4 pt-4">
+							<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/kl.png' | media }}" alt="Glue Up Office in the Kuala Lumpur Malaysia">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Kuala Lumpur'|_}}</h4>
+							    <p class="card-text pb-2">{{'1775 Tysons Blvd, 5th Floor<br>Tysons, VA 22102'|_}}</p>
+							    <a href="tel:" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">1-888-218-1354</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>#}
+			            <div class="col-md-4 pt-4">
+			            	<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/manila.png' | media }}" alt="Glue Up Office in The Philippines">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Manila'|_}}</h4>
+							    <p class="card-text pb-2">{{'928 Arnaiz Avenue<br>Barangay San Lorenzo<br>Makati City<br>Manila, 1223<br>Philippines'|_}}</p>
+							    <a href="tel:+63 (2) 8396-5621" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+63 (2) 8396-5621</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-4 pt-4">
+							<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/singapore.png' | media }}" alt="Glue Up Office in Singapore">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Singapore'|_}}</h4>
+							    <p class="card-text pb-2">{{'9 Battery Road<br>MYP Centre<br>Office #27-107<br>Singapore 049910'|_}}</p>
+							    <a href="tel:+65 6815 0656" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+65 6815 0656</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>
+						<div class="col-md-4 pt-4">
+							<div class="card h-100 shadow-sm">
+							  <img class="card-img-top" src="{{ 'offices/bangalore.png' | media }}" alt="Glue Up Office in India">
+							  <div class="card-body d-flex flex-column">
+							    <h4 class="card-title link-title">{{'Bangalore'|_}}</h4>
+							    <p class="card-text pb-2">{{'43 - Residency Rd, Shanthala Nagar,<br>Ashok Nagar, Bengaluru,<br>Karnataka 560025 India'|_}}</p>
+							    <a href="tel:+91-984-414-1817" class="pb-4"><i class="icon-phone-number" style="font-size: 22px; position: absolute;"></i><span class="pl-4">+91-984-414-1817</span></a>
+							    <a href="#" class="btn mt-auto btn-outline-light d-block mt-4" value="Submit" id="office-button" input-type="submit" data-toggle="modal" data-target="#general">{{'Contact'|_}}</a>
+							  </div>
+							</div>
+						</div>					
+				  </div>
+				  </div>
+				</div>
+	            
+            </div>
+            </div>
+       </div>
+   </div>
+</section>";s:4:"code";s:467:"use Raccoon\GeoLocation\Facades\Geo;
+//use October\Rain\Router\Router as RainRouter;
+//use Cms\Classes\ComponentBase;
+protected $redirect;
+
+protected $translator;
+
+function onStart() {
+$background = $this->background;
+
+$ipAddress = $_SERVER['REMOTE_ADDR']?:($_SERVER['HTTP_X_FORWARDED_FOR']?:$_SERVER['HTTP_CLIENT_IP']);   
+$geoLocation = Geo::getLocation($ipAddress);  
+	$this['Location'] = $geoLocation->countryCode; 
+
+//$this['string'] = $string; 
+}";s:11:"description";s:7:"offices";s:7:"viewBag";a:0:{}}}

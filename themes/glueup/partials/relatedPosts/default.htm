@@ -1,0 +1,14 @@
+==
+{% set posts = __SELF__.posts %}
+
+         {# In the loop we excluded the post being displayed list of related posts by variable postFilter passed by the partial #}
+         {% for post in posts if post.slug != postFilter %}
+
+             {# Here you show what you want #}
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <p>{{ post.summary }}</p>  
+
+            {% else %}
+            <h5 class="no-data">{{ noPostsMessage }}</h5>
+
+        {% endfor %}

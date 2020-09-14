@@ -1,0 +1,152 @@
+1600067169a:1:{s:23:"genericForm/default.htm";a:6:{s:8:"fileName";s:23:"genericForm/default.htm";s:7:"content";s:4419:"[viewBag]
+==
+<!-- // Modal -->
+    <div id="contact-paygage" class="modal fade centered-modal" role="dialog">
+                <div class="modal-dialog">
+                
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            
+                          
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                                          <!--  <div class="container paygage-hero-container">
+                                
+                                   
+                                    <div class="col-md-6 align-items-center align-self-center">-->
+                                          <img src="{{ ('assets/images/Glueup-symbol.svg') | theme }}" class="paygage-visual" style="max-width:40px; height:auto;" alt="paygage logo">
+                                          </br>
+                                     <h4 class="t-5 modal-title">{{ 'Request a personalized demo of Glue Up platform.'|_ }} </h4>
+                                     <p>{{ 'Find out how our solutions can help you be more efficient. '|_ }}</p>
+                        <form data-request="{{ __SELF__ }}::onFormSubmit" id="generalForm">
+                        
+                            {{ form_token() }}
+                        
+                            <div id="{{ __SELF__ }}_forms_flash"></div>
+                        
+                            <div class="form-group">
+                                <label for="full_name">{{ 'Full Name'|_ }}</label>
+                                <input type="text" id="full_name" name="full_name" placeholder="{{''|_}}" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">{{ 'Phone Number'|_ }}</label>
+                                <input type="text" id="phone" name="phone" class="form-control" placeholder="{{''|_}}">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">{{ 'Email Address'|_ }}</label>
+                                <input type="text" id="email" name="email" class="form-control" value="" placeholder="{{''|_}}">
+                            </div>
+			    <div class="form-group">
+                                <label for="company">{{ 'Company Name'|_ }}</label>
+                                <input type="text" id="company" name="company" class="form-control" value="" placeholder="{{''|_}}">
+                            </div>
+ {% partial 'site/hidden-fields-form.htm' %}
+
+{#			    <div class="form-group" style="visibility:hidden; max-height: 1px; margin:0;">
+                                 <label for="user_location" style="visibility:hidden;"> </label>
+                                 <input type="text" id="user_location" name="user_location" placeholder="{{ country }}" value="{{ country }}" aria-label="user_location" class="form-control has_background" style="visibility:hidden;">
+                                </div>
+			    <div class="form-group" style="visibility:hidden; max-height: 1px; margin:0;">
+                                 <label for="user_ip" style="visibility:hidden;"> </label>
+                                 <input type="text" id="user_ip" name="user_ip" placeholder="{{ ip_Address }}" value="{{ ip_Address }}" aria-label="user_ip" class="form-control has_background" style="visibility:hidden;">
+                                </div>
+
+#}
+{#       $this['Location'] = $geoLocation->countryCode;
+        $this['ip_Address'] = $geoLocation->ipAddress;
+        $this['Location_Name'] = $geoLocation->countryName;
+        $this['City'] = $geoLocation->cityName;
+#}
+                        
+                          
+                        
+                            <button id="simpleContactSubmitButton" type="submit" class="btn btn-primary">{{ 'Book a Demo'|_ }}</button>
+                        
+                        </form>
+                                </div>
+                            </div> 
+     
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- // Modal -->
+";s:5:"mtime";i:1598429657;s:6:"markup";s:4405:"<!-- // Modal -->
+    <div id="contact-paygage" class="modal fade centered-modal" role="dialog">
+                <div class="modal-dialog">
+                
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            
+                          
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                                          <!--  <div class="container paygage-hero-container">
+                                
+                                   
+                                    <div class="col-md-6 align-items-center align-self-center">-->
+                                          <img src="{{ ('assets/images/Glueup-symbol.svg') | theme }}" class="paygage-visual" style="max-width:40px; height:auto;" alt="paygage logo">
+                                          </br>
+                                     <h4 class="t-5 modal-title">{{ 'Request a personalized demo of Glue Up platform.'|_ }} </h4>
+                                     <p>{{ 'Find out how our solutions can help you be more efficient. '|_ }}</p>
+                        <form data-request="{{ __SELF__ }}::onFormSubmit" id="generalForm">
+                        
+                            {{ form_token() }}
+                        
+                            <div id="{{ __SELF__ }}_forms_flash"></div>
+                        
+                            <div class="form-group">
+                                <label for="full_name">{{ 'Full Name'|_ }}</label>
+                                <input type="text" id="full_name" name="full_name" placeholder="{{''|_}}" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">{{ 'Phone Number'|_ }}</label>
+                                <input type="text" id="phone" name="phone" class="form-control" placeholder="{{''|_}}">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">{{ 'Email Address'|_ }}</label>
+                                <input type="text" id="email" name="email" class="form-control" value="" placeholder="{{''|_}}">
+                            </div>
+			    <div class="form-group">
+                                <label for="company">{{ 'Company Name'|_ }}</label>
+                                <input type="text" id="company" name="company" class="form-control" value="" placeholder="{{''|_}}">
+                            </div>
+ {% partial 'site/hidden-fields-form.htm' %}
+
+{#			    <div class="form-group" style="visibility:hidden; max-height: 1px; margin:0;">
+                                 <label for="user_location" style="visibility:hidden;"> </label>
+                                 <input type="text" id="user_location" name="user_location" placeholder="{{ country }}" value="{{ country }}" aria-label="user_location" class="form-control has_background" style="visibility:hidden;">
+                                </div>
+			    <div class="form-group" style="visibility:hidden; max-height: 1px; margin:0;">
+                                 <label for="user_ip" style="visibility:hidden;"> </label>
+                                 <input type="text" id="user_ip" name="user_ip" placeholder="{{ ip_Address }}" value="{{ ip_Address }}" aria-label="user_ip" class="form-control has_background" style="visibility:hidden;">
+                                </div>
+
+#}
+{#       $this['Location'] = $geoLocation->countryCode;
+        $this['ip_Address'] = $geoLocation->ipAddress;
+        $this['Location_Name'] = $geoLocation->countryName;
+        $this['City'] = $geoLocation->cityName;
+#}
+                        
+                          
+                        
+                            <button id="simpleContactSubmitButton" type="submit" class="btn btn-primary">{{ 'Book a Demo'|_ }}</button>
+                        
+                        </form>
+                                </div>
+                            </div> 
+     
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- // Modal -->";s:4:"code";N;s:7:"viewBag";a:0:{}}}

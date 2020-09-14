@@ -1,0 +1,310 @@
+description = "demoform"
+
+[viewBag]
+snippetCode = "demoform"
+snippetName = "demoform-long"
+
+[staticPage]
+useContent = 1
+default = 0
+
+[genericForm awards]
+rules[email] = "required|email"
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<!-- // form -->
+ 
+                                     {#<h4 class="t-5 modal-title">{{ 'Contact Support'|_ }} </h4>
+                                     <p>{{ "We're here to help. Please fill out this quick form and we'll get back to you shortly."|_ }}</p>#}
+                        <form data-request="{{ __SELF__ }}::onFormSubmit" id="awards">
+                        
+                            {{ form_token() }}
+                        
+                            <div id="{{ __SELF__ }}_forms_flash"></div>
+                     
+
+
+
+<h3 class="pb-5">{{"Application Form"|_}}</h3>
+
+
+<label for="full_name">{{"Your full name"|_}}</label>
+<input type="text" id="full_name" name="full_name" class="form-control"><br>
+
+<label for="position">{{"Your Title"|_}}</label>
+<input type="text" id="position" name="position" class="form-control"><br>
+
+
+<label for="email">{{"Email Address"|_}}</label>
+<input type="text" id="email" name="email" class="form-control" value=""><br>
+
+<label for="email">{{"Phone Number"|_}}</label>
+<input type="text" id="phone" name="phone" class="form-control"><br>
+
+
+<input type="checkbox" name="assoc_authorization" value="Yes" /><label for="assoc_authorization" class="pb-5" style="display:inline; margin-left:1rem;">{{"I am authorized to submit nominations and have approval from all interested parties (association and other stakeholders)."|_}}</label>
+<br>
+<div class="py-5"></div>
+<h3 class="pb-5">{{"About Your Association"|_}}</h3>
+
+
+<label for="assoc_name">{{"What is the name of the association you are nominating?"|_}}</label>
+<input type="text" id="assoc_name" name="assoc_name" class="form-control"><br>
+
+<label for="assoc_web">{{"Please provide link to your association's website"|_}}</label>
+<input type="text" id="assoc_web" name="assoc_web" class="form-control"><br>
+
+<label for="assoc_head">{{"Who is the head of your association? Full name and official title"|_}}</label>
+<input type="text" id="assoc_head" name="assoc_head" class="form-control"><br>
+
+
+<label for="email_assoc">{{"Please provide their email"|_}}</label>
+<input type="text" id="email_assoc" name="email_assoc" class="form-control" value=""><br>
+
+<label for="phone_assoc">{{"Please provide their phone number"|_}}</label>
+<input type="text" id="phone_assoc" name="phone_assoc" class="form-control"><br>
+
+
+<div class="form-group">
+  <label class="d-block" for="radio-buttons">{{"What are the main services of the association?"|_}}</label>
+ <input type="radio" id="for-profit" name="for-profit" value="for-profit">
+  <label for="">{{"Business (for-profit)"|_}}</label><br>
+ <input type="radio" id="Non-profit" name="Non-profit" value="Non-profit">
+  <label for="">{{"Non-profit"|_}}</label><br>
+ <input type="radio" id="Leadership" name="Leadership" value="Leadership">
+  <label for="">{{"Leadership Development"|_}}</label><br>
+ <input type="radio" id="Training" name="Training" value="Training">
+  <label for="">{{"Training & Development"|_}}</label><br>
+ <input type="radio" id="Education" name="Education" value="Education">
+  <label for="">{{"Education Development & Acitation"|_}}</label><br>
+ <input type="radio" id="Networking" name="Networking" value="Networking">
+  <label for="">{{"Professional Networking"|_}}</label><br>
+ <input type="radio" id="Others" name="Others" value="Others">
+  <label for="">{{"Others"|_}}</label><br>
+ </div>
+
+<label for="assoc_employees">{{"How many full-time employees do you have?"|_}}</label>
+<input type="number" id="assoc_employees" name="assoc_employees" class="form-control"><br>
+
+<label for="assoc_pt_employees">{{"How many part-time employees do you have?"|_}}</label>
+<input type="number" id="assoc_pt_employees" name="assoc_pt_employees" class="form-control"><br>
+
+<label for="assoc_members">{{"How many members do you have?"|_}}</label>
+<input type="number" id="assoc_members" name="assoc_members" class="form-control"><br>
+
+<label for="assoc_new_members">{{"How many new members joined your association in 2020?"|_}}</label>
+<input type="number" id="assoc_new_members" name="assoc_new_members" class="form-control"><br>
+
+<label for="assoc_ren_rate">{{"What is the renewal rate in 2020 Please indicate in %"|_}}</label>
+<input type="number" id="assoc_ren_rate" name="assoc_ren_rate" class="form-control"><br>
+
+<label for="assoc_events_year">{{"How many events (virtual or face-to-face) do you organize per year?"|_}}</label>
+<input type="number" id="assoc_events_year" name="assoc_events_year" class="form-control"><br>
+
+<label for="assoc_emails_month">{{"How many email campaigns are you sending out per month?"|_}}</label>
+<input type="number" id="assoc_emails_month" name="assoc_emails_month" class="form-control"><br>
+
+
+
+<div class="py-5"></div>
+<div class="form-group">
+  <label  class="d-block" for="radio-buttons"><h3 class="pb-5">{{"Which award(s) are you applying for?"|_}}</h3></label>
+
+ <input type="checkbox" id="assoc_large" name="awardsApplyingfor1" value="assoc_large">
+  <label for="assoc_large">{{"Large Association of the Year Award"|_}}</label><br>
+
+ <input type="checkbox" id="assoc_small" name="awardsApplyingfor2" value="assoc_small">
+  <label for="assoc_small">{{"Small Association of the Year Award"|_}}</label><br>
+
+ <input type="checkbox" id="assoc_pro" name="awardsApplyingfor3" value="assoc_pro">
+  <label for="assoc_pro">{{"Professional Association of the Year Award"|_}}</label><br>
+
+ <input type="checkbox" id="assoc_industry" name="awardsApplyingfor4" value="assoc_industry">
+  <label for="assoc_industry">{{"Industry Association of the Year Award"|_}}</label><br>
+
+ <input type="checkbox" id="assoc_covid" name="awardsApplyingfor5" value="assoc_covid">
+  <label for="assoc_covid">{{"COVID-19 Hero Association Awards"|_}}</label><br>
+
+ <input type="checkbox" id="assoc_star" name="awardsApplyingfor6" value="assoc_star">
+  <label for="assoc_star">{{"Rising Star of the Year Award"|_}}</label><br>
+
+ <input type="checkbox" id="assoc_executive" name="awardsApplyingfor7" value="assoc_executive">
+  <label for="assoc_executive">{{"The Executive of the Year Award"|_}}</label><br>
+
+ <input type="checkbox" id="assoc_excellence" name="awardsApplyingfor8" value="assoc_excellence">
+  <label for="assoc_excellence">{{"Excellence in Technology & Innovation Award "|_}}</label><br>
+
+ <input type="checkbox" id="assoc_virtual" name="awardsApplyingfor9" value="assoc_virtual">
+  <label for="assoc_virtual">{{"Best Virtual Event of the Year Award "|_}}</label><br>
+
+ <input type="checkbox" id="assoc_engagement" name="awardsApplyingfor10" value="assoc_engagement">
+  <label for="assoc_engagement">{{"Best Community Engagement Programme Award"|_}}</label><br>
+</div>
+
+
+
+<label for="assoc_accomplishment">{{"Describe the association's biggest accomplishment from the past year:"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_accomplishment" name="assoc_accomplishment" class="form-control"><br>
+
+<label for="assoc_3_programs">{{"Describe three programs / services/ events that you are most proud of:"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_3_programs" name="assoc_3_programs" class="form-control"><br>
+
+<label for="assoc_strategy">{{"What is the engagement strategy? Please describe how the association engages with members:"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_strategy" name="assoc_strategy" class="form-control"><br>
+
+<label for="assoc_changes_challenges">{{"What are the biggest challenges dealing with the COVID-19 pandemic in your association and your community in general?"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_changes_challenges" name="assoc_changes_challenges" class="form-control"><br>
+
+<label for="assoc_changes_pandemic">{{"What changes have been made or achievements within the association to cope with the pandemic?"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_changes_pandemic" name="assoc_changes_pandemic" class="form-control"><br>
+
+<label for="assoc_forward">{{"How is the association helping the industry/profession move forward?"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_forward" name="assoc_forward" class="form-control"><br>
+
+<label for="assoc_success">{{"Describe how successful the association was in fulfilling plans and how has it improved in comparison with previous year"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_success" name="assoc_success" class="form-control"><br>
+
+<label for="assoc_goals">{{"What are association's goals for the next two years? How will you continue to propel your industry/profession forward?"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_goals" name="assoc_goals" class="form-control"><br>
+
+<label for="assoc_extra">{{"Is there anything else you would like to share?"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_extra" name="assoc_extra" class="form-control"><br>
+
+
+
+<div class="assoc_star box" style="display:none;">
+<div class="py-5"></div>
+<h3 class="pb-5">{{"Rising Star of the Year Award"|_}}</h3>
+<label for="assoc_star_name">{{"Full name of the nominee including the official title"|_}}</label>
+<input type="text" id="assoc_star_name" name="assoc_star_name" class="form-control"><br>
+
+<label for="assoc_star_years">{{"Number of years working at the association"|_}}</label>
+<input type="number" id="assoc_star_years" name="assoc_star_years" class="form-control"><br>
+
+<label for="assoc_star_birth">{{"Year of birth"|_}}</label>
+<input type="number" id="assoc_star_birth" name="assoc_star_birth" class="form-control"><br>
+
+<label class="pt-3" for="assoc_star_sm">{{"Link to the nominee's social media (LinkedIn, Twitter or other)"|_}}</label>
+<input type="text" id="assoc_star_sm" name="assoc_star_sm" class="form-control"><br>
+
+<label for="assoc_star_orgs">{{"Please list other organizations to which the nominee belongs and his/her positions"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_star_orgs" name="assoc_star_orgs" class="form-control"><br>
+
+<label for="assoc_star_awards">{{"Please list other recognitions & awards the nominee has received"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_star_awards" name="assoc_star_awards" class="form-control"><br>
+
+<label for="assoc_star_accomplishments">{{"Describe the nominee's accomplishments from last year. What challenges has the nominee overcome?"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_star_accomplishments" name="assoc_star_accomplishments" class="form-control"><br>
+
+<label for="assoc_star_impact">{{"How has the nominee has made an impact on the association and its members?"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_star_impact" name="assoc_star_impact" class="form-control"><br>
+</div>
+
+
+<div class="assoc_executive box" style="display:none;">
+<div class="py-5"></div>
+<h3 class="pb-5">{{"The Executive of the Year Award"|_}}</h3>
+<label for="assoc_executive_name">{{"Full name of the nominee including the official title"|_}}</label>
+<input type="text" id="assoc_executive_name" name="assoc_executive_name" class="form-control"><br>
+
+<label for="assoc_executive_years">{{"Number of years working at the association"|_}}</label>
+<input type="number" id="assoc_executive_years" name="assoc_executive_years" class="form-control"><br>
+
+<label class="pt-3" for="assoc_executive_sm">{{"Link to the nominee's social media (LinkedIn, Twitter or other)"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_executive_sm" name="assoc_executive_sm" class="form-control"><br>
+
+<label for="assoc_executive_orgs">{{"Please list other organizations to which the nominee belongs and his/her positions"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_executive_orgs" name="assoc_executive_orgs" class="form-control"><br>
+
+<label for="assoc_executive_awards">{{"Please list other recognitions & awards the nominee has received"|_}}</label>
+<input type="texarea" id="assoc_executive_awards" name="assoc_executive_awards" class="form-control"><br>
+
+<label for="assoc_executive_accomplishments">{{"Describe the nominee's accomplishments from last year. What challenges has the nominee overcome?"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_executive_accomplishments" name="assoc_executive_accomplishments" class="form-control"><br>
+
+<label for="assoc_executive_impact">{{"How has the nominee has made an impact on the association and its members?"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_executive_impact" name="assoc_executive_impact" class="form-control"><br>
+</div>
+
+
+<div class="assoc_excellence box" style="display:none;">
+<div class="py-5"></div>
+<h3 class="pb-5">{{"Excellence in Technology & Innovation Award"|_}} </h3>
+<label for="assoc_excellence_innovations">{{"What innovations have been introduced in the association in 2020 so far."|_}}{{" What impact did they have on your industry/profession? (i.e. software used, process innovation, etc.)"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_excellence_innovations" name="assoc_excellence_innovations" class="form-control"><br>
+
+<label for="assoc_excellence_pandemic">{{"Are there any services or suppliers that could help you (or have helped you) through the pandemic?"|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_excellence_pandemic" name="assoc_excellence_pandemic" class="form-control"><br>
+
+</div>
+
+
+<div class="assoc_virtual box" style="display:none;">
+<div class="py-5"></div>
+<h3 class="pb-5">{{"Best Virtual Event of the Year Award"|_}}</h3>
+<label for="assoc_virtual_name">{{"Name the event that had the greatest impact on your respective profession/industry"|_}}</label>
+<input type="text" id="assoc_virtual_name" name="assoc_virtual_name" class="form-control"><br>
+
+<label for="assoc_virtual_date">{{"When did the event take place?"|_}}</label>
+<input type="date" id="assoc_virtual_date" name="assoc_virtual_date"
+       value=""
+       min="" max="">
+
+<label for="assoc_virtual_tools">{{"What tools are you using to conduct online events (webinars)?"|_}}</label>
+<input type="text" id="assoc_virtual_tools" name="assoc_virtual_tools" class="form-control"><br>
+
+<label for="assoc_virtual_attendees">{{"How many attendees attended the event?"|_}}</label>
+<input type="number" id="assoc_virtual_attendees" name="assoc_virtual_attendees" class="form-control"><br>
+
+<label for="assoc_virtual_link">{{"Link to the event (registration) page"|_}}</label>
+<input type="text" id="assoc_virtual_link" name="assoc_virtual_link" class="form-control"><br>
+
+<label for="assoc_virtual_description">{{"Describe the success of the event. Outline the success of the event in terms of the audience size, profile and feedback from delegates, speakers, sponsors and members and non members."|_}}{{" Include anything else you feel qualifies or quantifies the success of the event and how you achieved your goals."|_}}</label>
+<input type="textarea" rows="4" style="height:100px;" id="assoc_virtual_description" name="assoc_virtual_description" class="form-control"><br>
+
+<label for="assoc_virtual_promotion">{{"How did you promote this event to your audiences?"|_}}{{" Outline your marketing strategy including any novel approaches and techniques you used in the development of the event and its' promotion – including key partnerships with third parties."|_}}</label>
+<input type="text" id="assoc_virtual_promotion" name="assoc_virtual_promotion" class="form-control"><br>
+
+<label for="assoc_virtual_implications">{{"What are the future implications of the event? How will this event affect the future of the profession or industry?"|_}}</label>
+<input type="text" id="assoc_virtual_implications" name="assoc_virtual_implications" class="form-control"><br>
+</div>
+
+<div class="assoc_engagement box" style="display:none;">
+<div class="py-5"></div>
+<h3 class="pb-5">{{"Best Community Engagement Programme Award"|_}}</h3>
+
+	<label for="assoc_engagement_name">{{"Name the programme that had the greatest impact to a specific need in your community"|_}}</label>
+	<input type="textarea" rows="4" style="height:100px;" id="assoc_engagement_name" name="assoc_engagement_name" class="form-control"><br>
+	
+	<label for="assoc_engagement_how">{{"How do you communicate and engage with your community when you can't meet in-person? Describe your engagement strategy:"|_}}</label>
+	<input type="textarea" rows="4" style="height:100px;" id="assoc_engagement_how" name="assoc_engagement_how" class="form-control"><br>
+	
+	<label for="assoc_engagement_description">{{"Describe the success of the programme."|_}}{{" Outline the success of the programme in terms of how it links within your communities, did it demonstrated positive impact and what are the measures taken to engage with the community."|_}}{{" Include anything else you feel qualifies or quantifies the success of the programme and how you achieved your goals."|_}}</label>
+	<input type="textarea" rows="4" style="height:100px;" id="assoc_engagement_description" name="assoc_engagement_description" class="form-control"><br>
+	
+	<label for="assoc_engagement_implications">{{"What are the future implications of the programme? How will this programme affect the future of the profession or industry?"|_}}</label>
+	<input type="text" id="assoc_engagement_implications" name="assoc_engagement_implications" class="form-control"><br>
+</div>
+<div class="py-5"></div>
+<br>
+<input type="checkbox" name="assoc_verification" value="Yes" />
+<label for="assoc_verification" style="display:inline; margin-left:1rem;">{{"I certify my answers are true and complete to the best of my knowledge."|_}}</label>
+<div class="py-2"></div>
+
+
+
+                             {% partial 'site/hidden-fields-form.htm' %}
+                          	 	
+                        
+                            <button id="simpleContactSubmitButton" type="submit" class="btn btn-primary">Send</button>
+                        
+                        </form>
+            <!-- // Modal -->

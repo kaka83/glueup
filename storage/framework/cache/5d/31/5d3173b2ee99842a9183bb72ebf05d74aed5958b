@@ -1,0 +1,73 @@
+1600066771a:1:{s:28:"logos/logobar-membership.htm";a:7:{s:8:"fileName";s:28:"logos/logobar-membership.htm";s:7:"content";s:1916:"description = "logobar membership"
+
+[viewBag]
+==
+<section class="">
+        <div class="container text-center">
+            <div class="row">
+                    <div class="col-lg-8 mx-auto py-3">
+                        <div class="block text-center">
+                          
+                             <p class="tagline">{{ 'Forward-looking teams choose Glue Up '|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ '/clients/glueup-client-logo-27.png' | media }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ '/clients/glueup-client-logo-24.png' | media }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ '/clients/glueup-client-logo-23.png' | media }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ '/clients/glueup-client-logo-18.png' | media }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ '/clients/glueup-client-logo-25.png' | media }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                     <img src="{{ '/clients/glueup-client-logo-22.png' | media }}" class="img-fluid" alt="logo">
+                </div>
+            </div>
+            <!--<img src="images/client-logos.png" alt="client logos" class="img-fluid">-->
+        </div>
+    </div>
+    </section>";s:5:"mtime";i:1597979146;s:6:"markup";s:1867:"<section class="">
+        <div class="container text-center">
+            <div class="row">
+                    <div class="col-lg-8 mx-auto py-3">
+                        <div class="block text-center">
+                          
+                             <p class="tagline">{{ 'Forward-looking teams choose Glue Up '|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ '/clients/glueup-client-logo-27.png' | media }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ '/clients/glueup-client-logo-24.png' | media }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ '/clients/glueup-client-logo-23.png' | media }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ '/clients/glueup-client-logo-18.png' | media }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ '/clients/glueup-client-logo-25.png' | media }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                     <img src="{{ '/clients/glueup-client-logo-22.png' | media }}" class="img-fluid" alt="logo">
+                </div>
+            </div>
+            <!--<img src="images/client-logos.png" alt="client logos" class="img-fluid">-->
+        </div>
+    </div>
+    </section>";s:4:"code";N;s:11:"description";s:18:"logobar membership";s:7:"viewBag";a:0:{}}}

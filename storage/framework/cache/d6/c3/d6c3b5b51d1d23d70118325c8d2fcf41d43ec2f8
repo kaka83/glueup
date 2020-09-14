@@ -1,0 +1,51 @@
+1600067169a:1:{s:14:"site/alert.htm";a:7:{s:8:"fileName";s:14:"site/alert.htm";s:7:"content";s:1871:"description = "alert top"
+
+[viewBag]
+==
+<div class="alert-top d-none d-sm-block" style="padding:.5rem 0; background:#0D62FE; border-radius:0;">
+	<div class="container-fluid  text-center" style="display: flex; flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;">
+    <div><span class=" text-white font-weight-light" style="padding-top:10px; display:block; padding: 0 0 0 4px;  ">{{'EventBank is now <span class="font-weight-bold">Glue Up</span>. Learn why we have changed our identity and what it means to you and your community.'|_}} </span></div>
+    <div>
+    {% if this.page.id == 'rebranding'%}
+	{% else %}<a href="{{ 'rebranding' | page}}" id="rebrand-button" class="read-more d-inline-flex text-white" style=" padding-left:10px; ">{{'Learn More'|_}} <i class="read-more-icon icon-arrow" style="text-white"></i></a>{% endif %}</div>
+    </div>
+</div><!-- /alert top message  -->
+<div class="alert-top d-block d-sm-none" style="padding:.5rem 0; background:#0D62FE; border-radius:0;">
+	<div class="container-fluid  text-center" style="display: flex; flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;">
+    <div><span class=" text-white font-weight-light" style="padding-top:10px; display:block; padding: 0 0 0 4px; font-size:4vw; ">{{'EventBank is now <span class="font-weight-bold">Glue Up</span>.'|_}} </span></div>
+    <div>
+    {% if this.page.id == 'rebranding'%}
+	{% else %}<a href="{{ 'rebranding' | page}}" id="rebrand-button" class="read-more d-inline-flex text-white" style="padding-left:10px; font-size:4vw;">{{'Learn More'|_}} <i class="read-more-icon icon-arrow" style="text-white"></i></a>{% endif %}</div>
+    </div>
+</div><!-- /alert top message  -->";s:5:"mtime";i:1598182375;s:6:"markup";s:1831:"<div class="alert-top d-none d-sm-block" style="padding:.5rem 0; background:#0D62FE; border-radius:0;">
+	<div class="container-fluid  text-center" style="display: flex; flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;">
+    <div><span class=" text-white font-weight-light" style="padding-top:10px; display:block; padding: 0 0 0 4px;  ">{{'EventBank is now <span class="font-weight-bold">Glue Up</span>. Learn why we have changed our identity and what it means to you and your community.'|_}} </span></div>
+    <div>
+    {% if this.page.id == 'rebranding'%}
+	{% else %}<a href="{{ 'rebranding' | page}}" id="rebrand-button" class="read-more d-inline-flex text-white" style=" padding-left:10px; ">{{'Learn More'|_}} <i class="read-more-icon icon-arrow" style="text-white"></i></a>{% endif %}</div>
+    </div>
+</div><!-- /alert top message  -->
+<div class="alert-top d-block d-sm-none" style="padding:.5rem 0; background:#0D62FE; border-radius:0;">
+	<div class="container-fluid  text-center" style="display: flex; flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;">
+    <div><span class=" text-white font-weight-light" style="padding-top:10px; display:block; padding: 0 0 0 4px; font-size:4vw; ">{{'EventBank is now <span class="font-weight-bold">Glue Up</span>.'|_}} </span></div>
+    <div>
+    {% if this.page.id == 'rebranding'%}
+	{% else %}<a href="{{ 'rebranding' | page}}" id="rebrand-button" class="read-more d-inline-flex text-white" style="padding-left:10px; font-size:4vw;">{{'Learn More'|_}} <i class="read-more-icon icon-arrow" style="text-white"></i></a>{% endif %}</div>
+    </div>
+</div><!-- /alert top message  -->";s:4:"code";N;s:11:"description";s:9:"alert top";s:7:"viewBag";a:0:{}}}

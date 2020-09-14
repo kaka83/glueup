@@ -1,0 +1,36 @@
+<?php
+    $context = BackendMenu::getContext();
+    if (strpos($context->sideMenuCode, '|') !== false) {
+        $menu = explode('|', $context->sideMenuCode);
+        $context->mainMenuCode = $menu[0];
+        $context->sideMenuCode = $menu[1];
+    }
+    if (isset($menu)):
+?>
+    <?= $this->makePartial(__DIR__ . '/../secondary/_sidenav.phtml', [
+        'context' => $context,
+    ]) ?>
+<?php else: ?>
+    <div class="layout-cell sidenav-tree bg-p" data-control="sidenav-tree" data-search-input="#settings-search-input">
+        <a class="back-link" href="<?= Backend::url('wms/menu') ?>"><i class="icon-angle-left"></i><?= e(trans('wms.menu::plugin.name')) ?></a>
+
+        <div class="layout">
+            <div class="layout-row min-size">
+                <?= $this->makePartial(__DIR__ . '/_system_sidebar_menu_toolbar.phtml') ?>
+            </div>
+
+            <div class="layout-row">
+                <div class="layout-cell">
+                    <div class="layout-relative">
+
+                        <div class="layout-absolute">
+                            <div class="control-scrollbar" data-control="scrollbar">
+                                <?= $this->makePartial(__DIR__ . '/_system_sidebar_menu.phtml') ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>

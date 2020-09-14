@@ -1,0 +1,439 @@
+title = "My Glue"
+url = "/features/glue-up-app"
+layout = "glueup-home"
+description = "Give your community an easy-to-use Glue Up App to engage and receive important information from anywhere."
+meta_title = "Mobile App for Attendees & Members"
+meta_description = "Give your community an easy-to-use mobile app to engage and receive important information from anywhere."
+is_hidden = 0
+seo_keywords = "attendee app, event app, whitelabel mobile app for events, member app, mobile engagement solution, mobile application for attendees, My Glue free event app, attendee chat, event wall, networking app"
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeMeta_title[es_la] = "Mi Glue - Permite que tu comunidad interactue donde sea"
+localeMeta_title[Pt_br] = "Meu Glue Up"
+localeMeta_title[ru] = "My Glue"
+localeMeta_title[tk] = "Benim Glue'um"
+localeMeta_title[zh] = "My Glue一体化移动端 App"
+localeMeta_description[es_la] = "Brinda a tus asistentes y miembros una manera fácil de participar, establecer contactos y recibir información importante sin importar dónde se encuentren."
+localeMeta_description[Pt_br] = "Ofereça aos seus participantes e membros uma maneira fácil de se engajar, interagir e receber informações importantes, não importa onde estejam."
+localeMeta_description[ru] = "Предоставьте вашим участникам мероприятия и членам простой способ общаться и получать важную информацию, где бы они ни находились."
+localeMeta_description[tk] = "Katılımcılarınız ve üyeleriniz için kullanıcı dostu mobil uygulama."
+localeMeta_description[zh] = "无论您的会员身在何处，都可随时随地参与社群线上互动社交，接收重要通知与推送提醒。"
+==
+<?php
+function onEnd(){
+    $this->page->nav_highlight = 'features';
+ }
+?>
+==
+<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+           <div class="row flex-row-reverse">
+                <div class="col-md-6 hero align-self-center text-left">
+                    <img src="{{ 'features/glueup-myglue-3some.svg' | media }}" class="paygage-visual" alt="logo">
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-left">
+                    <p class="tagline mb-4">{{'My Glue'|_}}</p>
+                      <h1>{{ 'Enable Your Community to Engage. <span class="line"><ins> Anywhere </ins></span>'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Give your attendees and members an easy way to engage, network and receive important information no matter where they are. '|_ }} </p><br>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+            </div>
+        </div> 
+</header>
+<section class="section pt-0">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-6 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'All-in-one Mobile App'|_ }}</h2>
+                             <p class="tagline">{{ 'User friendly mobile app for your communities that comes with every Glue Up solution.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-lg-10 align-self-center mx-auto">
+                <div class="services__accordion row flex-row-reverse">
+                        <div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+            				<div class="accordion__img desktop">
+            				    <div id="tab1-bullet-img" class="firstshow">
+            				        <img class="feature-window desktop" src="{{ 'features/glueup-myglue-1.svg' | media }}" alt="chat">
+            				         
+            				    </div>
+            				    <div id="tab2-bullet-img">
+            				        <img class="feature-window deskto" src="{{ 'features/glueup-myglue-1.svg' | media }}" alt="chat">
+            				    </div>
+            			        <div id="tab3-bullet-img">
+                			        <img class="feature-window deskto" src="{{ 'features/glueup-myglue-1.svg' | media }}" alt="chat">
+                			    </div>
+            			     </div>
+            			</div>
+            			<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+            				<div class="services__accordion">
+            				  
+                                <div class="accordion pl-3 active small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+                                    <i class="icon-engagement"></i>
+                                    <span>{{ 'Do it all from one place'|_ }}</span>
+                                    <div class="accordion__body firstshow" style="display:none;">
+            							<p class="pt-3 d-flex flex-column">{{ 'A single mobile app that has everything your community needs for maximum engagement. '|_ }}
+            							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+            						</div>
+                                </div>
+                                <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab2-bullet">
+                                    <i class="icon-button"></i>
+                                    <span>{{ 'Make it simple for everyone'|_ }}</span>
+                                    <div class="accordion__body " style="display:none;">
+            							<p class="pt-3 d-flex flex-column">{{ 'Premium user experience battle-tested for your attendees’ and members’ absolute comfort. '|_ }}
+            							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+            						</div>
+                                </div>
+                                <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab3-bullet">
+                                    <i class="icon-chat"></i>
+                                    <span>{{ 'Activate engagement'|_ }}</span>
+                                    <div class="accordion__body " style="display:none;">
+            							<p class="pt-3 d-flex flex-column">{{ 'Give your community a digital place where they can share their ideas and stay social even when meeting in person is not possible. '|_ }}
+            							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+            						</div>
+                                </div>
+            				</div>
+            			</div>
+            			
+            		</div>
+            </div>
+            </div>
+        </div>
+
+</section>
+{#engagement 1#}{#
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-4 text-right">
+                    <span class="h6 text-color hideme">{{ 'Events'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Maximize Attendee Experience'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Keep your attendees up-to-date at all times during your physical and virtual events and give them means to build relationships and stay connected from anywhere.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-menu-section-lemontea"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Session Documents<br> & Presentations'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Speaker bios and maps'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-navigation"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Live Event Walls'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Seamless <br>QR Code Check-ins'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                     <img src="{{ 'features/glueup-myglue-1.svg' | media }}" alt="paygage is accessible" class="img-fluid mobile-screen mobile-screen mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-4 ">
+                    <span class="h6 text-color hideme">{{ 'Memberships'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Provide<br> Extra Value to Members'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Spoil your members like never before with an all-in-one app that lets them get most of their memberships from palm of their hand. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-menu-section-lemontea"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Renewal Management'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Membership Directory'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-navigation"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Member Profile & Membership Card'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Newsletters & Notifications'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+</section>
+#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-6 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-myglue-3some.svg' | media }}" alt="paygage is accessible" class="img-fluid mobile-screen mobile-screen mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Maximize Attendee Experience'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Keep your attendees up-to-date at all times during your physical and virtual events and give them means to build relationships and stay connected from anywhere.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-speaker"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Session Documents<br> & Presentations'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-documents"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Speaker bios and maps'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Live Event Walls'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-qr-code"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Seamless <br>QR Code Check-ins'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-6 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-myglue-6.svg' | media }}" alt="paygage is accessible" class="img-fluid mobile-screen mobile-screen mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-6 align-self-center">
+                 <div>
+                          <span class="h6 text-color hideme">{{ 'Memberships'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Provide<br> Extra Value to Members'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Spoil your members like never before with an all-in-one app that lets them get most of their memberships from palm of their hand. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-refresh"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Renewal Management'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-directory"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Membership Directory'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-membership-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Member Profile & Membership Card'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-email-solid"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Newsletters & Notifications'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-6 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-myglue-2.svg' | media }}" alt="paygage is accessible" class="img-fluid mobile-screen mobile-screen mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Conversations'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Let People Talk'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Make it your business to enable everyone in your community develop lasting relationships with you and each other.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ '1-on-1 Chats'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-heart"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'GIFs and Emojis'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-documents"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Media & Location Sharing'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Rooms'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-lock"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Privacy Settings'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-6 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-myglue-bsc.svg' | media }}" alt="paygage is accessible" class="img-fluid mobile-screen mobile-screen mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-6 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Digital Business Cards'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Help Business Happen'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Enable your community to create and share their own digital business cards, manage their contacts and effectively network with everyone no matter where they are.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row float-left">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Business Card Scanner'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-qr-code"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Personal QR-Codes'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Individual CRM'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-crm"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Contact Profile'|_ }}</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-6 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-myglue-5.svg' | media }}" alt="paygage is accessible" class="img-fluid mobile-screen mobile-screen mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Showcase Sponsors'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Increase Revenue  '|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Monetize the app by giving your sponsors in-app visibility with banner ads, profiles, and push notifications.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row float-left">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-invoice"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Sponsor <br>& Exhibitor Profiles'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-notifications"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Membership<br> & Exhibitor Directory'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-edit-update"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Push <br>Notifications'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-ticket"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'ROI Tracking'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-8 mx-auto pb-4">
+                        <div class="block text-center">
+                            <span class="h6 text-color text-center mx-auto hideme">{{ 'White-label App'|_ }}</span>
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Make My Glue Your Own'|_ }}</h2>
+                             <p class="tagline"> {{ 'Create a unified and engaging experience aligned with your branding requirements for all of your events.'|_ }} </p>
+                        </div>
+                        <div class="bullets hideme mx-auto pt-3">
+                                <div class="row mx-auto">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-analytics"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom login screen'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-refresh"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Fonts & Colours '|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-dash-2"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Logos'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-download"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Customizable Layouts'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 text-center mx-auto mt-1">
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contact-paygage">{{ 'Book a Demo'|_ }}</a>
+                </div>
+            </div>
+        </div>
+
+</section>
+{#engagement 1#}
+
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}

@@ -1,0 +1,201 @@
+==
+<?php
+use RainLab\Blog\Models\Post as BlogPost;
+
+function onStart(){
+    //This is where you list the categories you want to display
+    //$categories = ['success-stories', 'event-management'];
+    $event = $this->event;
+    $posts = [];
+    
+    foreach(BlogPost::all() as $blog){
+        $catList = [];
+        foreach($blog->categories as $cat){
+            $catList[] = $cat->slug;
+        }
+       // var_dump($catList);
+        if( in_array($event,$catList) ){
+                array_push($posts, $blog);
+                //break;
+        }
+    }
+    
+   $this['filteredPosts1'] = $posts;
+   //
+   ///
+   ////
+    //This is where you list the categories you want to display
+    //$categories = ['success-stories', 'event-management'];
+    $assoc = $this->assoc;
+    $posts2 = [];
+    
+    foreach(BlogPost::all() as $blog){
+        $catList = [];
+        foreach($blog->categories as $cat){
+            $catList[] = $cat->slug;
+        }
+       // var_dump($catList);
+        if( in_array($assoc,$catList) ){
+                array_push($posts2, $blog);
+                break;
+        }
+    }
+    
+   $this['filteredPosts2'] = $posts2;
+   //
+   ///
+   ////
+    //This is where you list the categories you want to display
+    //$categories = ['success-stories', 'event-management'];
+    $events = $this->events;
+    $posts3 = [];
+    
+    foreach(BlogPost::all() as $blog){
+        $catList = [];
+        foreach($blog->categories as $cat){
+            $catList[] = $cat->slug;
+        }
+       // var_dump($catList);
+        if( in_array($events,$catList) ){
+                array_push($posts3, $blog);
+                break;
+        }
+    }
+    
+   $this['filteredPosts3'] = $posts2;
+}
+/*
+
+function onEnd(){
+    //This is where you list the categories you want to display
+    $categories = ['success-stories', 'event-management'];
+    $posts = [];
+    
+    foreach(BlogPost::all() as $blog){
+        $catList = [];
+        foreach($blog->categories->take(1) as $cat){
+            $catList[] = $cat->slug;
+        }
+       // var_dump($catList);
+        if( in_array('associations',$catList ) && in_array('whitepaper',$catList) ){
+                array_push($posts, $blog);
+                break;
+        }
+    }
+    
+   $this['filteredPostsWP'] = $posts;
+}*/
+?>
+==
+{##}
+    <section class="section py-0">
+                <div class="container">
+                <div class="row">
+         {# In the loop we excluded the post being displayed list of related posts by variable postFilter passed by the partial #}
+         {% for post in filteredPosts1|sort|reverse|slice(0, 1) %}
+                              
+                                                <div class="col-md-4 hero ml-auto pb-2">
+                                                <a href="{{ url('/blog/') }}/{{ post.slug }}" class="">
+                                                {% if post.featured_images.count > 0 %}
+                                                <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                                                {% else %}
+                                                <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+                                                {% endif %}
+                                                 </a>
+                                                {% for category in post.categories %}
+                                                        <span class="sm-grey-text text-capitalize mt-1 d-flex category-badge">    
+                                                            {% if post.categories.index == loop.first %}
+                                                            <a href="{{ url('/blog/category/') }}/{{ category.slug }}"><i class=" icon-content"></i> {{ category.name }}</a>
+                                            			    {#<p class="px-3 sm-grey-text">•</p>#}
+                                            			    {% else %}
+                                            			    {% endif %}
+                                            			</span>
+                                                {% endfor %}
+                                                <h5 class="my-2">
+                                                    <a href="{{ url('/blog/') }}/{{ post.slug }}">{{ post.title }}</a>
+                                                </h5>
+                                                
+                                                <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                
+                                                <a href="{{ url('/blog/') }}/{{ post.slug }}" class="read-more d-flex">Join Us <i class="read-more-icon icon-arrow"></i></a>
+                                                </div>
+                                                
+                      
+    {% else %}
+    {% endfor %}
+    {% for post in filteredPosts2|sort|reverse|slice(0, 1) %}
+                              
+                                                <div class="col-md-4 hero ml-auto pb-2">
+                                                <a href="{{ url('/blog/') }}/{{ post.slug }}" class="">
+                                                {% if post.featured_images.count > 0 %}
+                                                <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                                                {% else %}
+                                                <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+                                                {% endif %}
+                                                 </a>
+                                                 {% for category in post.categories %}
+                                                        <span class="sm-grey-text text-capitalize mt-1 d-flex category-badge">    
+                                                            {% if post.categories.index == loop.first %}
+                                                            <a href="{{ url('/blog/category/') }}/{{ category.slug }}"><i class="icon-content"></i> {{ category.name }}</a>
+                                            			    {#<p class="px-3 sm-grey-text">•</p>#}
+                                            			    {% else %}
+                                            			    {% endif %}
+                                            			</span>
+                                                {% endfor %}
+                                                <h5 class="my-2">
+                                                    <a href="{{ url('/blog/') }}/{{ post.slug }}">{{ post.title }}</a>
+                                                </h5>
+                                                <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                
+                                                <a href="{{ url('/blog/') }}/{{ post.slug }}" class="read-more d-flex">Download <i class="read-more-icon icon-arrow"></i></a>
+                                                </div>
+                                                
+                      
+    {% else %}
+    {% endfor %}
+    {% for post in filteredPosts3|sort|reverse %}
+                              
+                                                <div class="col-md-4 hero ml-auto pb-2">
+                                                <a href="{{ url('/blog/') }}/{{ post.slug }}" class="">
+                                                {% if post.featured_images.count > 0 %}
+                                                <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                                                {% else %}
+                                                <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+                                                {% endif %}
+                                                 </a>
+                                                 {% for category in post.categories %}
+                                                        <span class="sm-grey-text text-capitalize mt-1 d-flex category-badge">    
+                                                            {% if post.categories.index == loop.first %}
+                                                            <a href="{{ url('/blog/category/') }}/{{ category.slug }}"><i class="icon-content"></i> {{ category.name }}</a>
+                                            			    {#<p class="px-3 sm-grey-text">•</p>#}
+                                            			    {% else %}
+                                            			    {% endif %}
+                                            			</span>
+                                                {% endfor %}
+                                                <h5 class="my-2">
+                                                    <a href="{{ url('/blog/') }}/{{ post.slug }}">{{ post.title }}</a>
+                                                </h5>
+                                                <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                <a href="{{ url('/blog/') }}/{{ post.slug }}" class="read-more d-flex">Download <i class="read-more-icon icon-arrow"></i></a>
+                                                </div>
+                                                
+                      
+    {% else %}
+    {% endfor %}
+</div>
+</section>

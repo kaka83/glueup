@@ -1,0 +1,23 @@
+description = "menu header - main"
+
+[viewBag]
+snippetCode = "header"
+snippetName = "header"
+
+[localePicker]
+forceUrl = 0
+
+[extendedLocalePicker]
+==
+<div class="container">
+        <div class="row">
+            <div class="col-md-12 pt-5 pb-3">
+                {% if activeLocale is same as('zh') %}
+                    <span class="navbar-brand" href="{{ 'home'|page }}"><img src="{{ ('assets/images/glueup-logo-zh.svg') | theme }}" class="logo img-fluid lazyload" alt="logo" /></span>
+                    {% else %}
+                     <span class="navbar-brand" href="{{ 'home'|page }}"><img src="{{ ('assets/images/glueup-logo-en.svg') | theme }}" class="logo img-fluid lazyload" alt="logo" /></span>
+                     {% endif %}
+                    
+            </div>
+        </div>
+    </div>

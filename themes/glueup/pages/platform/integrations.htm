@@ -1,0 +1,214 @@
+title = "Integrations & API Access"
+url = "/features/integrations"
+layout = "glueup-home"
+description = "Give your communithy a place where they can connect with you and your mission 365 days a year even when meeting face to face isn’t possible."
+meta_title = "Integrations & API Access"
+meta_description = "Connect the tools you love and use every day with Glue Up platform or built your own connections with our API to maximize your workflows."
+is_hidden = 0
+seo_keywords = "Glue Up integrations, Glue Up API documentation, connect Glue Up with other apps, webhooks and workflows, Glue Up REST API, Glue Up developers guide, Glue Up Quickbooks integration, Glue Up Zoom integration, Glue Up Xero integration"
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeMeta_title[es_la] = "Integraciones"
+localeMeta_title[Pt_br] = "Integrações"
+localeMeta_title[ru] = "Интеграции"
+localeMeta_title[tk] = "Entegrasyonlar"
+localeMeta_title[zh] = "功能集成"
+localeMeta_description[es_la] = "Conecta las herramientas que amas y usas todos los días con la plataforma Glue Up, o crea tus propias conexiones con nuestra API para maximizar sus flujos de trabajo."
+localeMeta_description[Pt_br] = "Conecte as ferramentas que você adora e usa todos os dias com o Glue Up."
+localeMeta_description[ru] = "Объедините инструменты, которые вы любите и используете каждый день, с платформой Glue Up."
+localeMeta_description[tk] = "Sevdiğiniz ve her gün kullandığınız araçları Glue Up platformuyla bağlayın veya iş akışlarınızı en üst düzeye çıkarmak için API'miz ile kendi bağlantılarınızı oluşturun."
+localeMeta_description[zh] = "您可以将您常用或喜爱的工具与 Glue Up 云平台实现功能整合，或进行 API 集成，以实现工作效率最大化。"
+==
+<?php
+function onEnd(){
+    $this->page->nav_highlight = 'resources';
+ }
+?>
+==
+<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+            <div class="row flex-row-reverse">
+                <div class="col-md-6 hero align-self-center text-left">
+                    <img src="{{ 'glueup-all-in-one.svg' | media }}" class="paygage-visual" alt="glue up hero section">
+                </div>
+                <div class="col-md-6 hero align-self-center text-md-left text-center">
+                    <p class="tagline mb-4">{{'Integrations'|_}}</p>
+                      <h1>{{ 'Make Great Even <span class="line"><ins> Better </ins></span>'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Connect the tools you love and use every day with Glue Up platform or built your own connections with our API to maximize your workflows. '|_ }} </p>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+            </div>
+        </div> 
+</header>
+
+<section class="section pt-0">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-7 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Become Even More Efficient'|_ }}</h2>
+                             <p class="tagline">{{ 'Powerful APIs, widgets and integrations to acquire, engage and retain more customers as well as to manage your data without complexities.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            {% partial 'platform/integrations-bullets.htm' %}
+            </div>
+        </div>
+
+</section>
+
+{#engagement 1#}
+<section class="section pt-0">
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-8 mx-auto pb-4">
+                        <div class="block text-center">
+                            <span class="h6 text-color text-center mx-auto hideme">{{ 'Advanced Integrations'|_ }}</span>
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Step Up Your Automation'|_ }}</h2>
+                             <p class="tagline"> {{ 'Save time and eliminate manual tasks by connecting Glue Up to your favorite software with easy plug & play integrations.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            {#<div class="col-lg-10 mx-auto">#}
+                <div class="row mx-auto">
+                        <div class="col-md-4 py-3 ml-auto">
+                            <div class="card text-center h-100 hideme shadow-sm">
+                              <div class="card-body pt-4 ">
+                                <img src="{{ 'integrations/quickbooks-logo.svg' | media }}" alt="Integrate Glue Up with Quickbooks" class="pt-2 img-fluid mx-auto lazy fadeIn integrations-logo">
+                                <h5 class="card-title mt-3">{{ 'QuickBooks'|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'Get a full accounting experience by combining the best of Glue Up’s all-in-one engagement management software with easy plug&play QuickBooks integration that can be set up in a few clicks.'|_ }}</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3 mr-auto">
+                            <div class="card text-center h-100 hideme shadow-sm">
+                              <div class="card-body pt-4">
+                                 <img src="{{ 'integrations/xero-logo.svg' | media }}" alt="Integrate Glue Up with Xero" class="img-fluid mx-auto lazy fadeIn integrations-logo">
+                                <h5 class="card-title mt-3">{{ 'Xero '|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'Synchronize and update your invoices from both apps, collect tickets and memberships as line-items and manage both finance systems effortlessly. '|_ }}</p>
+                              </div>
+                            </div>
+                        </div>
+                 </div>
+                 <div class="row mx-auto">
+                        <div class="col-md-4 py-3 ml-auto">
+                            <div class="card text-center h-100 hideme shadow-sm">
+                              <div class="card-body pt-4 ">
+                                <img src="{{ 'integrations/zoom-logo.svg' | media }}" alt="Integrate Glue Up with Zoom" class="img-fluid mx-auto lazy fadeIn integrations-logo">
+                                <h5 class="card-title mt-3">{{ 'Zoom'|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'Run all your online and offline events with ease by integrating Zoom with Glue Up for the best attendee experience possible. '|_ }}</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3 mr-auto">
+                            <div class="card text-center h-100 hideme shadow-sm">
+                              <div class="card-body pt-4">
+                                 <img src="{{ 'integrations/salesforce-logo.svg' | media }}" alt="Integrate Glue Up with Salesforce" class="img-fluid mx-auto lazy fadeIn integrations-logo">
+                                <h5 class="card-title mt-3 mb-0">{{ 'Salesforce '|_ }}</h5>
+                                <span class="badge badge-soon mb-2">{{ 'Coming Soon'|_ }}</span>
+                                <p class="card-text mb-5">{{ 'Sync contact and deals data from all activities you run on Glue Up and streamline workflows for sales, marketing and support. '|_ }}</p>
+                              </div>
+                            </div>
+                        </div>
+                        
+                {#</div>#}
+            </div>
+            {#<div class="row">
+                <div class="col-lg-4 text-center mx-auto mt-3">
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contact-paygage">See it in Action</a>
+                </div>
+            </div>#}
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'glueup-api.svg' | media }}" alt="Glue Up API helps you build powerful integrations just the way your business requires" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Powerful API'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Build Something on Your Own '|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Integrate Glue Up features into your own application or website in a fast, easy, and secure way using our powerful APIs. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-menu-section-lemontea"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Detailed API Documentation'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Subdomain Access'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-navigation"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Tech support'|_ }}</p>
+                                    </div>  
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'glueup-widgets-2.svg' | media }}" alt="Glue Up helps you increase your outreach and personalize your communications with widgets for membership events and subscriptions" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Widgets'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Showcase Glue Up Data Automatically'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Feature the important data such as events, membership directory, applications and other things you create with Glue Up platform to your website visitors in real-time with easy-to-use widgets.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-invisible"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Widgets'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-heart"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Membership Widgets'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-atsymbol"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Subscription Widgets'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Login Widgets'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}

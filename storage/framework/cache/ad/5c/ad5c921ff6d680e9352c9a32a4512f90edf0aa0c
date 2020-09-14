@@ -1,0 +1,669 @@
+1600067169a:1:{s:46:"industries/association-management-software.htm";a:14:{s:8:"fileName";s:46:"industries/association-management-software.htm";s:7:"content";s:21929:"title = "Association Management Software"
+url = "/association-management-software"
+layout = "glueup-home"
+meta_title = "Association Management Software"
+meta_description = "Streamline processes and manage your membership journey with an all-in-one association management software built for forward-looking associations."
+is_hidden = 0
+seo_keywords = "all-in-one software, association management, AMS, email marketing, community management, CRM, virtual events, webinars, automation, engagement tool, member renewal"
+robot_index = "index"
+robot_follow = "follow"
+==
+<?php
+function onEnd(){
+    $this->page->nav_highlight = 'products';
+ }
+?>
+==
+<header id="hero" class="" style="padding-bottom:-60px;">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+            <div class="row">
+                
+                <div class="col-md-6 hero align-self-center text-md-left text-center">
+                    <p class="tagline mb-4">{{'Association Management Software'|_}} </p>
+                      <h1>{{ 'Engage and <span class="line"><ins>retain</ins></span><br> your members'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Streamline processes and manage your membership journey with an all-in-one engagement software built for associations.'|_ }} </p><br>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-md-left text-center">
+                    <img src="{{ 'glueup-membership.svg' | media }}" class="paygage-visual" alt="Glue Up helps you manage your memberships more efficiently">
+
+                </div>
+            </div>
+        </div> 
+</header>
+<div class="container">
+            {#<div class="col-lg-10 mx-auto">#}
+            <div class="row">
+            {% partial 'industry/industry-case-study.htm' category='associations' %}
+                   
+            </div>
+        </div>
+        
+        
+{% partial 'elements/logobar.htm' %}
+
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-6 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Why Associations<br> stick with Glue Up '|_ }}</h2>
+                             <p class="tagline">{{ 'An all-in-one software that brings your communities and engagement to the center of attention.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+                <div class="col-lg-10 align-self-center mx-auto">
+                    <div class="services__accordion row flex-row-reverse">
+                            <div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+                				<div class="accordion__img desktop">
+                				    <div id="tab1-bullet-img" class="firstshow">
+                				        <img class="feature-window desktop" src="{{ 'features/glueup-value-members.svg' | media }}" alt="Glue Up helps you bring value to your members">
+                				         
+                				    </div>
+                				    <div id="tab2-bullet-img">
+                				        <img class="feature-window deskto paygage-visual" src="{{ 'glueup-crm-feature.svg' | media }}" alt="Glue Up helps you stay in the know about your members">
+                				    </div>
+                			        <div id="tab3-bullet-img">
+                    			        <img class="feature-window deskto" src="{{ 'features/glueup-revenue.svg' | media }}" alt="Glue Up helps you drive revenue through sponsorships and memberships">
+                    			    </div>
+                    			    <div id="tab4-bullet-img">
+                    			        <img class="feature-window deskto" src="{{ 'glueup-anywhere.svg' | media }}" alt="Glue Up helps you helps you reach your community wherever they are">
+                    			    </div>
+                			     </div>
+                			</div>
+                			<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+                				<div class="services__accordion">
+                				    <div class="accordion pl-3 active small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+                                        <i class="icon-overview"></i>
+                                        <span>{{ 'Bring members extra value'|_ }}</span>
+                                        <div class="accordion__body firstshow " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'Reinforce leadership by creating engaging programs that drive membership value.'|_ }}
+                							 {#<a href="{{ 'blog'|page }}" class="read-more gourl pt-3">Learn More</a>#}</p>
+                						</div>
+                                    </div>
+                                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab2-bullet">
+                                        <i class="icon-analytics"></i>
+                                        <span>{{ 'Understand engagement and optimize'|_ }}</span>
+                                        <div class="accordion__body " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'Get immediate engagement scores that measure overall engagement of your members.'|_ }}
+                							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+                						</div>
+                                    </div>
+                                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab3-bullet">
+                                        <i class="icon-payments"></i>
+                                        <span>{{ 'Drive revenue with membership and sponsorship'|_ }}</span>
+                                        <div class="accordion__body " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'Procure robust channels to drive revenue for membership applications, renewals, and sponsorship.'|_ }}
+                							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+                						</div>
+                                    </div>
+                                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab4-bullet">
+                                        <i class="icon-mobile-check"></i>
+                                        <span>{{ 'Manage your operations anywhere'|_ }}</span>
+                                        <div class="accordion__body " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'A powerful all-in-one manager app that allows you to impact your members from anywhere.'|_ }}
+                							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+                						</div>
+                                    </div>
+                				</div>
+                			</div>
+                			
+                		</div>
+                </div>
+            </div>
+        </div>
+
+</section>
+<section class="section bg-grey">
+        <div class="container">
+            <div class="services__accordion row flex-row-reverse">
+                <div class="col-md-6 align-self-center right h-100">
+    				<div class="accordion__img desktop">
+    				    <div id="tab0-sellpoint-img" class="firstshow">
+    				        <img class="feature-window deskto lazyload" src="{{ 'glueup-membership-management.svg' | media }}" alt="Best-in-class event management with Glue Up">
+    				    </div>
+    				     <div id="tab1-sellpoint-img">
+    				        <img class="feature-window deskto lazyload" src="{{ 'glueup-event-management.svg' | media }}" alt="Best-in-class event management with Glue Up">
+    				    </div>
+    			        <div id="tab2-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-crm.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab3-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-emails.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab4-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-finance.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab5-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-community.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab6-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-surveys.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab7-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-mobile.svg' | media }}" alt="chat">
+        			    </div>
+    			     </div>
+    			</div>
+    			<div class="col-md-5 mr-auto float-left align-self-center">
+    			    <div class="pt-1 pb-3 pt-md-5 pb-md-5 ml-xs-0 my-3">
+                                     <small>{{ "What's included?"|_ }}</small>
+                                     <h2 class="mt-3 mb-2 position-relative content-title">{{'Membership <br> Management Suite'|_ }} </h2>
+                                     <p class="tagline pt-2 ">{{ 'With Glue Up, we automate the busywork so you can focus on growing your association.'|_ }} </p>
+                    </div>
+    				<div class="services__accordion row bullets hideme ml-xs-0 pb-5 mb-5 h-100" style="padding-left:-16px;">
+                        <div class="accordion sellpoint active small col text-center pointer px-0 pl-1" tab-name="tab0-sellpoint">
+                            <i class="sellpoint-item align-middle icon-memberships"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Membership Management'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab1-sellpoint">
+                            <i class="sellpoint-item align-middle icon-events"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Event Management'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab2-sellpoint">
+                             <i class="sellpoint-item align-middle icon-crm"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'CRM'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab3-sellpoint">
+                            <i class="sellpoint-item align-middle icon-email-campaigns"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Email Campaigns'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab4-sellpoint">
+                            <i class="sellpoint-item align-middle icon-payments"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Invoicing & Payments'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab5-sellpoint">
+                            <i class="sellpoint-item align-middle icon-social-share"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Community'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab7-sellpoint">
+                            <i class="sellpoint-item align-middle icon-mobile-check"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Mobile Apps'|_ }}</p>
+                        </div>
+    				</div>
+    			</div>
+    			
+    		</div>
+            </div>
+        </div>
+
+</section>
+
+{#% partial 'solutions/event-timeline.htm' %#}
+
+
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-member-application.svg' | media }}" alt="Glue Up helps you automate your member journey" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Member Journey'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Automate your membership workflows'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Improve your membership management workflows and maximize retention with automated renewal notices and membership application processes.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-notifications"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Automatic Reminders'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-invoice"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Auto-generated Invoices'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-hierarchy"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Unlimited Membership Types'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-button"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Customizable Dashboard'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-event-templates.svg' | media }}" alt="Glue Up helps you manage your events more efficiently" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Event Management'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Create an engaging online and offline events'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Manage hundreds of events large and small efficiently from the initial idea to the follow up after the event, and deliver premium event experience to your members and attendees.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-speaker"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Professional Event Templates'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-email-solid"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Invitations '|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-email-campaigns"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Targeted Campaigns'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-thumb-full"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Post-event Survey'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-engage.svg' | media }}" alt="Glue Up helps you engage with your community" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Community Engagement'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Maximize member engagement'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Give your members a place where they can connect with you and your mission 365 days a year even when meeting face to face isn’t possible.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-membership-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Membership Dashboard'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Community Groups'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Business Card Exchange'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Direct Messaging'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-6 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Learn more about Associations and Glue Up'|_ }}</h2>
+                             {#<p class="tagline">{{ 'An all-in-one solution that helps you save time and focus on your mission while keeping everybody on the same page.'|_ }} </p>#}
+                        </div>
+                    </div>
+            </div>
+            {% partial 'industry/industry-blog.htm' event='associations' wp1='associations' wp2='event' %}
+            </div>
+        </div>
+
+</section>
+{% partial 'solutions/footer-cta-mem.htm' %}";s:5:"mtime";i:1598006548;s:6:"markup";s:21284:"<header id="hero" class="" style="padding-bottom:-60px;">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+            <div class="row">
+                
+                <div class="col-md-6 hero align-self-center text-md-left text-center">
+                    <p class="tagline mb-4">{{'Association Management Software'|_}} </p>
+                      <h1>{{ 'Engage and <span class="line"><ins>retain</ins></span><br> your members'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Streamline processes and manage your membership journey with an all-in-one engagement software built for associations.'|_ }} </p><br>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-md-left text-center">
+                    <img src="{{ 'glueup-membership.svg' | media }}" class="paygage-visual" alt="Glue Up helps you manage your memberships more efficiently">
+
+                </div>
+            </div>
+        </div> 
+</header>
+<div class="container">
+            {#<div class="col-lg-10 mx-auto">#}
+            <div class="row">
+            {% partial 'industry/industry-case-study.htm' category='associations' %}
+                   
+            </div>
+        </div>
+        
+        
+{% partial 'elements/logobar.htm' %}
+
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-6 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Why Associations<br> stick with Glue Up '|_ }}</h2>
+                             <p class="tagline">{{ 'An all-in-one software that brings your communities and engagement to the center of attention.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+                <div class="col-lg-10 align-self-center mx-auto">
+                    <div class="services__accordion row flex-row-reverse">
+                            <div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+                				<div class="accordion__img desktop">
+                				    <div id="tab1-bullet-img" class="firstshow">
+                				        <img class="feature-window desktop" src="{{ 'features/glueup-value-members.svg' | media }}" alt="Glue Up helps you bring value to your members">
+                				         
+                				    </div>
+                				    <div id="tab2-bullet-img">
+                				        <img class="feature-window deskto paygage-visual" src="{{ 'glueup-crm-feature.svg' | media }}" alt="Glue Up helps you stay in the know about your members">
+                				    </div>
+                			        <div id="tab3-bullet-img">
+                    			        <img class="feature-window deskto" src="{{ 'features/glueup-revenue.svg' | media }}" alt="Glue Up helps you drive revenue through sponsorships and memberships">
+                    			    </div>
+                    			    <div id="tab4-bullet-img">
+                    			        <img class="feature-window deskto" src="{{ 'glueup-anywhere.svg' | media }}" alt="Glue Up helps you helps you reach your community wherever they are">
+                    			    </div>
+                			     </div>
+                			</div>
+                			<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+                				<div class="services__accordion">
+                				    <div class="accordion pl-3 active small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+                                        <i class="icon-overview"></i>
+                                        <span>{{ 'Bring members extra value'|_ }}</span>
+                                        <div class="accordion__body firstshow " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'Reinforce leadership by creating engaging programs that drive membership value.'|_ }}
+                							 {#<a href="{{ 'blog'|page }}" class="read-more gourl pt-3">Learn More</a>#}</p>
+                						</div>
+                                    </div>
+                                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab2-bullet">
+                                        <i class="icon-analytics"></i>
+                                        <span>{{ 'Understand engagement and optimize'|_ }}</span>
+                                        <div class="accordion__body " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'Get immediate engagement scores that measure overall engagement of your members.'|_ }}
+                							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+                						</div>
+                                    </div>
+                                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab3-bullet">
+                                        <i class="icon-payments"></i>
+                                        <span>{{ 'Drive revenue with membership and sponsorship'|_ }}</span>
+                                        <div class="accordion__body " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'Procure robust channels to drive revenue for membership applications, renewals, and sponsorship.'|_ }}
+                							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+                						</div>
+                                    </div>
+                                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab4-bullet">
+                                        <i class="icon-mobile-check"></i>
+                                        <span>{{ 'Manage your operations anywhere'|_ }}</span>
+                                        <div class="accordion__body " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'A powerful all-in-one manager app that allows you to impact your members from anywhere.'|_ }}
+                							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+                						</div>
+                                    </div>
+                				</div>
+                			</div>
+                			
+                		</div>
+                </div>
+            </div>
+        </div>
+
+</section>
+<section class="section bg-grey">
+        <div class="container">
+            <div class="services__accordion row flex-row-reverse">
+                <div class="col-md-6 align-self-center right h-100">
+    				<div class="accordion__img desktop">
+    				    <div id="tab0-sellpoint-img" class="firstshow">
+    				        <img class="feature-window deskto lazyload" src="{{ 'glueup-membership-management.svg' | media }}" alt="Best-in-class event management with Glue Up">
+    				    </div>
+    				     <div id="tab1-sellpoint-img">
+    				        <img class="feature-window deskto lazyload" src="{{ 'glueup-event-management.svg' | media }}" alt="Best-in-class event management with Glue Up">
+    				    </div>
+    			        <div id="tab2-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-crm.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab3-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-emails.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab4-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-finance.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab5-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-community.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab6-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-surveys.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab7-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-mobile.svg' | media }}" alt="chat">
+        			    </div>
+    			     </div>
+    			</div>
+    			<div class="col-md-5 mr-auto float-left align-self-center">
+    			    <div class="pt-1 pb-3 pt-md-5 pb-md-5 ml-xs-0 my-3">
+                                     <small>{{ "What's included?"|_ }}</small>
+                                     <h2 class="mt-3 mb-2 position-relative content-title">{{'Membership <br> Management Suite'|_ }} </h2>
+                                     <p class="tagline pt-2 ">{{ 'With Glue Up, we automate the busywork so you can focus on growing your association.'|_ }} </p>
+                    </div>
+    				<div class="services__accordion row bullets hideme ml-xs-0 pb-5 mb-5 h-100" style="padding-left:-16px;">
+                        <div class="accordion sellpoint active small col text-center pointer px-0 pl-1" tab-name="tab0-sellpoint">
+                            <i class="sellpoint-item align-middle icon-memberships"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Membership Management'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab1-sellpoint">
+                            <i class="sellpoint-item align-middle icon-events"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Event Management'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab2-sellpoint">
+                             <i class="sellpoint-item align-middle icon-crm"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'CRM'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab3-sellpoint">
+                            <i class="sellpoint-item align-middle icon-email-campaigns"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Email Campaigns'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab4-sellpoint">
+                            <i class="sellpoint-item align-middle icon-payments"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Invoicing & Payments'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab5-sellpoint">
+                            <i class="sellpoint-item align-middle icon-social-share"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Community'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab7-sellpoint">
+                            <i class="sellpoint-item align-middle icon-mobile-check"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Mobile Apps'|_ }}</p>
+                        </div>
+    				</div>
+    			</div>
+    			
+    		</div>
+            </div>
+        </div>
+
+</section>
+
+{#% partial 'solutions/event-timeline.htm' %#}
+
+
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-member-application.svg' | media }}" alt="Glue Up helps you automate your member journey" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Member Journey'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Automate your membership workflows'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Improve your membership management workflows and maximize retention with automated renewal notices and membership application processes.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-notifications"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Automatic Reminders'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-invoice"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Auto-generated Invoices'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-hierarchy"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Unlimited Membership Types'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-button"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Customizable Dashboard'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-event-templates.svg' | media }}" alt="Glue Up helps you manage your events more efficiently" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Event Management'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Create an engaging online and offline events'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Manage hundreds of events large and small efficiently from the initial idea to the follow up after the event, and deliver premium event experience to your members and attendees.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-speaker"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Professional Event Templates'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-email-solid"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Invitations '|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-email-campaigns"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Targeted Campaigns'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-thumb-full"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Post-event Survey'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-engage.svg' | media }}" alt="Glue Up helps you engage with your community" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Community Engagement'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Maximize member engagement'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Give your members a place where they can connect with you and your mission 365 days a year even when meeting face to face isn’t possible.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-membership-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Membership Dashboard'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Community Groups'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Business Card Exchange'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Direct Messaging'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-6 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Learn more about Associations and Glue Up'|_ }}</h2>
+                             {#<p class="tagline">{{ 'An all-in-one solution that helps you save time and focus on your mission while keeping everybody on the same page.'|_ }} </p>#}
+                        </div>
+                    </div>
+            </div>
+            {% partial 'industry/industry-blog.htm' event='associations' wp1='associations' wp2='event' %}
+            </div>
+        </div>
+
+</section>
+{% partial 'solutions/footer-cta-mem.htm' %}";s:4:"code";s:67:"function onEnd(){
+    $this->page->nav_highlight = 'products';
+ }";s:5:"title";s:31:"Association Management Software";s:3:"url";s:32:"/association-management-software";s:6:"layout";s:11:"glueup-home";s:10:"meta_title";s:31:"Association Management Software";s:16:"meta_description";s:146:"Streamline processes and manage your membership journey with an all-in-one association management software built for forward-looking associations.";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:163:"all-in-one software, association management, AMS, email marketing, community management, CRM, virtual events, webinars, automation, engagement tool, member renewal";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";}}

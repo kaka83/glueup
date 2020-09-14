@@ -1,0 +1,428 @@
+1600066771a:1:{s:18:"site/demo-form.htm";a:8:{s:8:"fileName";s:18:"site/demo-form.htm";s:7:"content";s:10092:"[viewBag]
+snippetCode = "demowowowo"
+snippetName = "demoform"
+
+[genericForm demoform]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+
+[staticPage]
+useContent = 1
+default = 0
+==
+<?php
+public function submitHubSpot( $contact, $message, $type, $extraDatas = '' )
+    {
+        //Process a new form submission in HubSpot in order to create a new Contact.
+        $hubspotutk = isset( $_COOKIE['hubspotutk'] ) ? $_COOKIE['hubspotutk'] : ''; //grab the cookie from the visitors browser.
+
+        $hs_context = array(
+            'hutk'      => $hubspotutk,
+            'ipAddress' => $_SERVER['REMOTE_ADDR'],
+            'pageUrl'   => $_SERVER['HTTP_REFERER'],
+            'pageName'  => $type
+        );
+        $hs_context_json = json_encode($hs_context);
+
+        //Need to populate these variable with values from the form.
+        $str_post = 'message=' . urlencode( $message ) . '&hs_context=' . urlencode( $hs_context_json ); //Leave this one be
+
+        foreach ( $contact as $key => $value ) {
+            $key = $key == 'fullName' ? 'full_name'   : $key;
+            $key = $key == 'phone'    ? 'mobilephone' : $key;
+            $str_post .= '&' . $key . '=' . urlencode( $value );
+        }
+
+        if ( !empty( $extraDatas ) ) {
+            foreach ( $extraDatas as $key => $value ) {
+                $str_post .= '&' . $key . '=' . urlencode( $value );
+            }
+        }
+
+        //replace the values in this URL with your portal ID and your form GUID
+        $portalId = '4653500';
+        $formGuid = 'ffddd43c-56e1-4781-ac08-d5232ebac8b3';
+        $endpoint = 'https://forms.hubspot.com/uploads/form/v2/' . $portalId . '/' . $formGuid;
+        $headers  = array( 'Content-Type' => 'application/x-www-form-urlencoded' );
+
+        $messageFactory = MessageFactoryDiscovery::find();
+        $request        = $messageFactory->createRequest( 'POST', $endpoint, $headers, $str_post );
+        $response       = HttpClientDiscovery::find()->sendRequest( $request );
+        return $response->getBody();
+    }
+
+    public function actionAjax()
+    {
+        if ( Router::isAjax() && isset( $_POST['action'] ) ) {
+            $result = new EBrestResult();
+            $data   = json_decode( $_POST['data'], true );
+
+            switch ( $_POST['action'] ) {
+
+                case 'hide-server-notice':
+                    Session::set( 'hide-server-notice', true, 'safe' );
+                    $result->addPartial( 'notice-bar', '<div/>' );
+                    break;
+
+                case 'requestLiveWallForm':
+                case 'contact-usSubmit':
+                    // Prepare Contact
+                    $contact = array(
+                        'fullName' => $data['full-name'],
+                        'email'    => $data['email'],
+                        'phone'    => isset( $data['phone'] ) ? $data['phone'] : '',
+                    );
+
+                    // Prepare Message
+                    $message  =  $data['full-name'];
+                    $message .= ' has a message!';
+                    $message .= '<br/><br/>' . $data['message'];
+
+                    // Prepare Subject
+                    $isRequestCommunity = $_POST['action'] == 'requestLiveWallForm';
+                    $subject            = $isRequestCommunity ? 'Request EventBank Community' : 'EventBank Client Inquiry';
+
+                    // Send copy to HubSpot
+                    $this->submitHubSpot( $contact, $message, $subject );
+
+                    // Send Email
+                    $recipients = $this->getRecipients( $isRequestCommunity );
+                    $params     = array(
+                        'languageCode' => Language::get(),
+                        'subject'      => $subject,
+                        'recipients'   => $recipients,
+                        'contact'      => $contact,
+                        'message'      => $message,
+                    );
+
+                    $result = InternalEmail::send( $params );
+                    if ( $result->isSuccessful ) {
+                        $result->value    = 'reset';
+                        $result->redirect = $isRequestCommunity ? 'Modal::community-request-success' : 'Modal::contact-us-success';
+                    }
+
+                    Logger::error( array(
+                        'server'      => '.' . Router::getTopLevelDomain(),
+                        'contactInfo' => $contact,
+                        'message'     => $message,
+                        'recipients'  => $recipients,
+                        'result'      => $result->result,
+                    ), 'midend.contact-us' );
+                    break;
+
+                case 'schedule-emailSubmit':
+                    $result->addPartial( 'Modal', View::renderPartial( '/solutions/_partials/schedule-email', array( 'filledValues' => $data ), true ) );
+                    break;
+
+                case ( preg_match( '/get-quote-*/', $_POST['action'] ) ? true: false ):
+                case 'schedule-demo':
+                    // Prepare Contact
+                    $contact = array(
+                        'fullName' => $data['full-name'],
+                        'email'    => $data['work-email'],
+                        'phone'    => $data['phone'],
+                        'company'  => $data['organization'],
+                    );
+
+                    // Prepare Message
+                    $message  = $data['full-name'];
+                    $message .= ' from ' . $data['organization'];
+                    $message .= $_POST['action'] == 'schedule-demo' ? ' would like a demo!' : ' requested a quotation for ';
+
+                    $extraDatas = array();
+                    if ( $_POST['action'] != 'schedule-demo' ) {
+                        $message .= $data['solution-type'];
+                        $message .= ' for ' . $data['package-type'] . ' package.';
+                        $message .= '<br /><br />' . $data['full-name'] . ' also left a message with additional information:';
+                        $message .= '<br /><br />' . $data['more-information'];
+
+                        $extraDatas = array(
+                            'solution_type' => $data['solution-type'],
+                            'package_type'  => $data['package-type'],
+                        );
+                    }
+
+                    if ( isset( $_POST[ 'currentPath' ] ) ) {
+                         $message .= '<br/></br>' . $data['full-name'] . '\'s last viewed page was ' . Router::getAbsoluteUrl( $_POST[ 'currentPath' ] );
+                    }
+
+                    // Prepare Subject
+                    $subject = $_POST['action'] == 'schedule-demo' ? 'Demo Requested' : 'Quote Requested';
+
+                    // Send copy to HubSpot
+                    $this->submitHubSpot( $contact, $message, $subject, $extraDatas );
+
+                    // Send Email
+                    $recipients = $this->getRecipients( true );
+                    $params     = array(
+                        'languageCode' => Language::get(),
+                        'subject'      => $subject,
+                        'recipients'   => $recipients,
+                        'contact'      => $contact,
+                        'message'      => $message,
+                    );
+
+                    $result = InternalEmail::send( $params );
+                    if ( $result->isSuccessful ) {
+                        $result->redirect = $_POST['action'] == 'schedule-demo' ? 'Modal::schedule-demo-success' : 'Modal::get-quote-success';
+                    }
+
+                    Logger::error( array(
+                        'server'      => '.' . Router::getTopLevelDomain(),
+                        'contactInfo' => array(
+                            'language' => Language::get(),
+                            'country'  => User::getCountryByIP(),
+                            'fullName' => $data['full-name'],
+                            'email'    => $data['work-email'],
+                            'phone'    => $data['phone'],
+                            'company'  => $data['organization'],
+                        ),
+                        'recipients' => $recipients,
+                        'result'     => $result->result,
+                    ), 'midend.demo-request' );
+                    break;
+
+                case 'StartSignupSubmit':
+                    $result->code     = 200;
+                    $result->redirect = ( isset( $data['type']['code'] ) && $data['type']['code'] == 'attendee' )
+                        ? '/register/account/' : '/register/organization/';
+                    break;
+
+                case 'subscription':
+                    $subscriptionListIds = array();
+                    foreach ( $data as $key => $value ) {
+                        if ( strpos( $key, 'subscription_' ) !== false && $value ) {
+                            $subscriptionListIds[] = str_replace( 'subscription_', '', $key );
+                        }
+                    }
+                    $actor = array(
+                        'email'         => $data['work-email'],
+                        'firstName'     => $data['firstname'],
+                        'lastName'      => $data['lastname'],
+                    );
+
+                    $result = EmailSubscription::subscribeEmail( $subscriptionListIds, $actor, '', false, Server::getEventBankOrgId() );
+
+                    if ( $result->code == 200 ) {
+                        $result->redirect = 'Modal::subscription-success';
+                    }
+                    break;
+
+            }
+
+            echo json_encode( $result->result );
+        }
+    }
+?>
+==
+<!-- // Modal -->
+   {% component 'demoform'%}";s:5:"mtime";i:1597642703;s:6:"markup";s:47:"<!-- // Modal -->
+   {% component 'demoform'%}";s:4:"code";s:9599:"public function submitHubSpot( $contact, $message, $type, $extraDatas = '' )
+    {
+        //Process a new form submission in HubSpot in order to create a new Contact.
+        $hubspotutk = isset( $_COOKIE['hubspotutk'] ) ? $_COOKIE['hubspotutk'] : ''; //grab the cookie from the visitors browser.
+
+        $hs_context = array(
+            'hutk'      => $hubspotutk,
+            'ipAddress' => $_SERVER['REMOTE_ADDR'],
+            'pageUrl'   => $_SERVER['HTTP_REFERER'],
+            'pageName'  => $type
+        );
+        $hs_context_json = json_encode($hs_context);
+
+        //Need to populate these variable with values from the form.
+        $str_post = 'message=' . urlencode( $message ) . '&hs_context=' . urlencode( $hs_context_json ); //Leave this one be
+
+        foreach ( $contact as $key => $value ) {
+            $key = $key == 'fullName' ? 'full_name'   : $key;
+            $key = $key == 'phone'    ? 'mobilephone' : $key;
+            $str_post .= '&' . $key . '=' . urlencode( $value );
+        }
+
+        if ( !empty( $extraDatas ) ) {
+            foreach ( $extraDatas as $key => $value ) {
+                $str_post .= '&' . $key . '=' . urlencode( $value );
+            }
+        }
+
+        //replace the values in this URL with your portal ID and your form GUID
+        $portalId = '4653500';
+        $formGuid = 'ffddd43c-56e1-4781-ac08-d5232ebac8b3';
+        $endpoint = 'https://forms.hubspot.com/uploads/form/v2/' . $portalId . '/' . $formGuid;
+        $headers  = array( 'Content-Type' => 'application/x-www-form-urlencoded' );
+
+        $messageFactory = MessageFactoryDiscovery::find();
+        $request        = $messageFactory->createRequest( 'POST', $endpoint, $headers, $str_post );
+        $response       = HttpClientDiscovery::find()->sendRequest( $request );
+        return $response->getBody();
+    }
+
+    public function actionAjax()
+    {
+        if ( Router::isAjax() && isset( $_POST['action'] ) ) {
+            $result = new EBrestResult();
+            $data   = json_decode( $_POST['data'], true );
+
+            switch ( $_POST['action'] ) {
+
+                case 'hide-server-notice':
+                    Session::set( 'hide-server-notice', true, 'safe' );
+                    $result->addPartial( 'notice-bar', '<div/>' );
+                    break;
+
+                case 'requestLiveWallForm':
+                case 'contact-usSubmit':
+                    // Prepare Contact
+                    $contact = array(
+                        'fullName' => $data['full-name'],
+                        'email'    => $data['email'],
+                        'phone'    => isset( $data['phone'] ) ? $data['phone'] : '',
+                    );
+
+                    // Prepare Message
+                    $message  =  $data['full-name'];
+                    $message .= ' has a message!';
+                    $message .= '<br/><br/>' . $data['message'];
+
+                    // Prepare Subject
+                    $isRequestCommunity = $_POST['action'] == 'requestLiveWallForm';
+                    $subject            = $isRequestCommunity ? 'Request EventBank Community' : 'EventBank Client Inquiry';
+
+                    // Send copy to HubSpot
+                    $this->submitHubSpot( $contact, $message, $subject );
+
+                    // Send Email
+                    $recipients = $this->getRecipients( $isRequestCommunity );
+                    $params     = array(
+                        'languageCode' => Language::get(),
+                        'subject'      => $subject,
+                        'recipients'   => $recipients,
+                        'contact'      => $contact,
+                        'message'      => $message,
+                    );
+
+                    $result = InternalEmail::send( $params );
+                    if ( $result->isSuccessful ) {
+                        $result->value    = 'reset';
+                        $result->redirect = $isRequestCommunity ? 'Modal::community-request-success' : 'Modal::contact-us-success';
+                    }
+
+                    Logger::error( array(
+                        'server'      => '.' . Router::getTopLevelDomain(),
+                        'contactInfo' => $contact,
+                        'message'     => $message,
+                        'recipients'  => $recipients,
+                        'result'      => $result->result,
+                    ), 'midend.contact-us' );
+                    break;
+
+                case 'schedule-emailSubmit':
+                    $result->addPartial( 'Modal', View::renderPartial( '/solutions/_partials/schedule-email', array( 'filledValues' => $data ), true ) );
+                    break;
+
+                case ( preg_match( '/get-quote-*/', $_POST['action'] ) ? true: false ):
+                case 'schedule-demo':
+                    // Prepare Contact
+                    $contact = array(
+                        'fullName' => $data['full-name'],
+                        'email'    => $data['work-email'],
+                        'phone'    => $data['phone'],
+                        'company'  => $data['organization'],
+                    );
+
+                    // Prepare Message
+                    $message  = $data['full-name'];
+                    $message .= ' from ' . $data['organization'];
+                    $message .= $_POST['action'] == 'schedule-demo' ? ' would like a demo!' : ' requested a quotation for ';
+
+                    $extraDatas = array();
+                    if ( $_POST['action'] != 'schedule-demo' ) {
+                        $message .= $data['solution-type'];
+                        $message .= ' for ' . $data['package-type'] . ' package.';
+                        $message .= '<br /><br />' . $data['full-name'] . ' also left a message with additional information:';
+                        $message .= '<br /><br />' . $data['more-information'];
+
+                        $extraDatas = array(
+                            'solution_type' => $data['solution-type'],
+                            'package_type'  => $data['package-type'],
+                        );
+                    }
+
+                    if ( isset( $_POST[ 'currentPath' ] ) ) {
+                         $message .= '<br/></br>' . $data['full-name'] . '\'s last viewed page was ' . Router::getAbsoluteUrl( $_POST[ 'currentPath' ] );
+                    }
+
+                    // Prepare Subject
+                    $subject = $_POST['action'] == 'schedule-demo' ? 'Demo Requested' : 'Quote Requested';
+
+                    // Send copy to HubSpot
+                    $this->submitHubSpot( $contact, $message, $subject, $extraDatas );
+
+                    // Send Email
+                    $recipients = $this->getRecipients( true );
+                    $params     = array(
+                        'languageCode' => Language::get(),
+                        'subject'      => $subject,
+                        'recipients'   => $recipients,
+                        'contact'      => $contact,
+                        'message'      => $message,
+                    );
+
+                    $result = InternalEmail::send( $params );
+                    if ( $result->isSuccessful ) {
+                        $result->redirect = $_POST['action'] == 'schedule-demo' ? 'Modal::schedule-demo-success' : 'Modal::get-quote-success';
+                    }
+
+                    Logger::error( array(
+                        'server'      => '.' . Router::getTopLevelDomain(),
+                        'contactInfo' => array(
+                            'language' => Language::get(),
+                            'country'  => User::getCountryByIP(),
+                            'fullName' => $data['full-name'],
+                            'email'    => $data['work-email'],
+                            'phone'    => $data['phone'],
+                            'company'  => $data['organization'],
+                        ),
+                        'recipients' => $recipients,
+                        'result'     => $result->result,
+                    ), 'midend.demo-request' );
+                    break;
+
+                case 'StartSignupSubmit':
+                    $result->code     = 200;
+                    $result->redirect = ( isset( $data['type']['code'] ) && $data['type']['code'] == 'attendee' )
+                        ? '/register/account/' : '/register/organization/';
+                    break;
+
+                case 'subscription':
+                    $subscriptionListIds = array();
+                    foreach ( $data as $key => $value ) {
+                        if ( strpos( $key, 'subscription_' ) !== false && $value ) {
+                            $subscriptionListIds[] = str_replace( 'subscription_', '', $key );
+                        }
+                    }
+                    $actor = array(
+                        'email'         => $data['work-email'],
+                        'firstName'     => $data['firstname'],
+                        'lastName'      => $data['lastname'],
+                    );
+
+                    $result = EmailSubscription::subscribeEmail( $subscriptionListIds, $actor, '', false, Server::getEventBankOrgId() );
+
+                    if ( $result->code == 200 ) {
+                        $result->redirect = 'Modal::subscription-success';
+                    }
+                    break;
+
+            }
+
+            echo json_encode( $result->result );
+        }
+    }";s:7:"viewBag";a:2:{s:11:"snippetCode";s:10:"demowowowo";s:11:"snippetName";s:8:"demoform";}s:20:"genericForm demoform";a:9:{s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:13:"inline_errors";s:8:"disabled";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}s:10:"staticPage";a:2:{s:10:"useContent";s:1:"1";s:7:"default";s:1:"0";}}}

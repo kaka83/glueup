@@ -1,0 +1,148 @@
+1600067238a:1:{s:19:"support/default.htm";a:6:{s:8:"fileName";s:19:"support/default.htm";s:7:"content";s:4472:"[genericForm support]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<!-- // Modal -->
+    <div id="support" class="modal fade centered-modal" role="dialog" >
+                <div class="modal-dialog">
+                
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            
+                          
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                                          <!--  <div class="container paygage-hero-container">
+                                
+                                   
+                                    <div class="col-md-6 align-items-center align-self-center">-->
+                                          <img src="{{ ('assets/images/Glueup-symbol.svg') | theme }}" class="paygage-visual" style="max-width:40px; height:auto;" alt="paygage logo">
+                                          </br>
+                                     <h4 class="t-5 modal-title">{{ 'Contact Support'|_ }} </h4>
+                                     <p>{{ "We're here to help. Please fill out this quick form and we'll get back to you shortly."|_ }}</p>
+                        <form data-request="{{ __SELF__ }}::onFormSubmit" id="modal__submit">
+                        
+                            {{ form_token() }}
+                        
+                            <div id="{{ __SELF__ }}_forms_flash"></div>
+                        
+                            <div class="form-group">
+                                <label for="full_name">{{ 'Full Name'|_ }}</label>
+                                <input type="text" id="full_name" name="full_name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">{{ 'Phone Number'|_ }}</label>
+                                <input type="text" id="phone" name="phone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">{{ 'Email Address'|_ }}</label>
+                                <input type="text" id="email" name="email" class="form-control" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="support-message">{{ 'Message'|_ }}</label>
+                                <textarea id="support-message" name="support-message" class="form-control" value="" rows="4"></textarea>
+                            </div>
+                           {# <div class="form-group">
+                                <label for="solution">{{ 'Solution'|_ }}</label>
+                                <select name="solution" id="solution">
+                                    <option value="sol-1">{{'Event Management Suite'|_}}</option>
+                                    <option value="sol-2">{{'Membership Management Suite'|_}}</option>
+                                    <option value="sol-3">{{'Community Management Suite'|_}}</option>
+                                    <option value="sol-4">{{'Virtual Events Management Suite'|_}}</option>
+                                    <option value="sol-5">{{'Training Management Suite'|_}}</option>
+                                    <option value="sol-6">{{'Donations Management Suite'|_}}</option>
+                                </select>
+                             </div>#}
+                        
+                          
+                        
+                            <button id="simpleContactSubmitButton" type="submit" class="btn btn-primary">{{ 'Contact'|_ }}</button>
+                        
+                        </form>
+                                </div>
+                            </div> 
+     
+                        </div>
+                    </div>
+                </div>
+           
+            
+            
+            <!-- // Modal -->";s:5:"mtime";i:1597070071;s:6:"markup";s:4144:"<!-- // Modal -->
+    <div id="support" class="modal fade centered-modal" role="dialog" >
+                <div class="modal-dialog">
+                
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            
+                          
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                                          <!--  <div class="container paygage-hero-container">
+                                
+                                   
+                                    <div class="col-md-6 align-items-center align-self-center">-->
+                                          <img src="{{ ('assets/images/Glueup-symbol.svg') | theme }}" class="paygage-visual" style="max-width:40px; height:auto;" alt="paygage logo">
+                                          </br>
+                                     <h4 class="t-5 modal-title">{{ 'Contact Support'|_ }} </h4>
+                                     <p>{{ "We're here to help. Please fill out this quick form and we'll get back to you shortly."|_ }}</p>
+                        <form data-request="{{ __SELF__ }}::onFormSubmit" id="modal__submit">
+                        
+                            {{ form_token() }}
+                        
+                            <div id="{{ __SELF__ }}_forms_flash"></div>
+                        
+                            <div class="form-group">
+                                <label for="full_name">{{ 'Full Name'|_ }}</label>
+                                <input type="text" id="full_name" name="full_name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">{{ 'Phone Number'|_ }}</label>
+                                <input type="text" id="phone" name="phone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">{{ 'Email Address'|_ }}</label>
+                                <input type="text" id="email" name="email" class="form-control" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="support-message">{{ 'Message'|_ }}</label>
+                                <textarea id="support-message" name="support-message" class="form-control" value="" rows="4"></textarea>
+                            </div>
+                           {# <div class="form-group">
+                                <label for="solution">{{ 'Solution'|_ }}</label>
+                                <select name="solution" id="solution">
+                                    <option value="sol-1">{{'Event Management Suite'|_}}</option>
+                                    <option value="sol-2">{{'Membership Management Suite'|_}}</option>
+                                    <option value="sol-3">{{'Community Management Suite'|_}}</option>
+                                    <option value="sol-4">{{'Virtual Events Management Suite'|_}}</option>
+                                    <option value="sol-5">{{'Training Management Suite'|_}}</option>
+                                    <option value="sol-6">{{'Donations Management Suite'|_}}</option>
+                                </select>
+                             </div>#}
+                        
+                          
+                        
+                            <button id="simpleContactSubmitButton" type="submit" class="btn btn-primary">{{ 'Contact'|_ }}</button>
+                        
+                        </form>
+                                </div>
+                            </div> 
+     
+                        </div>
+                    </div>
+                </div>
+           
+            
+            
+            <!-- // Modal -->";s:4:"code";N;s:19:"genericForm support";a:9:{s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:13:"inline_errors";s:8:"disabled";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}}}

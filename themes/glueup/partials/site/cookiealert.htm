@@ -1,0 +1,20 @@
+description = "cookie alert partial"
+
+[viewBag]
+==
+<!-- START Bootstrap-Cookie-Alert -->
+    
+<div class="alert text-center cookiealert" role="alert">
+	<div class="container text-left" style="display: flex; flex-wrap: wrap; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center;">
+		<div class="row mx-auto align-items-center align-self-center">
+			<div class="col-md-10">
+			<span class=" text-white font-weight-light" style="padding-top:10px; display:block; padding: 0 0 0 4px; font-size:12px; ">	{{'We use cookies to make Glue Up’s website better. Cookies help to provide a more personalized and relevant experience for you, and web analytics for us.'|_}} {{' To learn more, and to see a full list of cookies we use, check out our'|_}} <a href="{{ 'legal/cookie-policy' | page }}" rel="noreferrer" target="_blank" class="text-white" style="color:white!important;">{{'Cookie Policy'|_}}.</a>
+			</div>
+			<div class="col-md-2">
+            <button type="button" class="py-2 btn btn-labeled btn-light acceptcookies"><span class="btn-label"><i class="">&#x1F36A; </i></span>{{' I Agree'|_}}</button>
+            </div>
+        </div>
+	</div>
+</div>
+<!-- END Bootstrap-Cookie-Alert -->
+<script src="{{ 'assets/js/cookiealert.js'|theme }}" async></script>

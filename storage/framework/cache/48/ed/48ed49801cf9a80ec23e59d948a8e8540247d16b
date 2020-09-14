@@ -1,0 +1,33 @@
+1600066771a:1:{s:13:"home/hero.htm";a:7:{s:8:"fileName";s:13:"home/hero.htm";s:7:"content";s:923:"description = "home hero saves the day"
+
+[viewBag]
+==
+<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+            <div class="row mx-auto">
+                
+                <div class="col-md-7 mx-auto hero align-self-center text-center">
+                 
+                      <h1>{{ 'Connect the dots from outreach to building <span class="line"><ins>communities</ins></span>'|_ }} </h1>
+                       <p class="tagline"> {{ 'Connecting with your audience is more important than ever. We can help with scalable events, memberships, communities and payments.'|_ }} </p>
+                       <a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>
+
+                </div>
+            </div>
+        </div> 
+    </header>";s:5:"mtime";i:1596786370;s:6:"markup";s:869:"<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+            <div class="row mx-auto">
+                
+                <div class="col-md-7 mx-auto hero align-self-center text-center">
+                 
+                      <h1>{{ 'Connect the dots from outreach to building <span class="line"><ins>communities</ins></span>'|_ }} </h1>
+                       <p class="tagline"> {{ 'Connecting with your audience is more important than ever. We can help with scalable events, memberships, communities and payments.'|_ }} </p>
+                       <a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>
+
+                </div>
+            </div>
+        </div> 
+    </header>";s:4:"code";N;s:11:"description";s:23:"home hero saves the day";s:7:"viewBag";a:0:{}}}

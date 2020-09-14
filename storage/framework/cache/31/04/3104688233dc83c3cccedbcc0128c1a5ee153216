@@ -1,0 +1,1204 @@
+1600067169a:1:{s:38:"landing/community-management-suite.htm";a:16:{s:8:"fileName";s:38:"landing/community-management-suite.htm";s:7:"content";s:38774:"title = "Community Management Suite"
+url = "/lp/community-management-software"
+layout = "glueup-landing"
+description = "Enable your community to thrive and connect with you and your mission 365 days a year even when meeting face to face isn’t possible."
+meta_title = "Community Management Suite"
+meta_description = "Enable your community to thrive and connect with you and your mission 365 days a year even when meeting face to face isn’t possible."
+is_hidden = 0
+seo_keywords = "community management software, community engagement automation platform, membership workflow, retention software, engagement solution, direct chat, member app, member engagement, discussion, public groups"
+robot_index = "noindex"
+robot_follow = "nofollow"
+
+[viewBag]
+localeTitle[cn] = "活动管理平台"
+localeUrl[cn] = "/huodongguanlipingtai"
+==
+<?php
+function onStart(){    
+
+    // or you can get file object from your post or record 
+    // and get its absolute path and use it `getPath()`
+    //$imagePath = 'https://yoursite/image.jpeg';
+    $baseUrl = url(Config::get('cms.storage.media.path'));
+    //$imagePath = getPath('app/media/glueup-membership.png');
+    $imagePath = $baseUrl . '/meta/glueup-community.png';
+    $this['fbImage'] = $imagePath; // image absolute path
+}
+function onEnd(){
+    $this->page->nav_highlight = 'products';
+ }
+?>
+==
+<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+            <div class="row flex-row-reverse">
+                <div class="col-md-6 hero align-self-center text-left">
+                    <img src="{{ 'glueup-community-feature.svg' | media }}" class="paygage-visual" alt="logo">
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-left">
+                    <p class="tagline mb-4"> {{ this.page.title}} </p>
+                      <h1>{{ '<span class="line"><ins>Transform </ins></span> Your Community Engagement'|_ }}</h1>
+                       <h2 class="tagline"> {{ 'Connecting with your community is more important than ever. Enable them to thrive no matter where they are with the most powerful solution on the market.'|_ }} </h2><br>
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+                
+            </div>
+        </div> 
+</header>
+{% partial 'logos/logobar-community.htm' %}
+{#engagement 1#}
+
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-8 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Business Never Sleeps, Neither Should Your Community'|_ }}</h2>
+                             <p class="tagline">{{ 'Give your members a digital place where they can connect with you and your mission 365 days a year even when meeting face to face isn’t possible.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+                <div class="col-lg-10 align-self-center mx-auto">
+                    <div class="services__accordion row flex-row-reverse">
+                            <div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+                				<div class="accordion__img desktop">
+                				    <div id="tab1-bullet-img" class="firstshow">
+                				        <img class="feature-window desktop" src="{{ 'glueup-all-in-one.svg' | media }}" alt="chat">
+                				         
+                				    </div>
+                				    <div id="tab2-bullet-img">
+                				        <img class="feature-window deskto" src="{{ 'glueup-anywhere.svg' | media }}" alt="chat">
+                				    </div>
+                			        <div id="tab3-bullet-img">
+                    			        <img class="feature-window deskto" src="{{ 'glueup-simple-for-everybody.svg' | media }}" alt="chat">
+                    			    </div>
+                    			    {#<div id="tab4-bullet-img">
+                    			        <img class="feature-window deskto" src="{{ 'assets/images/preview.svg' | theme }}" alt="chat">
+                    			    </div>#}
+                			     </div>
+                			</div>
+                			<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+                				<div class="services__accordion">
+                				    <div class="accordion pl-3 active small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+                                        <i class="icon-overview"></i>
+                                        <span>{{ 'Do it all from one place'|_ }}</span>
+                                        <div class="accordion__body firstshow " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'An all-in-one software that helps you build, manage, engage, and understand every member of your community.'|_ }}
+                							 {#<a href="{{ 'blog'|page }}" class="read-more gourl pt-3">Learn More</a>#}</p>
+                						</div>
+                                    </div>
+                                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab2-bullet">
+                                        <i class="icon-mobile-check"></i>
+                                        <span>{{ 'Reach members where they are'|_ }}</span>
+                                        <div class="accordion__body " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'One app for you to manage your operations from anywhere, and one app for your members to stay connected.'|_ }}
+                							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+                						</div>
+                                    </div>
+                                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab3-bullet">
+                                        <i class="icon-button"></i>
+                                        <span>{{ 'Make it simple for everyone'|_ }}</span>
+                                        <div class="accordion__body " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'Premium user experience battle-tested for your and your community’s absolute comfort.'|_ }}
+                							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+                						</div>
+                                    </div>
+                                    
+                                    </div>
+                				</div>
+                			</div>
+                			
+                		</div>
+                </div>
+            </div>
+        </div>
+
+</section>
+
+{#% partial 'solutions/event-timeline.htm' %#}
+
+
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'community-features-1.svg' | media }}" alt="Glue Up helps you offer a space for your members to exchange knowledge" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Community Hub'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'A Place to Engage and Exchange Knowledge'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Provide your community a hub where they can share their ideas, discuss various topic and stay social even when meeting in person is not an option. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-menu-section-lemontea"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Live Feed'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-comment-box"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Comments & Discussions'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-directory"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Member<br>Directory'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Social Sharing'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-advertisement"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Broadcastings'|_ }}</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'community-features-2.svg' | media }}" alt="Glue Up helps you offer discussion groups both private and open" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Conversations'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Spark Discussions in Open or Private Groups'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Make it easy for everyone to find like-minded people and topics that matter to them so they can network with each other and exchange their opinions.'|_ }}<br>
+                			     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-invisible"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Public & Private Groups'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-comment-box"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Unlimited Commenting'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-thumb-full"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Reactions'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-atsymbol"></i>
+                                        <p class="bullet-small text-center pt-4">{{ '@Mentioning'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contacts"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'People Profiles'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-6 d-flex align-items-center text-center mx-auto">
+                    <p class="mb-4 sentence mx-auto">{{ '<span style="color:#0d62fe;">Glue Up</span> clients are reporting <span class="line"><ins>3x</ins></span> increase in engagement.'|_ }}</p>
+                </div>
+            </div>
+        </div>
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'community-features-3.svg' | media }}" alt="Glue Up helps you facilitate business card exchange" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Networking'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Help Business Happen'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Enable your community to create and share their own digital business cards, manage their contacts and effectively network with everyone no matter where they are.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-apps"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Free Member App'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-prev"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Available on all devices'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-lock"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom privacy settings'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-qr-code"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Business Card Scanner'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-crm"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Stored in Individual CRM'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'community-features-4.svg' | media }}" alt="Glue Up helps you connect you audiences" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Private Discussions'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Let People Talk'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Make it your business to enable everyone in your community develop lasting relationships with you and each other via 1-on-1 chats with option to share business cards.'|_ }}<br>
+                			     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ '1-on-1 Direct Chat'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-heart"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'GIFs and Emojis'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Media & Location Sharing'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-invisible"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Privacy Settings'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+<section class="section pb-0">
+        <div class="container">
+            {#<div class="col-lg-10 mx-auto">#}
+            <div class="row">
+                    <div class="col-lg-8 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Customers <span class="line"><ins>stick</ins></span> with Glue Up'|_ }}</h2>
+                             <p class="tagline">{{ 'From small associations and non-profits to large Chambers of Commerce with dozens of chapters, our clients in 50+ countries around the world love engaging their members all-in-one with Glue Up.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+            {% partial 'industry/industry-case-study.htm' category='associations' %}
+                   
+            </div>
+        </div>
+</section>
+
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'community-features-5.svg' | media }}" alt="Glue Up helps you define the engagement rules" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Admin Controls'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Define Rules Of Engagement'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'You are the boss of the engagement. Create and manage different groups, allow and restrict access or offer greater functionalities to paying members of your community.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-filters"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Advanced Filters'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-hierarchy"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Roles & Permissions'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-lock"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Full Moderation'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-advertisement"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Post Broadcastings'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-analytics"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Engagement Analytics'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-engage.svg' | media }}" alt="Glue Up helps you facilitat interaction and engagement with and for your community" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Engagement'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Enable Your Community To Thrive'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Make it your business to enable every member in your community to develop lasting relationships'|_ }}{{' with you and each other via 1-on-1 chats with option to share business cards and premium networking features.'|_ }}<br>
+                			     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-invisible"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Private & Public Groups'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Media sharing'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ '1-on-1 Direct Chat'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Digital Business Cards'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-apps"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Free Member App '|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-analyze.svg' | media }}" alt="Glue Up helps you analyze your engagement" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Analytics'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Understand Engagement With Your Members'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Get immediate insights into your members’ activities from events, email marketing, finance and more in the real time and use what you learn to make smarter decisions.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Contact Information'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-reset-time"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Engagement History'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-refresh"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Membership Status and Renewals'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-opportunity"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Opportunities Management'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-filter"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Deal Stages'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-webinars.svg' | media }}" alt="Glue Up helps you monetize your webinars" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Online Events'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Monetize & Enhance Your Webinars'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Run webinars and other online events from all-in-one platform.'|_ }}{{' Provide your attendees with premium and seamless experience that gives them access to presentations, agenda, as well as ability to connect and chat with other attendees. '|_ }}<br>
+                			     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-star-full"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Premium Branding Options'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-sponsor"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Sponsor Promotion'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Attendee Chat'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-documents"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Webinar Documents'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Digital Business Cards'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+
+<section class="section bg-grey">
+        <div class="container">
+            <div class="services__accordion row flex-row-reverse">
+                <div class="col-md-6 align-self-center right h-100">
+    				<div class="accordion__img desktop">
+    				    <div id="tab1-sellpoint-img" class="firstshow">
+    				        <img class="feature-window deskto lazyload" src="{{ 'glueup-community.svg' | media }}" alt="Best-in-class event management with Glue Up">
+    				    </div>
+    			        <div id="tab2-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-crm.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab3-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-emails.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab4-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-finance.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab5-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-tasks.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab6-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-surveys.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab7-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-mobile.svg' | media }}" alt="chat">
+        			    </div>
+    			     </div>
+    			</div>
+    			<div class="col-md-5 mr-auto float-left align-self-center">
+    			    <div class="pt-1 pb-3 pt-md-5 pb-md-5 ml-xs-0 my-3">
+                                     <small>{{ "What's included?"|_ }}</small>
+                                     <h2 class="mt-3 mb-2 position-relative content-title">{{'Membership <br> Management Suite'|_ }} </h2>
+                                     <p class="tagline pt-2 ">{{ 'An all-in-one solution that helps you save time and focus on your mission while keeping everybody on the same page.'|_ }} </p>
+                    </div>
+    				<div class="services__accordion row bullets hideme ml-xs-0 pb-5 mb-5 h-100" style="padding-left:-16px;">
+    				    <div class="accordion sellpoint active small col text-center pointer px-0 pl-1" tab-name="tab1-sellpoint">
+                            <i class="sellpoint-item align-middle icon-social-share"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Community'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab2-sellpoint">
+                             <i class="sellpoint-item align-middle icon-crm"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'CRM'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab3-sellpoint">
+                            <i class="sellpoint-item align-middle icon-email-campaigns"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Email Campaigns'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab4-sellpoint">
+                            <i class="sellpoint-item align-middle icon-payments"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Invoicing & Payments'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab5-sellpoint">
+                            <i class="sellpoint-item align-middle icon-task-icon"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Tasks'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab7-sellpoint">
+                            <i class="sellpoint-item align-middle icon-mobile-check"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Mobile Apps'|_ }}</p>
+                        </div>
+    				</div>
+    			</div>
+    			
+    		</div>
+            </div>
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-6 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Learn more about Event Management and Glue Up'|_ }}</h2>
+                             {#<p class="tagline">{{ 'An all-in-one solution that helps you save time and focus on your mission while keeping everybody on the same page.'|_ }} </p>#}
+                        </div>
+                    </div>
+            </div>
+            {% partial 'industry/industry-blog.htm' event='associations' wp1='associations' wp2='event' %}
+            </div>
+        </div>
+
+</section>
+{% partial 'solutions/footer-cta-mem.htm' %}";s:5:"mtime";i:1598001645;s:6:"markup";s:37420:"<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+            <div class="row flex-row-reverse">
+                <div class="col-md-6 hero align-self-center text-left">
+                    <img src="{{ 'glueup-community-feature.svg' | media }}" class="paygage-visual" alt="logo">
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-left">
+                    <p class="tagline mb-4"> {{ this.page.title}} </p>
+                      <h1>{{ '<span class="line"><ins>Transform </ins></span> Your Community Engagement'|_ }}</h1>
+                       <h2 class="tagline"> {{ 'Connecting with your community is more important than ever. Enable them to thrive no matter where they are with the most powerful solution on the market.'|_ }} </h2><br>
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+                
+            </div>
+        </div> 
+</header>
+{% partial 'logos/logobar-community.htm' %}
+{#engagement 1#}
+
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-8 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Business Never Sleeps, Neither Should Your Community'|_ }}</h2>
+                             <p class="tagline">{{ 'Give your members a digital place where they can connect with you and your mission 365 days a year even when meeting face to face isn’t possible.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+                <div class="col-lg-10 align-self-center mx-auto">
+                    <div class="services__accordion row flex-row-reverse">
+                            <div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+                				<div class="accordion__img desktop">
+                				    <div id="tab1-bullet-img" class="firstshow">
+                				        <img class="feature-window desktop" src="{{ 'glueup-all-in-one.svg' | media }}" alt="chat">
+                				         
+                				    </div>
+                				    <div id="tab2-bullet-img">
+                				        <img class="feature-window deskto" src="{{ 'glueup-anywhere.svg' | media }}" alt="chat">
+                				    </div>
+                			        <div id="tab3-bullet-img">
+                    			        <img class="feature-window deskto" src="{{ 'glueup-simple-for-everybody.svg' | media }}" alt="chat">
+                    			    </div>
+                    			    {#<div id="tab4-bullet-img">
+                    			        <img class="feature-window deskto" src="{{ 'assets/images/preview.svg' | theme }}" alt="chat">
+                    			    </div>#}
+                			     </div>
+                			</div>
+                			<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+                				<div class="services__accordion">
+                				    <div class="accordion pl-3 active small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+                                        <i class="icon-overview"></i>
+                                        <span>{{ 'Do it all from one place'|_ }}</span>
+                                        <div class="accordion__body firstshow " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'An all-in-one software that helps you build, manage, engage, and understand every member of your community.'|_ }}
+                							 {#<a href="{{ 'blog'|page }}" class="read-more gourl pt-3">Learn More</a>#}</p>
+                						</div>
+                                    </div>
+                                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab2-bullet">
+                                        <i class="icon-mobile-check"></i>
+                                        <span>{{ 'Reach members where they are'|_ }}</span>
+                                        <div class="accordion__body " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'One app for you to manage your operations from anywhere, and one app for your members to stay connected.'|_ }}
+                							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+                						</div>
+                                    </div>
+                                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab3-bullet">
+                                        <i class="icon-button"></i>
+                                        <span>{{ 'Make it simple for everyone'|_ }}</span>
+                                        <div class="accordion__body " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'Premium user experience battle-tested for your and your community’s absolute comfort.'|_ }}
+                							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+                						</div>
+                                    </div>
+                                    
+                                    </div>
+                				</div>
+                			</div>
+                			
+                		</div>
+                </div>
+            </div>
+        </div>
+
+</section>
+
+{#% partial 'solutions/event-timeline.htm' %#}
+
+
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'community-features-1.svg' | media }}" alt="Glue Up helps you offer a space for your members to exchange knowledge" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Community Hub'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'A Place to Engage and Exchange Knowledge'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Provide your community a hub where they can share their ideas, discuss various topic and stay social even when meeting in person is not an option. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-menu-section-lemontea"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Live Feed'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-comment-box"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Comments & Discussions'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-directory"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Member<br>Directory'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Social Sharing'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-advertisement"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Broadcastings'|_ }}</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'community-features-2.svg' | media }}" alt="Glue Up helps you offer discussion groups both private and open" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Conversations'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Spark Discussions in Open or Private Groups'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Make it easy for everyone to find like-minded people and topics that matter to them so they can network with each other and exchange their opinions.'|_ }}<br>
+                			     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-invisible"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Public & Private Groups'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-comment-box"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Unlimited Commenting'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-thumb-full"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Reactions'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-atsymbol"></i>
+                                        <p class="bullet-small text-center pt-4">{{ '@Mentioning'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contacts"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'People Profiles'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-6 d-flex align-items-center text-center mx-auto">
+                    <p class="mb-4 sentence mx-auto">{{ '<span style="color:#0d62fe;">Glue Up</span> clients are reporting <span class="line"><ins>3x</ins></span> increase in engagement.'|_ }}</p>
+                </div>
+            </div>
+        </div>
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'community-features-3.svg' | media }}" alt="Glue Up helps you facilitate business card exchange" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Networking'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Help Business Happen'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Enable your community to create and share their own digital business cards, manage their contacts and effectively network with everyone no matter where they are.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-apps"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Free Member App'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-prev"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Available on all devices'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-lock"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom privacy settings'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-qr-code"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Business Card Scanner'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-crm"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Stored in Individual CRM'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'community-features-4.svg' | media }}" alt="Glue Up helps you connect you audiences" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Private Discussions'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Let People Talk'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Make it your business to enable everyone in your community develop lasting relationships with you and each other via 1-on-1 chats with option to share business cards.'|_ }}<br>
+                			     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ '1-on-1 Direct Chat'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-heart"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'GIFs and Emojis'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Media & Location Sharing'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-invisible"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Privacy Settings'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+<section class="section pb-0">
+        <div class="container">
+            {#<div class="col-lg-10 mx-auto">#}
+            <div class="row">
+                    <div class="col-lg-8 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Customers <span class="line"><ins>stick</ins></span> with Glue Up'|_ }}</h2>
+                             <p class="tagline">{{ 'From small associations and non-profits to large Chambers of Commerce with dozens of chapters, our clients in 50+ countries around the world love engaging their members all-in-one with Glue Up.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+            {% partial 'industry/industry-case-study.htm' category='associations' %}
+                   
+            </div>
+        </div>
+</section>
+
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'community-features-5.svg' | media }}" alt="Glue Up helps you define the engagement rules" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Admin Controls'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Define Rules Of Engagement'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'You are the boss of the engagement. Create and manage different groups, allow and restrict access or offer greater functionalities to paying members of your community.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-filters"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Advanced Filters'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-hierarchy"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Roles & Permissions'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-lock"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Full Moderation'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-advertisement"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Post Broadcastings'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-analytics"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Engagement Analytics'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-engage.svg' | media }}" alt="Glue Up helps you facilitat interaction and engagement with and for your community" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Engagement'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Enable Your Community To Thrive'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Make it your business to enable every member in your community to develop lasting relationships'|_ }}{{' with you and each other via 1-on-1 chats with option to share business cards and premium networking features.'|_ }}<br>
+                			     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-invisible"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Private & Public Groups'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Media sharing'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ '1-on-1 Direct Chat'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Digital Business Cards'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-apps"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Free Member App '|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-analyze.svg' | media }}" alt="Glue Up helps you analyze your engagement" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Analytics'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Understand Engagement With Your Members'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Get immediate insights into your members’ activities from events, email marketing, finance and more in the real time and use what you learn to make smarter decisions.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Contact Information'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-reset-time"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Engagement History'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-refresh"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Membership Status and Renewals'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-opportunity"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Opportunities Management'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-filter"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Deal Stages'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-webinars.svg' | media }}" alt="Glue Up helps you monetize your webinars" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Online Events'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Monetize & Enhance Your Webinars'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Run webinars and other online events from all-in-one platform.'|_ }}{{' Provide your attendees with premium and seamless experience that gives them access to presentations, agenda, as well as ability to connect and chat with other attendees. '|_ }}<br>
+                			     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-star-full"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Premium Branding Options'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-sponsor"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Sponsor Promotion'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Attendee Chat'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-documents"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Webinar Documents'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Digital Business Cards'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+
+<section class="section bg-grey">
+        <div class="container">
+            <div class="services__accordion row flex-row-reverse">
+                <div class="col-md-6 align-self-center right h-100">
+    				<div class="accordion__img desktop">
+    				    <div id="tab1-sellpoint-img" class="firstshow">
+    				        <img class="feature-window deskto lazyload" src="{{ 'glueup-community.svg' | media }}" alt="Best-in-class event management with Glue Up">
+    				    </div>
+    			        <div id="tab2-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-crm.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab3-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-emails.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab4-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-finance.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab5-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-tasks.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab6-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-surveys.svg' | media }}" alt="chat">
+        			    </div>
+        			    <div id="tab7-sellpoint-img">
+        			        <img class="feature-window deskto lazyload" src="{{ 'glueup-mobile.svg' | media }}" alt="chat">
+        			    </div>
+    			     </div>
+    			</div>
+    			<div class="col-md-5 mr-auto float-left align-self-center">
+    			    <div class="pt-1 pb-3 pt-md-5 pb-md-5 ml-xs-0 my-3">
+                                     <small>{{ "What's included?"|_ }}</small>
+                                     <h2 class="mt-3 mb-2 position-relative content-title">{{'Membership <br> Management Suite'|_ }} </h2>
+                                     <p class="tagline pt-2 ">{{ 'An all-in-one solution that helps you save time and focus on your mission while keeping everybody on the same page.'|_ }} </p>
+                    </div>
+    				<div class="services__accordion row bullets hideme ml-xs-0 pb-5 mb-5 h-100" style="padding-left:-16px;">
+    				    <div class="accordion sellpoint active small col text-center pointer px-0 pl-1" tab-name="tab1-sellpoint">
+                            <i class="sellpoint-item align-middle icon-social-share"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Community'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab2-sellpoint">
+                             <i class="sellpoint-item align-middle icon-crm"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'CRM'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab3-sellpoint">
+                            <i class="sellpoint-item align-middle icon-email-campaigns"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Email Campaigns'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab4-sellpoint">
+                            <i class="sellpoint-item align-middle icon-payments"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Invoicing & Payments'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab5-sellpoint">
+                            <i class="sellpoint-item align-middle icon-task-icon"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Tasks'|_ }}</p>
+                        </div>
+                        <div class="accordion sellpoint small col text-center pointer px-0 pl-1" tab-name="tab7-sellpoint">
+                            <i class="sellpoint-item align-middle icon-mobile-check"></i>
+                            <p class="bullet-small text-center pt-2 mt-2 px-0 mx-0 ">{{ 'Mobile Apps'|_ }}</p>
+                        </div>
+    				</div>
+    			</div>
+    			
+    		</div>
+            </div>
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-6 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Learn more about Event Management and Glue Up'|_ }}</h2>
+                             {#<p class="tagline">{{ 'An all-in-one solution that helps you save time and focus on your mission while keeping everybody on the same page.'|_ }} </p>#}
+                        </div>
+                    </div>
+            </div>
+            {% partial 'industry/industry-blog.htm' event='associations' wp1='associations' wp2='event' %}
+            </div>
+        </div>
+
+</section>
+{% partial 'solutions/footer-cta-mem.htm' %}";s:4:"code";s:508:"function onStart(){    
+
+    // or you can get file object from your post or record 
+    // and get its absolute path and use it `getPath()`
+    //$imagePath = 'https://yoursite/image.jpeg';
+    $baseUrl = url(Config::get('cms.storage.media.path'));
+    //$imagePath = getPath('app/media/glueup-membership.png');
+    $imagePath = $baseUrl . '/meta/glueup-community.png';
+    $this['fbImage'] = $imagePath; // image absolute path
+}
+function onEnd(){
+    $this->page->nav_highlight = 'products';
+ }";s:5:"title";s:26:"Community Management Suite";s:3:"url";s:33:"/lp/community-management-software";s:6:"layout";s:14:"glueup-landing";s:11:"description";s:134:"Enable your community to thrive and connect with you and your mission 365 days a year even when meeting face to face isn’t possible.";s:10:"meta_title";s:26:"Community Management Suite";s:16:"meta_description";s:134:"Enable your community to thrive and connect with you and your mission 365 days a year even when meeting face to face isn’t possible.";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:204:"community management software, community engagement automation platform, membership workflow, retention software, engagement solution, direct chat, member app, member engagement, discussion, public groups";s:11:"robot_index";s:7:"noindex";s:12:"robot_follow";s:8:"nofollow";s:7:"viewBag";a:2:{s:11:"localeTitle";a:1:{s:2:"cn";s:18:"活动管理平台";}s:9:"localeUrl";a:1:{s:2:"cn";s:21:"/huodongguanlipingtai";}}}}

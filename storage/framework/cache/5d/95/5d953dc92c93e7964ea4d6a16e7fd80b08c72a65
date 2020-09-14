@@ -1,0 +1,29 @@
+1600066771a:1:{s:23:"elements/bottom-cta.htm";a:6:{s:8:"fileName";s:23:"elements/bottom-cta.htm";s:7:"content";s:733:"description = "bottom cta"
+==
+<section class="section bg-gradient">
+        <div class="container">
+            <div class="row justify-content-center align-items-center py-5">
+                <div class="col-lg-7">
+                    <span class="text-color">Empower Your Community</span>
+                    <h2 class="mt-2 mb-4 mb-lg-0 text-white">{{ 'Start using the best technology to engage with your community.'|_ }}</h2>
+                </div>
+                <div class="col-lg-4">
+                    <a href="#" class="btn btn-primary-white btn-round-full float-lg-right " data-toggle="modal" data-target="#contact-paygage">Book a Demo</a>
+                </div>
+            </div>
+        </div>
+
+</section>";s:5:"mtime";i:1596786370;s:6:"markup";s:703:"<section class="section bg-gradient">
+        <div class="container">
+            <div class="row justify-content-center align-items-center py-5">
+                <div class="col-lg-7">
+                    <span class="text-color">Empower Your Community</span>
+                    <h2 class="mt-2 mb-4 mb-lg-0 text-white">{{ 'Start using the best technology to engage with your community.'|_ }}</h2>
+                </div>
+                <div class="col-lg-4">
+                    <a href="#" class="btn btn-primary-white btn-round-full float-lg-right " data-toggle="modal" data-target="#contact-paygage">Book a Demo</a>
+                </div>
+            </div>
+        </div>
+
+</section>";s:4:"code";N;s:11:"description";s:10:"bottom cta";}}

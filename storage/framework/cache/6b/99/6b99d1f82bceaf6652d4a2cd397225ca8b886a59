@@ -1,0 +1,35 @@
+1600067238a:1:{s:20:"site/cookiealert.htm";a:7:{s:8:"fileName";s:20:"site/cookiealert.htm";s:7:"content";s:1322:"description = "cookie alert partial"
+
+[viewBag]
+==
+<!-- START Bootstrap-Cookie-Alert -->
+    
+<div class="alert text-center cookiealert" role="alert">
+	<div class="container text-left" style="display: flex; flex-wrap: wrap; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center;">
+		<div class="row mx-auto align-items-center align-self-center">
+			<div class="col-md-10">
+			<span class=" text-white font-weight-light" style="padding-top:10px; display:block; padding: 0 0 0 4px; font-size:12px; ">	{{'We use cookies to make Glue Up’s website better. Cookies help to provide a more personalized and relevant experience for you, and web analytics for us.'|_}} {{' To learn more, and to see a full list of cookies we use, check out our'|_}} <a href="{{ 'legal/cookie-policy' | page }}" rel="noreferrer" target="_blank" class="text-white" style="color:white!important;">{{'Cookie Policy'|_}}.</a>
+			</div>
+			<div class="col-md-2">
+            <button type="button" class="py-2 btn btn-labeled btn-light acceptcookies"><span class="btn-label"><i class="">&#x1F36A; </i></span>{{' I Agree'|_}}</button>
+            </div>
+        </div>
+	</div>
+</div>
+<!-- END Bootstrap-Cookie-Alert -->
+<script src="{{ 'assets/js/cookiealert.js'|theme }}" async></script>";s:5:"mtime";i:1597718226;s:6:"markup";s:1271:"<!-- START Bootstrap-Cookie-Alert -->
+    
+<div class="alert text-center cookiealert" role="alert">
+	<div class="container text-left" style="display: flex; flex-wrap: wrap; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center;">
+		<div class="row mx-auto align-items-center align-self-center">
+			<div class="col-md-10">
+			<span class=" text-white font-weight-light" style="padding-top:10px; display:block; padding: 0 0 0 4px; font-size:12px; ">	{{'We use cookies to make Glue Up’s website better. Cookies help to provide a more personalized and relevant experience for you, and web analytics for us.'|_}} {{' To learn more, and to see a full list of cookies we use, check out our'|_}} <a href="{{ 'legal/cookie-policy' | page }}" rel="noreferrer" target="_blank" class="text-white" style="color:white!important;">{{'Cookie Policy'|_}}.</a>
+			</div>
+			<div class="col-md-2">
+            <button type="button" class="py-2 btn btn-labeled btn-light acceptcookies"><span class="btn-label"><i class="">&#x1F36A; </i></span>{{' I Agree'|_}}</button>
+            </div>
+        </div>
+	</div>
+</div>
+<!-- END Bootstrap-Cookie-Alert -->
+<script src="{{ 'assets/js/cookiealert.js'|theme }}" async></script>";s:4:"code";N;s:11:"description";s:20:"cookie alert partial";s:7:"viewBag";a:0:{}}}

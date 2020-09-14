@@ -1,0 +1,277 @@
+title = "Thank You"
+url = "/whitepaper-on-the-way"
+layout = "glueup-home"
+meta_title = "Thank You!"
+meta_description = "Thank you for requesting a demo of Glue Up platform. A Glue Up expert will be in touch with you in a few minutes."
+is_hidden = 0
+seo_keywords = "Glue Up demo, Glue Up pricing, Glue Up reviews, Glue Up testiominals, how much does Glue Up cost?, Glue Up experience, Glue Up fees, EventBank is Glue Up"
+robot_index = "noindex"
+robot_follow = "nofollow"
+
+[blogPosts eventPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 4
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+<?php
+function onEnd(){
+    $this->page->nav_highlight = 'pricing';
+ }
+?>
+==
+<div class="generic " id="generic">  
+        <div class="container">
+            <div class="row pt-5">
+                
+                <div class="col-md-8 hero align-self-center text-center mx-auto pt-5">
+                      <h1>{{ 'Thank <span class="line"><ins> you!</ins></span>'|_ }}</h1>
+                       <p class="tagline pb-3">Your whitepaper is on its way to your inbox.</p>
+                       <p class="tagline pb-3">You will receive an email with the link to access the whitepaper shortly.</p>
+                      <p class="tagline pb-3">Please check your junk or spam folder if the email does not arrive within the next 2 minutes.</p>
+                       
+                      <p> {{'If you are looking for more quality content, here are some articles from our blog you might enjoy:  '|_}}</a> </p>
+
+
+                </div>
+               
+            </div>
+        </div> 
+</div>
+<section>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 hero ml-auto pb-2">
+                  {#<div class="row pt-5 pb-2">
+                      <div class="col-md-12">
+                      <span class="text-muted text-capitalize mr-3 pb-3">
+                          <a href="{{ url('/blog/') }}/category/event-management"  class="read-more d-flex">{{'Event Management'|_}}</a>
+                      </span>
+                      </div>
+                  </div>#}
+                  <div class="row pt-2 pb-5">
+                      
+                      {% set events = eventPosts.posts %}
+                      {% for category in events.post.slice(0, 1).categories.slice(0, 1) %}
+                                                 <span class="text-muted text-capitalize mr-3 pb-3">
+                                                            <a href="{{ category.url }}"  class="read-more d-flex">{{ category.name }}</a>
+                                                        </span>
+                                                {% endfor %}
+                          {% for post in events %}
+                                                
+                                                <div class="col-md-3 hero pb-2">
+                                              <a href="{{ post.url }}" class="">
+                        {% if post.featured_images.count > 0 %}
+                        <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                        {% else %}
+                        <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+                        {% endif %}
+                         </a>
+                                                <h5 class="pt-2">
+                                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                                </h5>
+                                                <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                </div>
+                                                
+                                                 
+                         {% endfor %}
+                  </div>
+            </div>
+       </div>
+ </div>
+</section>
+
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-8 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'What makes our solutions special?'|_ }}</h2>
+                             <p class="tagline">{{ 'A successful partnership starts with a great software that works for both you and your community.'|_}}<br>{{' Not only do our award-winning solutions amplify engagement, they streamline operations for organizations of all sizes.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="row justify-content-center mx-auto">
+            	<div class="col-md-8 mx-auto">
+            		<div class="row">
+                        <div class="col-md-4 py-3">
+                            <div class="card text-center h-100 hideme">
+                              <div class="card-body pt-4 ">
+                                <img src="{{ 'capterra-top-20-img.png' | media }}" alt="Glue Up Top 20 Rated in Capterra" class=" img-fluid mx-auto lazy fadeIn" style="max-height: 120px;">
+                                {#<h5 class="card-title mt-1">{{ 'Capterra Top 20'|_ }}</h5>#}
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3">
+                            <div class="card text-center h-100 hideme">
+                              <div class="card-body pt-4">
+                              	<img alt="Glue Up is one of GetApp Category Leaders for Association Management Jul-20" title="Category Leaders Badge" style="width: 140px; border: 0px" src="https://cdn0.capterra-static.com/assets/images/gdm-badges/GA_Badge_Category%20Leaders_Full%20Color.png">
+                                 {#<img src="{{ 'gdpr-ready-glueup.png' | media }}" alt="Glue Up is fully GDPR Compliant" class="img-fluid mx-auto lazy fadeIn" style="max-height: 70px; margin-top: 39px; margin-bottom: 38px;">#}
+                                {#<h5 class="card-title mt-3">{{ 'GDPR Compliance'|_ }}</h5>#}
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3">
+                            <div class="card text-center h-100 hideme">
+                              <div class="card-body pt-4 ">
+                                {#<div style="margin-top: 30px; margin-bottom: 61px;"><i class="bullet-icon shadow-sm align-middle icon-clock-outlined" style="font-size: 72px;"></i></div>#}
+                                <img alt="Glue Up is one of the Software Advice Frontrunners for Association Management Jul-20" title="Frontrunners Badge" style="width: 140px; border: 0px" src="https://cdn0.capterra-static.com/assets/images/gdm-badges/SA_FrontRunners_Full%20Color.png">
+                                {#<h5 class="card-title mt-3">{{ 'Daily Backups'|_ }}</h5>#}
+                              </div>
+                            </div>
+                        </div>
+                       </div>
+                  </div>
+            </div>
+        </div>
+</section>
+{#
+<section class="section pb-0">
+        <div class="container">
+            
+                <div class="col-lg-10 align-self-center mx-auto">
+                    <div class="services__accordion row flex-row-reverse">
+                            <div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+                				<div class="accordion__img desktop">
+                				    <div id="tab1-bullet-img" class="firstshow">
+                				        <img class="feature-window desktop" src="{{ 'glueup-all-in-one.svg' | media }}" alt="chat">
+                				         
+                				    </div>
+                				    <div id="tab2-bullet-img">
+                				        <img class="feature-window deskto" src="{{ 'glueup-anywhere.svg' | media }}" alt="chat">
+                				    </div>
+                			        <div id="tab3-bullet-img">
+                    			        <img class="feature-window deskto" src="{{ 'glueup-simple-for-everybody.svg' | media }}" alt="chat">
+                    			    </div>
+                    			    {#<div id="tab4-bullet-img">
+                    			        <img class="feature-window deskto" src="{{ 'assets/images/preview.svg' | theme }}" alt="chat">
+                    			    </div>#}{#
+                			     </div>
+                			</div>
+                			<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+                				<div class="services__accordion">
+                				    <div class="accordion pl-3 active small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+                                        <i class="icon-overview"></i>
+                                        <span>{{ 'All-in-one solutions'|_ }}</span>
+                                        <div class="accordion__body firstshow " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'AUltimate platform that has everything you need to run successful events, manage memberships and more.'|_ }}
+                							 {#<a href="{{ 'blog'|page }}" class="read-more gourl pt-3">Learn More</a>#}{#</p>
+                						</div>
+                                    </div>
+                                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab2-bullet">
+                                        <i class="icon-mobile-check"></i>
+                                        <span>{{ 'Two free mobile apps'|_ }}</span>
+                                        <div class="accordion__body " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'One app for you to manage operations from anywhere, and one app for your community to stay connected.'|_ }}
+                							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}{#</p>
+                						</div>
+                                    </div>
+                                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab3-bullet">
+                                        <i class="icon-button"></i>
+                                        <span>{{ 'Super simple for everyone'|_ }}</span>
+                                        <div class="accordion__body " style="display:none;">
+                							<p class="pt-3 d-flex flex-column">{{ 'Premium user experience battle-tested for your and all your attendees’ absolute comfort.'|_ }}
+                							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}{#</p>
+                						</div>
+                                    </div>
+                                    
+                                    </div>
+                				</div>
+                			</div>
+                			
+                		</div>
+                		<div class="row">
+                    <div class="col-lg-8 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Automate the Busywork'|_ }}</h2>
+                             <p class="tagline">{{ 'Glue Up’s all-in-one software automates repetitive tasks so you can get back to growing your community.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+                </div>
+            </div>
+        </div>
+
+</section>#}{#
+<section class="section">
+        <div class="container">
+           
+            <div class="row justify-content-center mx-auto">
+                <div class="col-md-8 py-3 mx-auto">
+                            <div class="card pricing  h-100 shadow-sm">
+                              <div class="card-body pt-4 text-center">
+                              		 <h2 class="mt-3 mb-4 text-center position-relative content-title">{{ 'Becoming a Glue Up Client'|_ }}</h2>
+                           			  <p class="tagline text-center mb-4">{{ '1, 2, 3. Signing Up is That Easy'|_ }} </p>
+                                   <ul class="pricing-list">
+                                        <li class="pricing-list-item text-left"><i class="icon-visible"></i>
+                                        <span class="d-inline-block pt-3"><h4 class="link-title mb-2">{{ 'Get a Demo'|_ }}</h4>
+                                  		<p class="card-text mb-5">{{ "Request a demo anywhere on this website and we’ll show you our platform in a customized demo right away"|_}}{{' or at your preferred time later in a week.'|_ }}</p></span>
+                                        </li>
+                                        <li class="pricing-list-item text-left"><i class="icon-cheque"></i>
+                                        <span class="d-inline-block pt-3"><h4 class="link-title mb-2">{{ 'Review proposal and e-sign agreement'|_ }}</h4>
+                                  		<p class="card-text mb-5">{{ 'After your personal demo is over, we will prepare a tailor-made proposal for your organization the same day.'|_}}{{' If all looks good we will send you an e-agreement for signing. '|_ }}</p></span>
+                                        </li>
+                                        <li class="pricing-list-item text-left"><i class="icon-flag"></i>
+                                        <span class="d-inline-block pt-3"><h4 class="link-title mb-2">{{ 'Going live'|_ }}</h4>
+                                  		<p class="card-text mb-5">{{ "With the help of your dedicated Customer Success Manager, we’ll get you onboarded and trained quickly."|_}}{{' You can begin creating events, running memberships, and collecting payments in no time.'|_ }}</p></span>
+                                        </li>
+                                   </ul>
+                                   
+                              </div>
+                            </div>
+                        </div>
+              </div>
+                </div>
+</section>
+
+<section class="section" id="faq">
+<div class="section pt-0">
+        <div class="container">
+            <div class="section-title">
+                <small>{{'FAQ'|_ }}</small>
+                <h2>{{'Frequently Asked Questions'|_ }}</h2>
+            </div>
+
+            <div class="row pt-4">
+                <div class="col-md-6">
+                   <h4 class="mb-3 hideme">{{'Will I be billed monthly or annually?'|_ }}</h4>
+						<p class="light-font mb-5">{{'All contracts are billed annually by default.'|_}}{{' however, if you want to use us just for one event/webinar or a special project, we can come up with a pricing that will suit your needs better.'|_ }}</p>
+						<h4 class="mb-3 hideme">{{'Is my data safe with Glue Up?'|_ }}</h4>
+						<p class="light-font mb-5">{{'Confidentiality and '|_}}<a href="{{ 'security'|page }}">{{ 'Security'|_ }}</a>{{' is our number one priority.'|_}}{{' The platform has sophisticated security features and follows all latest data regulations like GDPR so you and your community are always protected. '|_ }}</p>
+						<h4 class="mb-3 hideme">{{'What happens if I exceed the agreed plan?'|_ }}</h4>
+						<p class="light-font mb-5">{{'You can easily get in touch with your Customer Success Manager to increase the limits.'|_}}{{' Add-ons and limit upgrades for events, emails, admins, contacts or integrations can be purchased at any time.'|_ }}</p>
+						<h4 class="mb-3 hideme">{{'Does Glue Up integrate with my website?'|_ }}</h4>
+						<p class="light-font mb-5">{{'We provide customizable widgets that you can embed anywhere on the internet.'|_ }} {{' We can also help you with access to our API and Webhooks so you can integrate with our software just the way you need.'|_ }} {{' You can also sign up for our '|_}}<a class="" href="{{ 'platform/website'|page }}">{{ 'professional website solution'|_ }}</a>{{' that has all the Glue Up integrations built-in already.'|_ }} {{" What's more, you can have new website up and running in less than a week!"|_ }}</p>
+						<h4 class="mb-3 hideme">{{'Who should I contact if I have more questions?'|_ }}</h4>
+					<p class="light-font mb-5">{{'Please email <a href="mailto:sales@glueup.com">sales@glueup.com</a> or reach out via live chat in the right corner of the website for any questions you might have. '|_ }}</p>
+                </div>
+                <div class="col-md-6">
+                    
+					<h4 class="mb-3 hideme">{{'What happens after I sign the agreement?'|_ }}</h4>
+					<p class="light-font mb-5">{{'Your Customer Success Manager will immediately create your Glue Up account and get in touch to jumpstart your onboarding process.'|_ }} {{' You will receive a personal kick-off call and training to get you up and running as soon as possible. Most Glue Up clients go live in less than a week after signing the agreement. '|_ }}</p>
+					
+					<h4 class="mb-3 hideme">{{'What type of support can I expect?'|_ }}</h4>
+					<p class="light-font mb-5">{{'Once on board, you will gain access to Glue Up’s online HelpDesk with how-to articles, FAQs, practical tutorials and manuals.'|_ }} {{'You can also sign up for regular webinars to get tips on how to get the maximum from the platform.'|_ }} {{' And if you still have some questions, you can contact us via live chat, email or phone.'|_}}{{' For larger clients, our dedicated Customer Success Managers are ready to help you.'|_ }}</p>
+					
+					<h4 class="mb-3 hideme">{{'Who uses Glue Up?'|_ }}</h4>
+					<p class="light-font mb-5">{{'Our cloud-based management solutions are used by organizations of all sizes in more than 50 countries around the world.'|_ }} {{' They range from multinational enterprises and event agencies, through chambers of commerce and associations, to start-ups and nonprofit organizations.'|_ }}</p>
+					
+					<h4 class="mb-3 hideme">{{'Where does Glue Up work?'|_ }}</h4>
+					<p class="light-font mb-5">{{'We are a global company headquarted in the US. We provide cloud solutions in multiple languages and don’t know any physical borders.'|_ }}{{' We currently maintain over 10 offices around the world. Check out our '|_ }}<a href="{{ 'contact'|page }}#offices">{{ 'Offices'|_ }}</a></p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>#}
+{% partial 'site/pricing-modal' %}
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}

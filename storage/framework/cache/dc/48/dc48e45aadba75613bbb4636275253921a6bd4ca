@@ -1,0 +1,83 @@
+1600067169a:1:{s:8:"demo.htm";a:7:{s:8:"fileName";s:8:"demo.htm";s:7:"content";s:1982:"[viewBag]
+title = "Request a Demo"
+url = "/demo"
+layout = "glueup-demo"
+is_hidden = 0
+navigation_hidden = 0
+meta_title = "Glue Up Demo Request Form"
+meta_description = "See Glue Up in action with a live 30-minute personalized demo delivered by a product expert. No commitments required!"
+seo_title = "Glue Up Demo Request Form"
+seo_description = "See Glue Up in action with a live 30-minute personalized demo delivered by a product expert. No commitments required!"
+robot_index = "index"
+robot_follow = "follow"
+==
+<header class="bg-grey pt-5" id="hero" style="height:100vh;">
+	<div class="container pt-5">
+		<div class="row">
+			<div class="col-md-6 hero align-self-center text-md-left text-center">
+
+				<h1>Explore Glue Up’s
+					<br><span class="line"><ins>All-in-one&nbsp;</ins></span> Platform</h1>
+
+				<p class="tagline pb-3">Fill out the form on the right for a custom 30-minute demo by a product specialist to see how Glue Up can help your organization.</p>
+				<br>
+
+				<p class="quote-home pt-5">"We host hundreds of events and manage tens of thousands of contacts using Glue Up. The platform's professional look and ease of use has enabled us to stand out as a premier forum for convening thought leaders."</p><span class="h6 text-color">Carol Li Rafferty, <span style="font-weight:300;">Managing Director, Yale Center</span></span>
+				<div class="align-self-center"><img src="/storage/app/media/clients/yale-center.svg" class="img-fluid fr-fil fr-dib" style="max-width: 127px; max-height: 320px; padding: 10px 0px;" alt="logo"></div></div>
+			<div class="col-md-6 hero align-self-center text-md-left text-center">
+				<div class="glue-up-form shadow-sm px-5 py-5" style="background:#fff;">
+					<figure data-snippet="demowowowo">&nbsp;</figure>
+				</div></div></div></div>
+</header>
+<div class="container pt-5">
+	<div class="col-lg-10 mx-auto">
+		<div class="row">
+			<!--{% partial 'elements/logobar.htm' %}-->
+			<br>
+		</div></div></div>";s:5:"mtime";i:1598057708;s:6:"markup";s:1467:"<header class="bg-grey pt-5" id="hero" style="height:100vh;">
+	<div class="container pt-5">
+		<div class="row">
+			<div class="col-md-6 hero align-self-center text-md-left text-center">
+
+				<h1>Explore Glue Up’s
+					<br><span class="line"><ins>All-in-one&nbsp;</ins></span> Platform</h1>
+
+				<p class="tagline pb-3">Fill out the form on the right for a custom 30-minute demo by a product specialist to see how Glue Up can help your organization.</p>
+				<br>
+
+				<p class="quote-home pt-5">"We host hundreds of events and manage tens of thousands of contacts using Glue Up. The platform's professional look and ease of use has enabled us to stand out as a premier forum for convening thought leaders."</p><span class="h6 text-color">Carol Li Rafferty, <span style="font-weight:300;">Managing Director, Yale Center</span></span>
+				<div class="align-self-center"><img src="/storage/app/media/clients/yale-center.svg" class="img-fluid fr-fil fr-dib" style="max-width: 127px; max-height: 320px; padding: 10px 0px;" alt="logo"></div></div>
+			<div class="col-md-6 hero align-self-center text-md-left text-center">
+				<div class="glue-up-form shadow-sm px-5 py-5" style="background:#fff;">
+					<figure data-snippet="demowowowo">&nbsp;</figure>
+				</div></div></div></div>
+</header>
+<div class="container pt-5">
+	<div class="col-lg-10 mx-auto">
+		<div class="row">
+			<!--{% partial 'elements/logobar.htm' %}-->
+			<br>
+		</div></div></div>";s:4:"code";N;s:7:"viewBag";a:11:{s:5:"title";s:14:"Request a Demo";s:3:"url";s:5:"/demo";s:6:"layout";s:11:"glueup-demo";s:9:"is_hidden";s:1:"0";s:17:"navigation_hidden";s:1:"0";s:10:"meta_title";s:25:"Glue Up Demo Request Form";s:16:"meta_description";s:117:"See Glue Up in action with a live 30-minute personalized demo delivered by a product expert. No commitments required!";s:9:"seo_title";s:25:"Glue Up Demo Request Form";s:15:"seo_description";s:117:"See Glue Up in action with a live 30-minute personalized demo delivered by a product expert. No commitments required!";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";}s:12:"parsedMarkup";s:1467:"<header class="bg-grey pt-5" id="hero" style="height:100vh;">
+	<div class="container pt-5">
+		<div class="row">
+			<div class="col-md-6 hero align-self-center text-md-left text-center">
+
+				<h1>Explore Glue Up’s
+					<br><span class="line"><ins>All-in-one&nbsp;</ins></span> Platform</h1>
+
+				<p class="tagline pb-3">Fill out the form on the right for a custom 30-minute demo by a product specialist to see how Glue Up can help your organization.</p>
+				<br>
+
+				<p class="quote-home pt-5">"We host hundreds of events and manage tens of thousands of contacts using Glue Up. The platform's professional look and ease of use has enabled us to stand out as a premier forum for convening thought leaders."</p><span class="h6 text-color">Carol Li Rafferty, <span style="font-weight:300;">Managing Director, Yale Center</span></span>
+				<div class="align-self-center"><img src="/storage/app/media/clients/yale-center.svg" class="img-fluid fr-fil fr-dib" style="max-width: 127px; max-height: 320px; padding: 10px 0px;" alt="logo"></div></div>
+			<div class="col-md-6 hero align-self-center text-md-left text-center">
+				<div class="glue-up-form shadow-sm px-5 py-5" style="background:#fff;">
+					<figure data-snippet="demowowowo">&nbsp;</figure>
+				</div></div></div></div>
+</header>
+<div class="container pt-5">
+	<div class="col-lg-10 mx-auto">
+		<div class="row">
+			<!--{% partial 'elements/logobar.htm' %}-->
+			<br>
+		</div></div></div>";}}

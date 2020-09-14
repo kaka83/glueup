@@ -1,0 +1,122 @@
+1600066771a:1:{s:16:"blog/related.htm";a:7:{s:8:"fileName";s:16:"blog/related.htm";s:7:"content";s:3108:"description = "related posts show below"
+
+[blogPosts relatedPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "categoryFilter"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+{##}
+{% component 'related' %}
+    <section class="section blog">
+        {% if posts.count > 0 %}
+                <div class="container">
+                <div class="row">
+                <div class="col-lg-4 col-md-4 mb-5">
+                <h2 class="mt-3 mb-4 position-relative content-title">Related Stories</h2>
+                 </div>
+                </div>
+                </div>
+                <div class="container">
+                <div class="row">
+        {% endif %}        
+         {# In the loop we excluded the post being displayed list of related posts by variable postFilter passed by the partial #}
+         {% for post in posts if post.slug != postFilter %}
+                <div class="col-lg-4 col-md-4 mb-5">
+                    <div class="blog-item">
+                        <a href="{{ post.url }}" class="">
+                        {% if post.featured_images.count > 0 %}
+                        <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                        {% else %}
+                        <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+                        {% endif %}
+                         </a>
+                        <div class="blog-item-content bg-white">
+            			<!--	<div class="blog-item-meta bg-gray py-1 px-2">-->
+            			
+                            {% for category in post.categories %}
+                               <!-- <span class="text-muted text-capitalize mr-3">
+                                    <a href="{{ category.url }}">{{ category.name }}</a>
+                                </span> -->
+                            {% endfor %}
+            				  <!--  <span class="text-black text-capitalize mr-3"><i class="ti-time mr-1"></i> {{ post.published_at|date('M d, Y') }}</span>-->
+            			<!--</div> -->
+                            <h3 class="mt-3 mb-3">
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+                            </h3>
+            
+                            {% if post.excerpt %}
+                                <p class="excerpt animated fadeInUp">{{ post.excerpt }}</p>
+                            {% else %}
+                                <p class="excerpt animated fadeInUp">{{ str_limit(post.content_html|striptags|raw, 166) }}</p>
+                            {% endif %}
+                           <!-- <a href="{{ post.url }}" class="btn btn-small btn-main btn-round-full">Learn More</a> -->
+                        </div>
+                    </div>
+                </div>
+    {% else %}
+        {# <div class="no-data">
+        {{posts.count}}
+            <p>{{ noPostsMessage }}</p>
+        </div> #}
+    {% endfor %}
+</div>
+</section>";s:5:"mtime";i:1596786370;s:6:"markup";s:2840:"{##}
+{% component 'related' %}
+    <section class="section blog">
+        {% if posts.count > 0 %}
+                <div class="container">
+                <div class="row">
+                <div class="col-lg-4 col-md-4 mb-5">
+                <h2 class="mt-3 mb-4 position-relative content-title">Related Stories</h2>
+                 </div>
+                </div>
+                </div>
+                <div class="container">
+                <div class="row">
+        {% endif %}        
+         {# In the loop we excluded the post being displayed list of related posts by variable postFilter passed by the partial #}
+         {% for post in posts if post.slug != postFilter %}
+                <div class="col-lg-4 col-md-4 mb-5">
+                    <div class="blog-item">
+                        <a href="{{ post.url }}" class="">
+                        {% if post.featured_images.count > 0 %}
+                        <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                        {% else %}
+                        <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+                        {% endif %}
+                         </a>
+                        <div class="blog-item-content bg-white">
+            			<!--	<div class="blog-item-meta bg-gray py-1 px-2">-->
+            			
+                            {% for category in post.categories %}
+                               <!-- <span class="text-muted text-capitalize mr-3">
+                                    <a href="{{ category.url }}">{{ category.name }}</a>
+                                </span> -->
+                            {% endfor %}
+            				  <!--  <span class="text-black text-capitalize mr-3"><i class="ti-time mr-1"></i> {{ post.published_at|date('M d, Y') }}</span>-->
+            			<!--</div> -->
+                            <h3 class="mt-3 mb-3">
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+                            </h3>
+            
+                            {% if post.excerpt %}
+                                <p class="excerpt animated fadeInUp">{{ post.excerpt }}</p>
+                            {% else %}
+                                <p class="excerpt animated fadeInUp">{{ str_limit(post.content_html|striptags|raw, 166) }}</p>
+                            {% endif %}
+                           <!-- <a href="{{ post.url }}" class="btn btn-small btn-main btn-round-full">Learn More</a> -->
+                        </div>
+                    </div>
+                </div>
+    {% else %}
+        {# <div class="no-data">
+        {{posts.count}}
+            <p>{{ noPostsMessage }}</p>
+        </div> #}
+    {% endfor %}
+</div>
+</section>";s:4:"code";N;s:11:"description";s:24:"related posts show below";s:22:"blogPosts relatedPosts";a:7:{s:10:"pageNumber";s:11:"{{ :page }}";s:14:"categoryFilter";s:14:"categoryFilter";s:12:"postsPerPage";s:1:"3";s:14:"noPostsMessage";s:14:"No posts found";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:13:"blog/category";s:8:"postPage";s:9:"blog/post";}}}

@@ -1,0 +1,717 @@
+1600067169a:1:{s:32:"platform/glue-up-manager-app.htm";a:16:{s:8:"fileName";s:32:"platform/glue-up-manager-app.htm";s:7:"content";s:24280:"title = "Glue Up Manager"
+url = "/features/glue-up-manager-app"
+layout = "glueup-home"
+description = "Give your community an easy-to-use Glue Up App to engage and receive important information from anywhere."
+meta_title = "Manager Up Mobile App for Glue Up Customers"
+meta_description = "Streamline processes and manage your community from palm of your hand with a mobile app that consolidates all your operations and engagement."
+is_hidden = 0
+seo_keywords = "manager app, manage operations on the go, whitelabel mobile app, run events remotely, send campaigns from the pone, manage events on the phone, mobile app for managers, mobile app for member-based organizations, manager app to manage events and memberships, community management mobile app"
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeMeta_title[es_la] = "Ejecuta Tus Operaciones desde Cualquier Lugar"
+localeMeta_title[Pt_br] = "Gerenciador Glue Up"
+localeMeta_title[ru] = "Glue Up Manager"
+localeMeta_title[tk] = "Yönetici Uygulaması"
+localeMeta_title[zh] = "Glue Up 管理者 App"
+localeMeta_description[es_la] = "Optimiza procesos y administra tu comunidad desde la palma de tu mano con la aplicación móvil que consolida todas tus operaciones e interacciones."
+localeMeta_description[Pt_br] = "Simplifique processos e gerencie sua comunidade na palma da sua mão com um aplicativo móvel que consolida todas as suas operações e engajamento."
+localeMeta_description[ru] = "Оптимизируйте процессы и управляйте своим сообществом с помощью мобильного приложения, которое объединяет все ваши процессы и взаимодействия."
+localeMeta_description[tk] = "Operasyonlarınızı yönetin ve her yerden haberdar olun."
+localeMeta_description[zh] = "Glue Up 云平台移动端 App，让您可以随时随地高效管理您的社群运营及互动。"
+==
+<?php
+function onEnd(){
+    $this->page->nav_highlight = 'features';
+ }
+?>
+==
+<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+           <div class="row flex-row-reverse">
+                <div class="col-md-6 hero align-self-center text-left">
+                    <img src="{{ 'features/glueup-manager-engagement.svg' | media }}" class="paygage-visual" alt="logo">
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-left">
+                    <p class="tagline mb-4">{{'Glue Up Manager'|_}}</p>
+                      <h1>{{ 'Run Your Operations from <span class="line"><ins> Anywhere </ins></span>'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Streamline processes and manage your community from palm of your hand with a mobile app that consolidates all your operations and engagement. '|_ }} </p><br>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+            </div>
+        </div> 
+</header>
+<section class="section pt-0">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-6 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'The Everyday App for Successful Managers'|_ }}</h2>
+                             <p class="tagline">{{ 'Manage registrations, member sign ups and renewals, collect payments, and facilitate smooth check-ins to carry out successful events with an app that comes with each Glue Up solution.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-lg-10 align-self-center mx-auto">
+                <div class="services__accordion row flex-row-reverse">
+                        <div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+            				<div class="accordion__img desktop">
+            				    <div id="tab1-bullet-img" class="firstshow">
+            				        <img class="feature-window desktop" src="{{ 'features/glueup-myglue-3some.svg' | media }}" alt="chat">
+            				         
+            				    </div>
+            				    <div id="tab2-bullet-img">
+            				        <img class="feature-window deskto" src="{{ 'features/glueup-myglue-3some.svg' | media }}" alt="chat">
+            				    </div>
+            			        <div id="tab3-bullet-img">
+                			        <img class="feature-window deskto" src="{{ 'features/glueup-myglue-3some.svg' | media }}" alt="chat">
+                			    </div>
+            			     </div>
+            			</div>
+            			<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+            				<div class="services__accordion">
+            				  
+                                <div class="accordion pl-3 active small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+                                    <i class="icon-engagement"></i>
+                                    <span>{{ 'Do it all from one app'|_ }}</span>
+                                    <div class="accordion__body firstshow" style="display:none;">
+            							<p class="pt-3 d-flex flex-column">{{ 'Ultimate mobile app that has everything you need to manage your community anywhere you go.  '|_ }}
+            							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+            						</div>
+                                </div>
+                                <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab2-bullet">
+                                    <i class="icon-button"></i>
+                                    <span>{{ 'Operations simplified'|_ }}</span>
+                                    <div class="accordion__body " style="display:none;">
+            							<p class="pt-3 d-flex flex-column">{{ 'Premium user experience battle-tested for your absolute comfort (our CEO uses Manager Up daily too). '|_ }}
+            							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+            						</div>
+                                </div>
+                                <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab3-bullet">
+                                    <i class="icon-notifications"></i>
+                                    <span>{{ 'Never miss a thing'|_ }}</span>
+                                    <div class="accordion__body " style="display:none;">
+            							<p class="pt-3 d-flex flex-column">{{ 'Get immediate insights into your community’s activities from events, emails, finance and more in real time. '|_ }}
+            							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+            						</div>
+                                </div>
+            				</div>
+            			</div>
+            			
+            		</div>
+            </div>
+            </div>
+        </div>
+
+</section>
+
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-6 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-manager-experience.svg' | media }}" alt="Glue Up Manager helps you maximize attendee experience" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div>
+                           <span class="h6 text-color hideme">{{ 'Events'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Maximize Attendee Experience'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Manage your events and engage with your attendees, even at multiple events at the same time. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-publishing"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Create & Edit Events'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-ticket"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Ticket Sales'|_ }}</p>
+                                    </div>  
+                                    {#<div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-add-contact"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Walk-in Registrations'|_ }}</p>
+                                    </div>  #}
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Badge Design & Printing'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-qr-code"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Seamless QR Code Check-ins'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-6 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-manager-members.svg' | media }}" alt="Glue Up Manager App helps you manage your memberships on the go" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-6 align-self-center">
+                 <div>
+                           <span class="h6 text-color hideme">{{ 'Memberships'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Go the Extra Mile<br> for Your Members'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Impact your members while you are waiting in a cab, stuck on a plane, at hospital, or anywhere else you can access the internet. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                   {# <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Review Applications '|_ }}</p>
+                                    </div>      #}
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-refresh"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Renewal Management'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-directory"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Membership Directory'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-membership-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Member Profile'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-email-solid"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Newsletters & Updates'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}{#
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-4 text-right">
+                    <span class="h6 text-color hideme">{{ 'Events'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Maximize Attendee Experience'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Manage your events and engage with your attendees, even at multiple events at the same time. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-menu-section-lemontea"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Create & Edit Events'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Ticket Sales'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-navigation"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Walk-in Registrations'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Badge Design & Printing'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Seamless QR Code Check-ins'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                     <img src="{{ 'features/glueup-myglue-3some.svg' | media }}" alt="paygage is accessible" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-4 ">
+                    <span class="h6 text-color hideme">{{ 'Memberships'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Go the <br>Extra Mile for Your Members'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Impact your members while you are waiting in a cab, stuck on a plane, at hospital, or anywhere else you can access the internet. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-menu-section-lemontea"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Review Applications '|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Renewal Management'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-navigation"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Membership Directory'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Member Profile'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Newsletters & Updates'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+</section>#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-6 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-manager-collaborate.svg' | media }}" alt="Glue Up Manager Up helps you collaborate" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Team Management'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Collaborate Effectively'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Work across teams on multiple projects at once and centralize all your tasks in one dashboard for easy access.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-task-icon"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Task Lists'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-alert"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Reminders'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-notifications"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Push Notifications'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-hierarchy"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Roles & Permissions'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-6 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-manager-engagement.svg' | media }}" alt="Glue Up Manager App helps you understand engagement" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-6 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Analytics'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Understand Engagement<br> & Take Action'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Stay up to date on everything you have going on with automated tracking, analytics, and reports in real time.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row float-left">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-button"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Customizable Dashboards'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-analytics"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'P&L Reports'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-menu-section-lemontea"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Live Check-in Statistics'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-content"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Project Management'|_ }}</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+
+{#engagement 1#}
+{#engagement 1#}
+
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}
+";s:5:"mtime";i:1598254213;s:6:"markup";s:22249:"<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+           <div class="row flex-row-reverse">
+                <div class="col-md-6 hero align-self-center text-left">
+                    <img src="{{ 'features/glueup-manager-engagement.svg' | media }}" class="paygage-visual" alt="logo">
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-left">
+                    <p class="tagline mb-4">{{'Glue Up Manager'|_}}</p>
+                      <h1>{{ 'Run Your Operations from <span class="line"><ins> Anywhere </ins></span>'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Streamline processes and manage your community from palm of your hand with a mobile app that consolidates all your operations and engagement. '|_ }} </p><br>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+            </div>
+        </div> 
+</header>
+<section class="section pt-0">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-6 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'The Everyday App for Successful Managers'|_ }}</h2>
+                             <p class="tagline">{{ 'Manage registrations, member sign ups and renewals, collect payments, and facilitate smooth check-ins to carry out successful events with an app that comes with each Glue Up solution.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-lg-10 align-self-center mx-auto">
+                <div class="services__accordion row flex-row-reverse">
+                        <div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+            				<div class="accordion__img desktop">
+            				    <div id="tab1-bullet-img" class="firstshow">
+            				        <img class="feature-window desktop" src="{{ 'features/glueup-myglue-3some.svg' | media }}" alt="chat">
+            				         
+            				    </div>
+            				    <div id="tab2-bullet-img">
+            				        <img class="feature-window deskto" src="{{ 'features/glueup-myglue-3some.svg' | media }}" alt="chat">
+            				    </div>
+            			        <div id="tab3-bullet-img">
+                			        <img class="feature-window deskto" src="{{ 'features/glueup-myglue-3some.svg' | media }}" alt="chat">
+                			    </div>
+            			     </div>
+            			</div>
+            			<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+            				<div class="services__accordion">
+            				  
+                                <div class="accordion pl-3 active small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+                                    <i class="icon-engagement"></i>
+                                    <span>{{ 'Do it all from one app'|_ }}</span>
+                                    <div class="accordion__body firstshow" style="display:none;">
+            							<p class="pt-3 d-flex flex-column">{{ 'Ultimate mobile app that has everything you need to manage your community anywhere you go.  '|_ }}
+            							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+            						</div>
+                                </div>
+                                <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab2-bullet">
+                                    <i class="icon-button"></i>
+                                    <span>{{ 'Operations simplified'|_ }}</span>
+                                    <div class="accordion__body " style="display:none;">
+            							<p class="pt-3 d-flex flex-column">{{ 'Premium user experience battle-tested for your absolute comfort (our CEO uses Manager Up daily too). '|_ }}
+            							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+            						</div>
+                                </div>
+                                <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab3-bullet">
+                                    <i class="icon-notifications"></i>
+                                    <span>{{ 'Never miss a thing'|_ }}</span>
+                                    <div class="accordion__body " style="display:none;">
+            							<p class="pt-3 d-flex flex-column">{{ 'Get immediate insights into your community’s activities from events, emails, finance and more in real time. '|_ }}
+            							{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+            						</div>
+                                </div>
+            				</div>
+            			</div>
+            			
+            		</div>
+            </div>
+            </div>
+        </div>
+
+</section>
+
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-6 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-manager-experience.svg' | media }}" alt="Glue Up Manager helps you maximize attendee experience" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div>
+                           <span class="h6 text-color hideme">{{ 'Events'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Maximize Attendee Experience'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Manage your events and engage with your attendees, even at multiple events at the same time. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-publishing"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Create & Edit Events'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-ticket"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Ticket Sales'|_ }}</p>
+                                    </div>  
+                                    {#<div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-add-contact"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Walk-in Registrations'|_ }}</p>
+                                    </div>  #}
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Badge Design & Printing'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-qr-code"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Seamless QR Code Check-ins'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-6 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-manager-members.svg' | media }}" alt="Glue Up Manager App helps you manage your memberships on the go" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-6 align-self-center">
+                 <div>
+                           <span class="h6 text-color hideme">{{ 'Memberships'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Go the Extra Mile<br> for Your Members'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Impact your members while you are waiting in a cab, stuck on a plane, at hospital, or anywhere else you can access the internet. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                   {# <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Review Applications '|_ }}</p>
+                                    </div>      #}
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-refresh"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Renewal Management'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-directory"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Membership Directory'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-membership-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Member Profile'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-email-solid"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Newsletters & Updates'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}{#
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-4 text-right">
+                    <span class="h6 text-color hideme">{{ 'Events'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Maximize Attendee Experience'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Manage your events and engage with your attendees, even at multiple events at the same time. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-menu-section-lemontea"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Create & Edit Events'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Ticket Sales'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-navigation"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Walk-in Registrations'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Badge Design & Printing'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Seamless QR Code Check-ins'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                     <img src="{{ 'features/glueup-myglue-3some.svg' | media }}" alt="paygage is accessible" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-4 ">
+                    <span class="h6 text-color hideme">{{ 'Memberships'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Go the <br>Extra Mile for Your Members'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Impact your members while you are waiting in a cab, stuck on a plane, at hospital, or anywhere else you can access the internet. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-menu-section-lemontea"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Review Applications '|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Renewal Management'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-navigation"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Membership Directory'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Member Profile'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Newsletters & Updates'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </div>
+        </div>
+</section>#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-6 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-manager-collaborate.svg' | media }}" alt="Glue Up Manager Up helps you collaborate" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Team Management'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Collaborate Effectively'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Work across teams on multiple projects at once and centralize all your tasks in one dashboard for easy access.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-task-icon"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Task Lists'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-alert"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Reminders'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-notifications"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Push Notifications'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-hierarchy"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Roles & Permissions'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-6 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-manager-engagement.svg' | media }}" alt="Glue Up Manager App helps you understand engagement" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-6 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Analytics'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Understand Engagement<br> & Take Action'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Stay up to date on everything you have going on with automated tracking, analytics, and reports in real time.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row float-left">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-button"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Customizable Dashboards'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-analytics"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'P&L Reports'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-menu-section-lemontea"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Live Check-in Statistics'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-content"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Project Management'|_ }}</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+
+{#engagement 1#}
+{#engagement 1#}
+
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}";s:4:"code";s:65:"function onEnd(){
+    $this->page->nav_highlight = 'features';
+ }";s:5:"title";s:15:"Glue Up Manager";s:3:"url";s:29:"/features/glue-up-manager-app";s:6:"layout";s:11:"glueup-home";s:11:"description";s:105:"Give your community an easy-to-use Glue Up App to engage and receive important information from anywhere.";s:10:"meta_title";s:43:"Manager Up Mobile App for Glue Up Customers";s:16:"meta_description";s:141:"Streamline processes and manage your community from palm of your hand with a mobile app that consolidates all your operations and engagement.";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:289:"manager app, manage operations on the go, whitelabel mobile app, run events remotely, send campaigns from the pone, manage events on the phone, mobile app for managers, mobile app for member-based organizations, manager app to manage events and memberships, community management mobile app";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:7:"viewBag";a:2:{s:16:"localeMeta_title";a:5:{s:5:"es_la";s:45:"Ejecuta Tus Operaciones desde Cualquier Lugar";s:5:"Pt_br";s:19:"Gerenciador Glue Up";s:2:"ru";s:15:"Glue Up Manager";s:2:"tk";s:21:"Yönetici Uygulaması";s:2:"zh";s:21:"Glue Up 管理者 App";}s:22:"localeMeta_description";a:5:{s:5:"es_la";s:148:"Optimiza procesos y administra tu comunidad desde la palma de tu mano con la aplicación móvil que consolida todas tus operaciones e interacciones.";s:5:"Pt_br";s:148:"Simplifique processos e gerencie sua comunidade na palma da sua mão com um aplicativo móvel que consolida todas as suas operações e engajamento.";s:2:"ru";s:264:"Оптимизируйте процессы и управляйте своим сообществом с помощью мобильного приложения, которое объединяет все ваши процессы и взаимодействия.";s:2:"tk";s:58:"Operasyonlarınızı yönetin ve her yerden haberdar olun.";s:2:"zh";s:99:"Glue Up 云平台移动端 App，让您可以随时随地高效管理您的社群运营及互动。";}}}}

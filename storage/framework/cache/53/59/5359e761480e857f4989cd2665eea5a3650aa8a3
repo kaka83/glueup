@@ -1,0 +1,603 @@
+1600067169a:1:{s:8:"blog.htm";a:23:{s:8:"fileName";s:8:"blog.htm";s:7:"content";s:19720:"title = "Blog"
+url = "/blog/"
+layout = "glueup-home"
+description = "Blog about Glue Up and online communities"
+meta_title = "Insights Blog"
+meta_description = "Read the latest Glue Up news and discover events and resources for event management, membership management, online communities and more."
+is_hidden = 0
+seo_keywords = "Glue Up blog, Glue Up case studies, Glue Up testimonials, best practices for event management, resources for chambers of commerce, tips on membership management, community engagement, guides on how to, Glue Up Academy, Glue Up events"
+robot_index = "index"
+robot_follow = "follow"
+
+[blogCategories blogcat]
+slug = ":slug"
+displayEmpty = 0
+categoryPage = "blog/category"
+
+[localePicker]
+forceUrl = 0
+
+[blogPosts featured]
+pageNumber = ":page"
+categoryFilter = "featured"
+postsPerPage = 1
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+
+[blogPosts eventPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "event-management"
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+exceptCategories = "success-stories, featured"
+
+[blogPosts membershipPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "memberships"
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+exceptCategories = "success-stories, featured, donations-fundraising-ngos"
+
+[blogPosts pressPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "virtual-events-webinars"
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+exceptCategories = "featured"
+
+[blogPosts ngoPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "donations-fundraising-ngos"
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+exceptCategories = "whitepaper"
+
+[blogPosts trainingPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "virtual-events-webinars"
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+exceptCategories = "whitepapers"
+==
+<?php
+function onStart(){    
+
+    // or you can get file object from your post or record 
+    // and get its absolute path and use it `getPath()`
+    //$imagePath = 'https://yoursite/image.jpeg';
+    $baseUrl = url(Config::get('cms.storage.media.path'));
+    //$imagePath = getPath('app/media/glueup-membership.png');
+    $imagePath = $baseUrl . '/meta/glueup-hello-meta.png';
+    $this['fbImage'] = $imagePath; // image absolute path
+}
+?>
+==
+{% partial 'blog/hero-blog.htm' %}
+<div class="container py-5 blog">
+            <div class="row">
+                  <div class="col-md-7 hero blog align-self-center mr-auto pb-2">
+                  {% set featured = featured.posts %}
+                  {% for post in featured %}  
+                                        <a href="{{ post.url }}" class="">
+                                                {% if post.featured_images.count > 0 %}
+                                                <img class="rounded highlight-img" src="{{ post.featured_images.last.getThumb( auto, 540 ) }}" />
+                                                {% else %}
+                                                <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'| media }}" />
+                                                {% endif %}
+                                            </a>
+                                        <h1 class="pt-3 blog">
+                                            <a href="{{ post.url }}">{{ post.title }}</a>
+                                        </h1>
+                        
+                                        {#% if post.excerpt %}
+                                        <p class="excerpt">{{ post.excerpt }}</p>
+                                        {% else %}
+                                        <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                        {% endif %#}
+                                         <a href="{{ post.url }}" class="read-more d-flex">{{'Turn the page'|_}} <i class="read-more-icon icon-arrow"></i></a>
+                                    
+                                    
+                        {% endfor %}
+                  </div>
+                  <div class="col-md-4 hero ml-auto pb-2">
+                  <div class="row pb-4 mx-auto">
+                      {% set events = eventPosts.posts.slice(0, 1)  %}
+                          {% for post in events %}
+                                                {% for category in post.categories.slice(0, 1) %}
+                                                 <span class="text-muted text-capitalize mr-3 pb-3">
+                                                            <a href="{{ category.url }}"  class="read-more d-flex">{{ category.name }}{{dump.category()}}</a>
+                                                        </span>
+                                                {% endfor %}
+                                                <h4 class="">
+                                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                                </h4>
+                                    
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                
+                                                 
+                         {% endfor %}
+                  </div>
+                   <div class="row pb-4 mx-auto">
+                      {% set memberships = membershipPosts.posts.slice(0, 1)  %}
+                          {% for post in memberships %}
+                                                {% for category in post.categories.slice(0, 1) %}
+                                                 <span class="text-muted text-capitalize mr-3 pb-3">
+                                                            <a href="{{ category.url }}"  class="read-more d-flex">{{ category.name }}</a>
+                                                        </span>
+                                                {% endfor %}
+                                                <h4 class="">
+                                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                                </h4>
+                                
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                
+                                                
+                         {% endfor %}
+                  </div>
+                  <div class="row pb-4 mx-auto">
+                      {% set press = pressPosts.posts.slice(0, 1)  %}
+                          {% for post in press %}
+                                                {% for category in post.categories.slice(0, 1) %}
+                                                 <span class="text-muted text-capitalize mr-3 pb-3">
+                                                            <a href="{{ category.url }}"  class="read-more d-flex">{{ category.name }}</a>
+                                                        </span>
+                                                {% endfor %}
+                                                <h4 class="">
+                                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                                </h4>
+                                
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                
+                                                
+                         {% endfor %}
+                  </div>
+                  
+                  </div>
+        </div>
+    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 hero ml-auto pb-2">
+                  <div class="row pt-5 pb-2">
+                      <div class="col-md-12">
+                      <span class="text-muted text-capitalize mr-3 pb-3">
+                          <a href="{{ url('/blog/') }}/category/event-management"  class="read-more d-flex">{{'Event Management'|_}}</a>
+                      </span>
+                      </div>
+                  </div>
+                  <div class="row pt-2 pb-5">
+                      
+                      {% set events = eventPosts.posts.slice(1, All)  %}
+                      {% for category in events.post.slice(0, 1).categories.slice(0, 1) %}
+                                                 <span class="text-muted text-capitalize mr-3 pb-3">
+                                                            <a href="{{ category.url }}"  class="read-more d-flex">{{ category.name }}</a>
+                                                        </span>
+                                                {% endfor %}
+                          {% for post in events %}
+                                                
+                                                <div class="col-md-3 hero pb-2">
+                                              <a href="{{ post.url }}" class="">
+                        {% if post.featured_images.count > 0 %}
+                        <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                        {% else %}
+                        <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+                        {% endif %}
+                         </a>
+                                                <h5 class="pt-2">
+                                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                                </h5>
+                                                <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                </div>
+                                                
+                                                 
+                         {% endfor %}
+                  </div>
+                  <div class="row pt-5 pb-2">
+                      <div class="col-md-12">
+                      <span class="text-muted text-capitalize mr-3 pb-3">
+                          <a href="{{ url('/blog/') }}/category/associations-amp-chambers"  class="read-more d-flex">{{'Membership Management'|_}}</a>
+                      </span>
+                      </div>
+                  </div>
+                  <div class="row pt-2 pb-5">
+                      {% set memberships = membershipPosts.posts.slice(1, All)  %}
+                      {% for category in post.categories.slice(0, 1) %}
+                                                 <span class="text-muted text-capitalize mr-3 pb-3">
+                                                            <a href="{{ category.url }}"  class="read-more d-flex">{{ category.name }}</a>
+                                                        </span>
+                                                {% endfor %}
+                          {% for post in memberships %}
+                                                <div class="col-md-3 hero pb-2">
+                                            <a href="{{ post.url }}" class="">
+                        {% if post.featured_images.count > 0 %}
+                        <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                        {% else %}
+                        <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+                        {% endif %}
+                         </a>
+                                                <h5 class="pt-2">
+                                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                                </h5>
+                                               <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                </div>
+                                                
+                         {% endfor %}
+                  </div>
+                  <div class="row pt-5 pb-2">
+                      <div class="col-md-12">
+                      <span class="text-muted text-capitalize mr-3 pb-3">
+                          <a href="{{ url('/blog/') }}/category/donations-fundraising-ngos"  class="read-more d-flex">{{'Donations, Fundraising, & NGOs'|_}}</a>
+                      </span>
+                      </div>
+                  </div>
+                  <div class="row pt-2 pb-5">
+                      {% set ngo = ngoPosts.posts.slice(1, All)  %}
+                      {% for category in post.categories.slice(0, 1) %}
+                                                 <span class="text-muted text-capitalize mr-3 pb-3">
+                                                            <a href="{{ category.url }}"  class="read-more d-flex">{{ category.name }}</a>
+                                                        </span>
+                                                {% endfor %}
+                          {% for post in ngo %}
+                              
+                                                <div class="col-md-3 hero pb-2">
+                                                <a href="{{ post.url }}" class="">
+                        {% if post.featured_images.count > 0 %}
+                        <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                        {% else %}
+                        <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+                        {% endif %}
+                         </a>
+                                                <h5 class="pt-2">
+                                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                                </h5>
+                                                <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                </div>
+                                                
+                         {% endfor %}
+                  </div>
+                   <div class="row pt-5 pb-2">
+                      <div class="col-md-12">
+                      <span class="text-muted text-capitalize mr-3 pb-3">
+                          <a href="{{ url('/blog/') }}/category/virtual-events-webinars"  class="read-more d-flex">{{'Virtual Events & Webinars'|_}}</a>
+                      </span>
+                      </div>
+                  </div>
+                  <div class="row pt-2 pb-5">
+                      {% set training = trainingPosts.posts.slice(1, All)  %}
+                      {% for category in post.categories.slice(0, 1) %}
+                                                 <span class="text-muted text-capitalize mr-3 pb-3">
+                                                            <a href="{{ category.url }}"  class="read-more d-flex">{{ category.name }}</a>
+                                                        </span>
+                                                {% endfor %}
+                          {% for post in training %}
+                              
+                                                <div class="col-md-3 hero pb-2">
+                                                <a href="{{ post.url }}" class="">
+                        {% if post.featured_images.count > 0 %}
+                        <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                        {% else %}
+                        <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+                        {% endif %}
+                         </a>
+                                                <h5 class="pt-2">
+                                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                                </h5>
+                                                <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                </div>
+                                                
+                         {% endfor %}
+                  </div>
+                  
+            </div>        
+ </div>
+            </div>
+            {% partial 'blog/footer-blog.htm' %}";s:5:"mtime";i:1598611214;s:6:"markup";s:16967:"{% partial 'blog/hero-blog.htm' %}
+<div class="container py-5 blog">
+            <div class="row">
+                  <div class="col-md-7 hero blog align-self-center mr-auto pb-2">
+                  {% set featured = featured.posts %}
+                  {% for post in featured %}  
+                                        <a href="{{ post.url }}" class="">
+                                                {% if post.featured_images.count > 0 %}
+                                                <img class="rounded highlight-img" src="{{ post.featured_images.last.getThumb( auto, 540 ) }}" />
+                                                {% else %}
+                                                <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'| media }}" />
+                                                {% endif %}
+                                            </a>
+                                        <h1 class="pt-3 blog">
+                                            <a href="{{ post.url }}">{{ post.title }}</a>
+                                        </h1>
+                        
+                                        {#% if post.excerpt %}
+                                        <p class="excerpt">{{ post.excerpt }}</p>
+                                        {% else %}
+                                        <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                        {% endif %#}
+                                         <a href="{{ post.url }}" class="read-more d-flex">{{'Turn the page'|_}} <i class="read-more-icon icon-arrow"></i></a>
+                                    
+                                    
+                        {% endfor %}
+                  </div>
+                  <div class="col-md-4 hero ml-auto pb-2">
+                  <div class="row pb-4 mx-auto">
+                      {% set events = eventPosts.posts.slice(0, 1)  %}
+                          {% for post in events %}
+                                                {% for category in post.categories.slice(0, 1) %}
+                                                 <span class="text-muted text-capitalize mr-3 pb-3">
+                                                            <a href="{{ category.url }}"  class="read-more d-flex">{{ category.name }}{{dump.category()}}</a>
+                                                        </span>
+                                                {% endfor %}
+                                                <h4 class="">
+                                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                                </h4>
+                                    
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                
+                                                 
+                         {% endfor %}
+                  </div>
+                   <div class="row pb-4 mx-auto">
+                      {% set memberships = membershipPosts.posts.slice(0, 1)  %}
+                          {% for post in memberships %}
+                                                {% for category in post.categories.slice(0, 1) %}
+                                                 <span class="text-muted text-capitalize mr-3 pb-3">
+                                                            <a href="{{ category.url }}"  class="read-more d-flex">{{ category.name }}</a>
+                                                        </span>
+                                                {% endfor %}
+                                                <h4 class="">
+                                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                                </h4>
+                                
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                
+                                                
+                         {% endfor %}
+                  </div>
+                  <div class="row pb-4 mx-auto">
+                      {% set press = pressPosts.posts.slice(0, 1)  %}
+                          {% for post in press %}
+                                                {% for category in post.categories.slice(0, 1) %}
+                                                 <span class="text-muted text-capitalize mr-3 pb-3">
+                                                            <a href="{{ category.url }}"  class="read-more d-flex">{{ category.name }}</a>
+                                                        </span>
+                                                {% endfor %}
+                                                <h4 class="">
+                                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                                </h4>
+                                
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                
+                                                
+                         {% endfor %}
+                  </div>
+                  
+                  </div>
+        </div>
+    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 hero ml-auto pb-2">
+                  <div class="row pt-5 pb-2">
+                      <div class="col-md-12">
+                      <span class="text-muted text-capitalize mr-3 pb-3">
+                          <a href="{{ url('/blog/') }}/category/event-management"  class="read-more d-flex">{{'Event Management'|_}}</a>
+                      </span>
+                      </div>
+                  </div>
+                  <div class="row pt-2 pb-5">
+                      
+                      {% set events = eventPosts.posts.slice(1, All)  %}
+                      {% for category in events.post.slice(0, 1).categories.slice(0, 1) %}
+                                                 <span class="text-muted text-capitalize mr-3 pb-3">
+                                                            <a href="{{ category.url }}"  class="read-more d-flex">{{ category.name }}</a>
+                                                        </span>
+                                                {% endfor %}
+                          {% for post in events %}
+                                                
+                                                <div class="col-md-3 hero pb-2">
+                                              <a href="{{ post.url }}" class="">
+                        {% if post.featured_images.count > 0 %}
+                        <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                        {% else %}
+                        <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+                        {% endif %}
+                         </a>
+                                                <h5 class="pt-2">
+                                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                                </h5>
+                                                <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                </div>
+                                                
+                                                 
+                         {% endfor %}
+                  </div>
+                  <div class="row pt-5 pb-2">
+                      <div class="col-md-12">
+                      <span class="text-muted text-capitalize mr-3 pb-3">
+                          <a href="{{ url('/blog/') }}/category/associations-amp-chambers"  class="read-more d-flex">{{'Membership Management'|_}}</a>
+                      </span>
+                      </div>
+                  </div>
+                  <div class="row pt-2 pb-5">
+                      {% set memberships = membershipPosts.posts.slice(1, All)  %}
+                      {% for category in post.categories.slice(0, 1) %}
+                                                 <span class="text-muted text-capitalize mr-3 pb-3">
+                                                            <a href="{{ category.url }}"  class="read-more d-flex">{{ category.name }}</a>
+                                                        </span>
+                                                {% endfor %}
+                          {% for post in memberships %}
+                                                <div class="col-md-3 hero pb-2">
+                                            <a href="{{ post.url }}" class="">
+                        {% if post.featured_images.count > 0 %}
+                        <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                        {% else %}
+                        <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+                        {% endif %}
+                         </a>
+                                                <h5 class="pt-2">
+                                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                                </h5>
+                                               <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                </div>
+                                                
+                         {% endfor %}
+                  </div>
+                  <div class="row pt-5 pb-2">
+                      <div class="col-md-12">
+                      <span class="text-muted text-capitalize mr-3 pb-3">
+                          <a href="{{ url('/blog/') }}/category/donations-fundraising-ngos"  class="read-more d-flex">{{'Donations, Fundraising, & NGOs'|_}}</a>
+                      </span>
+                      </div>
+                  </div>
+                  <div class="row pt-2 pb-5">
+                      {% set ngo = ngoPosts.posts.slice(1, All)  %}
+                      {% for category in post.categories.slice(0, 1) %}
+                                                 <span class="text-muted text-capitalize mr-3 pb-3">
+                                                            <a href="{{ category.url }}"  class="read-more d-flex">{{ category.name }}</a>
+                                                        </span>
+                                                {% endfor %}
+                          {% for post in ngo %}
+                              
+                                                <div class="col-md-3 hero pb-2">
+                                                <a href="{{ post.url }}" class="">
+                        {% if post.featured_images.count > 0 %}
+                        <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                        {% else %}
+                        <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+                        {% endif %}
+                         </a>
+                                                <h5 class="pt-2">
+                                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                                </h5>
+                                                <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                </div>
+                                                
+                         {% endfor %}
+                  </div>
+                   <div class="row pt-5 pb-2">
+                      <div class="col-md-12">
+                      <span class="text-muted text-capitalize mr-3 pb-3">
+                          <a href="{{ url('/blog/') }}/category/virtual-events-webinars"  class="read-more d-flex">{{'Virtual Events & Webinars'|_}}</a>
+                      </span>
+                      </div>
+                  </div>
+                  <div class="row pt-2 pb-5">
+                      {% set training = trainingPosts.posts.slice(1, All)  %}
+                      {% for category in post.categories.slice(0, 1) %}
+                                                 <span class="text-muted text-capitalize mr-3 pb-3">
+                                                            <a href="{{ category.url }}"  class="read-more d-flex">{{ category.name }}</a>
+                                                        </span>
+                                                {% endfor %}
+                          {% for post in training %}
+                              
+                                                <div class="col-md-3 hero pb-2">
+                                                <a href="{{ post.url }}" class="">
+                        {% if post.featured_images.count > 0 %}
+                        <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+                        {% else %}
+                        <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+                        {% endif %}
+                         </a>
+                                                <h5 class="pt-2">
+                                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                                </h5>
+                                                <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+                                                {#% if post.excerpt %}
+                                                <p class="excerpt">{{ post.excerpt }}</p>
+                                                {% else %}
+                                                <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+                                                {% endif %#}
+                                                </div>
+                                                
+                         {% endfor %}
+                  </div>
+                  
+            </div>        
+ </div>
+            </div>
+            {% partial 'blog/footer-blog.htm' %}";s:4:"code";s:440:"function onStart(){    
+
+    // or you can get file object from your post or record 
+    // and get its absolute path and use it `getPath()`
+    //$imagePath = 'https://yoursite/image.jpeg';
+    $baseUrl = url(Config::get('cms.storage.media.path'));
+    //$imagePath = getPath('app/media/glueup-membership.png');
+    $imagePath = $baseUrl . '/meta/glueup-hello-meta.png';
+    $this['fbImage'] = $imagePath; // image absolute path
+}";s:5:"title";s:4:"Blog";s:3:"url";s:6:"/blog/";s:6:"layout";s:11:"glueup-home";s:11:"description";s:41:"Blog about Glue Up and online communities";s:10:"meta_title";s:13:"Insights Blog";s:16:"meta_description";s:136:"Read the latest Glue Up news and discover events and resources for event management, membership management, online communities and more.";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:233:"Glue Up blog, Glue Up case studies, Glue Up testimonials, best practices for event management, resources for chambers of commerce, tips on membership management, community engagement, guides on how to, Glue Up Academy, Glue Up events";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:22:"blogCategories blogcat";a:3:{s:4:"slug";s:5:":slug";s:12:"displayEmpty";s:1:"0";s:12:"categoryPage";s:13:"blog/category";}s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"0";}s:18:"blogPosts featured";a:7:{s:10:"pageNumber";s:5:":page";s:14:"categoryFilter";s:8:"featured";s:12:"postsPerPage";s:1:"1";s:14:"noPostsMessage";s:14:"No posts found";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:13:"blog/category";s:8:"postPage";s:9:"blog/post";}s:20:"blogPosts eventPosts";a:8:{s:10:"pageNumber";s:11:"{{ :page }}";s:14:"categoryFilter";s:16:"event-management";s:12:"postsPerPage";s:1:"5";s:14:"noPostsMessage";s:14:"No posts found";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:13:"blog/category";s:8:"postPage";s:9:"blog/post";s:16:"exceptCategories";s:25:"success-stories, featured";}s:25:"blogPosts membershipPosts";a:8:{s:10:"pageNumber";s:11:"{{ :page }}";s:14:"categoryFilter";s:11:"memberships";s:12:"postsPerPage";s:1:"5";s:14:"noPostsMessage";s:14:"No posts found";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:13:"blog/category";s:8:"postPage";s:9:"blog/post";s:16:"exceptCategories";s:53:"success-stories, featured, donations-fundraising-ngos";}s:20:"blogPosts pressPosts";a:8:{s:10:"pageNumber";s:11:"{{ :page }}";s:14:"categoryFilter";s:23:"virtual-events-webinars";s:12:"postsPerPage";s:1:"5";s:14:"noPostsMessage";s:14:"No posts found";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:13:"blog/category";s:8:"postPage";s:9:"blog/post";s:16:"exceptCategories";s:8:"featured";}s:18:"blogPosts ngoPosts";a:8:{s:10:"pageNumber";s:11:"{{ :page }}";s:14:"categoryFilter";s:26:"donations-fundraising-ngos";s:12:"postsPerPage";s:1:"5";s:14:"noPostsMessage";s:14:"No posts found";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:13:"blog/category";s:8:"postPage";s:9:"blog/post";s:16:"exceptCategories";s:10:"whitepaper";}s:23:"blogPosts trainingPosts";a:8:{s:10:"pageNumber";s:11:"{{ :page }}";s:14:"categoryFilter";s:23:"virtual-events-webinars";s:12:"postsPerPage";s:1:"5";s:14:"noPostsMessage";s:14:"No posts found";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:13:"blog/category";s:8:"postPage";s:9:"blog/post";s:16:"exceptCategories";s:11:"whitepapers";}}}

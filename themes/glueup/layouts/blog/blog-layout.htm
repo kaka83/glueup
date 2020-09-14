@@ -1,0 +1,78 @@
+description = "blog layout"
+
+[genericForm]
+rules[full_name] = "required"
+rules[phone] = "required"
+rules[email] = "required|email"
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+mail_enabled = 1
+mail_subject = "New Submission to Paygage!"
+mail_recipients[] = "sales@eventbank.com"
+mail_replyto = "sales@eventbank.com"
+mail_resp_enabled = 1
+mail_resp_field = "email"
+mail_resp_from = "welcome@paygage.us"
+mail_resp_subject = "Welcome to Paygage"
+inline_errors = "disabled"
+js_on_success = "window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'formLocation': 'modal',
+ 'event': 'form_submission'
+});
+$('#contact-paygage').modal('hide');
+ $('#success').modal('show');
+$('#success').modal().addClass('d-flex');"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 0
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+
+[hubspotTrackingCode]
+
+[localePicker]
+forceUrl = 0
+
+[genericForm new_feat]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<html lang="{{ activeLocale }}">
+<head>
+{% partial 'site/meta.htm' %}
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="80" data-gr-c-s-loaded="true">
+{# Header with TopBar #}
+{% partial 'site/header.htm' %}
+{% partial 'blog/hero-blog.htm' %}
+<!--<div class="main-wrapper">{# Main Wrapper #}-->
+{% page %}
+    {#% if this.page.url == '/blog/:page?' %}
+        {% partial 'site/footer-cta.htm' %}
+    {% else %}
+        {% partial 'blog/blog-footer-cta.htm' %}
+    {% endif %#}
+{% partial 'platform/features-nav.htm' %}
+
+{% partial 'blog/blog-footer-cta.htm' %}
+{% partial 'site/footer.htm' %}
+{# End Main Wrapper #}
+{% partial 'site/success-modal.htm' %}
+{% partial 'site/signup-modal.htm' %}
+{#{% partial 'site/new_feat.htm' %}#}
+{# JavaScripts #}
+{% partial 'site/scripts.htm' %}
+{% partial 'blog/blog-scripts.htm' %}
+</body>
+</html>

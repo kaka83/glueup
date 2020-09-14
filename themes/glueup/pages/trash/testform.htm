@@ -1,0 +1,37 @@
+title = "testing/testform"
+url = "/testing/testform"
+layout = "glueup-home"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[genericForm]
+rules[name] = "required"
+rules[email] = "required|email"
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+mail_enabled = 1
+mail_recipients[] = "alexsantafe@gmail.com"
+mail_resp_enabled = 1
+redirect = "https://www.alexsantafe.com/october"
+inline_errors = "display"
+allowed_fields[] = "email"
+allowed_fields[] = "name"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+skip_database = 0
+emails_date_format = "Y-m-d"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "home"
+postPage = "{{ :page }}"
+==
+{% component 'genericForm'%}
+{% component 'blogPosts'%}

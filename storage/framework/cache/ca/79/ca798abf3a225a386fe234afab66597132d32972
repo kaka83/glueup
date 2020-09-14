@@ -1,0 +1,520 @@
+1600067169a:1:{s:17:"landing/home2.htm";a:16:{s:8:"fileName";s:17:"landing/home2.htm";s:7:"content";s:21137:"title = "Home"
+url = "/lp/home2"
+layout = "glueup-home"
+description = "Glue up is an all-in-one platform that helps you build and scale your community through events, memberships, CRM, email campaigns, finance, payments and marketing tools."
+meta_title = "All-in-One Software for Growing Your Community"
+meta_description = "Glue Up is an all-in-one CRM platform that helps you build and grow your community through events, memberships & other digital tools."
+is_hidden = 0
+seo_keywords = "Glue Up homepage, Glue Up all-in-one platform, who uses Glue Up?, what's Glue Up?, community engagement platform, event management software, association management software"
+robot_index = "noindex"
+robot_follow = "nofollow"
+
+[viewBag]
+localeMeta_title[cn] = "未来社区"
+localeMeta_title[es_la] = "Plataforma todo-en-Uno para crecer tu comunidad"
+localeMeta_title[Pt_br] = "Um Software All-in-One para Expandir Sua Comunidade"
+localeMeta_title[ru] = "«Всё-в-одном» для  расширения  сообщества"
+localeMeta_title[tk] = "Büyüyen  Topluluğunuz için Hepsi Bir Arada Yazılım"
+localeMeta_title[zh] = "Glue Up 助力企业或社群组织 与客户建立连接"
+localeMeta_description[es_la] = "Glue Up es una plataforma todo en uno que te ayuda a construir y hacer crecer tu comunidad a través de eventos, membresías, CRM, campañas de correo electrónico, finanzas y herramientas de marketing."
+localeMeta_description[Pt_br] = "Glue Up é uma plataforma All-in-One que ajuda você a construir e aumentar sua comunidade por meio de eventos, associações, CRM, campanhas por e-mail, finanças e ferramentas de marketing."
+localeMeta_description[ru] = "Glue Up - это универсальная платформа, которая помогает вам создавать и развивать свое сообщество с помощью мероприятий, членств, CRM, кампаний, финансовых и маркетинговых инструментов."
+localeMeta_description[tk] = "Glue Up; etkinlikler, üyelikler, CRM, e-posta kampanyaları, finans ve pazarlama araçları aracılığıyla topluluğunuzu oluşturmanıza ve büyütmenize yardımcı olan hepsi bir arada bir platformdur."
+localeMeta_description[zh] = "Glue Up 一体化云平台通过活动营销、内容营销、CRM数据管理、会员管理，以及聚合云支付等数字化手段，助力企业或社群组织与客户建立稳固且有价值的连接，实现长远发展目标。"
+==
+<header id="hero" class="d-flex align-self-center">
+
+        <div class="container paygage-hero-container align-items-center align-self-center">
+        	 
+            <div class="row mx-auto">
+                
+                <div class="col-md-8 mx-auto hero home align-self-center text-center" style="padding-top:5vh;">
+					<h1>{{ 'All-in-One Software<br> for <span class="line"><ins> Growing</ins></span> Your Community '|_ }}</h1>
+                       <p class="tagline"> {{ 'Glue Up is an all-in-one platform that helps you build and grow your community through events, memberships, CRM, email campaigns, finance and marketing tools. '|_ }} </p><br>
+                       <div class="row">
+                            <div class="col-md-7 mx-auto input-group mt-3 d-flex">
+                                <input type="text" id="email" name="email" placeholder="{{'Your Email'|_}}" aria-label="email" class="form-control has_background">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary btn-round-full pointer" value="Submit" id="emailtomodal" input-type="submit" data-toggle="modal" data-target="#contact-paygage">{{'Get Started'|_}}</button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <img class="col-md-offset-12 img-fluid hero-home text-center mx-auto d-none d-sm-block" style="" src="{{ 'glueup-hero3.svg' | media }}" alt="Glue Up helps you with events, memberships, CRM, email campaigns, finance and marketing tools.">
+            </div>
+        </div> 
+    </header>
+{% partial 'logos/logobar-home.htm' %}
+
+{#engagement 1#}
+<section id="product-display" class="py-5">
+    <div class="py-5 container">
+        <div class="row flex-row">
+                                                    <div class="col-md-8 mx-auto">
+                                                       <div class="block text-center">
+                                                             <h2 class="mt-3 mb-4 sentence  position-relative">{{ 'All-in-one Solutions for Every Team'|_ }}</h2>
+                                                             <p class="tagline">{{ 'No matter your needs, our solutions are powerful yet flexible to empower you to grow your organization and your community.'|_}} </p>
+                                                        </div>
+                                                    </div>
+        </div>
+        <div class="row flex-row mt-5">
+                   <div id="solutions-display" class="col-md-12 align-self-center">
+                                                <div class="row align-self-center">
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item " href="{{ 'solutions/event-management-suite'|page }}">
+                                                            <img src="{{ 'glueup-event.svg' | media }}" class="dropdown-visual" alt="Glue Up helps you plan, promote and execute events.">
+                                                            <p class="link-title mb-2">{{ 'Event Management Suite'|_ }}</p>
+                                                            <p class="small mb-0 d-flex">{{ 'Plan, promote, execute and evaluate all of your events. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item " href="{{ 'solutions/membership-management-suite'|page }}">
+                                                            <img src="{{ 'glueup-membership.svg' | media }}" class="dropdown-visual" alt="Glue Up helps you manage your memberships">
+                                                            <p class="link-title mb-2">{{ 'Membership Management Suite'|_ }}</p>
+                                                            <p class="small mb-0 d-flex">{{ 'Retain, engage and grow your member community. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item " href="{{ 'solutions/virtual-events-management-suite'|page }}">
+                                                            <img src="{{ 'glueup-online-events.svg' | media }}" class="dropdown-visual" alt="Glue Up helps you plan, promote and execute online events">
+                                                            <p class="link-title mb-2">{{ 'Virtual Events Management Suite'|_ }}</p>
+                                                            <p class="small mb-0 d-flex">{{ 'Monetize and enhance your online events and webinars. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item " href="{{ 'solutions/community-management-suite'|page }}">
+                                                            <img src="{{ 'glueup-community-feature.svg' | media }}" class="dropdown-visual" alt="Glue Up helps you engage your community">
+                                                            <p class="link-title mb-2">{{ 'Community Management Suite'|_ }}</p>
+                                                            <p class="small mb-0 d-flex">{{ 'Enable your community to thrive and amplify engagement. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item " href="{{ 'solutions/training-management-suite'|page }}">
+                                                            <img src="{{ 'glueup-learning.svg' | media }}" class="dropdown-visual pb-4" alt="Glue Up helps you deliver and monetize your courses and CPE/CPD Credits">
+                                                            <p class="link-title mb-2">{{ 'Training Management Suite'|_ }}</p>
+                                                            <p class="small mb-0 d-flex">{{ 'Build, market, sell, and analyze courses with ease.'|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item pointer btn-block" value="Submit" id="pricing-button" input-type="submit" data-toggle="modal" data-target="#pricing" href="{#{ 'solutions/donations-management-suite'|page }#}">
+                                                        <img src="{{ 'glueup-donations.svg' | media }}" class="dropdown-visual" alt="Glue Up helps you manage donations">
+                                                            <p class="link-title mb-2">{{ 'Donations Management Suite'|_ }} <span class="badge badge-soon">{{ 'Coming Soon'|_ }}</span></p>
+                                                            <p class="small mb-0 d-flex">{{ 'Collect and manage all your donations effortlessly. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+        </div>
+    </div>
+
+</section>
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'glueup-event-management.svg' | media }}" alt="Glue Up helps you manage events big and small" class="img-fluid mx-auto lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Events'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Scale Up Events,<br> Not Workload.'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Plan, promote, and execute one or hundreds of events, large and small, from the first idea to attendee follow-up and evaluate with surveys after your event.'|_ }}
+    						     </p>
+                             <a href="{{ 'platform/event-management' | page }}" class="read-more d-flex">{{ 'Learn More'|_}} <i class="read-more-icon icon-arrow"></i></a>
+				</div>
+                            {# <svg class="svgline fadingEffect" width="117" height="20"><path d="M5 11 Q 37 16 110 9" fill="transparent" stroke="#0d62fe" stroke-width="7" stroke-linecap="round"></path></svg>#}
+                             <p class="quote-home pt-5">
+                             "{{" We host hundreds of events and manage tens of thousands of contacts using Glue Up."|_}}{{" The platform's professional look and ease of use has enabled us to stand out as a premier forum for convening thought leaders."|_}}"</p>
+                             <span class="h6 text-color hideme">{{ 'Carol Li Rafferty, '|_ }}<span style="font-weight:300;">{{'Managing Director, Yale Center'|_}}</span></span>
+                             <div class="align-self-center">
+                                 <img src="{{ 'clients/yale-center.svg' | media }}" class="img-fluid" style="display: block; max-width: 127px; max-height: 320px; padding: 10px 0;" alt="logo">
+                             </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-8 mx-auto d-flex align-items-center text-center mx-auto">
+                    <p class="mb-4 sentence text-center mx-auto">{{ 'Create events <span class="line"><ins>80%</ins></span> faster with <span style="color:#0d62fe;">Glue Up</span>.'|_ }}</p>
+                </div>
+            </div>
+        </div>
+</section>
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'glueup-membership-management.svg' | media }}" alt="Glue Up helps you manage memberships of any kind" class="img-fluid mx-auto lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Memberships'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Retain, engage and grow your community.'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Automate your membership management processes, maximize retention, and pamper your members with a premium experience they deserve.'|_ }}<br>
+                			     </p>
+				<a href="{{ 'platform/membership-management' | page }}" class="read-more d-flex">{{ 'Learn More'|_}} <i class="read-more-icon icon-arrow"></i></a>
+                             </div>
+                             <p class="quote-home pt-5">
+                             "{{' We are very pleased with the simplicity of the system. We rarely spend time training staff as most users simply “get it"'|_}}{{'  Its simple and fast out-of-the-box solution. We now have 4 client accounts running on Glue Up software.'|_}}"</p>
+                             <span class="h6 text-color hideme">{{ 'Marcel Ewals, '|_ }}<span style="font-weight:300;">{{'Director, Community Development, MCI Group'|_}}</span></span>
+                             <div class="align-self-center">
+                                 <img src="{{ 'clients/mci.svg' | media }}" class="img-fluid" style="display: block; max-width: 66px; max-height: 320px; padding: 10px 0;" alt="logo">
+                             </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-8 d-flex align-items-center text-center mx-auto">
+                    <p class="mb-4 sentence mx-auto text-center">{{ 'With <span style="color:#0d62fe;">Glue Up</span>, members stick around. <br> Average retention rate of our clients is <span class="line"><ins> 82%</ins></span>.'|_ }}</p>
+                </div>
+            </div>
+        </div>
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-engage.svg' | media }}" alt="Glue Up Helps your community thrive" class="img-fluid mx-auto lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Communities'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Enable Your Community To Thrive'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Give your audience a digital place where they can connect with you and your mission 365 days a year even when meeting face to face isn’t possible.'|_ }}
+    						     </p>
+				<a href="{{ 'platform/community' | page }}" class="read-more d-flex">{{ 'Learn More'|_}} <i class="read-more-icon icon-arrow"></i></a>
+                             </div>
+                             <p class="quote-home pt-5">
+                             "{{"Many great features under one umbrella."|_}}{{" From CRM, Event Management, Social Engagement, Email Marketing Campaigns, Invoicing, Membership Management & Financing, this software enables you run your business effectively and efficiently."|_}}"</p>
+                             <span class="h6 text-color hideme">{{ 'Edward Ornelas, '|_ }}<span style="font-weight:300;">{{'President & CEO, Inland Empire Regional Chamber of Commerce'|_}}</span></span>
+                             <div class="align-self-center">
+                                 <img src="{{ 'clients/iechamber.svg' | media }}" class="img-fluid" style="display: block; max-width: 160px; max-height: 320px; padding: 10px 0;" alt="logo">
+                             </div>
+                             
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{% partial 'site/blogs-sort-home.htm' %}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-8 d-flex align-items-center text-center mx-auto">
+                    <p class="mb-4 sentence mx-auto text-center">{{ "Don't take  <span class='line'><ins> our word </ins></span> for it."|_ }}</p>
+                </div>
+            </div>
+            <div class="row mx-auto">
+            	<div class="col-md-8 mx-auto">
+            		<div class="row">
+                        <div class="col-md-4 py-3">
+                            <div class="card text-center h-100 hideme">
+                              <div class="card-body pt-4 ">
+                                <img src="{{ 'capterra-top-20-img.png' | media }}" alt="Glue Up Top 20 Rated in Capterra" class=" img-fluid mx-auto lazy fadeIn" style="max-height: 120px;">
+                                {#<h5 class="card-title mt-1">{{ 'Capterra Top 20'|_ }}</h5>#}
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3">
+                            <div class="card text-center h-100 hideme">
+                              <div class="card-body pt-4">
+                              	<img alt="Glue Up is one of GetApp Category Leaders for Association Management Jul-20" title="Category Leaders Badge" style="width: 140px; border: 0px" src="https://cdn0.capterra-static.com/assets/images/gdm-badges/GA_Badge_Category%20Leaders_Full%20Color.png">
+                                 {#<img src="{{ 'gdpr-ready-glueup.png' | media }}" alt="Glue Up is fully GDPR Compliant" class="img-fluid mx-auto lazy fadeIn" style="max-height: 70px; margin-top: 39px; margin-bottom: 38px;">#}
+                                {#<h5 class="card-title mt-3">{{ 'GDPR Compliance'|_ }}</h5>#}
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3">
+                            <div class="card text-center h-100 hideme">
+                              <div class="card-body pt-4 ">
+                                {#<div style="margin-top: 30px; margin-bottom: 61px;"><i class="bullet-icon shadow-sm align-middle icon-clock-outlined" style="font-size: 72px;"></i></div>#}
+                                <img alt="Glue Up is one of the Software Advice Frontrunners for Association Management Jul-20" title="Frontrunners Badge" style="width: 140px; border: 0px" src="https://cdn0.capterra-static.com/assets/images/gdm-badges/SA_FrontRunners_Full%20Color.png">
+                                {#<h5 class="card-title mt-3">{{ 'Daily Backups'|_ }}</h5>#}
+                              </div>
+                            </div>
+                        </div>
+                       </div>
+                  </div>
+            </div>
+</section>
+
+{% partial 'site/pricing-modal' %}
+{#
+{% partial 'home/intro.htm' %}
+{% partial 'home/counter.htm' %}
+{% partial 'home/left-1.htm' %}
+{% partial 'home/right-1.htm' %}
+{% partial 'home/left-2.htm' %}
+{% partial 'home/faq.htm' %}
+{% partial 'home/blog-home.htm' %}#}
+{% partial 'site/footer-cta.htm' %}
+";s:5:"mtime";i:1598428039;s:6:"markup";s:18617:"<header id="hero" class="d-flex align-self-center">
+
+        <div class="container paygage-hero-container align-items-center align-self-center">
+        	 
+            <div class="row mx-auto">
+                
+                <div class="col-md-8 mx-auto hero home align-self-center text-center" style="padding-top:5vh;">
+					<h1>{{ 'All-in-One Software<br> for <span class="line"><ins> Growing</ins></span> Your Community '|_ }}</h1>
+                       <p class="tagline"> {{ 'Glue Up is an all-in-one platform that helps you build and grow your community through events, memberships, CRM, email campaigns, finance and marketing tools. '|_ }} </p><br>
+                       <div class="row">
+                            <div class="col-md-7 mx-auto input-group mt-3 d-flex">
+                                <input type="text" id="email" name="email" placeholder="{{'Your Email'|_}}" aria-label="email" class="form-control has_background">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary btn-round-full pointer" value="Submit" id="emailtomodal" input-type="submit" data-toggle="modal" data-target="#contact-paygage">{{'Get Started'|_}}</button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <img class="col-md-offset-12 img-fluid hero-home text-center mx-auto d-none d-sm-block" style="" src="{{ 'glueup-hero3.svg' | media }}" alt="Glue Up helps you with events, memberships, CRM, email campaigns, finance and marketing tools.">
+            </div>
+        </div> 
+    </header>
+{% partial 'logos/logobar-home.htm' %}
+
+{#engagement 1#}
+<section id="product-display" class="py-5">
+    <div class="py-5 container">
+        <div class="row flex-row">
+                                                    <div class="col-md-8 mx-auto">
+                                                       <div class="block text-center">
+                                                             <h2 class="mt-3 mb-4 sentence  position-relative">{{ 'All-in-one Solutions for Every Team'|_ }}</h2>
+                                                             <p class="tagline">{{ 'No matter your needs, our solutions are powerful yet flexible to empower you to grow your organization and your community.'|_}} </p>
+                                                        </div>
+                                                    </div>
+        </div>
+        <div class="row flex-row mt-5">
+                   <div id="solutions-display" class="col-md-12 align-self-center">
+                                                <div class="row align-self-center">
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item " href="{{ 'solutions/event-management-suite'|page }}">
+                                                            <img src="{{ 'glueup-event.svg' | media }}" class="dropdown-visual" alt="Glue Up helps you plan, promote and execute events.">
+                                                            <p class="link-title mb-2">{{ 'Event Management Suite'|_ }}</p>
+                                                            <p class="small mb-0 d-flex">{{ 'Plan, promote, execute and evaluate all of your events. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item " href="{{ 'solutions/membership-management-suite'|page }}">
+                                                            <img src="{{ 'glueup-membership.svg' | media }}" class="dropdown-visual" alt="Glue Up helps you manage your memberships">
+                                                            <p class="link-title mb-2">{{ 'Membership Management Suite'|_ }}</p>
+                                                            <p class="small mb-0 d-flex">{{ 'Retain, engage and grow your member community. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item " href="{{ 'solutions/virtual-events-management-suite'|page }}">
+                                                            <img src="{{ 'glueup-online-events.svg' | media }}" class="dropdown-visual" alt="Glue Up helps you plan, promote and execute online events">
+                                                            <p class="link-title mb-2">{{ 'Virtual Events Management Suite'|_ }}</p>
+                                                            <p class="small mb-0 d-flex">{{ 'Monetize and enhance your online events and webinars. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item " href="{{ 'solutions/community-management-suite'|page }}">
+                                                            <img src="{{ 'glueup-community-feature.svg' | media }}" class="dropdown-visual" alt="Glue Up helps you engage your community">
+                                                            <p class="link-title mb-2">{{ 'Community Management Suite'|_ }}</p>
+                                                            <p class="small mb-0 d-flex">{{ 'Enable your community to thrive and amplify engagement. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item " href="{{ 'solutions/training-management-suite'|page }}">
+                                                            <img src="{{ 'glueup-learning.svg' | media }}" class="dropdown-visual pb-4" alt="Glue Up helps you deliver and monetize your courses and CPE/CPD Credits">
+                                                            <p class="link-title mb-2">{{ 'Training Management Suite'|_ }}</p>
+                                                            <p class="small mb-0 d-flex">{{ 'Build, market, sell, and analyze courses with ease.'|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item pointer btn-block" value="Submit" id="pricing-button" input-type="submit" data-toggle="modal" data-target="#pricing" href="{#{ 'solutions/donations-management-suite'|page }#}">
+                                                        <img src="{{ 'glueup-donations.svg' | media }}" class="dropdown-visual" alt="Glue Up helps you manage donations">
+                                                            <p class="link-title mb-2">{{ 'Donations Management Suite'|_ }} <span class="badge badge-soon">{{ 'Coming Soon'|_ }}</span></p>
+                                                            <p class="small mb-0 d-flex">{{ 'Collect and manage all your donations effortlessly. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+        </div>
+    </div>
+
+</section>
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'glueup-event-management.svg' | media }}" alt="Glue Up helps you manage events big and small" class="img-fluid mx-auto lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Events'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Scale Up Events,<br> Not Workload.'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Plan, promote, and execute one or hundreds of events, large and small, from the first idea to attendee follow-up and evaluate with surveys after your event.'|_ }}
+    						     </p>
+                             <a href="{{ 'platform/event-management' | page }}" class="read-more d-flex">{{ 'Learn More'|_}} <i class="read-more-icon icon-arrow"></i></a>
+				</div>
+                            {# <svg class="svgline fadingEffect" width="117" height="20"><path d="M5 11 Q 37 16 110 9" fill="transparent" stroke="#0d62fe" stroke-width="7" stroke-linecap="round"></path></svg>#}
+                             <p class="quote-home pt-5">
+                             "{{" We host hundreds of events and manage tens of thousands of contacts using Glue Up."|_}}{{" The platform's professional look and ease of use has enabled us to stand out as a premier forum for convening thought leaders."|_}}"</p>
+                             <span class="h6 text-color hideme">{{ 'Carol Li Rafferty, '|_ }}<span style="font-weight:300;">{{'Managing Director, Yale Center'|_}}</span></span>
+                             <div class="align-self-center">
+                                 <img src="{{ 'clients/yale-center.svg' | media }}" class="img-fluid" style="display: block; max-width: 127px; max-height: 320px; padding: 10px 0;" alt="logo">
+                             </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-8 mx-auto d-flex align-items-center text-center mx-auto">
+                    <p class="mb-4 sentence text-center mx-auto">{{ 'Create events <span class="line"><ins>80%</ins></span> faster with <span style="color:#0d62fe;">Glue Up</span>.'|_ }}</p>
+                </div>
+            </div>
+        </div>
+</section>
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'glueup-membership-management.svg' | media }}" alt="Glue Up helps you manage memberships of any kind" class="img-fluid mx-auto lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Memberships'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Retain, engage and grow your community.'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Automate your membership management processes, maximize retention, and pamper your members with a premium experience they deserve.'|_ }}<br>
+                			     </p>
+				<a href="{{ 'platform/membership-management' | page }}" class="read-more d-flex">{{ 'Learn More'|_}} <i class="read-more-icon icon-arrow"></i></a>
+                             </div>
+                             <p class="quote-home pt-5">
+                             "{{' We are very pleased with the simplicity of the system. We rarely spend time training staff as most users simply “get it"'|_}}{{'  Its simple and fast out-of-the-box solution. We now have 4 client accounts running on Glue Up software.'|_}}"</p>
+                             <span class="h6 text-color hideme">{{ 'Marcel Ewals, '|_ }}<span style="font-weight:300;">{{'Director, Community Development, MCI Group'|_}}</span></span>
+                             <div class="align-self-center">
+                                 <img src="{{ 'clients/mci.svg' | media }}" class="img-fluid" style="display: block; max-width: 66px; max-height: 320px; padding: 10px 0;" alt="logo">
+                             </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-8 d-flex align-items-center text-center mx-auto">
+                    <p class="mb-4 sentence mx-auto text-center">{{ 'With <span style="color:#0d62fe;">Glue Up</span>, members stick around. <br> Average retention rate of our clients is <span class="line"><ins> 82%</ins></span>.'|_ }}</p>
+                </div>
+            </div>
+        </div>
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-engage.svg' | media }}" alt="Glue Up Helps your community thrive" class="img-fluid mx-auto lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Communities'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Enable Your Community To Thrive'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Give your audience a digital place where they can connect with you and your mission 365 days a year even when meeting face to face isn’t possible.'|_ }}
+    						     </p>
+				<a href="{{ 'platform/community' | page }}" class="read-more d-flex">{{ 'Learn More'|_}} <i class="read-more-icon icon-arrow"></i></a>
+                             </div>
+                             <p class="quote-home pt-5">
+                             "{{"Many great features under one umbrella."|_}}{{" From CRM, Event Management, Social Engagement, Email Marketing Campaigns, Invoicing, Membership Management & Financing, this software enables you run your business effectively and efficiently."|_}}"</p>
+                             <span class="h6 text-color hideme">{{ 'Edward Ornelas, '|_ }}<span style="font-weight:300;">{{'President & CEO, Inland Empire Regional Chamber of Commerce'|_}}</span></span>
+                             <div class="align-self-center">
+                                 <img src="{{ 'clients/iechamber.svg' | media }}" class="img-fluid" style="display: block; max-width: 160px; max-height: 320px; padding: 10px 0;" alt="logo">
+                             </div>
+                             
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{% partial 'site/blogs-sort-home.htm' %}
+<section class="section ">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-8 d-flex align-items-center text-center mx-auto">
+                    <p class="mb-4 sentence mx-auto text-center">{{ "Don't take  <span class='line'><ins> our word </ins></span> for it."|_ }}</p>
+                </div>
+            </div>
+            <div class="row mx-auto">
+            	<div class="col-md-8 mx-auto">
+            		<div class="row">
+                        <div class="col-md-4 py-3">
+                            <div class="card text-center h-100 hideme">
+                              <div class="card-body pt-4 ">
+                                <img src="{{ 'capterra-top-20-img.png' | media }}" alt="Glue Up Top 20 Rated in Capterra" class=" img-fluid mx-auto lazy fadeIn" style="max-height: 120px;">
+                                {#<h5 class="card-title mt-1">{{ 'Capterra Top 20'|_ }}</h5>#}
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3">
+                            <div class="card text-center h-100 hideme">
+                              <div class="card-body pt-4">
+                              	<img alt="Glue Up is one of GetApp Category Leaders for Association Management Jul-20" title="Category Leaders Badge" style="width: 140px; border: 0px" src="https://cdn0.capterra-static.com/assets/images/gdm-badges/GA_Badge_Category%20Leaders_Full%20Color.png">
+                                 {#<img src="{{ 'gdpr-ready-glueup.png' | media }}" alt="Glue Up is fully GDPR Compliant" class="img-fluid mx-auto lazy fadeIn" style="max-height: 70px; margin-top: 39px; margin-bottom: 38px;">#}
+                                {#<h5 class="card-title mt-3">{{ 'GDPR Compliance'|_ }}</h5>#}
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 py-3">
+                            <div class="card text-center h-100 hideme">
+                              <div class="card-body pt-4 ">
+                                {#<div style="margin-top: 30px; margin-bottom: 61px;"><i class="bullet-icon shadow-sm align-middle icon-clock-outlined" style="font-size: 72px;"></i></div>#}
+                                <img alt="Glue Up is one of the Software Advice Frontrunners for Association Management Jul-20" title="Frontrunners Badge" style="width: 140px; border: 0px" src="https://cdn0.capterra-static.com/assets/images/gdm-badges/SA_FrontRunners_Full%20Color.png">
+                                {#<h5 class="card-title mt-3">{{ 'Daily Backups'|_ }}</h5>#}
+                              </div>
+                            </div>
+                        </div>
+                       </div>
+                  </div>
+            </div>
+</section>
+
+{% partial 'site/pricing-modal' %}
+{#
+{% partial 'home/intro.htm' %}
+{% partial 'home/counter.htm' %}
+{% partial 'home/left-1.htm' %}
+{% partial 'home/right-1.htm' %}
+{% partial 'home/left-2.htm' %}
+{% partial 'home/faq.htm' %}
+{% partial 'home/blog-home.htm' %}#}
+{% partial 'site/footer-cta.htm' %}";s:4:"code";N;s:5:"title";s:4:"Home";s:3:"url";s:9:"/lp/home2";s:6:"layout";s:11:"glueup-home";s:11:"description";s:169:"Glue up is an all-in-one platform that helps you build and scale your community through events, memberships, CRM, email campaigns, finance, payments and marketing tools.";s:10:"meta_title";s:46:"All-in-One Software for Growing Your Community";s:16:"meta_description";s:133:"Glue Up is an all-in-one CRM platform that helps you build and grow your community through events, memberships & other digital tools.";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:172:"Glue Up homepage, Glue Up all-in-one platform, who uses Glue Up?, what's Glue Up?, community engagement platform, event management software, association management software";s:11:"robot_index";s:7:"noindex";s:12:"robot_follow";s:8:"nofollow";s:7:"viewBag";a:2:{s:16:"localeMeta_title";a:6:{s:2:"cn";s:12:"未来社区";s:5:"es_la";s:47:"Plataforma todo-en-Uno para crecer tu comunidad";s:5:"Pt_br";s:51:"Um Software All-in-One para Expandir Sua Comunidade";s:2:"ru";s:75:"«Всё-в-одном» для  расширения  сообщества";s:2:"tk";s:56:"Büyüyen  Topluluğunuz için Hepsi Bir Arada Yazılım";s:2:"zh";s:57:"Glue Up 助力企业或社群组织 与客户建立连接";}s:22:"localeMeta_description";a:5:{s:5:"es_la";s:202:"Glue Up es una plataforma todo en uno que te ayuda a construir y hacer crecer tu comunidad a través de eventos, membresías, CRM, campañas de correo electrónico, finanzas y herramientas de marketing.";s:5:"Pt_br";s:191:"Glue Up é uma plataforma All-in-One que ajuda você a construir e aumentar sua comunidade por meio de eventos, associações, CRM, campanhas por e-mail, finanças e ferramentas de marketing.";s:2:"ru";s:331:"Glue Up - это универсальная платформа, которая помогает вам создавать и развивать свое сообщество с помощью мероприятий, членств, CRM, кампаний, финансовых и маркетинговых инструментов.";s:2:"tk";s:206:"Glue Up; etkinlikler, üyelikler, CRM, e-posta kampanyaları, finans ve pazarlama araçları aracılığıyla topluluğunuzu oluşturmanıza ve büyütmenize yardımcı olan hepsi bir arada bir platformdur.";s:2:"zh";s:236:"Glue Up 一体化云平台通过活动营销、内容营销、CRM数据管理、会员管理，以及聚合云支付等数字化手段，助力企业或社群组织与客户建立稳固且有价值的连接，实现长远发展目标。";}}}}

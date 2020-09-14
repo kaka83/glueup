@@ -1,0 +1,113 @@
+1600067323a:1:{s:20:"blog/blog-layout.htm";a:10:{s:8:"fileName";s:20:"blog/blog-layout.htm";s:7:"content";s:2238:"description = "blog layout"
+
+[genericForm]
+rules[full_name] = "required"
+rules[phone] = "required"
+rules[email] = "required|email"
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+mail_enabled = 1
+mail_subject = "New Submission to Paygage!"
+mail_recipients[] = "sales@eventbank.com"
+mail_replyto = "sales@eventbank.com"
+mail_resp_enabled = 1
+mail_resp_field = "email"
+mail_resp_from = "welcome@paygage.us"
+mail_resp_subject = "Welcome to Paygage"
+inline_errors = "disabled"
+js_on_success = "window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'formLocation': 'modal',
+ 'event': 'form_submission'
+});
+$('#contact-paygage').modal('hide');
+ $('#success').modal('show');
+$('#success').modal().addClass('d-flex');"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 0
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+
+[hubspotTrackingCode]
+
+[localePicker]
+forceUrl = 0
+
+[genericForm new_feat]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<html lang="{{ activeLocale }}">
+<head>
+{% partial 'site/meta.htm' %}
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="80" data-gr-c-s-loaded="true">
+{# Header with TopBar #}
+{% partial 'site/header.htm' %}
+{% partial 'blog/hero-blog.htm' %}
+<!--<div class="main-wrapper">{# Main Wrapper #}-->
+{% page %}
+    {#% if this.page.url == '/blog/:page?' %}
+        {% partial 'site/footer-cta.htm' %}
+    {% else %}
+        {% partial 'blog/blog-footer-cta.htm' %}
+    {% endif %#}
+{% partial 'platform/features-nav.htm' %}
+
+{% partial 'blog/blog-footer-cta.htm' %}
+{% partial 'site/footer.htm' %}
+{# End Main Wrapper #}
+{% partial 'site/success-modal.htm' %}
+{% partial 'site/signup-modal.htm' %}
+{#{% partial 'site/new_feat.htm' %}#}
+{# JavaScripts #}
+{% partial 'site/scripts.htm' %}
+{% partial 'blog/blog-scripts.htm' %}
+</body>
+</html>";s:5:"mtime";i:1596786371;s:6:"markup";s:881:"<html lang="{{ activeLocale }}">
+<head>
+{% partial 'site/meta.htm' %}
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="80" data-gr-c-s-loaded="true">
+{# Header with TopBar #}
+{% partial 'site/header.htm' %}
+{% partial 'blog/hero-blog.htm' %}
+<!--<div class="main-wrapper">{# Main Wrapper #}-->
+{% page %}
+    {#% if this.page.url == '/blog/:page?' %}
+        {% partial 'site/footer-cta.htm' %}
+    {% else %}
+        {% partial 'blog/blog-footer-cta.htm' %}
+    {% endif %#}
+{% partial 'platform/features-nav.htm' %}
+
+{% partial 'blog/blog-footer-cta.htm' %}
+{% partial 'site/footer.htm' %}
+{# End Main Wrapper #}
+{% partial 'site/success-modal.htm' %}
+{% partial 'site/signup-modal.htm' %}
+{#{% partial 'site/new_feat.htm' %}#}
+{# JavaScripts #}
+{% partial 'site/scripts.htm' %}
+{% partial 'blog/blog-scripts.htm' %}
+</body>
+</html>";s:4:"code";N;s:11:"description";s:11:"blog layout";s:11:"genericForm";a:20:{s:5:"rules";a:3:{s:9:"full_name";s:8:"required";s:5:"phone";s:8:"required";s:5:"email";s:14:"required|email";}s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:12:"mail_enabled";s:1:"1";s:12:"mail_subject";s:26:"New Submission to Paygage!";s:15:"mail_recipients";a:1:{i:0;s:19:"sales@eventbank.com";}s:12:"mail_replyto";s:19:"sales@eventbank.com";s:17:"mail_resp_enabled";s:1:"1";s:15:"mail_resp_field";s:5:"email";s:14:"mail_resp_from";s:18:"welcome@paygage.us";s:17:"mail_resp_subject";s:18:"Welcome to Paygage";s:13:"inline_errors";s:8:"disabled";s:13:"js_on_success";s:233:"window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'formLocation': 'modal',
+ 'event': 'form_submission'
+});
+$('#contact-paygage').modal('hide');
+ $('#success').modal('show');
+$('#success').modal().addClass('d-flex');";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:17:"recaptcha_enabled";s:1:"0";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}s:19:"hubspotTrackingCode";a:0:{}s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"0";}s:20:"genericForm new_feat";a:9:{s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:13:"inline_errors";s:8:"disabled";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}}}

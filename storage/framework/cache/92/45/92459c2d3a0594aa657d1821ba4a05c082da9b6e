@@ -1,0 +1,729 @@
+1600067169a:1:{s:19:"site/mobile-nav.htm";a:7:{s:8:"fileName";s:19:"site/mobile-nav.htm";s:7:"content";s:27076:"description = "mobile menu"
+
+[viewBag]
+==
+<li class="nav-item dropdown position-static d-block d-sm-none">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'Why Glue Up?'|_ }}</a>
+    <ul class="dropdown-menu w-100 shadow p-0" id="navbarcompany">
+        <li class="glueupmenu">
+            <div class="row pr-4">
+                <div class="col-md-8">
+                                                        <a class="dropdown-item" href="{{ 'pricing'|page }}">
+                                                            <span>{{ 'Pricing'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/crm'|page }}">
+                                                            <span>{{ 'CRM'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/community'|page }}">
+                                                            <span>{{ 'Community'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/event-management'|page }}">
+                                                            <span>{{ 'Online & Offline Events'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/membership-management'|page }}">
+                                                            <span>{{ 'Memberships'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/email-campaigns'|page }}">
+                                                            <span>{{ 'Email Campaigns'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/finance'|page }}">
+                                                            <span>{{ 'Finance & Invoicing'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/tasks'|page }}">
+                                                            <span>{{ 'Tasks'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/surveys'|page }}">
+                                                            <span>{{ 'Surveys'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/cpe-cpd'|page }}">
+                                                            <span>{{ 'CPE/CPD Credits'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/website'|page }}">
+                                                            <span>{{ 'Website'|_ }}</span>
+                                                        </a>
+                                                        
+                                                       {# <a class="dropdown-item" href="{{ 'platform/payments'|page }}">
+                                                            <span>{{ 'Payments'|_ }}</span>#}
+                                                        </a>
+                                                    <h4 class="text-capitalize ml-2 mb-2">{{ 'Mobile Apps'|_ }}</h4>
+                                                        <a class="dropdown-item" href="{{ 'platform/glueup-app'|page }}">
+                                                            <span>{{ 'Glue Up App'|_ }}</span></a>
+                                                        <a class="dropdown-item" href="{{ 'platform/glueup-manager'|page }}">
+                                                            <span>{{ 'Glue Up Manager'|_ }}</span></a>
+                </div>
+            </div>
+            </ul>
+        </li>
+
+<li class="nav-item dropdown position-static d-block d-sm-none">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'Products'|_ }}</a>
+    <ul class="dropdown-menu w-100 shadow p-0" id="navbarcompany">
+        <li class="glueupmenu">
+            <div class="row pr-4">
+                <div class="col-md-8">
+                                                        <a class="dropdown-item" href="{{ 'solutions/event-management-suite'|page }}">
+                                                            <span>{{ 'Event Management Suite'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'solutions/membership-management-suite'|page }}">
+                                                            <span>{{ 'Membership Management Suite'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'solutions/virtual-events-management-suite'|page }}">
+                                                            <span>{{ 'Virtual Events Management Suite'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'solutions/community-management-suite'|page }}">
+                                                            <span>{{ 'Community Management Suite'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'solutions/training-management-suite'|page }}">
+                                                            <span>{{ 'Training Management Suite'|_ }}</span>
+                                                        </a>
+                                                        {#<a class="dropdown-item" href="{{ 'solutions/donations-management-suite'|page }}">
+                                                            <span>{{ 'Donations Management Suite'|_ }}</span>
+                                                        </a>#}
+                    <h4 class="text-capitalize ml-2 mb-2">{{ 'Per Industry'|_ }}</h4>
+                                                       <a class="dropdown-item" href="{{ 'industries/association-management-software'|page }}">
+                                                        <span>{{ 'Associations'|_ }}</span></a>
+                                                        <a class="dropdown-item" href="{{ 'industries/chamber-management-software'|page }}">
+                                                        <span>{{ 'Chambers of Commerce'|_ }}</span></a>
+                                                        <a class="dropdown-item" href="{{ 'industries/event-agencies-management-software'|page }}">
+                                                        <span>{{ 'Conference Organizers'|_ }}</span></a>
+                                                        <a class="dropdown-item" href="{{ 'industries/corporation-management-software'|page }}">
+                                                        <span>{{ 'Corporations'|_ }}</span></a>
+                                                        <a class="dropdown-item" href="{{ 'industries/non-profit-management-software'|page }}">
+                                                        <span>{{ 'Non-Profits'|_ }}</span></a>
+                                                        <a class="dropdown-item" href="{{ 'industries/financial-management-software'|page }}">
+                                                        <span>{{ 'Financial Services'|_ }}</span></a>
+                                                        <a class="dropdown-item" href="{{ 'industries/consulting-company-management-software'|page }}">
+                                                        <span>{{ 'Consultancy Firms'|_ }}</span></a>
+                                                        <a class="dropdown-item" href="{{ 'industries/training-company-management-software'|page }}">
+                                                        <span>{{ 'Training & Development'|_ }}</span></a>  
+                </div>
+            </div>
+        </li>
+    </ul>
+</li>
+<li class="nav-item dropdown position-static d-block d-sm-none">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'Resources'|_ }}</a>
+    <ul class="dropdown-menu w-100 shadow p-0" id="navbarcompany">
+        <li class="glueupmenu">
+            <div class="row pr-4">
+                <div class="col-md-8">
+                        {#<a class="dropdown-item" href="{{ 'demo'|page }}">{{ 'Request a Demo'|_ }}</a>#}
+    					<a class="dropdown-item" href="{{ 'blog'|page }}">{{ 'Blog'|_ }}</a>
+    					<a class="dropdown-item" href="{{ 'resources/case-studies'|page }}">{{ 'Case Studies'|_ }}</a>
+    					<a class="dropdown-item" href="{{ 'resources/whitepapers'|page }}">{{ 'Whitepapers'|_ }}</a>
+    				{#	<a class="dropdown-item" href="{{ 'academy'|page }}">{{ 'Academy'|_ }}</a>#}
+    				{#	<a class="dropdown-item" href="{{ 'events'|page }}">{{ 'Events'|_ }}</a>#}
+    				{#	<a class="dropdown-item" href="{{ 'partners'|page }}">{{ 'Partners'|_ }}</a>#}
+    				{#	<a class="dropdown-item" href="{{ 'support'|page }}">{{ 'Support'|_ }}</a>#}
+    					<a class="dropdown-item" href="{{ 'platform/integrations'|page }}">{{ 'Integrations'|_ }}</a>
+    					<a class="dropdown-item" href="{{ 'security'|page }}">{{ 'Security'|_ }}</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</li>
+<li class="nav-item dropdown position-static d-block d-sm-none">
+         <a class="nav-link" href="{{ 'pricing'|page }}">{{ 'Pricing'|_ }}</a>
+</li>
+<li class="nav-item dropdown position-static d-block d-sm-none">
+        <a class="nav-link" href="{{ 'about'|page }}">{{ 'About'|_ }}</a>
+</li>
+<li class="nav-item dropdown position-static d-block d-sm-none">
+        <a class="nav-link" href="{{ 'contact'|page }}">{{ 'Contact Us'|_ }}</a>
+</li>
+<li class="nav-item dropdown position-static d-block d-sm-none">
+        <a class="nav-link" href="/account/login">{{ 'Log In'|_ }}</a>
+</li>
+<li class="nav-item lang d-block d-sm-none py-3">
+{% component 'localePicker' %}
+</li>
+
+
+{##}
+{# Footer Start #}{#
+<footer class="footer section">
+    <nav aria-labelledby="sitemap" class="">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2 mr-auto col-sm-6">
+			   
+    					<h4 class="text-capitalize mb-2">{{ 'Glue Up'|_ }}</h4>
+    					<ul class="list-unstyled footer-menu lh-35 list-break">
+				                                 <li>
+                                                        <a class="dropdown-item" href="{{ 'pricing'|page }}">
+                                                            <span>{{ 'Pricing'|_ }}</span>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/crm'|page }}">
+                                                            <span>{{ 'CRM'|_ }}</span>
+                                                    </li>
+                                                   <li>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/community'|page }}">
+                                                            <span>{{ 'Community'|_ }}</span>
+                                                        </a>
+                                                   </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/event-management'|page }}">
+                                                            <span>{{ 'Online & Offline Events'|_ }}</span>
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/membership-management'|page }}">
+                                                            <span>{{ 'Memberships'|_ }}</span>
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/email-campaigns'|page }}">
+                                                            <span>{{ 'Email Campaigns'|_ }}</span>
+                                                            
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/finance'|page }}">
+                                                            <span>{{ 'Finance & Invoicing'|_ }}</span>
+                                
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/tasks'|page }}">
+                                                            <span>{{ 'Tasks'|_ }}</span>
+                                    
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/surveys'|page }}">
+                                                            <span>{{ 'Surveys'|_ }}</span>
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/cpe-cpd'|page }}">
+                                                            <span>{{ 'CPE/CPD Credits'|_ }}</span>
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/website'|page }}">
+                                                            <span>{{ 'Website'|_ }}</span>
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/integrations'|page }}">
+                                                            <span>{{ 'Integrations'|_ }}</span>
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/payments'|page }}">
+                                                            <span>{{ 'Payments'|_ }}</span>
+                                                        </a>
+                                                    </li>
+                                                   </ul>
+                                        <h4 class="text-capitalize mb-2">{{ 'Mobile Apps'|_ }}</h4>
+                                        <ul class="list-unstyled footer-menu lh-35">
+				                                 <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/glueup-app'|page }}">
+                                                            <span>{{ 'Glue Up App'|_ }}</span>
+                                                    </li>
+                                                <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/glueup-manager'|page }}">
+                                                            <span>{{ 'Glue Up Manager'|_ }}</span>
+                                                    </li>
+                                        </ul>
+			</div>
+			<div class="col-lg-3 mr-auto col-sm-6">
+					<h4 class="text-capitalize mb-2">{{ 'Products'|_ }}</h4>
+					<ul class="list-unstyled footer-menu lh-35">
+						
+                                                <li>
+                                                        <a class="dropdown-item" href="{{ 'solutions/event-management-suite'|page }}">
+                                                            <span>{{ 'Event Management Suite'|_ }}</span>
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'solutions/membership-management-suite'|page }}">
+                                                            <span>{{ 'Membership Management Suite'|_ }}</span>
+                                                        </a>
+                                                   </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'solutions/virtual-events-management-suite'|page }}">
+                                                            <span>{{ 'Virtual Events Management Suite'|_ }}</span>
+                                                        </a>
+                                                   </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'solutions/community-management-suite'|page }}">
+                                                            <span>{{ 'Community Management Suite'|_ }}</span>
+                                                        </a>
+                                                   </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'solutions/training-management-suite'|page }}">
+                                                            <span>{{ 'Training Management Suite'|_ }}</span>
+                                                        </a>
+                                                   </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'solutions/donations-management-suite'|page }}">
+                                                            <span>{{ 'Donations Management Suite'|_ }}</span>
+                                                        </a>
+                                                   </li>
+                                                   <li>
+                                                 </ul>
+                    <h4 class="text-capitalize mb-2">{{ 'Per Industry'|_ }}</h4>
+					<ul class="list-unstyled footer-menu lh-35">
+						
+                                                <li>
+                                                       <a class="dropdown-item" href="{{ 'industries/association-management-software'|page }}">
+                                                        <span>{{ 'Associations'|_ }}</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ 'industries/chamber-management-software'|page }}">
+                                                        <span>{{ 'Chambers of Commerce'|_ }}</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ 'industries/event-agencies-management-software'|page }}">
+                                                        <span>{{ 'Conference Organizers'|_ }}</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ 'industries/corporation-management-software'|page }}">
+                                                        <span>{{ 'Corporations'|_ }}</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ 'industries/non-profit-management-software'|page }}">
+                                                        <span>{{ 'Non-Profits'|_ }}</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ 'industries/financial-management-software'|page }}">
+                                                        <span>{{ 'Financial Services'|_ }}</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ 'industries/consulting-company-management-software'|page }}">
+                                                        <span>{{ 'Consultancy Firms'|_ }}</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ 'industries/training-company-management-software'|page }}">
+                                                        <span>{{ 'Training & Development'|_ }}</span></a>
+                                                        </li>
+                                                 </ul>
+            </div>              
+			<div class="col-lg-2 mr-auto col-sm-6">
+    			        <h4 class="text-capitalize mb-2">{{ 'Resources'|_ }}</h4>
+    					<ul class="list-unstyled footer-menu lh-35 list-break">
+    					    <li><a href="{{ 'demo'|page }}">{{ 'Request a Demo'|_ }}</a></li>
+    						<li><a href="{{ 'blog'|page }}">{{ 'Blog'|_ }}</a></li>
+    						<li><a href="{{ 'case-studies'|page }}">{{ 'Case Studies'|_ }}</a></li>
+    						<li><a href="{{ 'case-studies'|page }}">{{ 'Whitepapers'|_ }}</a></li>
+    						<li><a href="{{ 'academy'|page }}">{{ 'Academy'|_ }}</a></li>
+    						<li><a href="{{ 'events'|page }}">{{ 'Events'|_ }}</a></li>
+    						<li><a href="{{ 'partners'|page }}">{{ 'Partners'|_ }}</a></li>
+    						<li><a href="{{ 'support'|page }}">{{ 'Support'|_ }}</a></li>
+    						<li><a href="{{ 'security'|page }}">{{ 'Security'|_ }}</a></li>
+    						
+    						{#<li><a href="{{ ''|page }}">{{ ''|_ }}</a></li>#}{#
+    					</ul>
+    					<h4 class="text-capitalize mb-2">{{ 'Legal'|_ }}</h4>
+    					<ul class="list-unstyled footer-menu lh-35 list-break">
+    						<li><a href="{{ 'terms-and-conditions-organizations'|page }}">{{ 'Terms & Conditions'|_ }}</a></li>
+    						{#<li><a href="{{ 'terms-and-conditions-users'|page }}">{{ 'Terms & Conditions for Users'|_ }}</a></li>#}{#
+    						<li><a href="{{ 'privacy-policy'|page }}">{{ 'Privacy Policy'|_ }}</a></li>
+    						<li><a href="{{ 'legal-notice'|page }}">{{ 'Legal Notice'|_ }}</a></li>
+    						<li><a href="{{ 'legal-notice'|page }}">{{ 'GDPR'|_ }}</a></li>
+    					</ul>
+					
+			</div>
+			
+			<div class="col-lg-3 mr-auto col-sm-12 copyright">
+			        {% partial 'site/footer-blog.htm' %}
+			</div>
+			<div class="col-lg-2 ml-auto col-sm-6">
+			            <h4 class="text-capitalize mb-2">{{ 'Company'|_ }}</h4>
+    					<ul class="list-unstyled footer-menu lh-35 list-break">
+    						<li><a href="{{ 'about'|page }}">{{ 'About'|_ }}</a></li>
+    						<li><a href="{{ 'culture'|page }}">{{ 'Culture'|_ }}</a></li>
+    						<li><a href="{{ 'careers'|page }}">{{ 'Careers'|_ }}</a></li>
+    						<li><a href="{{ 'events'|page }}">{{ 'Events'|_ }}</a></li>
+    						<li><a href="{{ 'contact'|page }}">{{ 'Contact Us'|_ }}</a></li>
+    						{#<li><a href="{{ ''|page }}">{{ ''|_ }}</a></li>#}{#
+    					</ul>
+    					<h4 class="text-capitalize mb-2">Follow Us</h4>
+    					<ul class="list-unstyled footer-menu lh-35">
+        					<li><a href="https://www.facebook.com/eventbank"><i class="icon-facebook mr-2"></i>{{ 'Facebook'|_ }}</a></li>
+    						<li><a href="https://twitter.com/eventbank"><i class="icon-twitter mr-2"></i>{{ 'Twitter'|_ }}</a></li>
+    						<li><a href="https://www.linkedin.com/eventbank/"><i class="icon-linkedin mr-2 "></i>{{ 'Linked In'|_ }}</a></li>
+    					</ul>
+    					 <ul class="list-unstyled footer-menu lh-35 mb-0 footer-lang">
+        				<li><h4 class="text-capitalize mb-2"><i class="icon-language mr-1"></i>Language</h4></li>
+    			
+		        {% component 'extendedLocalePicker' %}
+		        		</ul>
+			</div>
+			{#<div class="col-lg-6 mr-auto copyright">
+		    <ul class="list-unstyled footer-menu lh-35 mb-0 footer-lang">
+        				<li><h4 class="text-capitalize mb-2"><i class="icon-language mr-1"></i>Choose your language</h4></li>
+    			
+		        {% component 'extendedLocalePicker' %}
+		        		</ul>
+		</div>#}{#
+		{% if CurrentLanguage is same as('cn') %}{% endif %}
+	</div>
+</nav>
+#}
+{# Footer Close #}";s:5:"mtime";i:1599058981;s:6:"markup";s:27034:"<li class="nav-item dropdown position-static d-block d-sm-none">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'Why Glue Up?'|_ }}</a>
+    <ul class="dropdown-menu w-100 shadow p-0" id="navbarcompany">
+        <li class="glueupmenu">
+            <div class="row pr-4">
+                <div class="col-md-8">
+                                                        <a class="dropdown-item" href="{{ 'pricing'|page }}">
+                                                            <span>{{ 'Pricing'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/crm'|page }}">
+                                                            <span>{{ 'CRM'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/community'|page }}">
+                                                            <span>{{ 'Community'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/event-management'|page }}">
+                                                            <span>{{ 'Online & Offline Events'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/membership-management'|page }}">
+                                                            <span>{{ 'Memberships'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/email-campaigns'|page }}">
+                                                            <span>{{ 'Email Campaigns'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/finance'|page }}">
+                                                            <span>{{ 'Finance & Invoicing'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/tasks'|page }}">
+                                                            <span>{{ 'Tasks'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/surveys'|page }}">
+                                                            <span>{{ 'Surveys'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/cpe-cpd'|page }}">
+                                                            <span>{{ 'CPE/CPD Credits'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/website'|page }}">
+                                                            <span>{{ 'Website'|_ }}</span>
+                                                        </a>
+                                                        
+                                                       {# <a class="dropdown-item" href="{{ 'platform/payments'|page }}">
+                                                            <span>{{ 'Payments'|_ }}</span>#}
+                                                        </a>
+                                                    <h4 class="text-capitalize ml-2 mb-2">{{ 'Mobile Apps'|_ }}</h4>
+                                                        <a class="dropdown-item" href="{{ 'platform/glueup-app'|page }}">
+                                                            <span>{{ 'Glue Up App'|_ }}</span></a>
+                                                        <a class="dropdown-item" href="{{ 'platform/glueup-manager'|page }}">
+                                                            <span>{{ 'Glue Up Manager'|_ }}</span></a>
+                </div>
+            </div>
+            </ul>
+        </li>
+
+<li class="nav-item dropdown position-static d-block d-sm-none">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'Products'|_ }}</a>
+    <ul class="dropdown-menu w-100 shadow p-0" id="navbarcompany">
+        <li class="glueupmenu">
+            <div class="row pr-4">
+                <div class="col-md-8">
+                                                        <a class="dropdown-item" href="{{ 'solutions/event-management-suite'|page }}">
+                                                            <span>{{ 'Event Management Suite'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'solutions/membership-management-suite'|page }}">
+                                                            <span>{{ 'Membership Management Suite'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'solutions/virtual-events-management-suite'|page }}">
+                                                            <span>{{ 'Virtual Events Management Suite'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'solutions/community-management-suite'|page }}">
+                                                            <span>{{ 'Community Management Suite'|_ }}</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'solutions/training-management-suite'|page }}">
+                                                            <span>{{ 'Training Management Suite'|_ }}</span>
+                                                        </a>
+                                                        {#<a class="dropdown-item" href="{{ 'solutions/donations-management-suite'|page }}">
+                                                            <span>{{ 'Donations Management Suite'|_ }}</span>
+                                                        </a>#}
+                    <h4 class="text-capitalize ml-2 mb-2">{{ 'Per Industry'|_ }}</h4>
+                                                       <a class="dropdown-item" href="{{ 'industries/association-management-software'|page }}">
+                                                        <span>{{ 'Associations'|_ }}</span></a>
+                                                        <a class="dropdown-item" href="{{ 'industries/chamber-management-software'|page }}">
+                                                        <span>{{ 'Chambers of Commerce'|_ }}</span></a>
+                                                        <a class="dropdown-item" href="{{ 'industries/event-agencies-management-software'|page }}">
+                                                        <span>{{ 'Conference Organizers'|_ }}</span></a>
+                                                        <a class="dropdown-item" href="{{ 'industries/corporation-management-software'|page }}">
+                                                        <span>{{ 'Corporations'|_ }}</span></a>
+                                                        <a class="dropdown-item" href="{{ 'industries/non-profit-management-software'|page }}">
+                                                        <span>{{ 'Non-Profits'|_ }}</span></a>
+                                                        <a class="dropdown-item" href="{{ 'industries/financial-management-software'|page }}">
+                                                        <span>{{ 'Financial Services'|_ }}</span></a>
+                                                        <a class="dropdown-item" href="{{ 'industries/consulting-company-management-software'|page }}">
+                                                        <span>{{ 'Consultancy Firms'|_ }}</span></a>
+                                                        <a class="dropdown-item" href="{{ 'industries/training-company-management-software'|page }}">
+                                                        <span>{{ 'Training & Development'|_ }}</span></a>  
+                </div>
+            </div>
+        </li>
+    </ul>
+</li>
+<li class="nav-item dropdown position-static d-block d-sm-none">
+    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ 'Resources'|_ }}</a>
+    <ul class="dropdown-menu w-100 shadow p-0" id="navbarcompany">
+        <li class="glueupmenu">
+            <div class="row pr-4">
+                <div class="col-md-8">
+                        {#<a class="dropdown-item" href="{{ 'demo'|page }}">{{ 'Request a Demo'|_ }}</a>#}
+    					<a class="dropdown-item" href="{{ 'blog'|page }}">{{ 'Blog'|_ }}</a>
+    					<a class="dropdown-item" href="{{ 'resources/case-studies'|page }}">{{ 'Case Studies'|_ }}</a>
+    					<a class="dropdown-item" href="{{ 'resources/whitepapers'|page }}">{{ 'Whitepapers'|_ }}</a>
+    				{#	<a class="dropdown-item" href="{{ 'academy'|page }}">{{ 'Academy'|_ }}</a>#}
+    				{#	<a class="dropdown-item" href="{{ 'events'|page }}">{{ 'Events'|_ }}</a>#}
+    				{#	<a class="dropdown-item" href="{{ 'partners'|page }}">{{ 'Partners'|_ }}</a>#}
+    				{#	<a class="dropdown-item" href="{{ 'support'|page }}">{{ 'Support'|_ }}</a>#}
+    					<a class="dropdown-item" href="{{ 'platform/integrations'|page }}">{{ 'Integrations'|_ }}</a>
+    					<a class="dropdown-item" href="{{ 'security'|page }}">{{ 'Security'|_ }}</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</li>
+<li class="nav-item dropdown position-static d-block d-sm-none">
+         <a class="nav-link" href="{{ 'pricing'|page }}">{{ 'Pricing'|_ }}</a>
+</li>
+<li class="nav-item dropdown position-static d-block d-sm-none">
+        <a class="nav-link" href="{{ 'about'|page }}">{{ 'About'|_ }}</a>
+</li>
+<li class="nav-item dropdown position-static d-block d-sm-none">
+        <a class="nav-link" href="{{ 'contact'|page }}">{{ 'Contact Us'|_ }}</a>
+</li>
+<li class="nav-item dropdown position-static d-block d-sm-none">
+        <a class="nav-link" href="/account/login">{{ 'Log In'|_ }}</a>
+</li>
+<li class="nav-item lang d-block d-sm-none py-3">
+{% component 'localePicker' %}
+</li>
+
+
+{##}
+{# Footer Start #}{#
+<footer class="footer section">
+    <nav aria-labelledby="sitemap" class="">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2 mr-auto col-sm-6">
+			   
+    					<h4 class="text-capitalize mb-2">{{ 'Glue Up'|_ }}</h4>
+    					<ul class="list-unstyled footer-menu lh-35 list-break">
+				                                 <li>
+                                                        <a class="dropdown-item" href="{{ 'pricing'|page }}">
+                                                            <span>{{ 'Pricing'|_ }}</span>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/crm'|page }}">
+                                                            <span>{{ 'CRM'|_ }}</span>
+                                                    </li>
+                                                   <li>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/community'|page }}">
+                                                            <span>{{ 'Community'|_ }}</span>
+                                                        </a>
+                                                   </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/event-management'|page }}">
+                                                            <span>{{ 'Online & Offline Events'|_ }}</span>
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/membership-management'|page }}">
+                                                            <span>{{ 'Memberships'|_ }}</span>
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/email-campaigns'|page }}">
+                                                            <span>{{ 'Email Campaigns'|_ }}</span>
+                                                            
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/finance'|page }}">
+                                                            <span>{{ 'Finance & Invoicing'|_ }}</span>
+                                
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/tasks'|page }}">
+                                                            <span>{{ 'Tasks'|_ }}</span>
+                                    
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/surveys'|page }}">
+                                                            <span>{{ 'Surveys'|_ }}</span>
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/cpe-cpd'|page }}">
+                                                            <span>{{ 'CPE/CPD Credits'|_ }}</span>
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/website'|page }}">
+                                                            <span>{{ 'Website'|_ }}</span>
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/integrations'|page }}">
+                                                            <span>{{ 'Integrations'|_ }}</span>
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/payments'|page }}">
+                                                            <span>{{ 'Payments'|_ }}</span>
+                                                        </a>
+                                                    </li>
+                                                   </ul>
+                                        <h4 class="text-capitalize mb-2">{{ 'Mobile Apps'|_ }}</h4>
+                                        <ul class="list-unstyled footer-menu lh-35">
+				                                 <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/glueup-app'|page }}">
+                                                            <span>{{ 'Glue Up App'|_ }}</span>
+                                                    </li>
+                                                <li>
+                                                        <a class="dropdown-item" href="{{ 'platform/glueup-manager'|page }}">
+                                                            <span>{{ 'Glue Up Manager'|_ }}</span>
+                                                    </li>
+                                        </ul>
+			</div>
+			<div class="col-lg-3 mr-auto col-sm-6">
+					<h4 class="text-capitalize mb-2">{{ 'Products'|_ }}</h4>
+					<ul class="list-unstyled footer-menu lh-35">
+						
+                                                <li>
+                                                        <a class="dropdown-item" href="{{ 'solutions/event-management-suite'|page }}">
+                                                            <span>{{ 'Event Management Suite'|_ }}</span>
+                                                        </a>
+                                                    </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'solutions/membership-management-suite'|page }}">
+                                                            <span>{{ 'Membership Management Suite'|_ }}</span>
+                                                        </a>
+                                                   </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'solutions/virtual-events-management-suite'|page }}">
+                                                            <span>{{ 'Virtual Events Management Suite'|_ }}</span>
+                                                        </a>
+                                                   </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'solutions/community-management-suite'|page }}">
+                                                            <span>{{ 'Community Management Suite'|_ }}</span>
+                                                        </a>
+                                                   </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'solutions/training-management-suite'|page }}">
+                                                            <span>{{ 'Training Management Suite'|_ }}</span>
+                                                        </a>
+                                                   </li>
+                                                   <li>
+                                                        <a class="dropdown-item" href="{{ 'solutions/donations-management-suite'|page }}">
+                                                            <span>{{ 'Donations Management Suite'|_ }}</span>
+                                                        </a>
+                                                   </li>
+                                                   <li>
+                                                 </ul>
+                    <h4 class="text-capitalize mb-2">{{ 'Per Industry'|_ }}</h4>
+					<ul class="list-unstyled footer-menu lh-35">
+						
+                                                <li>
+                                                       <a class="dropdown-item" href="{{ 'industries/association-management-software'|page }}">
+                                                        <span>{{ 'Associations'|_ }}</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ 'industries/chamber-management-software'|page }}">
+                                                        <span>{{ 'Chambers of Commerce'|_ }}</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ 'industries/event-agencies-management-software'|page }}">
+                                                        <span>{{ 'Conference Organizers'|_ }}</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ 'industries/corporation-management-software'|page }}">
+                                                        <span>{{ 'Corporations'|_ }}</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ 'industries/non-profit-management-software'|page }}">
+                                                        <span>{{ 'Non-Profits'|_ }}</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ 'industries/financial-management-software'|page }}">
+                                                        <span>{{ 'Financial Services'|_ }}</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ 'industries/consulting-company-management-software'|page }}">
+                                                        <span>{{ 'Consultancy Firms'|_ }}</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="{{ 'industries/training-company-management-software'|page }}">
+                                                        <span>{{ 'Training & Development'|_ }}</span></a>
+                                                        </li>
+                                                 </ul>
+            </div>              
+			<div class="col-lg-2 mr-auto col-sm-6">
+    			        <h4 class="text-capitalize mb-2">{{ 'Resources'|_ }}</h4>
+    					<ul class="list-unstyled footer-menu lh-35 list-break">
+    					    <li><a href="{{ 'demo'|page }}">{{ 'Request a Demo'|_ }}</a></li>
+    						<li><a href="{{ 'blog'|page }}">{{ 'Blog'|_ }}</a></li>
+    						<li><a href="{{ 'case-studies'|page }}">{{ 'Case Studies'|_ }}</a></li>
+    						<li><a href="{{ 'case-studies'|page }}">{{ 'Whitepapers'|_ }}</a></li>
+    						<li><a href="{{ 'academy'|page }}">{{ 'Academy'|_ }}</a></li>
+    						<li><a href="{{ 'events'|page }}">{{ 'Events'|_ }}</a></li>
+    						<li><a href="{{ 'partners'|page }}">{{ 'Partners'|_ }}</a></li>
+    						<li><a href="{{ 'support'|page }}">{{ 'Support'|_ }}</a></li>
+    						<li><a href="{{ 'security'|page }}">{{ 'Security'|_ }}</a></li>
+    						
+    						{#<li><a href="{{ ''|page }}">{{ ''|_ }}</a></li>#}{#
+    					</ul>
+    					<h4 class="text-capitalize mb-2">{{ 'Legal'|_ }}</h4>
+    					<ul class="list-unstyled footer-menu lh-35 list-break">
+    						<li><a href="{{ 'terms-and-conditions-organizations'|page }}">{{ 'Terms & Conditions'|_ }}</a></li>
+    						{#<li><a href="{{ 'terms-and-conditions-users'|page }}">{{ 'Terms & Conditions for Users'|_ }}</a></li>#}{#
+    						<li><a href="{{ 'privacy-policy'|page }}">{{ 'Privacy Policy'|_ }}</a></li>
+    						<li><a href="{{ 'legal-notice'|page }}">{{ 'Legal Notice'|_ }}</a></li>
+    						<li><a href="{{ 'legal-notice'|page }}">{{ 'GDPR'|_ }}</a></li>
+    					</ul>
+					
+			</div>
+			
+			<div class="col-lg-3 mr-auto col-sm-12 copyright">
+			        {% partial 'site/footer-blog.htm' %}
+			</div>
+			<div class="col-lg-2 ml-auto col-sm-6">
+			            <h4 class="text-capitalize mb-2">{{ 'Company'|_ }}</h4>
+    					<ul class="list-unstyled footer-menu lh-35 list-break">
+    						<li><a href="{{ 'about'|page }}">{{ 'About'|_ }}</a></li>
+    						<li><a href="{{ 'culture'|page }}">{{ 'Culture'|_ }}</a></li>
+    						<li><a href="{{ 'careers'|page }}">{{ 'Careers'|_ }}</a></li>
+    						<li><a href="{{ 'events'|page }}">{{ 'Events'|_ }}</a></li>
+    						<li><a href="{{ 'contact'|page }}">{{ 'Contact Us'|_ }}</a></li>
+    						{#<li><a href="{{ ''|page }}">{{ ''|_ }}</a></li>#}{#
+    					</ul>
+    					<h4 class="text-capitalize mb-2">Follow Us</h4>
+    					<ul class="list-unstyled footer-menu lh-35">
+        					<li><a href="https://www.facebook.com/eventbank"><i class="icon-facebook mr-2"></i>{{ 'Facebook'|_ }}</a></li>
+    						<li><a href="https://twitter.com/eventbank"><i class="icon-twitter mr-2"></i>{{ 'Twitter'|_ }}</a></li>
+    						<li><a href="https://www.linkedin.com/eventbank/"><i class="icon-linkedin mr-2 "></i>{{ 'Linked In'|_ }}</a></li>
+    					</ul>
+    					 <ul class="list-unstyled footer-menu lh-35 mb-0 footer-lang">
+        				<li><h4 class="text-capitalize mb-2"><i class="icon-language mr-1"></i>Language</h4></li>
+    			
+		        {% component 'extendedLocalePicker' %}
+		        		</ul>
+			</div>
+			{#<div class="col-lg-6 mr-auto copyright">
+		    <ul class="list-unstyled footer-menu lh-35 mb-0 footer-lang">
+        				<li><h4 class="text-capitalize mb-2"><i class="icon-language mr-1"></i>Choose your language</h4></li>
+    			
+		        {% component 'extendedLocalePicker' %}
+		        		</ul>
+		</div>#}{#
+		{% if CurrentLanguage is same as('cn') %}{% endif %}
+	</div>
+</nav>
+#}
+{# Footer Close #}";s:4:"code";N;s:11:"description";s:11:"mobile menu";s:7:"viewBag";a:0:{}}}

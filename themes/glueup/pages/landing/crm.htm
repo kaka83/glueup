@@ -1,0 +1,314 @@
+title = "CRM"
+url = "/lp/event-crm"
+layout = "glueup-landing"
+description = "Centralize all your data in one place and get deep insights into your community so you can understand engagement and improve your campaigns."
+meta_description = "Centralize all your data in one place and get deep insights into your community so you can understand engagement and improve your campaigns."
+is_hidden = 0
+robot_index = "noindex"
+robot_follow = "nofollow"
+==
+<?php
+function onEnd(){
+    $this->page->nav_highlight = 'features';
+ }
+?>
+==
+<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+           <div class="row flex-row-reverse">
+                <div class="col-md-6 hero align-self-center text-left">
+                    <img src="{{ 'glueup-crm-feature.svg' | media }}" class="paygage-visual" alt="Glue Up provides you with an engagement CRM logo">
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-left">
+                    <p class="tagline mb-4">{{ this.page.title}} </p>
+                      <h1>{{ 'Stay in the <span class="line"><ins>Know</ins></span><br>Always.'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Centralize all your data in one place and get deep insights into your community so you can understand engagement and improve your campaigns.'|_ }} </p>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+            </div>
+        </div> 
+</header>
+<section class="section pt-0">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-7 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Discover the journey of every person in your community'|_ }}</h2>
+                             <p class="tagline">{{ 'CRM built for engagement that helps you manage all your contacts and generate more revenue. '|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-lg-10 align-self-center mx-auto">
+			    <div class="services__accordion row flex-row-reverse">
+			            <div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+							<div class="accordion__img desktop">
+							    <div id="tab1-bullet-img" class="firstshow">
+							        <img class="feature-window desktop" src="{{ 'glueup-all-in-one.svg' | media }}" alt="chat">
+							         
+							    </div>
+							    <div id="tab2-bullet-img">
+							        <img class="feature-window deskto" src="{{ 'glueup-crm-1.svg' | media }}" alt="chat">
+							    </div>
+						        <div id="tab3-bullet-img">
+			    			        <img class="feature-window deskto" src="{{ 'glueup-security-feature.svg' | media }}" alt="chat">
+			    			    </div>
+						     </div>
+						</div>
+						<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+							<div class="services__accordion">
+							  
+			                    <div class="accordion pl-3 active small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+			                        <i class="icon-engagement"></i>
+			                        <span>{{ 'Do it All From One Platform'|_ }}</span>
+			                        <div class="accordion__body firstshow" style="display:none;">
+										<p class="pt-3 d-flex flex-column">{{ 'Manage your audiences and opportunities with easy-to-use tools. '|_ }}
+										{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+									</div>
+			                    </div>
+			                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab2-bullet">
+			                        <i class="icon-analytics"></i>
+			                        <span>{{ 'Make Smarter Decisions'|_ }}</span>
+			                        <div class="accordion__body " style="display:none;">
+										<p class="pt-3 d-flex flex-column">{{ 'Gain instant visibility into engagement with interactive dashboards and profiles. '|_ }}
+										{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+									</div>
+			                    </div>
+			                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab3-bullet">
+			                        <i class="icon-lock"></i>
+			                        <span>{{ 'Stay Protected At All Times'|_ }}</span>
+			                        <div class="accordion__body " style="display:none;">
+										<p class="pt-3 d-flex flex-column">{{ 'We take care of security, so you can focus on serving your community. '|_ }}
+										{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+									</div>
+			                    </div>
+							</div>
+						</div>
+						
+					</div>
+			</div>
+            </div>
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'crm-features-1.svg' | media }}" alt="paygage is accessible" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Contact Management'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Manage Your Contacts All In One'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Streamline your processes and get efficient with a first-class cloud platform that consolidates all of your operations and engagement with your contacts in one place.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-reset-time"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'History of all interactions'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-upload"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Easy import'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-refresh"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Automatic synchronization'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-tag"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Labels and filters'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'crm-features-2.svg' | media }}" alt="paygage is accessible" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Opportunities'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Automate Your Sales Workflows'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Drive revenue with features designed to help you close more deals. All team members can simultaneously track and manage opportunities through each stage of the sales process.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-filter"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Sales pipeline'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-upload"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Import existing deals'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-edit-update"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom fields'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-sections"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Deal stages'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'crm-features-3.svg' | media }}" alt="paygage is accessible" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Tasks'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Never Miss a Thing'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Leverage every sales opportunity by assigning tasks to team members. Efficiently follow up on every lead with tracking tools based on individual or company contact profiles.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-event-time-unsure"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom reminders'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-document"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Add notes & files'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-notifications"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Push notifications'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-event-tags"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Tasks history'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'crm-features-4.svg' | media }}" alt="paygage is accessible" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Contact & Company Profile'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Understand Engagement Across Activities'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Grow your community by knowing everything about your contacts and organizations.  '|_ }}{{ 'Contact & Company profiles show activity history so you know which events they have attended, what emails they read and how much money they have spent. '|_ }}<br>
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-magnifying-glass"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Contact Insights'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-template"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Customizable dashboards'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-event-tags"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Finance history'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-refresh"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Automatic sync'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'crm-features-5.svg' | media }}" alt="paygage is accessible" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Smart Lists & Advanced Search'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Personalize Your Approach'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Easily search and save contacts into different lists so you can personalize your marketing activities and stay targeted.'|_ }}{{ ' Activate your data to unify your client communications strategy and stay in touch with everyone critical to your organization’s growth.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                	<div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-registrations"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Project Management'|_ }}</p>
+                                    </div>    
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-smart-list"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'List segmentation'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-tag"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Tags and filters'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-upload"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Easy import/export'|_ }}</p>
+                                    </div>  
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}

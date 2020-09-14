@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>glueup-manager-icon</title>
+    <defs>
+        <linearGradient x1="50%" y1="-32.4256264%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#0064FF" offset="0%"></stop>
+            <stop stop-color="#001D71" offset="100%"></stop>
+        </linearGradient>
+        <path d="M29.4513139,8.97567581 C23.9799079,8.97567581 19.5444569,13.4111268 19.5444569,18.8825328 C19.5444569,19.440944 19.5906742,19.9937705 19.6819152,20.5372399 L19.6992901,20.636207 L19.7113332,20.6997464 C19.8033192,21.2331691 19.8501968,21.7795489 19.8501968,22.3319582 L19.8494442,22.452566 C19.800321,26.3876641 17.3504731,29.8513477 13.7370004,31.2453196 L13.6684355,31.2710061 C9.6997587,32.6340566 6.98108119,36.3788732 6.98108119,40.6429379 C6.98108119,46.1143439 11.4165321,50.5497948 16.8879382,50.5497948 C22.3593442,50.5497948 26.7947951,46.1143439 26.7947951,40.6429379 C26.7947951,40.0152745 26.7364031,39.3948592 26.6213445,38.7871354 C26.5337458,38.2665144 26.4890553,37.7328821 26.4890553,37.1935124 C26.4890553,33.1880569 28.9775298,29.6504803 32.6623694,28.2572661 C36.6327457,26.9003245 39.3581709,23.1519016 39.3581709,18.8825328 C39.3581709,13.4111268 34.9227199,8.97567581 29.4513139,8.97567581 Z" id="path-2"></path>
+        <filter x="-1.9%" y="-1.4%" width="103.7%" height="102.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="0.3" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0.6" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.11269284   0 0 0 0 0.441384435  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <path d="M42.2710183,30.703125 C36.7996123,30.703125 32.3641613,35.1385759 32.3641613,40.6099819 C32.3641613,46.0813879 36.7996123,50.5168389 42.2710183,50.5168389 C47.7424243,50.5168389 52.1778753,46.0813879 52.1778753,40.6099819 C52.1778753,35.1385759 47.7424243,30.703125 42.2710183,30.703125 Z" id="path-4"></path>
+        <filter x="-3.0%" y="-3.0%" width="106.1%" height="106.1%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="0.3" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0.6" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0.11269284   0 0 0 0 0.441384435  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="glueup-manager-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M17.3062251,-4.25190589e-15 L42.5316137,-2.85352147e-15 C48.5493652,-3.95896449e-15 50.7315473,0.626572875 52.9315473,1.80314575 C55.1315473,2.97971863 56.8581201,4.7062915 58.034693,6.9062915 C59.2112659,9.1062915 59.8378388,11.2884736 59.8378388,17.3062251 L59.8378388,42.5316137 C59.8378388,48.5493652 59.2112659,50.7315473 58.034693,52.9315473 C56.8581201,55.1315473 55.1315473,56.8581201 52.9315473,58.034693 C50.7315473,59.2112659 48.5493652,59.8378388 42.5316137,59.8378388 L17.3062251,59.8378388 C11.2884736,59.8378388 9.1062915,59.2112659 6.9062915,58.034693 C4.7062915,56.8581201 2.97971863,55.1315473 1.80314575,52.9315473 C0.626572875,50.7315473 -2.2997648e-15,48.5493652 -5.70914531e-15,42.5316137 L-3.08658554e-15,17.3062251 C-3.82354755e-15,11.2884736 0.626572875,9.1062915 1.80314575,6.9062915 C2.97971863,4.7062915 4.7062915,2.97971863 6.9062915,1.80314575 C9.1062915,0.626572875 11.2884736,-3.14646287e-15 17.3062251,-4.25190589e-15 Z" id="App-Icon" fill="url(#linearGradient-1)"></path>
+        <g id="Path" fill-rule="nonzero">
+            <use fill="#0064FF" xlink:href="#path-2"></use>
+            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+        </g>
+        <g id="Path" fill-rule="nonzero">
+            <use fill="#0064FF" xlink:href="#path-4"></use>
+            <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+        </g>
+    </g>
+</svg>

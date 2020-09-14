@@ -1,0 +1,7 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    hub_id:
+        label: terne.hubspot::lang.settings.fields.hub_id

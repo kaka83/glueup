@@ -1,0 +1,489 @@
+1600066771a:1:{s:22:"landing/toolkit.zh.htm";a:6:{s:8:"fileName";s:22:"landing/toolkit.zh.htm";s:7:"content";s:18623:"[viewBag]
+==
+<section id="us" class="section ">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-8 d-flex align-items-center text-center mx-auto">
+                    <p class="mb-4 sentence mx-auto">一、品牌升级后，有哪些改变?</p>
+                </div>
+            </div>
+        </div>
+</section>
+<section class="section pt-0">
+        <div class="container">
+            <div class="row justify-content-center">
+            
+            	<div class="col-md-8 pt-4 mx-auto">
+	            		
+<div data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+
+<h5 id="item-1-1">新品牌 </h5>
+<img src="{{ 'glueup-community-feature.svg' | media }}" class="paygage-visual py-2" style="max-height: 300px; width: auto;" alt="logo">
+<p>EventBank捷会易现品牌全新升级，并更名为 Glue Up。自2013年以来，EventBank捷会易一直专注于为客户提供专业的一体化云解决方案，帮助客户改善和提升关系互动管理。全新牌名称Glue Up，承载了我们一体化云解决方案的亮点优势，体现了产品的成长，以及我们将您的企业或社群互动发展作为使命。</p>
+
+<p>我们的一体化云平台为全球50多个国家的企业和组织机构提供了强有力的服务支持，旨在帮助他们提升与联系人或会员间的互动关系，实现长期商业价值，并使互动更高效。</p>
+
+<p>作为便捷易用的SaaS平台，我们是行业领先的云解决方案提供商，为企业、活动组织者、商会、协会、非营利组织、代理机构、营销人员等提供一套完整的一体化云端管理工具，旨在帮助他们实现简化运营流程，全面实现云端自动化、智能化，并消除原先管理中的困难与挑战。</p>
+
+
+
+
+
+<h5 id="item-1-2" class="pt-5">关于新品牌Glup Up的Logo </h5>
+<img src="{{ 'assets/images/glueup-logo-en.svg' | theme }}" class="paygage-visual py-5 px-5" style="max-height: 300px; width: auto;" alt="logo">
+<p>我们的新Logo更大方，更简洁，更美观。它由三个圆点组成，其中两个相互连接，它代表了我们的一体化云解决方案与我们的客户之间相互连接的紧密关系。</p>
+
+<p>我们希望向我们的客户（企业和组织机构等）传递关系互动的重要性，因为这是Glue Up的重要使命。</p>
+
+<p>新品牌Logo采用全新颜色旨在实现通俗易懂给人留下深刻印象。 </p>
+
+<p>字体采用Ubuntu，该字体大方，简单，为大众熟知的，切合我们品牌。我们决定使用Ubunt作为开源字体设置，以进一步突出我们对组织及社群的关注。</p>
+
+<p>新Logo将在系统平台和移动端App中更新。我们的系统电子邮件也将采用新Logo。</p>
+
+<div class="alert alert-light" role="alert">
+								  <i class="bullet-icon icon-documents px-0" style="background-color:transparent; color:#0D62FE; position: absolute; align-self: center; margin: -20px 0 0 -5px;"></i>    
+							<span style="margin-left: 40px; color:#0D62FE;"> <a style="color:#0D62FE;" href="https://eventbank-my.sharepoint.com/:u:/g/personal/alex_eventbank_com1/EfcsR2KqOatBtlPsdzfp6fgBptjRd1JRp-ocTClrEkW7Ng?e=COSQl2">您可以下载黑白和彩色的Logo，以下了解更多如何使用我们的Logo。</a></span>
+							</div>
+
+<h5 id="item-1-3" class="pt-5">我们的网址</h5>
+<img src="{{ 'web@2x.png' | media }}" class="rounded mb-3" alt="glueup.cn">
+<p>我们的新网站<a href="https://www.glueup.cn"><span style=" align-self: center;">glueup.cn</span></a> (http://glueup.cn/) 与我们品牌升级保持一致。您可以在我们的新官网中找到关于产品和功能亮点的全部信息，我们服务的客户行业，以及许多可以帮助您的企业和组织机构实现发展的高价值资源。</p>
+
+<h5 id="item-1-3" class="pt-5">新品牌“My Glue”互动中心</h5>
+
+<img src="{{ 'user-intro-step2-en@2x.png' | media }}" class="rounded mb-3" alt="My Glue ">
+<p>”My Glue”(曾用名My EventBank)，您可以在这里分享想法、讨论各种话题，即使无法面对面交流也可以随时保持线上互动社交。此外，您在Glue Up上主办的所有活动，管理的订阅和会员信息也都可以在My Glue中使用，因此您的活动参会者和会员可以找到他们需要的信息，并快速更新自己的个人信息。</p>
+
+<div class="row">
+  <div class="col-md-3 mx-auto text-center">
+  <a class="btn btn-primary btn-round-full pointer mx-auto" style="padding: .5rem 1rem;" href="https://www.glueup.cn/my/home/"><span style=" align-self: center;">前往 My Glue</span></a>
+  </div>
+  </div>
+
+
+</div>
+	            	
+	            
+	            	</div>
+            	</div>
+            				
+           	</div>
+        </div>
+</section>
+<section id="same" class="section ">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-8 d-flex align-items-center text-center mx-auto">
+                    <p class="mb-4 sentence mx-auto">二、品牌升级后，有哪些是没有变的？</p>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section  class="section pt-0">
+        <div class="container">
+            <div class="row justify-content-center">
+            
+            	<div class="col-md-8 pt-4 mx-auto">
+	            		
+<div data-spy="scroll" data-target="#navbar-example3" data-offset="80">
+
+<h5 id="item-11-1"  class="pt-5">我们的使命</h5>
+<p><span style="color:#001C6C;">Glue Up</span>将继承EventBank捷会易的传统，帮助您成功是我们的使命。我们相信，随着我们的新名称的使用;我们能够更好地沟通，更好的完成帮助专业组织和社群提高变革关系的使命。</span>.</p>
+
+<h5 id="item-11-1"  class="pt-5">我们的服务</h5>
+<p>我们的团队由来自全球20多个国家的专业人士组成，致力于为每一位客户提供最高水平的创新技术和服务。我们全球客户成功团队精诚合作，为您提供一流的服务和支持，协助客户成功。当然，我们将不断以高度专业的水准提高产品，增加产品功能。</p>
+
+<h5 id="item-11-1"  class="pt-5">我们的承诺</h5>
+
+<p>我们致力于为全球的客户、合作伙伴和专业团体创造一个每个人和组织都能使用我们的技术创造成功机会的世界。</p>
+
+<p>技术已经改变了企业和人们的互动方式以及获取信息的方式。许多组织由于没有跟上时代的步伐和经营业务的新方法而落后，因此在与其他企业互动和创收方面面临着种种挑战。Glue Up的一体化管理软件能够扭转这种趋势，并确保所有组织都能紧跟技术发展趋势。</p>
+
+<h5 id="item-11-1"  class="pt-5">您的协议及我们的法律实体</h5>
+
+<p>您与EventBank捷会易签署的协议不会有任何变化，因为我们的法律实体保持不变。“Glue Up”指Glue Up, Inc.或EventBank Inc.及其关联公司和子公司。<a href="{{ 'legal/terms-and-conditions-organizations'|page }}">有关我们实体的完整信息，请查看我们的组织条款和条件 (英语)。 </a> page. </p>
+
+
+
+</div>
+	            	
+	            
+	            	</div>
+            	</div>
+            				
+           	</div>
+        </div>
+</section>
+
+<section id="org"  class="section ">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-8 d-flex align-items-center text-center mx-auto">
+                    <p class="mb-4 sentence mx-auto">三、对企业客户而言，会受到哪些影响？</p>
+                </div>
+            </div>
+        </div>
+</section>
+<section class="section pt-0">
+        <div class="container">
+            <div class="row justify-content-center">
+            	<div class="col-md-8 pt-4 mx-auto">
+	            		
+<div data-spy="scroll" data-target="#navbar-example3"  data-offset="80">
+
+<h5 id="item-2-1">这将对我的企业有何影响？</h5>
+
+<p>所有活动页面，营销邮件和其他链接都将自动重新定向至新域名中的对应页面，以确保服务不会中断。 如果用户尝试使用以前的EventBank.com链接访问服务，将会自动跳转至Glue Up上的新页面。 </p>
+
+<p>如果您之前使用EventBank API，<a class="" href="#item-2-10">请查看有关如何更改它的说明</a>。</p>
+
+
+
+
+<h5 id="item-2-2" class="pt-5">对我已发布的活动有何影响？</h5>
+<p>所有已发布的活动将自动重新定向至新链接。 即使您已经在您的官方网站，第三方网站或社交媒体上宣传了活动，也无需修改任何链接。 </p>
+<h5 id="item-2-3" class="pt-5">如果在我的网站上链接了EventBank捷会易的某些页面，会有何变化？</h5>
+<p>您的访客将被自动重新定向至Glue Up上的相应页面。 如果您愿意，也可以更新链接，但这不是必需步骤。</p>
+<h5 id="item-2-4" class="pt-5">如果我已集成其他应用程序（例如Xero，Quickbooks，Zoom或Google Analytics）有何影响？</h5>
+<p>如果您之前已将EventBank捷会易帐户与Xero，Quickbooks，Zoom或Google Analytics进行集成，则无需采取任何措施，就可以继续使用这些集成，无需进行任何更改。</p>
+<h5 id="item-2-5" class="pt-5">如果我使用EventBank域名作为发件人，有何影响？</h5>
+<p>如您已使用EventBank 作为发件人域名（例如abc.xyz@companyname.eventbankmail.com） 目前，它将保持不变，我们将逐步向新域名转移。 如有任何更新，我们会及时通知您。 
+如您新注册 Glue Up 作为发件人域名，将应用我们的新域名：abc@yourcompanyname.glueupmail.com, 此更改将于2020年9月7日生效。
+</p>
+<h5 id="item-2-6" class="pt-5 pb-2">EventBank 捷会易管理者 App 会有何变化？</h5> 
+<img src="{{ 'manager-app@2x.png' | media }}" class="rounded mb-3" alt="Glue Up Manager App ">
+<p>EventBank 捷会易管理者移动端App更新为“Glue Up 管理者App”。 如果您之前下载过EventBank 捷会易管理者App，则无需再次安装或下载任何内容，只需从App Store或Google Play更新EventBank捷会易 管理者App。 重新登录，选择相应的服务器，即可继续使用管理者App。</p>
+
+ <div class="row">
+  <div class="col-md-5 mx-auto">
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto" style="padding: .5rem 1rem;" href="https://apps.apple.com/us/app/eventbank-manager/id740353437"><i class="icon-apple" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在App Store下载Glue Up Manager</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto mt-3"  style="padding: .5rem 1rem;" href="https://play.google.com/store/apps/details?id=com.eventbank.android"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在GooglePlay下载Glue Up Manager</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto mt-3"  style="padding: .5rem 1rem;" href="https://www.wandoujia.com/search/2146381061967852209"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在豌豆荚下载Glue Up Manager</span></a></div>
+  </div>
+<h5 id="item-2-8" class="pt-5">我与EventBank捷会易的合同是否会有变化？</h5>
+<p>您与EventBank捷会易签订的协议不会更改，因为我们的法人实体保持不变。 </p>
+<h5 id="item-2-9" class="pt-5">EventBank捷会易是否已被另一家公司收购？</h5>
+<p>EventBank 捷会易并未被另一家公司收购。</p>
+<h5 id="item-2-10" class="pt-5">如何更新EventBank API？</h5>
+
+<p>如果您已通过EventBank API将我们平台与您的网站集成在一起，请确保将端点从EventBank更新为Glue Up（页面将重定向至 .COM / .CN / .RU上的相应服务器）。</p> <p>请确保在我们的新品牌发布后的下个月更新端点，因为端点的临时重新定向将在该日期之后终止。</p>
+<div class="alert alert-warning" role="alert">
+								  <i class="bullet-icon icon-alert px-0" style="background-color:transparent; color:#FF8100; position: absolute; align-self: center; margin: -20px 0 0 -5px;"></i>    
+							<span class="font-weight-light d-block" style="margin-left: 40px;">如果您当前正在使用我们的API，请确保<span style="color:#FB3640;">在2020年9月30日</span>之前使用新的Glue Up API更新端点 </span>
+							</div>
+<p><a href="https://glueupapi.docs.apiary.io/">查看新的Glue Up API文档。</a>.</p>
+<p>以下指南可帮助您迁移至新的Glue Up API：<br>
+<div class="pl-3">
+<p>• API文件的EventBank.php中，将变量* $ API_endpoint *从“ eventbank.com/cn/ru”更新为“ glueup.cn/cn/ru”。</p>
+<p>• 在将用户从您的网站重定向到EventBank的任何代码中，将包含“ eventbank.com/cn/ru”的URL更新为“ glueup.cn/cn/ru”。</p>
+<p>• 在网站嵌入部件代码中，将包含“ eventbank.com/cn/ru”的URL更新为“ glueup.cn/cn/ru（_http://glueup.cn/cn/ru_ (http://glueup.cn/cn/ru)）”。</p>
+</div>
+<p>如果您需要任何帮助，<a href="#support" value="Submit" id="support-link" input-type="submit" data-toggle="modal" data-target="#support">请与我们联系</a> 或发送电子邮件至support@glueup.cn或support@eventbank.com</p>
+
+
+</div>
+	            	
+	            
+	            	</div>
+            	</div>
+            				
+           	</div>
+        </div>
+</section>
+<section  id="user" class="section ">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-8 d-flex align-items-center text-center mx-auto">
+                    <p class="mb-4 sentence mx-auto">四、对社群组织而言，会受到哪些影响？</p>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section class="section pt-0">
+        <div class="container">
+            <div class="row justify-content-center">
+            	<div class="col-md-8 pt-4 mx-auto">
+	            		
+<div data-spy="scroll" data-target="#navbar-example3" data-offset="80">
+
+<h5 id="item-3-1">崭新的登录页面</h5>
+
+<p>2020年8月24日，所有用户都将自动退出平台，需要重新登录，您只需用您的登录名重新<a href="https://glueup.cn/login">登录</a>Glue Up即可 (https://glueup.cn/login)。 您存储在“我的EventBank”中的所有数据，例如活动，营销邮件和会籍信息，都将显示在您的个人互动中心“My Glue”。 </p>
+
+
+<h5 id="item-3-2" class="pt-5">如何与我的会员，参会者和其他利益相关者交流这一品牌变更？</h5>
+
+<p>为了使您更轻松地与您的会员沟通，我们准备了一封<a  href="https://www.eventbank.com/organization/170/campaign/51298/">电子邮件</a>，其中包含此次品牌升级的相关信息，您可以使用这些信息来向您的社群更新有关Glue Up及其含义的信息。 您可以随意使用和编辑您需要的内容。 </p>
+
+<h5 id="item-3-3" class="pt-5 pb-2">参会者和会员的EventBank移动端App会有何变化？</h5>
+<img src="{{ 'my-glue@2x.png' | media }}" class="rounded mb-3" alt="Glue Up Manager App ">
+<p>目前，适用于参会者和会员的EventBank捷会易App为My Glue。如果您之前下载过EventBank 捷会易的移动端App，则无需再次安装或下载任何内容，只需从App Store或Google Play更新EventBank App。 然后，重新登录，选择相应的服务器即可继续使用My Glue App。</p>
+ <div class="row">
+  <div class="col-md-5 mx-auto">
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto" style="padding: .5rem 1rem;" href="https://apps.apple.com/us/app/eventbank/id958545893"><i class="icon-apple" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在AppStore下载My Glue</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto mt-3"  style="padding: .5rem 1rem;" href="https://play.google.com/store/apps/details?id=com.eventbank.android.attendee"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在Google Play下载My Glue</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto mt-3"  style="padding: .5rem 1rem;" href="https://www.wandoujia.com/apps/6654640"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在豌豆荚下载My Glue</span></a></div>
+  </div>
+
+<h5 id="item-3-4" class="pt-5">我应该告诉会员/注册参会者/其他利益相关者什么信息？</h5>
+<p>2020年8月24日，您的会员，活动参与者和所有其他注册用户将退出EventBank，并自动转至Glue Up上的新<a href="https://glueup.cn/login">登录</a>页面，用户可以使用在EventBank捷会易上使用的登录信息，在此处进行登录。 重新定向将是自动的，因此您无需执行任何操作。</p>
+<h5 id="item-3-5" class="pt-5">如果我是组织的会员，我的个人资料将会如何处理？</h5>
+<p>如果您是组织的会员，则必须从Glue Up页面（https://glueup.cn/login）<a href="https://glueup.cn/login">登录</a>。 您的会员详细信息以及您所在会员组织对信息的访问权将在此处提供。 如果您已收到用于申请或续订会员资格的电子邮件，仍然可以单击邮件内的链接，然后您将被重新定向至Glue Up上的相应页面，以完成其余步骤。</p>
+<h5 id="item-3-6" class="pt-5">如果我已经注册了活动，那么过去参与的活动，和未来即将举行的活动，注册一事会有何影响？</h5>
+<p>如果您已经注册了活动，则仍然可以通过My Glue访问您的注册。 您将必须从Glue Up（_https://glueup.cn/login）a href="https://glueup.cn/login">登录</a>，将显示您的个人资料以及与帐户有关的所有信息（例如以前的活动，成员资格和订阅）。</p>
+
+</div>
+	            	
+	            
+	            	</div>
+            	</div>
+            				
+           	</div>
+        </div>
+</section>";s:5:"mtime";i:1598261641;s:6:"markup";s:18610:"<section id="us" class="section ">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-8 d-flex align-items-center text-center mx-auto">
+                    <p class="mb-4 sentence mx-auto">一、品牌升级后，有哪些改变?</p>
+                </div>
+            </div>
+        </div>
+</section>
+<section class="section pt-0">
+        <div class="container">
+            <div class="row justify-content-center">
+            
+            	<div class="col-md-8 pt-4 mx-auto">
+	            		
+<div data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+
+<h5 id="item-1-1">新品牌 </h5>
+<img src="{{ 'glueup-community-feature.svg' | media }}" class="paygage-visual py-2" style="max-height: 300px; width: auto;" alt="logo">
+<p>EventBank捷会易现品牌全新升级，并更名为 Glue Up。自2013年以来，EventBank捷会易一直专注于为客户提供专业的一体化云解决方案，帮助客户改善和提升关系互动管理。全新牌名称Glue Up，承载了我们一体化云解决方案的亮点优势，体现了产品的成长，以及我们将您的企业或社群互动发展作为使命。</p>
+
+<p>我们的一体化云平台为全球50多个国家的企业和组织机构提供了强有力的服务支持，旨在帮助他们提升与联系人或会员间的互动关系，实现长期商业价值，并使互动更高效。</p>
+
+<p>作为便捷易用的SaaS平台，我们是行业领先的云解决方案提供商，为企业、活动组织者、商会、协会、非营利组织、代理机构、营销人员等提供一套完整的一体化云端管理工具，旨在帮助他们实现简化运营流程，全面实现云端自动化、智能化，并消除原先管理中的困难与挑战。</p>
+
+
+
+
+
+<h5 id="item-1-2" class="pt-5">关于新品牌Glup Up的Logo </h5>
+<img src="{{ 'assets/images/glueup-logo-en.svg' | theme }}" class="paygage-visual py-5 px-5" style="max-height: 300px; width: auto;" alt="logo">
+<p>我们的新Logo更大方，更简洁，更美观。它由三个圆点组成，其中两个相互连接，它代表了我们的一体化云解决方案与我们的客户之间相互连接的紧密关系。</p>
+
+<p>我们希望向我们的客户（企业和组织机构等）传递关系互动的重要性，因为这是Glue Up的重要使命。</p>
+
+<p>新品牌Logo采用全新颜色旨在实现通俗易懂给人留下深刻印象。 </p>
+
+<p>字体采用Ubuntu，该字体大方，简单，为大众熟知的，切合我们品牌。我们决定使用Ubunt作为开源字体设置，以进一步突出我们对组织及社群的关注。</p>
+
+<p>新Logo将在系统平台和移动端App中更新。我们的系统电子邮件也将采用新Logo。</p>
+
+<div class="alert alert-light" role="alert">
+								  <i class="bullet-icon icon-documents px-0" style="background-color:transparent; color:#0D62FE; position: absolute; align-self: center; margin: -20px 0 0 -5px;"></i>    
+							<span style="margin-left: 40px; color:#0D62FE;"> <a style="color:#0D62FE;" href="https://eventbank-my.sharepoint.com/:u:/g/personal/alex_eventbank_com1/EfcsR2KqOatBtlPsdzfp6fgBptjRd1JRp-ocTClrEkW7Ng?e=COSQl2">您可以下载黑白和彩色的Logo，以下了解更多如何使用我们的Logo。</a></span>
+							</div>
+
+<h5 id="item-1-3" class="pt-5">我们的网址</h5>
+<img src="{{ 'web@2x.png' | media }}" class="rounded mb-3" alt="glueup.cn">
+<p>我们的新网站<a href="https://www.glueup.cn"><span style=" align-self: center;">glueup.cn</span></a> (http://glueup.cn/) 与我们品牌升级保持一致。您可以在我们的新官网中找到关于产品和功能亮点的全部信息，我们服务的客户行业，以及许多可以帮助您的企业和组织机构实现发展的高价值资源。</p>
+
+<h5 id="item-1-3" class="pt-5">新品牌“My Glue”互动中心</h5>
+
+<img src="{{ 'user-intro-step2-en@2x.png' | media }}" class="rounded mb-3" alt="My Glue ">
+<p>”My Glue”(曾用名My EventBank)，您可以在这里分享想法、讨论各种话题，即使无法面对面交流也可以随时保持线上互动社交。此外，您在Glue Up上主办的所有活动，管理的订阅和会员信息也都可以在My Glue中使用，因此您的活动参会者和会员可以找到他们需要的信息，并快速更新自己的个人信息。</p>
+
+<div class="row">
+  <div class="col-md-3 mx-auto text-center">
+  <a class="btn btn-primary btn-round-full pointer mx-auto" style="padding: .5rem 1rem;" href="https://www.glueup.cn/my/home/"><span style=" align-self: center;">前往 My Glue</span></a>
+  </div>
+  </div>
+
+
+</div>
+	            	
+	            
+	            	</div>
+            	</div>
+            				
+           	</div>
+        </div>
+</section>
+<section id="same" class="section ">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-8 d-flex align-items-center text-center mx-auto">
+                    <p class="mb-4 sentence mx-auto">二、品牌升级后，有哪些是没有变的？</p>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section  class="section pt-0">
+        <div class="container">
+            <div class="row justify-content-center">
+            
+            	<div class="col-md-8 pt-4 mx-auto">
+	            		
+<div data-spy="scroll" data-target="#navbar-example3" data-offset="80">
+
+<h5 id="item-11-1"  class="pt-5">我们的使命</h5>
+<p><span style="color:#001C6C;">Glue Up</span>将继承EventBank捷会易的传统，帮助您成功是我们的使命。我们相信，随着我们的新名称的使用;我们能够更好地沟通，更好的完成帮助专业组织和社群提高变革关系的使命。</span>.</p>
+
+<h5 id="item-11-1"  class="pt-5">我们的服务</h5>
+<p>我们的团队由来自全球20多个国家的专业人士组成，致力于为每一位客户提供最高水平的创新技术和服务。我们全球客户成功团队精诚合作，为您提供一流的服务和支持，协助客户成功。当然，我们将不断以高度专业的水准提高产品，增加产品功能。</p>
+
+<h5 id="item-11-1"  class="pt-5">我们的承诺</h5>
+
+<p>我们致力于为全球的客户、合作伙伴和专业团体创造一个每个人和组织都能使用我们的技术创造成功机会的世界。</p>
+
+<p>技术已经改变了企业和人们的互动方式以及获取信息的方式。许多组织由于没有跟上时代的步伐和经营业务的新方法而落后，因此在与其他企业互动和创收方面面临着种种挑战。Glue Up的一体化管理软件能够扭转这种趋势，并确保所有组织都能紧跟技术发展趋势。</p>
+
+<h5 id="item-11-1"  class="pt-5">您的协议及我们的法律实体</h5>
+
+<p>您与EventBank捷会易签署的协议不会有任何变化，因为我们的法律实体保持不变。“Glue Up”指Glue Up, Inc.或EventBank Inc.及其关联公司和子公司。<a href="{{ 'legal/terms-and-conditions-organizations'|page }}">有关我们实体的完整信息，请查看我们的组织条款和条件 (英语)。 </a> page. </p>
+
+
+
+</div>
+	            	
+	            
+	            	</div>
+            	</div>
+            				
+           	</div>
+        </div>
+</section>
+
+<section id="org"  class="section ">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-8 d-flex align-items-center text-center mx-auto">
+                    <p class="mb-4 sentence mx-auto">三、对企业客户而言，会受到哪些影响？</p>
+                </div>
+            </div>
+        </div>
+</section>
+<section class="section pt-0">
+        <div class="container">
+            <div class="row justify-content-center">
+            	<div class="col-md-8 pt-4 mx-auto">
+	            		
+<div data-spy="scroll" data-target="#navbar-example3"  data-offset="80">
+
+<h5 id="item-2-1">这将对我的企业有何影响？</h5>
+
+<p>所有活动页面，营销邮件和其他链接都将自动重新定向至新域名中的对应页面，以确保服务不会中断。 如果用户尝试使用以前的EventBank.com链接访问服务，将会自动跳转至Glue Up上的新页面。 </p>
+
+<p>如果您之前使用EventBank API，<a class="" href="#item-2-10">请查看有关如何更改它的说明</a>。</p>
+
+
+
+
+<h5 id="item-2-2" class="pt-5">对我已发布的活动有何影响？</h5>
+<p>所有已发布的活动将自动重新定向至新链接。 即使您已经在您的官方网站，第三方网站或社交媒体上宣传了活动，也无需修改任何链接。 </p>
+<h5 id="item-2-3" class="pt-5">如果在我的网站上链接了EventBank捷会易的某些页面，会有何变化？</h5>
+<p>您的访客将被自动重新定向至Glue Up上的相应页面。 如果您愿意，也可以更新链接，但这不是必需步骤。</p>
+<h5 id="item-2-4" class="pt-5">如果我已集成其他应用程序（例如Xero，Quickbooks，Zoom或Google Analytics）有何影响？</h5>
+<p>如果您之前已将EventBank捷会易帐户与Xero，Quickbooks，Zoom或Google Analytics进行集成，则无需采取任何措施，就可以继续使用这些集成，无需进行任何更改。</p>
+<h5 id="item-2-5" class="pt-5">如果我使用EventBank域名作为发件人，有何影响？</h5>
+<p>如您已使用EventBank 作为发件人域名（例如abc.xyz@companyname.eventbankmail.com） 目前，它将保持不变，我们将逐步向新域名转移。 如有任何更新，我们会及时通知您。 
+如您新注册 Glue Up 作为发件人域名，将应用我们的新域名：abc@yourcompanyname.glueupmail.com, 此更改将于2020年9月7日生效。
+</p>
+<h5 id="item-2-6" class="pt-5 pb-2">EventBank 捷会易管理者 App 会有何变化？</h5> 
+<img src="{{ 'manager-app@2x.png' | media }}" class="rounded mb-3" alt="Glue Up Manager App ">
+<p>EventBank 捷会易管理者移动端App更新为“Glue Up 管理者App”。 如果您之前下载过EventBank 捷会易管理者App，则无需再次安装或下载任何内容，只需从App Store或Google Play更新EventBank捷会易 管理者App。 重新登录，选择相应的服务器，即可继续使用管理者App。</p>
+
+ <div class="row">
+  <div class="col-md-5 mx-auto">
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto" style="padding: .5rem 1rem;" href="https://apps.apple.com/us/app/eventbank-manager/id740353437"><i class="icon-apple" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在App Store下载Glue Up Manager</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto mt-3"  style="padding: .5rem 1rem;" href="https://play.google.com/store/apps/details?id=com.eventbank.android"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在GooglePlay下载Glue Up Manager</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto mt-3"  style="padding: .5rem 1rem;" href="https://www.wandoujia.com/search/2146381061967852209"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在豌豆荚下载Glue Up Manager</span></a></div>
+  </div>
+<h5 id="item-2-8" class="pt-5">我与EventBank捷会易的合同是否会有变化？</h5>
+<p>您与EventBank捷会易签订的协议不会更改，因为我们的法人实体保持不变。 </p>
+<h5 id="item-2-9" class="pt-5">EventBank捷会易是否已被另一家公司收购？</h5>
+<p>EventBank 捷会易并未被另一家公司收购。</p>
+<h5 id="item-2-10" class="pt-5">如何更新EventBank API？</h5>
+
+<p>如果您已通过EventBank API将我们平台与您的网站集成在一起，请确保将端点从EventBank更新为Glue Up（页面将重定向至 .COM / .CN / .RU上的相应服务器）。</p> <p>请确保在我们的新品牌发布后的下个月更新端点，因为端点的临时重新定向将在该日期之后终止。</p>
+<div class="alert alert-warning" role="alert">
+								  <i class="bullet-icon icon-alert px-0" style="background-color:transparent; color:#FF8100; position: absolute; align-self: center; margin: -20px 0 0 -5px;"></i>    
+							<span class="font-weight-light d-block" style="margin-left: 40px;">如果您当前正在使用我们的API，请确保<span style="color:#FB3640;">在2020年9月30日</span>之前使用新的Glue Up API更新端点 </span>
+							</div>
+<p><a href="https://glueupapi.docs.apiary.io/">查看新的Glue Up API文档。</a>.</p>
+<p>以下指南可帮助您迁移至新的Glue Up API：<br>
+<div class="pl-3">
+<p>• API文件的EventBank.php中，将变量* $ API_endpoint *从“ eventbank.com/cn/ru”更新为“ glueup.cn/cn/ru”。</p>
+<p>• 在将用户从您的网站重定向到EventBank的任何代码中，将包含“ eventbank.com/cn/ru”的URL更新为“ glueup.cn/cn/ru”。</p>
+<p>• 在网站嵌入部件代码中，将包含“ eventbank.com/cn/ru”的URL更新为“ glueup.cn/cn/ru（_http://glueup.cn/cn/ru_ (http://glueup.cn/cn/ru)）”。</p>
+</div>
+<p>如果您需要任何帮助，<a href="#support" value="Submit" id="support-link" input-type="submit" data-toggle="modal" data-target="#support">请与我们联系</a> 或发送电子邮件至support@glueup.cn或support@eventbank.com</p>
+
+
+</div>
+	            	
+	            
+	            	</div>
+            	</div>
+            				
+           	</div>
+        </div>
+</section>
+<section  id="user" class="section ">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-8 d-flex align-items-center text-center mx-auto">
+                    <p class="mb-4 sentence mx-auto">四、对社群组织而言，会受到哪些影响？</p>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section class="section pt-0">
+        <div class="container">
+            <div class="row justify-content-center">
+            	<div class="col-md-8 pt-4 mx-auto">
+	            		
+<div data-spy="scroll" data-target="#navbar-example3" data-offset="80">
+
+<h5 id="item-3-1">崭新的登录页面</h5>
+
+<p>2020年8月24日，所有用户都将自动退出平台，需要重新登录，您只需用您的登录名重新<a href="https://glueup.cn/login">登录</a>Glue Up即可 (https://glueup.cn/login)。 您存储在“我的EventBank”中的所有数据，例如活动，营销邮件和会籍信息，都将显示在您的个人互动中心“My Glue”。 </p>
+
+
+<h5 id="item-3-2" class="pt-5">如何与我的会员，参会者和其他利益相关者交流这一品牌变更？</h5>
+
+<p>为了使您更轻松地与您的会员沟通，我们准备了一封<a  href="https://www.eventbank.com/organization/170/campaign/51298/">电子邮件</a>，其中包含此次品牌升级的相关信息，您可以使用这些信息来向您的社群更新有关Glue Up及其含义的信息。 您可以随意使用和编辑您需要的内容。 </p>
+
+<h5 id="item-3-3" class="pt-5 pb-2">参会者和会员的EventBank移动端App会有何变化？</h5>
+<img src="{{ 'my-glue@2x.png' | media }}" class="rounded mb-3" alt="Glue Up Manager App ">
+<p>目前，适用于参会者和会员的EventBank捷会易App为My Glue。如果您之前下载过EventBank 捷会易的移动端App，则无需再次安装或下载任何内容，只需从App Store或Google Play更新EventBank App。 然后，重新登录，选择相应的服务器即可继续使用My Glue App。</p>
+ <div class="row">
+  <div class="col-md-5 mx-auto">
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto" style="padding: .5rem 1rem;" href="https://apps.apple.com/us/app/eventbank/id958545893"><i class="icon-apple" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在AppStore下载My Glue</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto mt-3"  style="padding: .5rem 1rem;" href="https://play.google.com/store/apps/details?id=com.eventbank.android.attendee"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在Google Play下载My Glue</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto mt-3"  style="padding: .5rem 1rem;" href="https://www.wandoujia.com/apps/6654640"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在豌豆荚下载My Glue</span></a></div>
+  </div>
+
+<h5 id="item-3-4" class="pt-5">我应该告诉会员/注册参会者/其他利益相关者什么信息？</h5>
+<p>2020年8月24日，您的会员，活动参与者和所有其他注册用户将退出EventBank，并自动转至Glue Up上的新<a href="https://glueup.cn/login">登录</a>页面，用户可以使用在EventBank捷会易上使用的登录信息，在此处进行登录。 重新定向将是自动的，因此您无需执行任何操作。</p>
+<h5 id="item-3-5" class="pt-5">如果我是组织的会员，我的个人资料将会如何处理？</h5>
+<p>如果您是组织的会员，则必须从Glue Up页面（https://glueup.cn/login）<a href="https://glueup.cn/login">登录</a>。 您的会员详细信息以及您所在会员组织对信息的访问权将在此处提供。 如果您已收到用于申请或续订会员资格的电子邮件，仍然可以单击邮件内的链接，然后您将被重新定向至Glue Up上的相应页面，以完成其余步骤。</p>
+<h5 id="item-3-6" class="pt-5">如果我已经注册了活动，那么过去参与的活动，和未来即将举行的活动，注册一事会有何影响？</h5>
+<p>如果您已经注册了活动，则仍然可以通过My Glue访问您的注册。 您将必须从Glue Up（_https://glueup.cn/login）a href="https://glueup.cn/login">登录</a>，将显示您的个人资料以及与帐户有关的所有信息（例如以前的活动，成员资格和订阅）。</p>
+
+</div>
+	            	
+	            
+	            	</div>
+            	</div>
+            				
+           	</div>
+        </div>
+</section>";s:4:"code";N;s:7:"viewBag";a:0:{}}}

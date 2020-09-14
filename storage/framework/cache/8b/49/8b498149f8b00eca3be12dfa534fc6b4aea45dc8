@@ -1,0 +1,855 @@
+1600067169a:1:{s:29:"platform/event-management.htm";a:16:{s:8:"fileName";s:29:"platform/event-management.htm";s:7:"content";s:31917:"title = "Event Management"
+url = "/features/event-management"
+layout = "glueup-home"
+description = "Take care of the whole event lifecycle of your online and offline events from the first idea to follow-up with Glue Up platform."
+meta_title = "Event Management Solution"
+meta_description = "Take care of the whole event lifecycle for your online and offline events from the first idea to follow-up with Glue Up platform."
+is_hidden = 0
+seo_keywords = "event management software, community engagement, event  automation, EMS, all-in-one event management software, event planning, webinar monetization, attendee engagement, event tech"
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeMeta_title[es_la] = "Administra tus eventos En un solo lugar"
+localeMeta_title[Pt_br] = "Gerencie Seus Eventos All-in-one"
+localeMeta_title[ru] = "Управление мероприятиями"
+localeMeta_title[tk] = "Etkinlik Yönetimi"
+localeMeta_title[zh] = "活动管理"
+localeMeta_description[es_la] = "Ten el control de todo el ciclo del evento de tus eventos en línea y presenciales desde la primera idea hasta el seguimiento con una sola plataforma."
+localeMeta_description[Pt_br] = "Cuide de todo o ciclo de vida de seus eventos online e offline, desde a primeira ideia até o acompanhamento com uma plataforma."
+localeMeta_description[ru] = "Позаботьтесь о полном жизненном цикле ваших онлайн и оффлайн мероприятий, начиная с первой идеи и заканчивая последующей деятельностью с помощью одной платформы."
+localeMeta_description[tk] = "Çevrimiçi ve çevrimdışı etkinliklerinizin ilk fikirden tek bir platformla takip edilmesine kadar tüm etkinlik yaşam döngüsüyle ilgilenin."
+localeMeta_description[zh] = "从最初的会前策划到会后跟进，Glue Up 一体化云平台为您的线上、线下活动提供全生命周期管理。"
+==
+<?php
+function onEnd(){
+    $this->page->nav_highlight = 'features';
+ }
+?>
+==
+<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+            <div class="row flex-row-reverse">
+                <div class="col-md-6 hero align-self-center text-left">
+                    <img src="{{ 'glueup-events-feature.svg' | media }}" class="paygage-visual" alt="logo">
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-left">
+                    <p class="tagline mb-4">{{ 'Event Management'|_}} </p>
+                      <h1>{{ 'Manage Your Events <span class="line"><ins>All-in-one</ins></span>'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Take care of the whole event lifecycle of your online and offline events from the first idea to follow-up with one platform.'|_ }} </p>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+            </div>
+        </div> 
+</header>
+<section class="section pt-0">
+	<div class="container">
+            <div class="row">
+                    <div class="col-md-8 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Own your events at every stage'|_ }}</h2>
+                             <p class="tagline"> {{ 'From small workshops and webinars to multi-day summits with thousands of attendees, Glue Up’s automated events platform makes event planning faster and more efficient for the whole team.'|_ }}</p>
+                        </div>
+                    </div>
+            </div>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-2 mx-auto pt-5">
+       <div class="col-md-8 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Before'|_ }}</h2>
+                        </div>
+                    </div>
+            <ul class="timeline timeline-centered">               
+                <li class="timeline-item pb-5">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2 pb-5">
+                        <h4 class="timeline-title">{{ 'Create'|_ }}</h4>
+                        {#<div style="font-size: 110px; font-weight: 700; line-height: 1; float:right;">1</div>#}
+                        <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Ready, set, go! <br>That easy.'|_ }}</h2>
+                        <p>{{ 'Set up one or hundred high-converting event pages without compromising on your branding.'|_}}{{' Create custom registration forms, activate supported payment options, add speakers and agenda. All in just a few clicks.'|_ }} </p>
+                        <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-publishing"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Website Builder'|_ }}</p>
+                                    </div>      
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-event-optimize"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Registration Forms'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-blueprint"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Blueprint & Duplication'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-ticket"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-template"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Templates'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>                        
+                        
+                    </div>
+                    <div class="timeline-info">
+                        <img src="{{ 'features/glueup-event-templates.svg' | media }}" alt="Glue Up Helps you create and manage events efficiently" class="img-fluid mx-auto paygage-visual lazy ">
+                    </div>
+                </li>
+                <li class="timeline-item pb-5">
+                    
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2 pb-5">
+                         <h4 class="timeline-title">{{ 'Promote'|_ }}</h4>
+                        <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Tell the world <br>about your event'|_ }}</h2>
+                        <p>{{ 'Streamline your event marketing and send newsletters, branded event invitations and other emails to targeted audiences.'|_}}{{' Share your event page on your website or social media channels for even more exposure. '|_ }}</p>
+                        <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-email-campaigns"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Branded Event Invitations'|_ }}</p>
+                                    </div>      
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-notifications"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Automated Notifications'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Social Media Integrations'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-button"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Drag & Drop Email Editor'|_ }}</p>
+                                    </div>
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-filter"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'List Segmentation'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="timeline-info">
+                        <img src="{{ 'features/glueup-promote.svg' | media }}" alt="Glue Up Helps you promote your events efficiently" class="img-fluid mx-auto paygage-visual lazy ">
+                    </div>
+                </li>
+                <li class="timeline-item period">
+                    <div class="timeline-info"></div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h2 class="timeline-title">{{'During'|_}}</h2>
+                    </div>
+                </li>
+                <li class="timeline-item pb-5">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2 pb-5">
+                        <h4 class="timeline-title">{{ 'Check In'|_ }}</h4>
+                        {#<div style="font-size: 110px; font-weight: 700; line-height: 1; float:right;">1</div>#}
+                        <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Make first impressions memorable'|_ }}</h2>
+                        <p>{{ 'Remind attendees about the event with push notifications and automatic reminders.'|_ }} {{ 'Then welcome them online at your virtual or physical event with smooth check-ins, and provide badges or digital business cards.'|_ }}</p>
+                        <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-qr-code"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'QR Code Check-ins'|_ }}</p>
+                                    </div>      
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-attendees-badge"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Badge Design & Printing'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-notifications"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Notifications'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-planner"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Agenda, Maps, Bios'|_ }}</p>
+                                    </div>
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-documents"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Documents'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>                        
+                        
+                    </div>
+                    <div class="timeline-info">
+                        <img src="{{ 'features/glueup-checkin.svg' | media }}" alt="Glue Up helps you deliver smooth checkins" class="img-fluid mx-auto paygage-visual lazy ">
+                    </div>
+                </li>
+                <li class="timeline-item pb-5">
+                    
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2 pb-5">
+                         <h4 class="timeline-title">{{ 'Manage'|_ }}</h4>
+                        <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Know how you do <br>in real time'|_ }}</h2>
+                        <p>{{ 'Track attendance, sponsorship sales, profit & loss from each event and performance of your event campaigns from anywhere.'|_ }}</p>
+                        <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-presentation"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Profit & Loss Reports'|_ }}</p>
+                                    </div>      
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-analytics"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Live Check-in Metrics'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-add-contact"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Walk-in Attendees'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-exhibitor"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Exhibitor Management'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="timeline-info">
+                        <img src="{{ 'features/glueup-manage.svg' | media }}" alt="Glue Up helps you manage your events efficiently" class="img-fluid mx-auto paygage-visual lazy ">
+                    </div>
+                </li>
+                <li class="timeline-item pb-5">
+                    
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2 pb-5">
+                         <h4 class="timeline-title">{{ 'Engage'|_ }}</h4>
+                        <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Exceed attendes’ expectations'|_ }}</h2>
+                        <p>{{ 'Enable your event community to create and share their own digital business cards.'|_}}{{' Manage their contacts and effectively network with everyone before, during, and after your physical and online events.'|_ }}</p>
+                        <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Attendee Chat'|_ }}</p>
+                                    </div>      
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-crm"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Individual CRM'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Business Card Exchange'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Rooms'|_ }}</p>
+                                    </div>
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Glue Up Mobile App'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="timeline-info">
+                        <img src="{{ 'features/glueup-engage.svg' | media }}" alt="Glue Up Helps you engage your attendees" class="img-fluid mx-auto paygage-visual lazy ">
+                    </div>
+                </li>
+                <li class="timeline-item period">
+                    <div class="timeline-info"></div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h2 class="timeline-title">{{'After'|_}}</h2>
+                    </div>
+                </li>
+                <li class="timeline-item pb-5">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2 pb-5">
+                        <h4 class="timeline-title">{{ 'Follow Up'|_ }}</h4>
+                        {#<div style="font-size: 110px; font-weight: 700; line-height: 1; float:right;">1</div>#}
+                        <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Ask for feedback'|_ }}</h2>
+                        <p>{{ 'Easily create surveys, quizzes, and polls to measure and understand feedback so you can improve your events.'|_ }}</p>
+                        <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-button"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Easy Setup'|_ }}</p>
+                                    </div>      
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-help"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Unlimited Questions'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-speaker"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Expert-Written Templates'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Survey logic'|_ }}</p>
+                                    </div>
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-analytics"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Tracking & Analytics'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>                        
+                        
+                    </div>
+                    <div class="timeline-info">
+                        <img src="{{ 'features/glueup-feedback.svg' | media }}" alt="Glue Up helps you follow up after the event" class="img-fluid mx-auto paygage-visual lazy ">
+                    </div>
+                </li>
+                <li class="timeline-item pb-5">
+                    
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2 pb-5">
+                         <h4 class="timeline-title">{{ 'Evaluate'|_ }}</h4>
+                        <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Understand the Impact <br>of Your Events'|_ }}</h2>
+                        <p>{{ 'Analyze your performance with powerful dashboards and reports to get insights into your attendee’s activity from events, email marketing, sales or finance. '|_ }}</p>
+                        <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-analytics"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'ROI Insights '|_ }}</p>
+                                    </div>      
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-email-solid"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Email Analytics'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-dash-2"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Customizable Dashboards'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-invoice"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Automatic Invoices & Receipts'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="timeline-info">
+                        <img src="{{ 'features/glueup-analyze.svg' | media }}" alt="Glue Up helps you analyze your performance" class="img-fluid mx-auto paygage-visual lazy ">
+                    </div>
+                </li>
+                <li class="timeline-item pb-5">
+                    
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2 pb-5">
+                         <h4 class="timeline-title">{{ 'Scale Up'|_ }}</h4>
+                        <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Get Better <br>and Go Again '|_ }}</h2>
+                        <p>{{ 'Convert your most successful events into templates.'|_}}{{' Make quick edits and host new events with similar registration processes, pricing, sponsors, and invite new and previous atteendees to save even more time. '|_ }}</p>
+                        <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-documents"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Easy Event Duplication '|_ }}</p>
+                                    </div>      
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-crm"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Glue Up CRM'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-translation-switch"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Multi-language Support'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-blueprint"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Blueprints '|_ }}</p>
+                                    </div>
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-opportunity"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Opportunities Pipeline'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="timeline-info">
+                        <img src="{{ 'features/glueup-scaleup.svg' | media }}" alt="Glue Up helps scale up your events" class="img-fluid mx-auto paygage-visual lazy ">
+                    </div>
+                </li>
+                
+                {#<li class="timeline-item">
+                    <div class="timeline-info">
+                        <span>April 28, 2016</span>
+                    </div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2">
+                        <h3 class="timeline-title">{{ 'Ready, set, go! That easy'|_ }}</h3>
+                        <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
+                            eu pede mollis pretium. Pellentesque ut neque. </p>
+                    </div>
+                </li>#}
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+<section class="section pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center mx-auto pb-3 pb-md-0 text-center">
+                <div>
+                            <span class="h6 text-color hideme">{{ 'Online Events'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Monetize & Enhance <br>Your Webinars'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Run webinars and other online events from an all-in-one platform. Provide premium and seamless experience to attendees and marketing exposure to your sponsors and partners. '|_ }}
+    						     </p>
+                             </div>
+                
+                  <img src="{{ 'features/glueup-webinars.svg' | media }}" alt="Glue Up helps you monetize your webinars" class="img-fluid mx-auto paygage-visual lazy ">
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-star-full"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Premium Branding Options'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-sponsor"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Sponsor Promotion'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Attendeee Chat'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-document"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Webinar Documents'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Digital Business Cards'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{% partial 'platform/features-nav.htm' %}
+{#{% partial 'elements/case-study.htm' %}#}
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-6 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Learn more about Associations and Glue Up'|_ }}</h2>
+                             {#<p class="tagline">{{ 'An all-in-one solution that helps you save time and focus on your mission while keeping everybody on the same page.'|_ }} </p>#}
+                        </div>
+                    </div>
+            </div>
+             {% partial 'industry/industry-blog.htm' event='associations' wp1='associations' wp2='event' %}
+            </div>
+        </div>
+
+</section>
+{% partial 'solutions/footer-cta-mem.htm' %}
+";s:5:"mtime";i:1598253770;s:6:"markup";s:29841:"<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+            <div class="row flex-row-reverse">
+                <div class="col-md-6 hero align-self-center text-left">
+                    <img src="{{ 'glueup-events-feature.svg' | media }}" class="paygage-visual" alt="logo">
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-left">
+                    <p class="tagline mb-4">{{ 'Event Management'|_}} </p>
+                      <h1>{{ 'Manage Your Events <span class="line"><ins>All-in-one</ins></span>'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Take care of the whole event lifecycle of your online and offline events from the first idea to follow-up with one platform.'|_ }} </p>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+            </div>
+        </div> 
+</header>
+<section class="section pt-0">
+	<div class="container">
+            <div class="row">
+                    <div class="col-md-8 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Own your events at every stage'|_ }}</h2>
+                             <p class="tagline"> {{ 'From small workshops and webinars to multi-day summits with thousands of attendees, Glue Up’s automated events platform makes event planning faster and more efficient for the whole team.'|_ }}</p>
+                        </div>
+                    </div>
+            </div>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-12 col-sm-offset-2 mx-auto pt-5">
+       <div class="col-md-8 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Before'|_ }}</h2>
+                        </div>
+                    </div>
+            <ul class="timeline timeline-centered">               
+                <li class="timeline-item pb-5">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2 pb-5">
+                        <h4 class="timeline-title">{{ 'Create'|_ }}</h4>
+                        {#<div style="font-size: 110px; font-weight: 700; line-height: 1; float:right;">1</div>#}
+                        <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Ready, set, go! <br>That easy.'|_ }}</h2>
+                        <p>{{ 'Set up one or hundred high-converting event pages without compromising on your branding.'|_}}{{' Create custom registration forms, activate supported payment options, add speakers and agenda. All in just a few clicks.'|_ }} </p>
+                        <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-publishing"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Website Builder'|_ }}</p>
+                                    </div>      
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-event-optimize"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Registration Forms'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-blueprint"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Blueprint & Duplication'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-ticket"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-template"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Templates'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>                        
+                        
+                    </div>
+                    <div class="timeline-info">
+                        <img src="{{ 'features/glueup-event-templates.svg' | media }}" alt="Glue Up Helps you create and manage events efficiently" class="img-fluid mx-auto paygage-visual lazy ">
+                    </div>
+                </li>
+                <li class="timeline-item pb-5">
+                    
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2 pb-5">
+                         <h4 class="timeline-title">{{ 'Promote'|_ }}</h4>
+                        <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Tell the world <br>about your event'|_ }}</h2>
+                        <p>{{ 'Streamline your event marketing and send newsletters, branded event invitations and other emails to targeted audiences.'|_}}{{' Share your event page on your website or social media channels for even more exposure. '|_ }}</p>
+                        <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-email-campaigns"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Branded Event Invitations'|_ }}</p>
+                                    </div>      
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-notifications"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Automated Notifications'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Social Media Integrations'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-button"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Drag & Drop Email Editor'|_ }}</p>
+                                    </div>
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-filter"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'List Segmentation'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="timeline-info">
+                        <img src="{{ 'features/glueup-promote.svg' | media }}" alt="Glue Up Helps you promote your events efficiently" class="img-fluid mx-auto paygage-visual lazy ">
+                    </div>
+                </li>
+                <li class="timeline-item period">
+                    <div class="timeline-info"></div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h2 class="timeline-title">{{'During'|_}}</h2>
+                    </div>
+                </li>
+                <li class="timeline-item pb-5">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2 pb-5">
+                        <h4 class="timeline-title">{{ 'Check In'|_ }}</h4>
+                        {#<div style="font-size: 110px; font-weight: 700; line-height: 1; float:right;">1</div>#}
+                        <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Make first impressions memorable'|_ }}</h2>
+                        <p>{{ 'Remind attendees about the event with push notifications and automatic reminders.'|_ }} {{ 'Then welcome them online at your virtual or physical event with smooth check-ins, and provide badges or digital business cards.'|_ }}</p>
+                        <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-qr-code"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'QR Code Check-ins'|_ }}</p>
+                                    </div>      
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-attendees-badge"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Badge Design & Printing'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-notifications"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Notifications'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-planner"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Agenda, Maps, Bios'|_ }}</p>
+                                    </div>
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-documents"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Documents'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>                        
+                        
+                    </div>
+                    <div class="timeline-info">
+                        <img src="{{ 'features/glueup-checkin.svg' | media }}" alt="Glue Up helps you deliver smooth checkins" class="img-fluid mx-auto paygage-visual lazy ">
+                    </div>
+                </li>
+                <li class="timeline-item pb-5">
+                    
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2 pb-5">
+                         <h4 class="timeline-title">{{ 'Manage'|_ }}</h4>
+                        <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Know how you do <br>in real time'|_ }}</h2>
+                        <p>{{ 'Track attendance, sponsorship sales, profit & loss from each event and performance of your event campaigns from anywhere.'|_ }}</p>
+                        <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-presentation"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Profit & Loss Reports'|_ }}</p>
+                                    </div>      
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-analytics"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Live Check-in Metrics'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-add-contact"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Walk-in Attendees'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-exhibitor"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Exhibitor Management'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="timeline-info">
+                        <img src="{{ 'features/glueup-manage.svg' | media }}" alt="Glue Up helps you manage your events efficiently" class="img-fluid mx-auto paygage-visual lazy ">
+                    </div>
+                </li>
+                <li class="timeline-item pb-5">
+                    
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2 pb-5">
+                         <h4 class="timeline-title">{{ 'Engage'|_ }}</h4>
+                        <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Exceed attendes’ expectations'|_ }}</h2>
+                        <p>{{ 'Enable your event community to create and share their own digital business cards.'|_}}{{' Manage their contacts and effectively network with everyone before, during, and after your physical and online events.'|_ }}</p>
+                        <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Attendee Chat'|_ }}</p>
+                                    </div>      
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-crm"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Individual CRM'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Business Card Exchange'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Rooms'|_ }}</p>
+                                    </div>
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Glue Up Mobile App'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="timeline-info">
+                        <img src="{{ 'features/glueup-engage.svg' | media }}" alt="Glue Up Helps you engage your attendees" class="img-fluid mx-auto paygage-visual lazy ">
+                    </div>
+                </li>
+                <li class="timeline-item period">
+                    <div class="timeline-info"></div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h2 class="timeline-title">{{'After'|_}}</h2>
+                    </div>
+                </li>
+                <li class="timeline-item pb-5">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2 pb-5">
+                        <h4 class="timeline-title">{{ 'Follow Up'|_ }}</h4>
+                        {#<div style="font-size: 110px; font-weight: 700; line-height: 1; float:right;">1</div>#}
+                        <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Ask for feedback'|_ }}</h2>
+                        <p>{{ 'Easily create surveys, quizzes, and polls to measure and understand feedback so you can improve your events.'|_ }}</p>
+                        <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-button"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Easy Setup'|_ }}</p>
+                                    </div>      
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-help"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Unlimited Questions'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-speaker"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Expert-Written Templates'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Survey logic'|_ }}</p>
+                                    </div>
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-analytics"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Tracking & Analytics'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>                        
+                        
+                    </div>
+                    <div class="timeline-info">
+                        <img src="{{ 'features/glueup-feedback.svg' | media }}" alt="Glue Up helps you follow up after the event" class="img-fluid mx-auto paygage-visual lazy ">
+                    </div>
+                </li>
+                <li class="timeline-item pb-5">
+                    
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2 pb-5">
+                         <h4 class="timeline-title">{{ 'Evaluate'|_ }}</h4>
+                        <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Understand the Impact <br>of Your Events'|_ }}</h2>
+                        <p>{{ 'Analyze your performance with powerful dashboards and reports to get insights into your attendee’s activity from events, email marketing, sales or finance. '|_ }}</p>
+                        <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-analytics"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'ROI Insights '|_ }}</p>
+                                    </div>      
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-email-solid"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Email Analytics'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-dash-2"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Customizable Dashboards'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-invoice"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Automatic Invoices & Receipts'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="timeline-info">
+                        <img src="{{ 'features/glueup-analyze.svg' | media }}" alt="Glue Up helps you analyze your performance" class="img-fluid mx-auto paygage-visual lazy ">
+                    </div>
+                </li>
+                <li class="timeline-item pb-5">
+                    
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2 pb-5">
+                         <h4 class="timeline-title">{{ 'Scale Up'|_ }}</h4>
+                        <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Get Better <br>and Go Again '|_ }}</h2>
+                        <p>{{ 'Convert your most successful events into templates.'|_}}{{' Make quick edits and host new events with similar registration processes, pricing, sponsors, and invite new and previous atteendees to save even more time. '|_ }}</p>
+                        <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-documents"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Easy Event Duplication '|_ }}</p>
+                                    </div>      
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-crm"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Glue Up CRM'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-translation-switch"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Multi-language Support'|_ }}</p>
+                                    </div>  
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-blueprint"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Blueprints '|_ }}</p>
+                                    </div>
+                                    <div class="col-md text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-opportunity"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Opportunities Pipeline'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="timeline-info">
+                        <img src="{{ 'features/glueup-scaleup.svg' | media }}" alt="Glue Up helps scale up your events" class="img-fluid mx-auto paygage-visual lazy ">
+                    </div>
+                </li>
+                
+                {#<li class="timeline-item">
+                    <div class="timeline-info">
+                        <span>April 28, 2016</span>
+                    </div>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content pt-2">
+                        <h3 class="timeline-title">{{ 'Ready, set, go! That easy'|_ }}</h3>
+                        <p>Nullam vel sem. Nullam vel sem. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Donec vitae sapien ut libero venenatis faucibus. ullam dictum felis
+                            eu pede mollis pretium. Pellentesque ut neque. </p>
+                    </div>
+                </li>#}
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+<section class="section pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center mx-auto pb-3 pb-md-0 text-center">
+                <div>
+                            <span class="h6 text-color hideme">{{ 'Online Events'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Monetize & Enhance <br>Your Webinars'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Run webinars and other online events from an all-in-one platform. Provide premium and seamless experience to attendees and marketing exposure to your sponsors and partners. '|_ }}
+    						     </p>
+                             </div>
+                
+                  <img src="{{ 'features/glueup-webinars.svg' | media }}" alt="Glue Up helps you monetize your webinars" class="img-fluid mx-auto paygage-visual lazy ">
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-star-full"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Premium Branding Options'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-sponsor"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Sponsor Promotion'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-chat"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Attendeee Chat'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-document"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Webinar Documents'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-contact-card"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Digital Business Cards'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{% partial 'platform/features-nav.htm' %}
+{#{% partial 'elements/case-study.htm' %}#}
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-6 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Learn more about Associations and Glue Up'|_ }}</h2>
+                             {#<p class="tagline">{{ 'An all-in-one solution that helps you save time and focus on your mission while keeping everybody on the same page.'|_ }} </p>#}
+                        </div>
+                    </div>
+            </div>
+             {% partial 'industry/industry-blog.htm' event='associations' wp1='associations' wp2='event' %}
+            </div>
+        </div>
+
+</section>
+{% partial 'solutions/footer-cta-mem.htm' %}";s:4:"code";s:65:"function onEnd(){
+    $this->page->nav_highlight = 'features';
+ }";s:5:"title";s:16:"Event Management";s:3:"url";s:26:"/features/event-management";s:6:"layout";s:11:"glueup-home";s:11:"description";s:128:"Take care of the whole event lifecycle of your online and offline events from the first idea to follow-up with Glue Up platform.";s:10:"meta_title";s:25:"Event Management Solution";s:16:"meta_description";s:129:"Take care of the whole event lifecycle for your online and offline events from the first idea to follow-up with Glue Up platform.";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:180:"event management software, community engagement, event  automation, EMS, all-in-one event management software, event planning, webinar monetization, attendee engagement, event tech";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:7:"viewBag";a:2:{s:16:"localeMeta_title";a:5:{s:5:"es_la";s:39:"Administra tus eventos En un solo lugar";s:5:"Pt_br";s:32:"Gerencie Seus Eventos All-in-one";s:2:"ru";s:47:"Управление мероприятиями";s:2:"tk";s:18:"Etkinlik Yönetimi";s:2:"zh";s:12:"活动管理";}s:22:"localeMeta_description";a:5:{s:5:"es_la";s:150:"Ten el control de todo el ciclo del evento de tus eventos en línea y presenciales desde la primera idea hasta el seguimiento con una sola plataforma.";s:5:"Pt_br";s:128:"Cuide de todo o ciclo de vida de seus eventos online e offline, desde a primeira ideia até o acompanhamento com uma plataforma.";s:2:"ru";s:299:"Позаботьтесь о полном жизненном цикле ваших онлайн и оффлайн мероприятий, начиная с первой идеи и заканчивая последующей деятельностью с помощью одной платформы.";s:2:"tk";s:148:"Çevrimiçi ve çevrimdışı etkinliklerinizin ilk fikirden tek bir platformla takip edilmesine kadar tüm etkinlik yaşam döngüsüyle ilgilenin.";s:2:"zh";s:128:"从最初的会前策划到会后跟进，Glue Up 一体化云平台为您的线上、线下活动提供全生命周期管理。";}}}}

@@ -1,0 +1,649 @@
+1600067169a:1:{s:45:"solutions/old-membership-management-suite.htm";a:12:{s:8:"fileName";s:45:"solutions/old-membership-management-suite.htm";s:7:"content";s:20091:"title = "old membership"
+url = "/oldmembrship"
+layout = "glueup-home"
+description = "Solution"
+is_hidden = 1
+robot_index = "noindex"
+robot_follow = "nofollow"
+==
+<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+            <div class="row">
+                
+                <div class="col-md-6 hero align-self-center text-md-left text-center">
+                    <p class="tagline mb-4"> {{ this.page.title}} </p>
+                      <h1>{{ 'See your members,<br>hear your members,<br><span class="line"><ins>speak</ins></span> your members.'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'The future of membership engagement is digital.<br>We can help you succeed.'|_ }} </p>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-md-left text-center">
+                    <img src="{{ 'testing2.svg' | media }}" class="paygage-visual" alt="glue up hero section">
+
+                </div>
+            </div>
+        </div> 
+</header>
+{% partial 'elements/logobar.htm' %}
+
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-8 mx-auto pb-4">
+                        <div class="block text-center">
+                            <small>{{ 'Glue Up'|_ }}</small>
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'A single tool from outreach to engaging your members'|_ }}</h2>
+                             <p class="tagline">{{ 'An all-in-one solution that helps you save time and focus on your mission while keeping everybody on the same page.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            {% partial 'solutions/bullets-mem.htm' %}
+            {#<div class="row">
+                        <div class="col-lg-4 py-3">
+                            <div class="card text-center h-100 hideme shadow">
+                              <div class="card-body pt-4">
+                                <i class="align-middle icon-overview pt-5"></i>
+                                <h5 class="card-title mt-3">{{ 'All-in-One Solution'|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'Ultimate toolkit that has everything you and your community needs for maximum engagement.'|_ }}</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 py-3">
+                            <div class="card text-center h-100 hideme shadow">
+                              <div class="card-body pt-4">
+                                <i class="align-middle icon-mobile-check pt-5"></i>
+                                <h5 class="card-title mt-3">{{ 'Built in Mobile Apps'|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'One app for you to manage everything on the go, and one app for your community to stay connected.'|_ }}</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 py-3">
+                            <div class="card text-center h-100 hideme shadow">
+                              <div class="card-body pt-4">
+                                <i class="align-middle icon-button pt-5"></i>
+                                <h5 class="card-title mt-3">{{ 'Easy-to-use for everyone'|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'Premium user experience battle-tested for your and all your audiences’s absolute comfort.'|_ }}</p>
+                              </div>
+                            </div>
+                        </div>
+                </div>#}
+            </div>
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section bg-grey">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'assets/images/preview.svg' | theme }}" alt="paygage is accessible" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Easy-to-use'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Set up your event<br> for success'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Easily create beautiful event pages optimized for maximum conversion that match your branding.'|_ }}<br>
+    						     {{ 'Set up VIP and other tickets, offer Coupons or Early-bird Pricing.'|_ }} <br>{{ 'Choose supported payment options, and customize the registration form to collect all the information you need in the EventBank CRM.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Website Builder'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Registration Forms'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Blueprint & Duplication'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'assets/images/preview.svg' | theme }}" alt="paygage is accessible" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Easy-to-use'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Set up your event<br> for success'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Easily create beautiful event pages optimized for maximum conversion that match your branding.'|_ }}<br>
+    						     {{ 'Set up VIP and other tickets, offer Coupons or Early-bird Pricing.'|_ }} <br>{{ 'Choose supported payment options, and customize the registration form to collect all the information you need in the EventBank CRM.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Website Builder'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Registration Forms'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Blueprint & Duplication'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section bg-grey">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'assets/images/preview.svg' | theme }}" alt="paygage is accessible" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Easy-to-use'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Set up your event<br> for success'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Easily create beautiful event pages optimized for maximum conversion that match your branding.'|_ }}<br>
+    						     {{ 'Set up VIP and other tickets, offer Coupons or Early-bird Pricing.'|_ }} <br>{{ 'Choose supported payment options, and customize the registration form to collect all the information you need in the EventBank CRM.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Website Builder'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Registration Forms'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Blueprint & Duplication'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'assets/images/preview.svg' | theme }}" alt="paygage is accessible" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Easy-to-use'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Set up your event<br> for success'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Easily create beautiful event pages optimized for maximum conversion that match your branding.'|_ }}<br>
+    						     {{ 'Set up VIP and other tickets, offer Coupons or Early-bird Pricing.'|_ }} <br>{{ 'Choose supported payment options, and customize the registration form to collect all the information you need in the EventBank CRM.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Website Builder'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Registration Forms'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Blueprint & Duplication'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+<section class="section bg-grey">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-10 mx-auto pb-4">
+                        <div class="block text-center">
+                            <small>{{ "What's included?"|_ }}</small>
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ this.page.title}}</h2>
+                        </div>
+                    </div>
+            </div>
+            {% partial 'tabs/membership-tabs.htm' %}
+            <div class="row">
+                <div class="col-lg-4 text-center mx-auto mt-1">
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contact-paygage">{{ 'See it in Action'|_ }}</a>
+                </div>
+            </div>
+        </div>
+</section>
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-10 mx-auto pb-4">
+                        <div class="block text-center">
+                            <small>Our Product</small>
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Join thousands of organizations engaging with their members in a new way'|_ }}</h2>
+                             {% partial 'elements/logobar.htm' %}
+                        </div>
+                    </div>
+            </div>
+            {#<div class="col-lg-10 mx-auto">#}
+            <div class="row">
+                    <div class="col-lg-4">
+                        {% partial 'quotes/yale.htm' %}
+                    </div>
+                    <div class="col-lg-4">
+                        {% partial 'quotes/yale.htm' %}
+                    </div>
+                    <div class="col-lg-4">
+                        {% partial 'quotes/yale.htm' %}
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 text-center mx-auto mt-5">
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contact-paygage">{{ 'View All Case Studies'|_ }}</a>
+                </div>
+            </div>
+        </div>
+
+</section>
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-6 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Learn more about Membership Management and Glue Up'|_ }}</h2>
+                             {#<p class="tagline">{{ 'An all-in-one solution that helps you save time and focus on your mission while keeping everybody on the same page.'|_ }} </p>#}
+                        </div>
+                    </div>
+            </div>
+            {% partial 'solutions/membership-blog.htm' %}
+            </div>
+        </div>
+
+</section>
+{% partial 'solutions/footer-cta-mem.htm' %}";s:5:"mtime";i:1597831618;s:6:"markup";s:19929:"<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+            <div class="row">
+                
+                <div class="col-md-6 hero align-self-center text-md-left text-center">
+                    <p class="tagline mb-4"> {{ this.page.title}} </p>
+                      <h1>{{ 'See your members,<br>hear your members,<br><span class="line"><ins>speak</ins></span> your members.'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'The future of membership engagement is digital.<br>We can help you succeed.'|_ }} </p>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+                <div class="col-md-6 hero align-self-center text-md-left text-center">
+                    <img src="{{ 'testing2.svg' | media }}" class="paygage-visual" alt="glue up hero section">
+
+                </div>
+            </div>
+        </div> 
+</header>
+{% partial 'elements/logobar.htm' %}
+
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-8 mx-auto pb-4">
+                        <div class="block text-center">
+                            <small>{{ 'Glue Up'|_ }}</small>
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'A single tool from outreach to engaging your members'|_ }}</h2>
+                             <p class="tagline">{{ 'An all-in-one solution that helps you save time and focus on your mission while keeping everybody on the same page.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            {% partial 'solutions/bullets-mem.htm' %}
+            {#<div class="row">
+                        <div class="col-lg-4 py-3">
+                            <div class="card text-center h-100 hideme shadow">
+                              <div class="card-body pt-4">
+                                <i class="align-middle icon-overview pt-5"></i>
+                                <h5 class="card-title mt-3">{{ 'All-in-One Solution'|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'Ultimate toolkit that has everything you and your community needs for maximum engagement.'|_ }}</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 py-3">
+                            <div class="card text-center h-100 hideme shadow">
+                              <div class="card-body pt-4">
+                                <i class="align-middle icon-mobile-check pt-5"></i>
+                                <h5 class="card-title mt-3">{{ 'Built in Mobile Apps'|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'One app for you to manage everything on the go, and one app for your community to stay connected.'|_ }}</p>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 py-3">
+                            <div class="card text-center h-100 hideme shadow">
+                              <div class="card-body pt-4">
+                                <i class="align-middle icon-button pt-5"></i>
+                                <h5 class="card-title mt-3">{{ 'Easy-to-use for everyone'|_ }}</h5>
+                                <p class="card-text mb-5">{{ 'Premium user experience battle-tested for your and all your audiences’s absolute comfort.'|_ }}</p>
+                              </div>
+                            </div>
+                        </div>
+                </div>#}
+            </div>
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section bg-grey">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'assets/images/preview.svg' | theme }}" alt="paygage is accessible" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Easy-to-use'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Set up your event<br> for success'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Easily create beautiful event pages optimized for maximum conversion that match your branding.'|_ }}<br>
+    						     {{ 'Set up VIP and other tickets, offer Coupons or Early-bird Pricing.'|_ }} <br>{{ 'Choose supported payment options, and customize the registration form to collect all the information you need in the EventBank CRM.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Website Builder'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Registration Forms'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Blueprint & Duplication'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'assets/images/preview.svg' | theme }}" alt="paygage is accessible" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Easy-to-use'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Set up your event<br> for success'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Easily create beautiful event pages optimized for maximum conversion that match your branding.'|_ }}<br>
+    						     {{ 'Set up VIP and other tickets, offer Coupons or Early-bird Pricing.'|_ }} <br>{{ 'Choose supported payment options, and customize the registration form to collect all the information you need in the EventBank CRM.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Website Builder'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Registration Forms'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Blueprint & Duplication'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section bg-grey">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'assets/images/preview.svg' | theme }}" alt="paygage is accessible" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Easy-to-use'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Set up your event<br> for success'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Easily create beautiful event pages optimized for maximum conversion that match your branding.'|_ }}<br>
+    						     {{ 'Set up VIP and other tickets, offer Coupons or Early-bird Pricing.'|_ }} <br>{{ 'Choose supported payment options, and customize the registration form to collect all the information you need in the EventBank CRM.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Website Builder'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Registration Forms'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Blueprint & Duplication'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'assets/images/preview.svg' | theme }}" alt="paygage is accessible" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Easy-to-use'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Set up your event<br> for success'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Easily create beautiful event pages optimized for maximum conversion that match your branding.'|_ }}<br>
+    						     {{ 'Set up VIP and other tickets, offer Coupons or Early-bird Pricing.'|_ }} <br>{{ 'Choose supported payment options, and customize the registration form to collect all the information you need in the EventBank CRM.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Website Builder'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Custom Registration Forms'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Event Blueprint & Duplication'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online Ticketing & Payments'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+<section class="section bg-grey">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-10 mx-auto pb-4">
+                        <div class="block text-center">
+                            <small>{{ "What's included?"|_ }}</small>
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ this.page.title}}</h2>
+                        </div>
+                    </div>
+            </div>
+            {% partial 'tabs/membership-tabs.htm' %}
+            <div class="row">
+                <div class="col-lg-4 text-center mx-auto mt-1">
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contact-paygage">{{ 'See it in Action'|_ }}</a>
+                </div>
+            </div>
+        </div>
+</section>
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-10 mx-auto pb-4">
+                        <div class="block text-center">
+                            <small>Our Product</small>
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Join thousands of organizations engaging with their members in a new way'|_ }}</h2>
+                             {% partial 'elements/logobar.htm' %}
+                        </div>
+                    </div>
+            </div>
+            {#<div class="col-lg-10 mx-auto">#}
+            <div class="row">
+                    <div class="col-lg-4">
+                        {% partial 'quotes/yale.htm' %}
+                    </div>
+                    <div class="col-lg-4">
+                        {% partial 'quotes/yale.htm' %}
+                    </div>
+                    <div class="col-lg-4">
+                        {% partial 'quotes/yale.htm' %}
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 text-center mx-auto mt-5">
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#contact-paygage">{{ 'View All Case Studies'|_ }}</a>
+                </div>
+            </div>
+        </div>
+
+</section>
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-6 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Learn more about Membership Management and Glue Up'|_ }}</h2>
+                             {#<p class="tagline">{{ 'An all-in-one solution that helps you save time and focus on your mission while keeping everybody on the same page.'|_ }} </p>#}
+                        </div>
+                    </div>
+            </div>
+            {% partial 'solutions/membership-blog.htm' %}
+            </div>
+        </div>
+
+</section>
+{% partial 'solutions/footer-cta-mem.htm' %}";s:4:"code";N;s:5:"title";s:14:"old membership";s:3:"url";s:13:"/oldmembrship";s:6:"layout";s:11:"glueup-home";s:11:"description";s:8:"Solution";s:9:"is_hidden";s:1:"1";s:11:"robot_index";s:7:"noindex";s:12:"robot_follow";s:8:"nofollow";}}

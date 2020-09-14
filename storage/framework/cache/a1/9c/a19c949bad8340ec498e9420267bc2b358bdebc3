@@ -1,0 +1,38 @@
+1600067169a:1:{s:22:"404-file-not-found.htm";a:11:{s:8:"fileName";s:22:"404-file-not-found.htm";s:7:"content";s:946:"title = "404 - File Not Found"
+url = "/404"
+layout = "glueup-home"
+is_hidden = 0
+robot_index = "noindex"
+robot_follow = "nofollow"
+==
+<header class="hero" id="hero">
+        <div class="container paygage-hero-container">
+         	<div class="row justify-content-center mx-auto">
+    			<div class="col-md-7 align-self-center align-items-center text-center mx-auto align-self-center">
+    			    <h1 class="content-title display-4" style="font-weight:800;">404</h1>
+    				<h2 class="content-title ">{{'File Not Found'|_}}</h2>
+    				<img src="{{ 'glueup-404.svg' | media }}" class="paygage-visual pt-3" alt="glue up hero section">	
+    				<p class="tagline">{{'<span style="text-decoration: line-through;">For</span>, oh, Four. <br>We are very sorry. Lets try to find something for you'|_}}</p>
+                    	
+    			</div>
+		    </div>
+                
+                
+                   
+        </div>
+    </header>";s:5:"mtime";i:1596786371;s:6:"markup";s:812:"<header class="hero" id="hero">
+        <div class="container paygage-hero-container">
+         	<div class="row justify-content-center mx-auto">
+    			<div class="col-md-7 align-self-center align-items-center text-center mx-auto align-self-center">
+    			    <h1 class="content-title display-4" style="font-weight:800;">404</h1>
+    				<h2 class="content-title ">{{'File Not Found'|_}}</h2>
+    				<img src="{{ 'glueup-404.svg' | media }}" class="paygage-visual pt-3" alt="glue up hero section">	
+    				<p class="tagline">{{'<span style="text-decoration: line-through;">For</span>, oh, Four. <br>We are very sorry. Lets try to find something for you'|_}}</p>
+                    	
+    			</div>
+		    </div>
+                
+                
+                   
+        </div>
+    </header>";s:4:"code";N;s:5:"title";s:20:"404 - File Not Found";s:3:"url";s:4:"/404";s:6:"layout";s:11:"glueup-home";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:7:"noindex";s:12:"robot_follow";s:8:"nofollow";}}

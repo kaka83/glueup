@@ -1,0 +1,73 @@
+1600066771a:1:{s:20:"elements/logobar.htm";a:7:{s:8:"fileName";s:20:"elements/logobar.htm";s:7:"content";s:2032:"[viewBag]
+snippetCode = "logobar"
+snippetName = "logobar"
+
+[staticPage]
+useContent = 1
+default = 0
+==
+<section class="">
+        <div class="container text-center">
+            <div class="row">
+                    <div class="col-lg-8 mx-auto py-3">
+                        <div class="block text-center">
+                          
+                             <p class="tagline">{{ 'Forward-looking teams choose Glue Up '|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ 'assets/images/client-logos/inland-empire-logo.png' | theme }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ 'assets/images/client-logos/virginia-tech-logo.png' | theme }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ 'assets/images/client-logos/tempe-chamber-logo.png' | theme }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                     <img src="{{ 'assets/images/client-logos/ite-met-logo.png' | theme }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ 'assets/images/client-logos/queens-chamber-logo.png' | theme }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ 'assets/images/client-logos/greenwich-village-chamber-logo.png' | theme }}" class="img-fluid" alt="logo">
+                </div>
+            </div>
+            <!--<img src="images/client-logos.png" alt="client logos" class="img-fluid">-->
+        </div>
+    </div>";s:5:"mtime";i:1597766394;s:6:"markup";s:1930:"<section class="">
+        <div class="container text-center">
+            <div class="row">
+                    <div class="col-lg-8 mx-auto py-3">
+                        <div class="block text-center">
+                          
+                             <p class="tagline">{{ 'Forward-looking teams choose Glue Up '|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ 'assets/images/client-logos/inland-empire-logo.png' | theme }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ 'assets/images/client-logos/virginia-tech-logo.png' | theme }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ 'assets/images/client-logos/tempe-chamber-logo.png' | theme }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                     <img src="{{ 'assets/images/client-logos/ite-met-logo.png' | theme }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ 'assets/images/client-logos/queens-chamber-logo.png' | theme }}" class="img-fluid" alt="logo">
+                </div>
+                <div class="col-md-2 client-logo align-self-center">
+                    <img src="{{ 'assets/images/client-logos/greenwich-village-chamber-logo.png' | theme }}" class="img-fluid" alt="logo">
+                </div>
+            </div>
+            <!--<img src="images/client-logos.png" alt="client logos" class="img-fluid">-->
+        </div>
+    </div>";s:4:"code";N;s:7:"viewBag";a:2:{s:11:"snippetCode";s:7:"logobar";s:11:"snippetName";s:7:"logobar";}s:10:"staticPage";a:2:{s:10:"useContent";s:1:"1";s:7:"default";s:1:"0";}}}

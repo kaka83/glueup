@@ -1,0 +1,62 @@
+1600066771a:1:{s:20:"blog/footer-blog.htm";a:8:{s:8:"fileName";s:20:"blog/footer-blog.htm";s:7:"content";s:1747:"description = "footer mem"
+
+[viewBag]
+
+[genericForm newsletter]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+{##}{#
+<section class="mt-70 " id="pricing">
+
+	<div class="container rounded position-relative"  style="overflow:hidden;">
+        <div class="cta-block-2 p-xs-2 p-md-5 rounded">
+            <div class="row justify-content-center text-center align-items-center">
+                <div class="col-lg-7 mx-auto">
+                    <h2 class="p-4 mb-lg-0 text-center display-4 font-weight-bold">{{ 'Get the latest updates in your inbox'|_ }}</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center text-center align-items-center">
+                <div class="col-lg-5 mx-auto pt-3">
+                    <div class="input-group mb-3">
+                        <input type="text" id="email-bottom" name="email" placeholder="{{'Your Email'|_}}" aria-label="email" class="form-control has_background">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary btn-round-full pointer" value="Submit" id="emailtomodal" id="newsletter" type="submit">{{'Subscribe'|_}}</button>
+                      </div>
+                    </div>#}
+                    {#<a href="#" class="btn btn-primary-white btn-round-full mt-5" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}{#
+                </div>
+            </div>
+        </div>
+    </div>
+</section>#}";s:5:"mtime";i:1598246369;s:6:"markup";s:1377:"{##}{#
+<section class="mt-70 " id="pricing">
+
+	<div class="container rounded position-relative"  style="overflow:hidden;">
+        <div class="cta-block-2 p-xs-2 p-md-5 rounded">
+            <div class="row justify-content-center text-center align-items-center">
+                <div class="col-lg-7 mx-auto">
+                    <h2 class="p-4 mb-lg-0 text-center display-4 font-weight-bold">{{ 'Get the latest updates in your inbox'|_ }}</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center text-center align-items-center">
+                <div class="col-lg-5 mx-auto pt-3">
+                    <div class="input-group mb-3">
+                        <input type="text" id="email-bottom" name="email" placeholder="{{'Your Email'|_}}" aria-label="email" class="form-control has_background">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary btn-round-full pointer" value="Submit" id="emailtomodal" id="newsletter" type="submit">{{'Subscribe'|_}}</button>
+                      </div>
+                    </div>#}
+                    {#<a href="#" class="btn btn-primary-white btn-round-full mt-5" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}{#
+                </div>
+            </div>
+        </div>
+    </div>
+</section>#}";s:4:"code";N;s:11:"description";s:10:"footer mem";s:7:"viewBag";a:0:{}s:22:"genericForm newsletter";a:9:{s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:13:"inline_errors";s:8:"disabled";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}}}

@@ -1,0 +1,14 @@
+1600067238a:1:{s:22:"site/support-modal.htm";a:6:{s:8:"fileName";s:22:"site/support-modal.htm";s:7:"content";s:374:"[genericForm support]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<!-- // Modal -->
+   {% component 'support'%}";s:5:"mtime";i:1596786370;s:6:"markup";s:46:"<!-- // Modal -->
+   {% component 'support'%}";s:4:"code";N;s:19:"genericForm support";a:9:{s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:13:"inline_errors";s:8:"disabled";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}}}

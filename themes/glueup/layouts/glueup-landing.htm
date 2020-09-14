@@ -1,0 +1,280 @@
+description = "glueup-landing"
+
+[genericForm]
+rules[full_name] = "required"
+rules[phone] = "required"
+rules[email] = "required|email"
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+mail_enabled = 1
+mail_subject = "New Lead to Glue Up!"
+mail_recipients[] = "sales@eventbank.com"
+mail_replyto = "sales@eventbank.com"
+mail_resp_enabled = 1
+mail_resp_field = "email"
+mail_resp_from = "sales@eventbank.com"
+inline_errors = "disabled"
+js_on_success = "window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'formLocation': 'modal',
+ 'event': 'form_submission'
+});
+ var capterra_vkey = '7de872764b79a75783f0a266ce61bdec',
+      capterra_vid = '2094498',
+      capterra_prefix = (('https:' == document.location.protocol) ? 'https://ct.capterra.com' : 'http://ct.capterra.com');
+ 
+      (function() {
+        var ct = document.createElement('script'); ct.type = 'text/javascript'; ct.async = true;
+        ct.src = capterra_prefix + '/capterra_tracker.js?vid=' + capterra_vid + '&vkey=' + capterra_vkey;
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ct, s);
+      })();
+ $('#success').modal('show');
+window.location.replace('/');"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 0
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+
+[hubspotTrackingCode]
+
+[localePicker]
+forceUrl = 0
+
+[geoLocation]
+
+[genericForm pricing]
+rules[full_name] = "required"
+rules[phone] = "required"
+rules[email] = "required|email"
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+mail_enabled = 1
+mail_subject = "New Submission to Glue Up!"
+mail_recipients[] = "sales@eventbank.com"
+mail_replyto = "sales@eventbank.com"
+mail_resp_enabled = 1
+mail_resp_field = "email"
+mail_resp_from = "sales@eventbank.com"
+inline_errors = "disabled"
+js_on_success = "window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'formLocation': 'modal',
+ 'event': 'form_submission'
+});
+$('#pricing').modal('hide');
+ $('#success').modal('show');
+$('.input-group').hide();
+$('#success').modal().addClass('d-flex');"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 0
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+
+[genericForm support]
+rules[full_name] = "required"
+rules[phone] = "required"
+rules[email] = "required|email"
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+mail_enabled = 1
+mail_subject = "New ticket from Glue Up Website!"
+mail_recipients[] = "support@eventbank.com"
+mail_replyto = "support@eventbank.com"
+mail_resp_enabled = 0
+mail_resp_field = "email"
+mail_resp_from = "support@eventbank.com"
+inline_errors = "disabled"
+js_on_success = "window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'formLocation': 'modal',
+ 'event': 'form_submission'
+});
+$('#support').modal('hide');
+ $('#success').modal('show');
+$('.input-group').hide();
+$('#success').modal().addClass('d-flex');"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 0
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+
+[genericForm general]
+rules[full_name] = "required"
+rules[phone] = "required"
+rules[email] = "required|email"
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+mail_enabled = 1
+mail_subject = "New Submission to Glue Up!"
+mail_recipients[] = "pr@eventbank.com"
+mail_replyto = "pr@eventbank.com"
+mail_resp_enabled = 1
+mail_resp_field = "email"
+mail_resp_from = "pr@eventbank.com"
+mail_resp_subject = "Welcome to Glue Up"
+inline_errors = "disabled"
+js_on_success = "window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'formLocation': 'modal',
+ 'event': 'form_submission'
+});
+$('#general').modal('hide');
+ $('#success').modal('show');
+$('.input-group').hide();
+$('#success').modal().addClass('d-flex');"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 0
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+
+[staticPage]
+useContent = 1
+default = 0
+
+[genericForm demoform]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<?php
+use RainLab\Translate\Classes\Translator;
+use RainLab\Translate\Components;
+use Raccoon\GeoLocation\Facades\Geo;
+//use October\Rain\Router\Router as RainRouter;
+//use Cms\Classes\ComponentBase;
+protected $redirect;
+
+protected $translator;
+
+function onStart() {
+    $this->translator = Translator::instance();
+    
+
+$ipAddress = $_SERVER['REMOTE_ADDR']?:($_SERVER['HTTP_X_FORWARDED_FOR']?:$_SERVER['HTTP_CLIENT_IP']);   
+$geoLocation = Geo::getLocation($ipAddress);  
+	$this['Location'] = $geoLocation->countryCode; 
+  if ($geoLocation->countryCode == 'CN') {
+     
+    // $this->page['activeLocale'] = 'cn';
+    // if (!$locale = post('locale')) {
+    //        return;
+    //    }
+    // if (empty($oldLocale)) {
+      $locale = 'cn';
+    // $this->translator->setLocale($locale);
+    // if (!$locale = post('locale')) {
+       //     return;
+       // }
+       // if (!$locale = post('locale')) {
+        //       return;
+         //  }
+        // Remember the current locale before switching to the requested one
+    $this->oldLocale = $this->translator->getLocale();
+         
+       $this['SelectedLanguage'] = $this->activeLocale = $this->translator->setLocale($locale);
+    $this->translator->setLocale($locale);
+    header("Location: https://glueup.com/cn");
+        //$this->page['activeLocale'] = $this->activeLocale = $this->translator->setLocale($locale);
+        //$this['SelectedLanguage'] = $this->activeLocale = $this->translator->setLocale($locale);
+         
+        // $pageUrl = $this->withPreservedQueryString($this->makeLocaleUrlFromPage($locale), $locale);
+        // if ($this->property('forceUrl')) {
+         //   return Redirect::to($this->translator->getPathInLocale($pageUrl, $locale));
+        // }
+
+       // return Redirect::to($pageUrl);
+    
+    
+    
+    // die();
+ } else {
+     $this['SelectedLanguage'] = $this->activeLocale = $this->translator->getLocale();
+ }
+ 
+
+}
+
+/*
+APAC:
+'AF', 'AU', 'AW', 'AZ', 'BD', 'BH', 'KH', 'CN', 'CX', 'CC', 'FJ', 'FK', 'FM', 'FO', 'HK', 'ID', 'IN', 'JP', 'KG', 'KP', 'KR', 'KZ', 'LA', 'LK', 'MO', 'MG', 'MY', 'MN', 'MM', 'NP', 'NZ', 'OM', 'PH', 'PK', 'PW', 'QA', 'SG', 'SY', 'TW', 'TJ', 'TH', 'TM', 'AE', 'UZ', 'VU', 'VN'
+ 
+EMEA:
+'AL', 'DZ', 'BF', 'BW', 'CM', 'CF', 'TD', 'CG', 'CI', 'CD', 'DJ', 'EG', 'TP', 'GQ', 'ER', 'ET', 'GA', 'GM', 'GH', 'IR', 'JO', 'KE', 'LR', 'LS', 'LY', 'MZ', 'NA', 'NE', 'NG', 'RU', 'RW', 'SN', 'SL', 'SO', 'ZA', 'SD', 'SR', 'SJ', 'SZ', 'TZ', 'TL', 'TG', 'TK', 'TO', 'TT', 'TN', 'TR', 'TC', 'TV', 'UA', 'UG', 'EH', 'YE', 'ZM', 'ZW'
+ 
+USA:
+'AX', 'AS', 'AI', 'AD', 'AO', 'AN', 'AG', 'AQ', 'AM', 'AT', 'BA', 'BB', 'BE', 'BG', 'BI', 'BJ', 'BM', 'BN', 'BT', 'BV', 'BV', 'BZ', 'CA', 'CV', 'CK', 'CR', 'HR', 'CY', 'CZ', 'DK', 'DM', 'EE', 'FI', 'FR', 'FX', 'GF', 'PF', 'DE', 'GI', 'GB', 'GD', 'GE', 'GR', 'GL', 'GS', 'HT', 'HU', 'IE', 'IL', 'IO', 'IQ', 'IT', 'KW', 'KY', 'LB', 'LC', 'LI', 'LT', 'LU', 'LV', 'MK', 'MT', 'MA', 'MC', 'MD', 'MV', 'NC', 'NL', 'NO', 'PL', 'CS', 'PT', 'RO', 'SA', 'WS', 'SH', 'VC', 'SM', 'ST', 'SC', 'SK', 'SI', 'SB', 'SE', 'CH', 'UK', 'US', 'UM', 'VA', 'VG', 'VI'
+ 
+LATAM:
+'AR', 'BO', 'BR', 'BS', 'CL', 'CO', 'CU', 'DO', 'EC', 'SV', 'GN', 'GT', 'GU', 'GW', 'GY', 'HN', 'JM', 'MX', 'NI', 'PA', 'PE', 'PG', 'PR', 'PY', 'ES', 'UY', 'VE'
+*/
+
+//function getFacadeAccessor() {
+//$geoLocation = Geo::getLocation($ipAddress);
+//print '<pre>';
+//var_dump('testibggg');
+//var_dump($geoLocation);
+//print '</pre>';
+//if ($geoLocation->countryCode === 'CN') {
+//    header("Location: https://www.glueup.com");
+// } else {
+//    header("Location: https://www.glueup.cn");
+ //    }   
+//}
+?>
+==
+{##}
+<!doctype html>
+<html lang="{{ activeLocale }}">
+{% set CurrentLanguage = SelectedLanguage %}
+<head>
+{% partial 'landing/meta-landing.htm' %}
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="80" data-gr-c-s-loaded="true">
+{# Header with TopBar #}
+<div style="background: background: #0d62fe; position:absolute; height:20vh; width:100%; top:-20vh;">
+</div>
+{% partial 'landing/header-lp.htm' %}
+
+<!--<div class="main-wrapper">{# Main Wrapper #}-->
+{% page %}
+
+{% if activeLocale is same as('cn') %}
+{% partial 'site/footer-cn.htm' %}
+{% else %}
+{% partial 'landing/footer-lp.htm' %}
+{% endif %}
+</div>{# End Main Wrapper #}
+
+<div class="modal-wrapper">
+{% partial 'site/success-modal.htm' %}
+{% partial 'site/general-modal.htm' %}
+{% partial 'site/support-modal' %}
+{% partial 'site/signup-modal.htm' %}
+
+{#{% partial 'site/new_feat.htm' %}#}
+</div>
+{# JavaScripts #}
+{% partial 'site/scripts.htm' %}
+{% component 'hubspotTrackingCode' %}
+</body>
+<!-- HIC SUNT LEONES -->
+</html>

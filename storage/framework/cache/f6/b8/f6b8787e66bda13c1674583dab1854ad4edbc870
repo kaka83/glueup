@@ -1,0 +1,553 @@
+1600067169a:1:{s:20:"platform/cpe-cpd.htm";a:16:{s:8:"fileName";s:20:"platform/cpe-cpd.htm";s:7:"content";s:17619:"title = "Training Management"
+url = "/features/training-management"
+layout = "glueup-home"
+description = "Manage and scale up your trainings and certification courses easily."
+meta_title = "Training Management Solution"
+meta_description = "Manage and scale up your trainings and certification courses easily with Glue Up's all-in-one training management solution."
+is_hidden = 0
+seo_keywords = "Training management software, CPD/CPE credits, training management system, professional associations, course manageement, e-courses, e-learning, certification software, licenses,"
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeMeta_title[es_la] = "Haz Mejores Programas de Entrenamiento"
+localeMeta_title[Pt_br] = "Execute os Melhores Programas de Treinamento"
+localeMeta_title[ru] = "Запустите учебные программы"
+localeMeta_title[tk] = "CPE / CPD Kredileri"
+localeMeta_title[zh] = "培训管理"
+localeMeta_description[es_la] = "Administra y escala tus cursos de capacitación y certificación facilmente."
+localeMeta_description[Pt_br] = "Gerencie e amplie seus treinamentos e cursos de certificação facilmente."
+localeMeta_description[ru] = "С легкостью управляйте и масштабируйте свои тренинги и сертификационные курсы."
+localeMeta_description[tk] = "Eğitimlerinizi ve sertifika kurslarınızı kolayca yönetin ve ölçeklendirin."
+localeMeta_description[zh] = "轻松管理您的培训认证课程，并实现规模化发展。"
+==
+<?php
+function onEnd(){
+    $this->page->nav_highlight = 'features';
+ }
+?>
+==
+<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+            <div class="row flex-row-reverse">
+                <div class="col-md-6 hero align-self-center text-left">
+                     <img src="{{ 'glueup-learning.svg' | media }}" class="paygage-visual" alt="glue up hero section">
+                </div>
+                
+                <div class="col-md-6 hero align-self-center text-md-left text-center">
+                    <p class="tagline mb-4">{{ 'Training Management'|_}}</p>
+                      <h1>{{ 'Run <span class="line"><ins>Better </ins></span><br> Training Programs'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Manage and scale up your trainings and certification courses easily.  '|_ }} </p>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+            </div>
+        </div> 
+</header>
+<section class="section pt-0">
+<div class="container">
+            <div class="row">
+                    <div class="col-lg-7 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Transform Your Training Programs'|_ }}</h2>
+                             <p class="tagline">{{ 'Automate repetitive tasks so you can get back to scaling up your courses and engaging your attendees.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+	            <div class="col-lg-10 align-self-center mx-auto">
+				    <div class="services__accordion row flex-row-reverse">
+				            <div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+								<div class="accordion__img desktop">
+								    <div id="tab1-bullet-img" class="firstshow">
+								        <img class="feature-window desktop" src="{{ 'glueup-all-in-one.svg' | media }}" alt="Glue Up is an all-in-one management solution">
+								         
+								    </div>
+								    <div id="tab2-bullet-img">
+								        <img class="feature-window deskto" src="{{ 'features/glueup-automate.svg' | media }}" alt="Glue Up helps you automate manual tasks">
+								    </div>
+							        <div id="tab3-bullet-img">
+				    			        <img class="feature-window desktop" src="{{ 'features/glueup-easy-members-1.svg' | media }}" alt="Glue Up is easy to use">
+				    			    </div>
+							     </div>
+							</div>
+							<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+								<div class="services__accordion">
+								  
+				                    <div class="accordion pl-3 active small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+				                        <i class="icon-engagement"></i>
+				                        <span>{{ 'Do it all from one place'|_ }}</span>
+				                        <div class="accordion__body firstshow" style="display:none;">
+											<p class="pt-3 d-flex flex-column">{{ 'Ultimate toolkit that has everything you and your community needs for maximum engagement.'|_ }}
+											{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+										</div>
+				                    </div>
+				                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab2-bullet">
+				                        <i class="icon-power-switch"></i>
+				                        <span>{{ 'Automate manual tasks'|_ }}</span>
+				                        <div class="accordion__body " style="display:none;">
+											<p class="pt-3 d-flex flex-column">{{ 'Streamline your processes and become the best version of yourself.'|_ }}
+											{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+										</div>
+				                    </div>
+				                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab3-bullet">
+				                        <i class="icon-button"></i>
+				                        <span>{{ 'Make it simple for everyone'|_ }}</span>
+				                        <div class="accordion__body " style="display:none;">
+											<p class="pt-3 d-flex flex-column">{{ 'Premium user experience battle-tested for your and all your audiences’s absolute comfort.'|_ }}
+											{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+										</div>
+				                    </div>
+								</div>
+							</div>
+							
+						</div>
+				</div>
+            </div>
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-sellout.svg' | media }}" alt="Glue Up helps you sell out your courses and training programs" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Registrations'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Collect Money & Registrations Easily'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Accept and manage online registrations, payments, and invoicing for your online and offline CPD courses and events automatically.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-translation-switch"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Multiple currencies'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-ticket"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Coupons & Discounts'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-refresh"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Easy refund management'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-online-event"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online & Offline Events'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-documents"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Course Duplication'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-collect-registrations.svg' | media }}" alt="Glue Up helps you collect registrations" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Marketing'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Sell Out Your Courses'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Increase sales with sophisticated marketing tools that help you get more registrations and accelerate your branding value. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Social Media Plug-ins'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-email-campaigns"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Email Campaigns'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-home"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Website Widgets'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Glue Up Attendee App'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-performance.svg' | media }}" alt="Glue Up helps you analyze your performance" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Analytics'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Understand Your Performance'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Gain instant insights into profitability of your courses and engagement of your contacts and organizations across all of your activities in one place.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-reset-time"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Engagement History'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-credits"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'CPD Reporting Info'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-crm"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Glue Up CRM '|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-add-dashboard"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Customizable Dashboards'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-certificate-1.svg' | media }}" alt="Glue Up helps you design your own certificates and diplomas" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Certificates'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Create Stunning Certificates'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Design and issue great-looking certificates for attendees that meet the criteria and automate their distribution with easy to use editor.'|_ }}<br>
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-credits"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Certificate Editor'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-task-refresh"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'CPD/CPE Credits Tracking'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-combos"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Archive '|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-notifications"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Automatic Reminders'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}
+";s:5:"mtime";i:1598253994;s:6:"markup";s:15995:"<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container">
+            <div class="row flex-row-reverse">
+                <div class="col-md-6 hero align-self-center text-left">
+                     <img src="{{ 'glueup-learning.svg' | media }}" class="paygage-visual" alt="glue up hero section">
+                </div>
+                
+                <div class="col-md-6 hero align-self-center text-md-left text-center">
+                    <p class="tagline mb-4">{{ 'Training Management'|_}}</p>
+                      <h1>{{ 'Run <span class="line"><ins>Better </ins></span><br> Training Programs'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Manage and scale up your trainings and certification courses easily.  '|_ }} </p>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+                       {% partial 'elements/hero-email-cta.htm' %}
+
+                </div>
+            </div>
+        </div> 
+</header>
+<section class="section pt-0">
+<div class="container">
+            <div class="row">
+                    <div class="col-lg-7 mx-auto pb-4">
+                        <div class="block text-center">
+                             <h2 class="mt-3 mb-4 position-relative content-title">{{ 'Transform Your Training Programs'|_ }}</h2>
+                             <p class="tagline">{{ 'Automate repetitive tasks so you can get back to scaling up your courses and engaging your attendees.'|_ }} </p>
+                        </div>
+                    </div>
+            </div>
+	            <div class="col-lg-10 align-self-center mx-auto">
+				    <div class="services__accordion row flex-row-reverse">
+				            <div class="col-md-7 align-self-center" style="margin-bottom:50px;">
+								<div class="accordion__img desktop">
+								    <div id="tab1-bullet-img" class="firstshow">
+								        <img class="feature-window desktop" src="{{ 'glueup-all-in-one.svg' | media }}" alt="Glue Up is an all-in-one management solution">
+								         
+								    </div>
+								    <div id="tab2-bullet-img">
+								        <img class="feature-window deskto" src="{{ 'features/glueup-automate.svg' | media }}" alt="Glue Up helps you automate manual tasks">
+								    </div>
+							        <div id="tab3-bullet-img">
+				    			        <img class="feature-window desktop" src="{{ 'features/glueup-easy-members-1.svg' | media }}" alt="Glue Up is easy to use">
+				    			    </div>
+							     </div>
+							</div>
+							<div class="col-md-5 align-self-center" style="margin-bottom:50px;">
+								<div class="services__accordion">
+								  
+				                    <div class="accordion pl-3 active small dropdown-item with-icon pointer" tab-name="tab1-bullet">
+				                        <i class="icon-engagement"></i>
+				                        <span>{{ 'Do it all from one place'|_ }}</span>
+				                        <div class="accordion__body firstshow" style="display:none;">
+											<p class="pt-3 d-flex flex-column">{{ 'Ultimate toolkit that has everything you and your community needs for maximum engagement.'|_ }}
+											{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+										</div>
+				                    </div>
+				                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab2-bullet">
+				                        <i class="icon-power-switch"></i>
+				                        <span>{{ 'Automate manual tasks'|_ }}</span>
+				                        <div class="accordion__body " style="display:none;">
+											<p class="pt-3 d-flex flex-column">{{ 'Streamline your processes and become the best version of yourself.'|_ }}
+											{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+										</div>
+				                    </div>
+				                    <div class="accordion pl-3 small dropdown-item with-icon pointer" tab-name="tab3-bullet">
+				                        <i class="icon-button"></i>
+				                        <span>{{ 'Make it simple for everyone'|_ }}</span>
+				                        <div class="accordion__body " style="display:none;">
+											<p class="pt-3 d-flex flex-column">{{ 'Premium user experience battle-tested for your and all your audiences’s absolute comfort.'|_ }}
+											{#<a href="{{ 'blog'|page }}" class="read-more pt-3">Learn More</a>#}</p>
+										</div>
+				                    </div>
+								</div>
+							</div>
+							
+						</div>
+				</div>
+            </div>
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-sellout.svg' | media }}" alt="Glue Up helps you sell out your courses and training programs" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Registrations'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Collect Money & Registrations Easily'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Accept and manage online registrations, payments, and invoicing for your online and offline CPD courses and events automatically.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-translation-switch"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Multiple currencies'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-ticket"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Coupons & Discounts'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-refresh"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Easy refund management'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-online-event"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Online & Offline Events'|_ }}</p>
+                                    </div>
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-documents"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Course Duplication'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-collect-registrations.svg' | media }}" alt="Glue Up helps you collect registrations" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Marketing'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Sell Out Your Courses'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Increase sales with sophisticated marketing tools that help you get more registrations and accelerate your branding value. '|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-social-share"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Social Media Plug-ins'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-email-campaigns"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Email Campaigns'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-home"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Website Widgets'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-mobile-check"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Glue Up Attendee App'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+</section>
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row">
+                <div class="col-lg-7 d-flex align-items-center align-self-center pb-3 pb-md-0">
+                  <img src="{{ 'features/glueup-performance.svg' | media }}" alt="Glue Up helps you analyze your performance" class="img-fluid mx-auto paygage-visual lazy ">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <div>
+                            <span class="h6 text-color hideme">{{ 'Analytics'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Understand Your Performance'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Gain instant insights into profitability of your courses and engagement of your contacts and organizations across all of your activities in one place.'|_ }}
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-reset-time"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Engagement History'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-credits"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'CPD Reporting Info'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-crm"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Glue Up CRM '|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-add-dashboard"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Customizable Dashboards'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+
+{#engagement 1#}
+<section class="section">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <div class="col-lg-7 d-flex align-items-center pb-3 pb-md-0">
+                    <img src="{{ 'features/glueup-certificate-1.svg' | media }}" alt="Glue Up helps you design your own certificates and diplomas" class="img-fluid mx-auto paygage-visual lazy fadeIn">
+                </div>
+                <div class="col-lg-5 align-self-center">
+                 <div>
+                            <span class="h6 text-color hideme">{{ 'Certificates'|_ }}</span>
+                            <h2 class="mt-3 mb-4 position-relative content-title  hideme">{{ 'Create Stunning Certificates'|_ }}</h2>
+                            <div class="about-content  hideme">
+    						     <p class="mb-4">{{ 'Design and issue great-looking certificates for attendees that meet the criteria and automate their distribution with easy to use editor.'|_ }}<br>
+    						     </p>
+                             </div>
+                             <div class="bullets hideme pt-3">
+                                <div class="row">
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-credits"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Certificate Editor'|_ }}</p>
+                                    </div>      
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-task-refresh"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'CPD/CPE Credits Tracking'|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-combos"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Archive '|_ }}</p>
+                                    </div>  
+                                    <div class="col mt-3 text-center mr-auto">
+                                        <i class="bullet-icon shadow-sm align-middle icon-notifications"></i>
+                                        <p class="bullet-small text-center pt-4">{{ 'Automatic Reminders'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+                
+            </div>
+
+        </div>
+</section>
+{#engagement 1#}
+
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}";s:4:"code";s:65:"function onEnd(){
+    $this->page->nav_highlight = 'features';
+ }";s:5:"title";s:19:"Training Management";s:3:"url";s:29:"/features/training-management";s:6:"layout";s:11:"glueup-home";s:11:"description";s:68:"Manage and scale up your trainings and certification courses easily.";s:10:"meta_title";s:28:"Training Management Solution";s:16:"meta_description";s:123:"Manage and scale up your trainings and certification courses easily with Glue Up's all-in-one training management solution.";s:9:"is_hidden";s:1:"0";s:12:"seo_keywords";s:178:"Training management software, CPD/CPE credits, training management system, professional associations, course manageement, e-courses, e-learning, certification software, licenses,";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:7:"viewBag";a:2:{s:16:"localeMeta_title";a:5:{s:5:"es_la";s:38:"Haz Mejores Programas de Entrenamiento";s:5:"Pt_br";s:44:"Execute os Melhores Programas de Treinamento";s:2:"ru";s:52:"Запустите учебные программы";s:2:"tk";s:19:"CPE / CPD Kredileri";s:2:"zh";s:12:"培训管理";}s:22:"localeMeta_description";a:5:{s:5:"es_la";s:76:"Administra y escala tus cursos de capacitación y certificación facilmente.";s:5:"Pt_br";s:74:"Gerencie e amplie seus treinamentos e cursos de certificação facilmente.";s:2:"ru";s:146:"С легкостью управляйте и масштабируйте свои тренинги и сертификационные курсы.";s:2:"tk";s:81:"Eğitimlerinizi ve sertifika kurslarınızı kolayca yönetin ve ölçeklendirin.";s:2:"zh";s:66:"轻松管理您的培训认证课程，并实现规模化发展。";}}}}

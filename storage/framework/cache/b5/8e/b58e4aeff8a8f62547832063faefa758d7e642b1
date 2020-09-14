@@ -1,0 +1,79 @@
+1600066771a:1:{s:25:"site/signup-modal-old.htm";a:6:{s:8:"fileName";s:25:"site/signup-modal-old.htm";s:7:"content";s:2900:"[viewBag]
+==
+<!-- // Modal -->
+    <div id="contact-paygage" class="modal fade centered-modal" role="dialog">
+                <div class="modal-dialog">
+                
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            
+                          <!--  <h4 class="modal-title">
+                                Contact Us
+                            </h4>-->
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form" method="post" id="reused_form">
+                                <img src="images/paygage-logo.svg" class="logo img-fluid" alt="logo">
+                                <h4>Want to start using Paygage for your community?</h4>
+                                <p>Sign up for updates, product releases and early access.</p>
+                                <div class="form-group">
+                                    <label for="name"> Name:</label>
+                                    <input type="text" class="form-control" id="name" name="name" required maxlength="50">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email"> Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required maxlength="50">
+                                </div>{% component 'genericForm'%}
+                                <!--<div class="form-group">
+                                    <label for="name"> Message:</label>
+                                    <textarea class="form-control" type="textarea" name="message" id="message" placeholder="Your Message Here" maxlength="6000" rows="7"></textarea>
+                                </div>-->
+                                <button type="submit" class="btn btn-lg btn-primary btn-success btn-block" id="btnContactUs">Sign Up</button>
+                            </form>
+                            <div id="success_message" style="width:100%; height:100%; display:none; "><div class="align-items-center paygage-bg3 align-self-center" style="min-height:375px;"> <img src="images/paygage-symbol.svg" class="paygage-hero" style="max-width:120px;" alt="logo"></div> <h3>Thank you for signing up for Paygage updates.</h3><p>We will get in touch with you very soon.</p></div>
+                            <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // Modal -->";s:5:"mtime";i:1596786370;s:6:"markup";s:2887:"<!-- // Modal -->
+    <div id="contact-paygage" class="modal fade centered-modal" role="dialog">
+                <div class="modal-dialog">
+                
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            
+                          <!--  <h4 class="modal-title">
+                                Contact Us
+                            </h4>-->
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form" method="post" id="reused_form">
+                                <img src="images/paygage-logo.svg" class="logo img-fluid" alt="logo">
+                                <h4>Want to start using Paygage for your community?</h4>
+                                <p>Sign up for updates, product releases and early access.</p>
+                                <div class="form-group">
+                                    <label for="name"> Name:</label>
+                                    <input type="text" class="form-control" id="name" name="name" required maxlength="50">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email"> Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required maxlength="50">
+                                </div>{% component 'genericForm'%}
+                                <!--<div class="form-group">
+                                    <label for="name"> Message:</label>
+                                    <textarea class="form-control" type="textarea" name="message" id="message" placeholder="Your Message Here" maxlength="6000" rows="7"></textarea>
+                                </div>-->
+                                <button type="submit" class="btn btn-lg btn-primary btn-success btn-block" id="btnContactUs">Sign Up</button>
+                            </form>
+                            <div id="success_message" style="width:100%; height:100%; display:none; "><div class="align-items-center paygage-bg3 align-self-center" style="min-height:375px;"> <img src="images/paygage-symbol.svg" class="paygage-hero" style="max-width:120px;" alt="logo"></div> <h3>Thank you for signing up for Paygage updates.</h3><p>We will get in touch with you very soon.</p></div>
+                            <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // Modal -->";s:4:"code";N;s:7:"viewBag";a:0:{}}}

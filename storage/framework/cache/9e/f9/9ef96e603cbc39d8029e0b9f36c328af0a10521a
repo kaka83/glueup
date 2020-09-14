@@ -1,0 +1,54 @@
+1600067169a:1:{s:22:"legal/legal-notice.htm";a:11:{s:8:"fileName";s:22:"legal/legal-notice.htm";s:7:"content";s:1036:"title = "Legal Notice"
+url = "/legal/legal-notice"
+layout = "generic"
+is_hidden = 0
+robot_index = "noindex"
+robot_follow = "nofollow"
+==
+<section class="section legal" id="terms_org">
+<div class="pt-0">
+        <div class="container">
+        <div class="row pt-4">
+        <div class="col-md-8 align-self-center mx-auto">
+        <h3 class="pt-4">EventBank Inc.</h3>
+         <p>1775 Tysons Blvd, 5th Floor<br>
+             Tysons, VA 22102<br>
+               USA </p>
+        
+            <p class="pt-4">You may contact us via email at <a href="mailto:support@eventbank.com">support@eventbank.com</a></p>
+            
+            <h3 class="pt-4">CEO</h3>
+             <p>Eric L. Schmidt</p>
+             <br>
+             <br>
+              <small style="color:#7a7a7a;">We assume no liability for the content of websites linked to us.
+The owners of these linked websites take sole responsibility for their contents.</small>
+       
+           </div>
+           </div>
+        </div>
+        </div>
+</section>";s:5:"mtime";i:1597830309;s:6:"markup";s:899:"<section class="section legal" id="terms_org">
+<div class="pt-0">
+        <div class="container">
+        <div class="row pt-4">
+        <div class="col-md-8 align-self-center mx-auto">
+        <h3 class="pt-4">EventBank Inc.</h3>
+         <p>1775 Tysons Blvd, 5th Floor<br>
+             Tysons, VA 22102<br>
+               USA </p>
+        
+            <p class="pt-4">You may contact us via email at <a href="mailto:support@eventbank.com">support@eventbank.com</a></p>
+            
+            <h3 class="pt-4">CEO</h3>
+             <p>Eric L. Schmidt</p>
+             <br>
+             <br>
+              <small style="color:#7a7a7a;">We assume no liability for the content of websites linked to us.
+The owners of these linked websites take sole responsibility for their contents.</small>
+       
+           </div>
+           </div>
+        </div>
+        </div>
+</section>";s:4:"code";N;s:5:"title";s:12:"Legal Notice";s:3:"url";s:19:"/legal/legal-notice";s:6:"layout";s:7:"generic";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:7:"noindex";s:12:"robot_follow";s:8:"nofollow";}}

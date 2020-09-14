@@ -1,0 +1,82 @@
+title = "blog category"
+url = "/blog/category/:slug/:page?"
+layout = "blog/blog-layout"
+description = "View blogs of a specific category"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[blogPosts featured]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
+==
+<section class="section">
+<div class="container">
+            <div class="row">
+            	<div class="col-md-3">
+               		{% component 'blogCategories' %}
+            	</div>
+                <div class="col-md-9 align-self-center">
+                {#{% component 'featured' %}#}
+                	<div class="row">
+                {% set featured = featured.posts %}
+				{% for post in featured %}  
+	           
+	                                                
+	                    <div class="col-md-4 hero pb-2">
+	                     <a href="{{ post.url }}" class="">
+	                        {% if post.featured_images.count > 0 %}
+	                        <img class="media-object img-fluid rounded" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />
+	                        {% else %}
+	                        <img class="media-object img-fluid rounded" src="{{ 'glueup-generic.svg'|media }}" />
+	                        {% endif %}
+	                         </a>
+	                     <h5 class="pt-2">
+	                         <a href="{{ post.url }}">{{ post.title }}</a>
+	                     </h5>
+	                     <p class="excerpt">{{ str_limit(post.content_html|striptags|raw, 150) }}</p>
+	                     {#% if post.excerpt %}
+	                     <p class="excerpt">{{ post.excerpt }}</p>
+	                     {% else %}
+	                     <div class="content">{{ str_limit(post.content_html|striptags|raw, 50) }}</div>
+	                     {% endif %#}
+	                     </div>
+	             {% endfor %}
+	             </div>
+	             
+{% if posts.lastPage > 1 %}
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-6 text-center">
+        <nav class="navigation pagination d-inline-block">
+            <div class="nav-links">
+                {% if posts.currentPage > 1 %}
+                <a class="prev page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}">Prev</a>
+                {% endif %}
+
+                {% for page in 1..posts.lastPage %}
+                <a class="page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                {% endfor %}
+
+                {% if posts.lastPage > posts.currentPage %}
+                <a class="next page-numbers" href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}">Next</a>
+                {% endif %}
+            </div>
+        </nav>
+    </div>
+</div>
+{% endif %}
+            </div>
+            
+        </div>
+    </div>
+</section>

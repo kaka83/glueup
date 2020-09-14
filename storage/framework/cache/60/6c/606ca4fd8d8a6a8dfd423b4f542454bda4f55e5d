@@ -1,0 +1,111 @@
+1600067238a:1:{s:28:"site/language-exclusions.htm";a:7:{s:8:"fileName";s:28:"site/language-exclusions.htm";s:7:"content";s:1122:"description = "language variables"
+
+[viewBag]
+==
+{% if activeLocale is same as('zh') %}
+<!-- specific css for chinese language active -->
+<style>
+
+body, p, h3, h4, .timeline h2 {
+	letter-spacing:0px;
+	line-height: 1.5em!important;
+/*	text-align: justify!important;*/
+/*word-break: break-all;
+ white-space: keep-all;
+ orphans: 3;*/
+ 
+}
+#hero svg.svgline {
+    position: absolute;
+    margin-right: -110%;
+    margin-top: 5.5vh;
+}
+.secondary-top-nav select.form-control:not([size]):not([multiple]) {
+   /* height: 2rem;
+    padding: .5rem 1rem;
+    font-weight: lighter;
+        margin-top: 7px;*/
+            height: calc(2.8rem + 8px);
+}
+.dot-info span.year {
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(0%);
+    width: 100px;
+}/*
+h1 {
+	line-height: 1.3em!important;
+/*	max-width: 18ch;*/
+}/*
+p { margin-after: 0.5em;
+word-break: break-all;
+ white-space: keep-all;
+}
+.tagline {max-width: 47ch;}
+
+@media print {
+  p {
+    orphans: 3;
+  }
+  h1 {
+    orphans: 3;
+  }
+}
+em { font-style: normal; }
+}
+/*p { margin: 0; text-indent: 2em;}*/
+</style>
+{% endif %}";s:5:"mtime";i:1598521343;s:6:"markup";s:1073:"{% if activeLocale is same as('zh') %}
+<!-- specific css for chinese language active -->
+<style>
+
+body, p, h3, h4, .timeline h2 {
+	letter-spacing:0px;
+	line-height: 1.5em!important;
+/*	text-align: justify!important;*/
+/*word-break: break-all;
+ white-space: keep-all;
+ orphans: 3;*/
+ 
+}
+#hero svg.svgline {
+    position: absolute;
+    margin-right: -110%;
+    margin-top: 5.5vh;
+}
+.secondary-top-nav select.form-control:not([size]):not([multiple]) {
+   /* height: 2rem;
+    padding: .5rem 1rem;
+    font-weight: lighter;
+        margin-top: 7px;*/
+            height: calc(2.8rem + 8px);
+}
+.dot-info span.year {
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(0%);
+    width: 100px;
+}/*
+h1 {
+	line-height: 1.3em!important;
+/*	max-width: 18ch;*/
+}/*
+p { margin-after: 0.5em;
+word-break: break-all;
+ white-space: keep-all;
+}
+.tagline {max-width: 47ch;}
+
+@media print {
+  p {
+    orphans: 3;
+  }
+  h1 {
+    orphans: 3;
+  }
+}
+em { font-style: normal; }
+}
+/*p { margin: 0; text-indent: 2em;}*/
+</style>
+{% endif %}";s:4:"code";N;s:11:"description";s:18:"language variables";s:7:"viewBag";a:0:{}}}

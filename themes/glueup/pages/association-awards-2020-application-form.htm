@@ -1,0 +1,96 @@
+title = "Association Awards 2020 Application form"
+url = "/lp/association-awards-2020"
+layout = "glueup-home"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[genericForm awards]
+rules[full_name] = "required"
+rules[position] = "required"
+rules[email] = "required|email"
+rules[phone] = "required|regex:/[0-9]{6}/"
+rules[assoc_authorization] = "required"
+rules[assoc_name] = "required"
+rules[assoc_web] = "required|regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/"
+rules[assoc_head] = "required"
+rules[email_assoc] = "required|email"
+rules[phone_assoc] = "required|regex:/[0-9]{6}/"
+rules[assoc_employees] = "required"
+rules[assoc_pt_employees] = "required"
+rules[assoc_members] = "required"
+rules[assoc_new_members] = "required"
+rules[assoc_ren_rate] = "required"
+rules[assoc_events_year] = "required"
+rules[assoc_emails_month] = "required"
+rules[assoc_accomplishment] = "required"
+rules[assoc_3_programs] = "required"
+rules[assoc_strategy] = "required"
+rules[assoc_changes_challenges] = "required"
+rules[assoc_changes_pandemic] = "required"
+rules[assoc_forward] = "required"
+rules[assoc_success] = "required"
+rules[assoc_goals] = "required"
+rules[assoc_extra] = "required"
+rules[assoc_verification] = "required"
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+mail_enabled = 1
+mail_subject = "New Application to APAC Association Awards!"
+mail_recipients[] = "events@glueup.com"
+mail_replyto = "events@glueup.com"
+mail_resp_enabled = 1
+mail_resp_field = "email"
+mail_resp_from = "evnts@glueup.com"
+inline_errors = "disabled"
+js_on_success = "window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'formLocation': 'modal',
+ 'event': 'award'
+});
+window.location.replace('/thank-you');"
+mail_resp_enabled = 1
+mail_resp_field = "email"
+mail_resp_from = "events@glueup.com"
+mail_resp_template = "martin.forms::awards"
+inline_errors = "display"
+sanitize_data = "htmlspecialchars"
+anonymize_ip = "disabled"
+recaptcha_enabled = 1
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<div class="generic " id="generic">  
+        <div class="container">
+            <div class="row pt-5">
+                
+                <div class="col-md-6 hero align-self-center text-center mx-auto pt-5">
+                      <h1>APAC Association <span class="line"><ins>Awards</ins></span> 2020</h1>
+                       {#<p class="tagline pb-3"> {{ 'See how are we transforming professional communities through digital solutions focusing on automation and engagement.'|_ }} </p>#}
+
+
+                </div>
+               <img class="col-md-offset-12 d-none d-sm-block img-fluid hero-home" style="" src="{{ 'glueup-hero1.svg' | media }}" alt="Glue Up helps you with events, memberships, CRM, email campaigns, finance and marketing tools.">
+            </div>
+            <div class="row mx-auto">
+             <div class="col-md-7 hero align-self-center text-center mx-auto">
+                 
+                </div>
+            </div>
+        </div> 
+</div>
+
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-8 mx-auto pb-4">
+                       	{% component 'awards' %}
+
+                
+           		    </div>
+       		 </div>
+
+    </div>
+</section>

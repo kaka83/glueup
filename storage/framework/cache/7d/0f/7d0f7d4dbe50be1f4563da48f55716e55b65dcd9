@@ -1,0 +1,65 @@
+1600066771a:1:{s:21:"landing/footer-lp.htm";a:8:{s:8:"fileName";s:21:"landing/footer-lp.htm";s:7:"content";s:1780:"description = "footer landing pages"
+
+[extendedLocalePicker]
+
+[viewBag]
+==
+{##}
+{# Footer Start #}
+<footer class="footer section pb-1">
+    <nav aria-labelledby="sitemap" class="">
+	<div class="container">
+	<div class="row pb-0">
+			<div class="col-lg-3 mx-auto text-center d-block flow-column pb-0">
+		    	<img src="{{ 'assets/images/Glueup-symbol.svg'| theme }}" style="width:50px; height:auto;" class="logo img-fluid lazyload pb-2" alt="Glue Up Official Logo" /><br>
+		    	
+		    	{% if CurrentLanguage is same as('cn') %}{% endif %}
+			</div>
+	</div>
+	<div class="row pt-2">
+			<div class="col-lg-8 mx-auto text-center d-block flow-column pb-0">
+				<ul class="list-unstyled footer-menu lh-35 list-break" style="display: flex">
+							<li class="mx-auto"><span style="color:#7a7a7a;" class="pt-3 pb-0">&copy;Glue Up {{ 'now' | date('Y') }}</span></li>
+    						<li class="mx-auto"><a href="{{ 'legal/terms-and-conditions-organizations'|page }}">{{ 'Organizations Terms'|_ }}</a></li>
+    						<li class="mx-auto"><a href="{{ 'legal/terms-and-conditions-users'|page }}">{{ 'User Terms'|_ }}</a></li>
+    						{#<li><a href="{{ 'terms-and-conditions-users'|page }}">{{ 'Terms & Conditions for Users'|_ }}</a></li>#}
+    						<li class="mx-auto"><a href="{{ 'legal/privacy-policy'|page }}">{{ 'Privacy Policy'|_ }}</a></li>
+    						<li class="mx-auto"><a href="{{ 'legal/cookie-policy'|page }}">{{ 'Cookie Policy'|_ }}</a></li>
+    						<li class="mx-auto"><a href="{{ 'legal/legal-notice'|page }}">{{ 'Legal Notice'|_ }}</a></li>
+    						<li class="mx-auto"><a href="{{ 'legal/privacy-policy'|page }}#transfers_data">{{ 'GDPR'|_ }}</a></li>
+    					</ul>
+    		</div>
+		</div>
+	</div>
+</nav>
+</footer>
+{# Footer Close - Hic Sunt Leones#}";s:5:"mtime";i:1597721434;s:6:"markup";s:1705:"{##}
+{# Footer Start #}
+<footer class="footer section pb-1">
+    <nav aria-labelledby="sitemap" class="">
+	<div class="container">
+	<div class="row pb-0">
+			<div class="col-lg-3 mx-auto text-center d-block flow-column pb-0">
+		    	<img src="{{ 'assets/images/Glueup-symbol.svg'| theme }}" style="width:50px; height:auto;" class="logo img-fluid lazyload pb-2" alt="Glue Up Official Logo" /><br>
+		    	
+		    	{% if CurrentLanguage is same as('cn') %}{% endif %}
+			</div>
+	</div>
+	<div class="row pt-2">
+			<div class="col-lg-8 mx-auto text-center d-block flow-column pb-0">
+				<ul class="list-unstyled footer-menu lh-35 list-break" style="display: flex">
+							<li class="mx-auto"><span style="color:#7a7a7a;" class="pt-3 pb-0">&copy;Glue Up {{ 'now' | date('Y') }}</span></li>
+    						<li class="mx-auto"><a href="{{ 'legal/terms-and-conditions-organizations'|page }}">{{ 'Organizations Terms'|_ }}</a></li>
+    						<li class="mx-auto"><a href="{{ 'legal/terms-and-conditions-users'|page }}">{{ 'User Terms'|_ }}</a></li>
+    						{#<li><a href="{{ 'terms-and-conditions-users'|page }}">{{ 'Terms & Conditions for Users'|_ }}</a></li>#}
+    						<li class="mx-auto"><a href="{{ 'legal/privacy-policy'|page }}">{{ 'Privacy Policy'|_ }}</a></li>
+    						<li class="mx-auto"><a href="{{ 'legal/cookie-policy'|page }}">{{ 'Cookie Policy'|_ }}</a></li>
+    						<li class="mx-auto"><a href="{{ 'legal/legal-notice'|page }}">{{ 'Legal Notice'|_ }}</a></li>
+    						<li class="mx-auto"><a href="{{ 'legal/privacy-policy'|page }}#transfers_data">{{ 'GDPR'|_ }}</a></li>
+    					</ul>
+    		</div>
+		</div>
+	</div>
+</nav>
+</footer>
+{# Footer Close - Hic Sunt Leones#}";s:4:"code";N;s:11:"description";s:20:"footer landing pages";s:20:"extendedLocalePicker";a:0:{}s:7:"viewBag";a:0:{}}}

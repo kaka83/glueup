@@ -1,0 +1,31 @@
+1600067238a:1:{s:20:"site/linkedintag.htm";a:7:{s:8:"fileName";s:20:"site/linkedintag.htm";s:7:"content";s:704:"description = "linkedin tag"
+
+[viewBag]
+==
+<script type="text/javascript">
+_linkedin_partner_id = "96631";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=96631&fmt=gif" />
+</noscript>";s:5:"mtime";i:1597446453;s:6:"markup";s:661:"<script type="text/javascript">
+_linkedin_partner_id = "96631";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=96631&fmt=gif" />
+</noscript>";s:4:"code";N;s:11:"description";s:12:"linkedin tag";s:7:"viewBag";a:0:{}}}

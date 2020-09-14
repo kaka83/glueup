@@ -1,0 +1,127 @@
+1600066771a:1:{s:32:"industry/industry-case-study.htm";a:8:{s:8:"fileName";s:32:"industry/industry-case-study.htm";s:7:"content";s:3021:"description = "association case studies"
+
+[viewBag]
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 2
+noPostsMessage = "No posts found"
+sortOrder = "random"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+<?php
+//use RainLab\Blog\Models\Post as BlogPost;
+
+function onStart(){
+    //This is where you list the categories you want to display
+    //$categories = ['success-stories', 'associations'];
+    $category = $this->category;
+
+    $posts = [];
+    //->slice(0, 10) as $item
+    //->take(10) as $item)
+    //($element['subs']->slice(0, 10) as $item)
+    foreach(BlogPost::all() as $blog){
+        $catList = [];
+        foreach($blog->categories as $cat){
+        //foreach($blog->categories as $cat){
+            $catList[] = $cat->slug;
+        }
+       // var_dump($catList);
+        if( in_array('success-stories',$catList ) && in_array($category,$catList) ){
+                array_push($posts, $blog);
+                
+        }
+    }
+    
+   $this['filteredPosts'] = $posts;
+}
+?>
+==
+{#% set events = eventPosts.posts.slice(0, 1)  %}
+                          {% for post in events %#}
+
+{% set casestudies = filteredPosts %}
+    {% for post in casestudies|slice(0, 2) %} 
+        
+                <div class="col-lg-5 col-md-4 mb-5 h-10 mx-auto pb-5">
+                    <div class="mb-3">
+                      <div class="row no-gutters">
+                       
+                        <div class="col-md-12">
+                          <div class="card-body">
+                          	<a href="{{ url('/blog/') }}/{{ post.slug }}" class="">
+                                {% if post.featured_images.count > 1 %}
+                                <img class="mr-2" style="height: auto; width: auto; max-height: 60px;" data-src="{{ post.featured_images.last.getThumb( auto, 540 ) }}" src="{{ post.featured_images.last.getThumb( auto, 540 ) }}" alt="{{ post.title }}"/>
+                                {#<img class="media-object img-fluid rounded-top card-img" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />#}
+                                {% else %}
+                                <img class="mr-2" style="height:60px; width:60px;" data-src="{{ post.user.avatar.file_name }}" src="{{ post.user.avatar.getThumb(120, 'auto') }}" alt="{{ post.user.first_name }}{{ post.user.last_name }}"/>
+                                {% endif %}
+                                 </a>
+                            <p class="excerpt">{{ post.excerpt }}</p>  
+                            <h5 class="card-title"><a href="{{ url('/blog/') }}/{{ post.slug }}">{{ post.title }}</a></h5>
+                            <a href="{{ url('/blog/') }}/{{ post.slug }}" class="read-more d-flex">Read their story <i class="read-more-icon icon-arrow"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                   
+                    </div>
+                </div>
+    {% else %}
+    {% endfor %}";s:5:"mtime";i:1597753934;s:6:"markup";s:1988:"{#% set events = eventPosts.posts.slice(0, 1)  %}
+                          {% for post in events %#}
+
+{% set casestudies = filteredPosts %}
+    {% for post in casestudies|slice(0, 2) %} 
+        
+                <div class="col-lg-5 col-md-4 mb-5 h-10 mx-auto pb-5">
+                    <div class="mb-3">
+                      <div class="row no-gutters">
+                       
+                        <div class="col-md-12">
+                          <div class="card-body">
+                          	<a href="{{ url('/blog/') }}/{{ post.slug }}" class="">
+                                {% if post.featured_images.count > 1 %}
+                                <img class="mr-2" style="height: auto; width: auto; max-height: 60px;" data-src="{{ post.featured_images.last.getThumb( auto, 540 ) }}" src="{{ post.featured_images.last.getThumb( auto, 540 ) }}" alt="{{ post.title }}"/>
+                                {#<img class="media-object img-fluid rounded-top card-img" src="{{ post.featured_images.last.getThumb(768, 'auto') }}" />#}
+                                {% else %}
+                                <img class="mr-2" style="height:60px; width:60px;" data-src="{{ post.user.avatar.file_name }}" src="{{ post.user.avatar.getThumb(120, 'auto') }}" alt="{{ post.user.first_name }}{{ post.user.last_name }}"/>
+                                {% endif %}
+                                 </a>
+                            <p class="excerpt">{{ post.excerpt }}</p>  
+                            <h5 class="card-title"><a href="{{ url('/blog/') }}/{{ post.slug }}">{{ post.title }}</a></h5>
+                            <a href="{{ url('/blog/') }}/{{ post.slug }}" class="read-more d-flex">Read their story <i class="read-more-icon icon-arrow"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                   
+                    </div>
+                </div>
+    {% else %}
+    {% endfor %}";s:4:"code";s:799:"//use RainLab\Blog\Models\Post as BlogPost;
+
+function onStart(){
+    //This is where you list the categories you want to display
+    //$categories = ['success-stories', 'associations'];
+    $category = $this->category;
+
+    $posts = [];
+    //->slice(0, 10) as $item
+    //->take(10) as $item)
+    //($element['subs']->slice(0, 10) as $item)
+    foreach(BlogPost::all() as $blog){
+        $catList = [];
+        foreach($blog->categories as $cat){
+        //foreach($blog->categories as $cat){
+            $catList[] = $cat->slug;
+        }
+       // var_dump($catList);
+        if( in_array('success-stories',$catList ) && in_array($category,$catList) ){
+                array_push($posts, $blog);
+                
+        }
+    }
+    
+   $this['filteredPosts'] = $posts;
+}";s:11:"description";s:24:"association case studies";s:7:"viewBag";a:0:{}s:9:"blogPosts";a:6:{s:10:"pageNumber";s:11:"{{ :page }}";s:12:"postsPerPage";s:1:"2";s:14:"noPostsMessage";s:14:"No posts found";s:9:"sortOrder";s:6:"random";s:12:"categoryPage";s:13:"blog/category";s:8:"postPage";s:9:"blog/post";}}}

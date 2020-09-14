@@ -1,0 +1,78 @@
+title = "Download My Glue"
+url = "/olddownloadapps"
+layout = "glueup-home"
+description = "Give your community an easy-to-use Glue Up App to engage and receive important information from anywhere."
+meta_title = "Manager Up Mobile App for Glue Up Customers"
+meta_description = "Streamline processes and manage your community from palm of your hand with a mobile app that consolidates all your operations and engagement."
+is_hidden = 1
+seo_keywords = "manager app, manage operations on the go, whitelabel mobile app, run events remotely, send campaigns from the pone, manage events on the phone, mobile app for managers, mobile app for member-based organizations, manager app to manage events and memberships, community management mobile app"
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeMeta_title[es_la] = "Ejecuta Tus Operaciones desde Cualquier Lugar"
+localeMeta_title[Pt_br] = "Gerenciador Glue Up"
+localeMeta_title[ru] = "Glue Up Manager"
+localeMeta_title[tk] = "Yönetici Uygulaması"
+localeMeta_title[zh] = "Glue Up 管理者 App"
+localeMeta_description[es_la] = "Optimiza procesos y administra tu comunidad desde la palma de tu mano con la aplicación móvil que consolida todas tus operaciones e interacciones."
+localeMeta_description[Pt_br] = "Simplifique processos e gerencie sua comunidade na palma da sua mão com um aplicativo móvel que consolida todas as suas operações e engajamento."
+localeMeta_description[ru] = "Оптимизируйте процессы и управляйте своим сообществом с помощью мобильного приложения, которое объединяет все ваши процессы и взаимодействия."
+localeMeta_description[tk] = "Operasyonlarınızı yönetin ve her yerden haberdar olun."
+localeMeta_description[zh] = "Glue Up 云平台移动端 App，让您可以随时随地高效管理您的社群运营及互动。"
+==
+<?php
+function onEnd(){
+    $this->page->nav_highlight = 'features';
+ }
+?>
+==
+<header id="hero" class="">
+{#<img src="{{ 'paygage-visual-main.svg' | media }}" class="paygage-visual" alt="logo">#}
+        <div class="container paygage-hero-container text-center">
+           <div class="row flex-row">
+                <div class="col-md-6 hero align-self-center text-left">
+                   <p class="tagline mb-4">{{'My Glue'|_}}</p>
+                      <h1>{{ 'Enable Your Community to Engage. <span class="line"><ins> Anywhere </ins></span>'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Give your attendees and members an easy way to engage, network and receive important information no matter where they are. '|_ }} </p><br>
+                       				       <div class="row">
+  <div class="col-md-8 mr-auto">
+
+  {% if activeLocale is same as('zh') %}
+
+	 <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto" style="padding: .5rem 1rem;" href="https://apps.apple.com/us/app/eventbank-manager/id740353437"><i class="icon-apple" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在AppStore下载My Glue</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto mt-3"  style="padding: .5rem 1rem;" href="https://play.google.com/store/apps/details?id=com.eventbank.android"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在GooglePlay下载My Glue</span></a>
+   <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto mt-3"  style="padding: .5rem 1rem;" href="https://www.wandoujia.com/apps/6654640"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在豌豆荚下载My Glue</span></a>
+{% else %}
+{%if Location in ['CN']%}
+	 <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto" style="padding: .5rem 1rem;" href="https://apps.apple.com/us/app/eventbank-manager/id740353437"><i class="icon-apple" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在AppStore下载My Glue</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto mt-3"  style="padding: .5rem 1rem;" href="https://play.google.com/store/apps/details?id=com.eventbank.android"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在GooglePlay下载My Glue</span></a>
+   <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto mt-3"  style="padding: .5rem 1rem;" href="https://www.wandoujia.com/apps/6654640"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">在豌豆荚下载My Glue</span></a>
+{% else %}
+
+   <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto" style="padding: .5rem 1rem;" href="https://apps.apple.com/us/app/eventbank-manager/id740353437"><i class="icon-apple" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">Glue Up Manager on the App Store</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto mt-3"  style="padding: .5rem 1rem;" href="https://play.google.com/store/apps/details?id=com.eventbank.android"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">Glue Up Manager on Google Play</span></a>
+{% endif %}
+  
+  </div>
+  </div>
+					
+                </div>
+                <div class="col-md-6 hero align-self-center text-left">
+                   <p class="tagline mb-4">{{'My Glue'|_}}</p>
+                      <h1>{{ 'Enable Your Community to Engage. <span class="line"><ins> Anywhere </ins></span>'|_ }}</h1>
+                       <p class="tagline pb-3"> {{ 'Give your attendees and members an easy way to engage, network and receive important information no matter where they are. '|_ }} </p><br>
+                       {#<a href="#" class="btn btn-primary my-4" data-toggle="modal" data-target="#contact-paygage">Get Started</a>#}
+				       <div class="row">
+  <div class="col-md-8 mr-auto">
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mr-auto" style="padding: .5rem 1rem;" href="https://apps.apple.com/us/app/eventbank/id958545893"><i class="icon-apple" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">Glue Up Manager on the App Store</span></a>
+  <a class="btn btn-primary btn-round-full pointer d-flex center-block mx-auto mt-3"  style="padding: .5rem 1rem;" href="https://play.google.com/store/apps/details?id=com.eventbank.android.attendee"><i class="icon-android" style="    font-size: 30px; margin-right:10px; align-self: center;"></i><span style=" align-self: center;">Glue Up Manager on Google Play</span></a></div>
+  </div>
+
+                </div>
+            </div>
+        </div> 
+</header>
+
+{% partial 'platform/features-nav.htm' %}
+{% partial 'solutions/footer-cta-mem.htm' %}

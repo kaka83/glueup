@@ -1,0 +1,132 @@
+1600066771a:1:{s:20:"demoform/default.htm";a:9:{s:8:"fileName";s:20:"demoform/default.htm";s:7:"content";s:4334:"description = "demoform"
+
+[viewBag]
+snippetCode = "demoform"
+snippetName = "demoform-long"
+
+[staticPage]
+useContent = 1
+default = 0
+
+[genericForm demoform]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<!-- // form -->
+ 
+                                     {#<h4 class="t-5 modal-title">{{ 'Contact Support'|_ }} </h4>
+                                     <p>{{ "We're here to help. Please fill out this quick form and we'll get back to you shortly."|_ }}</p>#}
+                        <form data-request="{{ __SELF__ }}::onFormSubmit" id="modal__submit">
+                        
+                            {{ form_token() }}
+                        
+                            <div id="{{ __SELF__ }}_forms_flash"></div>
+                        
+                            <div class="form-group">
+                                <label for="full_name">{{ 'Full Name'|_ }}</label>
+                                <input type="text" id="full_name" name="full_name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">{{ 'Phone Number'|_ }}</label>
+                                <input type="text" id="phone" name="phone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">{{ 'Email Address'|_ }}</label>
+                                <input type="text" id="email" name="email" class="form-control" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">{{ 'Company Name'|_ }}</label>
+                                <input type="text" id="company" name="company" class="form-control" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">{{ 'Website URL'|_ }}</label>
+                                <input type="text" id="url" name="url" class="form-control" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="numemployees">{{ 'How many employees do you have?'|_ }}</label>
+                                <input type="text" id="numemployees" name="numemployees" class="form-control" value="">
+                            </div>
+                           {# <div class="form-group">
+                                <label for="support-message">{{ 'Message'|_ }}</label>
+                                <textarea id="support-message" name="support-message" class="form-control" value="" rows="4"></textarea>
+                            </div>#}
+                           <div class="form-group">
+                                <label for="solution_buying">{{ 'Solution'|_ }}</label>
+                                <select name="solution_buying" id="solution_buying">
+                                    <option value="sol-1">{{'Event Management Suite'|_}}</option>
+                                    <option value="sol-2">{{'Membership Management Suite'|_}}</option>
+                                    <option value="sol-3">{{'Community Management Suite'|_}}</option>
+                                    <option value="sol-4">{{'Virtual Events Management Suite'|_}}</option>
+                                    <option value="sol-5">{{'Training Management Suite'|_}}</option>
+                                    <option value="sol-6">{{'Donations Management Suite'|_}}</option>
+                                </select>
+                             </div>
+                             {% partial 'site/hidden-fields-form.htm' %}
+                          	 	
+                        
+                            <button id="simpleContactSubmitButton" type="submit" class="btn btn-primary">{{ 'Get a Demo'|_ }}</button>
+                        
+                        </form>
+            <!-- // Modal -->";s:5:"mtime";i:1598059096;s:6:"markup";s:3872:"<!-- // form -->
+ 
+                                     {#<h4 class="t-5 modal-title">{{ 'Contact Support'|_ }} </h4>
+                                     <p>{{ "We're here to help. Please fill out this quick form and we'll get back to you shortly."|_ }}</p>#}
+                        <form data-request="{{ __SELF__ }}::onFormSubmit" id="modal__submit">
+                        
+                            {{ form_token() }}
+                        
+                            <div id="{{ __SELF__ }}_forms_flash"></div>
+                        
+                            <div class="form-group">
+                                <label for="full_name">{{ 'Full Name'|_ }}</label>
+                                <input type="text" id="full_name" name="full_name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">{{ 'Phone Number'|_ }}</label>
+                                <input type="text" id="phone" name="phone" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">{{ 'Email Address'|_ }}</label>
+                                <input type="text" id="email" name="email" class="form-control" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">{{ 'Company Name'|_ }}</label>
+                                <input type="text" id="company" name="company" class="form-control" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">{{ 'Website URL'|_ }}</label>
+                                <input type="text" id="url" name="url" class="form-control" value="">
+                            </div>
+                            <div class="form-group">
+                                <label for="numemployees">{{ 'How many employees do you have?'|_ }}</label>
+                                <input type="text" id="numemployees" name="numemployees" class="form-control" value="">
+                            </div>
+                           {# <div class="form-group">
+                                <label for="support-message">{{ 'Message'|_ }}</label>
+                                <textarea id="support-message" name="support-message" class="form-control" value="" rows="4"></textarea>
+                            </div>#}
+                           <div class="form-group">
+                                <label for="solution_buying">{{ 'Solution'|_ }}</label>
+                                <select name="solution_buying" id="solution_buying">
+                                    <option value="sol-1">{{'Event Management Suite'|_}}</option>
+                                    <option value="sol-2">{{'Membership Management Suite'|_}}</option>
+                                    <option value="sol-3">{{'Community Management Suite'|_}}</option>
+                                    <option value="sol-4">{{'Virtual Events Management Suite'|_}}</option>
+                                    <option value="sol-5">{{'Training Management Suite'|_}}</option>
+                                    <option value="sol-6">{{'Donations Management Suite'|_}}</option>
+                                </select>
+                             </div>
+                             {% partial 'site/hidden-fields-form.htm' %}
+                          	 	
+                        
+                            <button id="simpleContactSubmitButton" type="submit" class="btn btn-primary">{{ 'Get a Demo'|_ }}</button>
+                        
+                        </form>
+            <!-- // Modal -->";s:4:"code";N;s:11:"description";s:8:"demoform";s:7:"viewBag";a:2:{s:11:"snippetCode";s:8:"demoform";s:11:"snippetName";s:13:"demoform-long";}s:10:"staticPage";a:2:{s:10:"useContent";s:1:"1";s:7:"default";s:1:"0";}s:20:"genericForm demoform";a:9:{s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:13:"inline_errors";s:8:"disabled";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}}}

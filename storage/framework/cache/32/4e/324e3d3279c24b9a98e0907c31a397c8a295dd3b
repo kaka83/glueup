@@ -1,0 +1,803 @@
+1600067169a:1:{s:15:"site/header.htm";a:9:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:32857:"description = "menu header - main"
+
+[viewBag]
+
+[localePicker]
+forceUrl = 0
+
+[extendedLocalePicker]
+==
+{% partial 'site/alert.htm' %}
+<div class="secondary-top-nav navbar-light d-none d-sm-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-light navbar-expand-lg">
+                    <ul class="navbar-nav ml-auto">
+                    	{% if activeLocale is same as('zh') %}
+						<li class="nav-item"><a class="nav-link" href="{{ url('/account/login') }}"><i class="icon-lock"></i>{{ 'Log In'|_ }}</a></li>
+						{% else %}
+                    {#    <li class="nav-item"><a class="nav-link" href="{{ url('https://app.glueup.com/account/login') }}"><i class="icon-lock"></i>{{ 'Log In'|_ }}</a></li>#}
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/account/login') }}"><i class="icon-lock"></i>{{ 'Log In'|_ }}</a></li>
+                        {% endif %}
+                        <li class="nav-item"><a class="nav-link" href="" value="Submit" id="pricing-button" input-type="submit" data-toggle="modal" data-target="#support"><i class="icon-support"></i>{{ 'Support'|_ }}</a></li>
+                        <li class="nav-item lang"><i class="icon-world-map"></i>{% component 'localePicker' %}</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nav-menu fixed-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg">
+                    {% if activeLocale is same as('zh') %}
+                    <a class="navbar-brand" href="{{ 'home'|page }}"><img src="{{ ('assets/images/glueup-logo-zh.svg') | theme }}" class="logo img-fluid lazyload" alt="logo" /></a>
+                    {% else %}
+                     <a class="navbar-brand" href="{{ 'home'|page }}"><img src="{{ ('assets/images/glueup-logo-en.svg') | theme }}" class="logo img-fluid lazyload" alt="logo" /></a>
+                     {% endif %}
+                     <div class="navbar-brand eb" style="    padding: 0;
+    text-align: left;
+    height: 35px;
+    display: grid;"href="{{ 'home'|page }}"><span style="    font-size: 10px;
+    font-weight: 300;
+    height:15px;
+    float: left;
+    text-align: left;
+    display: inline;">{{'Formerly'|_}}</span> <img src="{{ ('eventbank-logo.svg') | media }}" class="logo lazyload" style="" alt="logo" /></div>
+                    <button class="navbar-toggler hambutton" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        {#<span class="icon-hamburger navbar-toggler-icon icon-default"></span>#}
+                        <div id="nav-icon3">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
+                    </button>
+                    {#here mega menu#}
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown position-static d-none d-sm-block">
+                                <a class="nav-link different {% if this.page.nav_highlight == 'features' %}active{% endif %}" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ 'Why Glue Up?'|_ }} </a>
+
+                                <ul class="dropdown-menu w-100 shadow p-0" id="navbarDropdownMega">
+                                    <li class="glueupmenu">
+                                        <div class="row">
+                                            <div class="col-md-8 pr-5 pb-4">
+                                                <div class="row pt-2 pb-3">
+                                                    <div class="col-md-12 mr-auto">
+                                                        <h6 class="intro">{{ 'Platform Modules'|_ }}</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/crm'|page }}">
+                                                            <i class="icon-crm"></i>
+                                                            <span>{{ 'CRM'|_ }}</span>
+            
+                                                        </a>
+                                                    </div>
+                                                     <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/community'|page }}">
+                                                            <i class="icon-social-share"></i>
+                                                            <span>{{ 'Community'|_ }}</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/event-management'|page }}">
+                                                            <i class="icon-events"></i>
+                                                            <span>{{ 'Online & Offline Events'|_ }}</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/membership-management'|page }}">
+                                                            <i class="icon-memberships"></i>
+                                                            <span>{{ 'Memberships'|_ }}</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/email-campaigns'|page }}">
+                                                            <i class="icon-email-campaigns"></i>
+                                                            <span>{{ 'Email Campaigns'|_ }}</span>
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/finance'|page }}">
+                                                            <i class="icon-invoice"></i>
+                                                            <span>{{ 'Finance & Invoicing'|_ }}</span>
+                                
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/tasks'|page }}">
+                                                            <i class="icon-task-icon"></i>
+                                                            <span>{{ 'Tasks'|_ }}</span>
+                                    
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/surveys'|page }}">
+                                                            <i class="icon-thumb-full"></i>
+                                                            <span>{{ 'Surveys'|_ }}</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/cpe-cpd'|page }}">
+                                                            <i class="icon-credits"></i>
+                                                            <span>{{ 'CPE/CPD Credits'|_ }}</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/website'|page }}">
+                                                            <i class="icon-website-dev"></i>
+                                                            <span>{{ 'Website'|_ }}</span>
+                                                        </a>
+                                                    </div>
+                                                    {#<div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/integrations'|page }}">
+                                                            <i class="icon-overview"></i>
+                                                            <span>{{ 'Integrations'|_ }}</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/payments'|page }}">
+                                                            <i class="icon-payments"></i>
+                                                            <span>{{ 'Payments'|_ }}</span>
+                                                        </a>
+                                                    </div>#}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 bg-grey right">
+                                                <div class="row pt-2">
+                                                    <div class="col-md-12 mr-auto">
+                                                        <h6 class="intro">{{ 'Mobile Apps'|_ }}</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-10 pb-2 right-panel">
+                                                        <a class="dropdown-item" href="{{ 'platform/glue-up-app'|page }}">
+                                                        <img src="{{ ('assets/images/glueup-app-icon.svg') | theme }}" class="app-icon img-fluid lazyload" alt="logo" />
+                                                        <p class="link-title mt-3 mb-2">{{ 'My Glue'|_ }}</p>
+                                                            <p class="small mb-0">{{ 'User-friendly mobile app for your attendees and members. '|_ }}</p>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/glue-up-manager-app'|page }}">
+                                                        <img src="{{ ('assets/images/glueup-manager-icon.svg') | theme }}" class="app-icon img-fluid lazyload" alt="logo" />
+                                                        <p class="link-title mt-3 mb-2">{{ 'Manager App'|_ }}</p>
+                                                            <p class="small mb-0">{{ 'Manage your operations and stay in the know from anywhere.'|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown position-static d-none d-sm-block">
+                                <a class="nav-link different {% if this.page.nav_highlight == 'products' %}active{% endif %}" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ 'Products'|_ }} </a>
+
+                                <ul class="dropdown-menu w-100 shadow p-0" id="navbarDropdownMega">
+                                    <li class="glueupmenu">
+                                        <div class="row">
+                                            <div class="col-md-8 pb-4">
+                                                <div class="row pt-2">
+                                                    <div class="col-md-12 mr-auto">
+                                                        <h6 class="intro">{{ 'All-in-One Solutions'|_ }}</h6>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item" href="{{ 'solutions/event-management-suite'|page }}">
+                                                            <p class="link-title mb-2">{{ 'Event Management Suite'|_ }}</p>
+                                                            <p class="small mb-0">{{ 'Plan, promote, execute and evaluate all of your events. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item" href="{{ 'solutions/membership-management-suite'|page }}">
+                                                            <p class="link-title mb-2">{{ 'Membership Management Suite'|_ }}</p>
+                                                            <p class="small mb-0">{{ 'Retain, engage and grow your member community. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item" href="{{ 'solutions/virtual-events-management-suite'|page }}">
+                                                            <p class="link-title mb-2">{{ 'Virtual Events Management Suite'|_ }}</p>
+                                                            <p class="small mb-0">{{ 'Monetize and enhance your online events and webinars. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item" href="{{ 'solutions/community-management-suite'|page }}">
+                                                            <p class="link-title mb-2">{{ 'Community Management Suite'|_ }}</p>
+                                                            <p class="small mb-0">{{ 'Enable your community to thrive and amplify engagement. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item" href="{{ 'solutions/training-management-suite'|page }}">
+                                                            <p class="link-title mb-2">{{ 'Training Management Suite'|_ }}</p>
+                                                            <p class="small mb-0">{{ 'Build, market, sell, and analyze courses with ease.'|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item disabled" href="" disabled>
+                                                            <p class="link-title mb-2">{{ 'Donations Management Suite'|_ }} <span class="badge badge-soon">{{ 'Coming Soon'|_ }}</span></p>
+                                                            <p class="small mb-0">{{ 'Collect and manage all your donations effortlessly. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                {#<div class="row pt-4">
+                                                    <div class="col-md-12 mr-auto">
+                                                        <h6 class="intro">{{ 'Additional Features'|_ }}</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="row pt-3">
+                                                    <div class="col-md-4">
+                                                        <a class="dropdown-item less" href="#">{{ 'Website Solution'|_ }}</a>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <a class="dropdown-item less" href="#">{{ 'Surveys'|_ }}</a>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <a class="dropdown-item less" href="#">{{ 'White Labeling'|_ }}</a>
+                                                    </div>
+                                                </div>#}
+                                            </div>
+                                            <div class="col ml-5 bg-grey right">
+                                                <div class="row pt-2">
+                                                    <div class="col-md-12 mr-auto">
+                                                        <h6 class="intro">{{ 'For your Industry'|_ }}</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                        <div class="col-md-10 pb-2">
+                                                        <a class="dropdown-item " href="{{ 'industries/association-management-software'|page }}">
+                                                        {{ 'Associations'|_ }}</a>
+                                                        <a class="dropdown-item" href="{{ 'industries/chamber-management-software'|page }}">
+                                                        {{ 'Chambers of Commerce'|_ }}</a>
+                                                        <a class="dropdown-item" href="{{ 'industries/conference-management-software'|page }}">
+                                                        {{ 'Conference Organizers'|_ }}</a>
+                                                        <a class="dropdown-item" href="{{ 'industries/corporations-management-software'|page }}">
+                                                        {{ 'Corporations'|_ }}</a>
+                                                        <a class="dropdown-item" href="{{ 'industries/non-profit-management-software'|page }}">
+                                                        {{ 'Non-Profits'|_ }}</a>
+                                                        <a class="dropdown-item" href="{{ 'industries/financial-services-management-software'|page }}">
+                                                        {{ 'Financial Services'|_ }}</a>
+                                                        <a class="dropdown-item" href="{{ 'industries/consultancy-firm-management-software'|page }}">
+                                                        {{ 'Consultancy Firms'|_ }}</a>
+                                                        <a class="dropdown-item" href="{{ 'industries/training-management-software'|page }}">
+                                                        {{ 'Training & Development'|_ }}</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item d-none d-sm-block"><a class="nav-link different  {% if this.page.id == 'pricing' %}active{% endif %}" href="{{ 'pricing'|page }}">{{ 'Pricing'|_ }}</a></li>
+                            <li class="nav-item d-none d-sm-block"><a class="nav-link different {% if this.page.id == 'about' %}active{% endif %}" href="{{ 'about'|page }}">{{ 'About'|_ }}</a></li>
+                            <li class="nav-item dropdown position-static d-none d-sm-block">
+                                <a class="nav-link different {% if this.page.nav_highlight == 'resources' %}active{% endif %}{% if this.page.id == 'blog' or this.page.id == 'case-studies' %}active{% endif %}" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ 'Resources'|_ }} </a>
+
+                                <ul class="dropdown-menu w-100 shadow p-0" id="navbarDropdownMega">
+                                    <li class="glueupmenu">
+                                        <div class="row">
+                                            <div class="col-md-8 pr-5 pb-4">
+                                                <div class="row pt-2">
+                                                    <div class="col-md-12 mr-auto">
+                                                        <h6 class="intro">{{ 'Resources'|_ }}</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="row pb-4">
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'blog'|page }}">
+                                                                <i class="align-middle icon-content"></i>
+                                                            <span class="align-middle">{{ 'Blog'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Expert insights, tips, and articles to help you become smarter.'|_ }}</p>
+    
+                                                        </a>
+                                                    </div>
+                                                    {#<div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'blog'|page }}">
+                                                                <i class="align-middle icon-contacts"></i>
+                                                            <span class="align-middle">{{ 'Partners'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Become Glue Up referral or reseller partner. '|_ }}</p>
+    
+                                                        </a>
+                                                    </div>#}
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'resources/case-studies'|page }}">
+                                                                <i class="align-middle icon-documents"></i>
+                                                            <span class="align-middle">{{ 'Case Studies'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Find out why customers stick with Glue Up.'|_ }}</p>
+        
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'resources/whitepapers'|page }}">
+                                                                <i class="align-middle icon-documents"></i>
+                                                            <span class="align-middle">{{ 'Whitepapers'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Broaden your knowledge with industry whitepapers.'|_ }}</p>
+        
+                                                        </a>
+                                                    </div>
+                                                   {# <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'resources/academy'|page }}">
+                                                                <i class="align-middle icon-onsite-tools"></i>
+                                                            <span class="align-middle">{{ 'Academy'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Elevate your skills and become Glue Up certified.'|_ }}</p>
+                    
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'resources/events'|page }}">
+                                                                <i class="align-middle icon-events"></i>
+                                                            <span class="align-middle">{{ 'Events'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Register for our upcoming events & webinars around the world.'|_ }}</p>
+                                                        </a>
+                                                    </div>#}
+                                                    {#<div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'blog'|page }}">
+                                                                <i class="align-middle icon-events"></i>
+                                                            <span class="align-middle">{{ 'Media'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Videos'|_ }}</p>
+                                                        </a>
+                                                    </div>#}
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/integrations'|page }}">
+                                                                <i class="align-middle icon-overview"></i>
+                                                            <span class="align-middle">{{ 'Integrations'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Connect the tools you love and use every day with Glue Up.'|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           <div class="col-md-4 bg-grey right pr-5 pb-4">
+                                               <div class="row pt-2">
+                                                    <div class="col-md-12 mr-auto">
+                                                        <h6 class="intro"><span style="color:#fafafa;">_</span> {#{{ 'Resources'|_ }}#} </h6>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12 pb-2 right-panel">
+                                                            {#<a class="dropdown-item with-icon py-4 my-2" href="{{ 'support'|page }}">
+                                                                    <i class="align-middle icon-support"></i>
+                                                                <span class="align-middle">{{ 'Support'|_ }}</span>
+                                                                <p class="small pt-2 mb-0 d-flex">{{ 'Get quick help with tutorials, FAQs or contact us. '|_ }}</p>
+    
+                                                            </a>#}
+                                                            <a class="dropdown-item with-icon py-4 my-2" href="{{ 'platform/security'|page }}">
+                                                                <i class="align-middle icon-lock"></i>
+                                                            <span class="align-middle">{{ 'Security'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Learn about how we protect you and your data.'|_ }}</p>
+                                                            </a>
+                                                            <a class="dropdown-item with-icon py-4 my-2" href="{{ 'contact'|page }}">
+                                                                <i class="align-middle icon-chat"></i>
+                                                            <span class="align-middle">{{ 'Contact'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ "We're here for you. Get in touch if you have any questions or feedback."|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                              {% partial 'site/mobile-nav.htm'%}
+                        </ul>
+			{% if this.page.url == '/download-my-glue' %}                         
+			{% elseif this.page.url == '/legal/privacy-policy' %}  
+			{% elseif this.page.url == '/download-manager-app' %}  
+                        {% else %}
+                         <li class="nav-item">
+                                <a href="" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3 ml-auto" data-toggle="modal" data-target="#contact-paygage">{{ 'Book a Demo'|_ }}</a>
+                            </li> 
+                        {% endif %}                       
+                     </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+     {% if blogPost.post %}
+     <div class="progress-container">
+                            <div class="progress-bar" id="myBar" value="0" max="100"></div>
+                      </div>
+    {% endif %}
+</div>
+";s:5:"mtime";i:1599483878;s:6:"markup";s:32754:"{% partial 'site/alert.htm' %}
+<div class="secondary-top-nav navbar-light d-none d-sm-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-light navbar-expand-lg">
+                    <ul class="navbar-nav ml-auto">
+                    	{% if activeLocale is same as('zh') %}
+						<li class="nav-item"><a class="nav-link" href="{{ url('/account/login') }}"><i class="icon-lock"></i>{{ 'Log In'|_ }}</a></li>
+						{% else %}
+                    {#    <li class="nav-item"><a class="nav-link" href="{{ url('https://app.glueup.com/account/login') }}"><i class="icon-lock"></i>{{ 'Log In'|_ }}</a></li>#}
+                        <li class="nav-item"><a class="nav-link" href="{{ url('/account/login') }}"><i class="icon-lock"></i>{{ 'Log In'|_ }}</a></li>
+                        {% endif %}
+                        <li class="nav-item"><a class="nav-link" href="" value="Submit" id="pricing-button" input-type="submit" data-toggle="modal" data-target="#support"><i class="icon-support"></i>{{ 'Support'|_ }}</a></li>
+                        <li class="nav-item lang"><i class="icon-world-map"></i>{% component 'localePicker' %}</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="nav-menu fixed-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg">
+                    {% if activeLocale is same as('zh') %}
+                    <a class="navbar-brand" href="{{ 'home'|page }}"><img src="{{ ('assets/images/glueup-logo-zh.svg') | theme }}" class="logo img-fluid lazyload" alt="logo" /></a>
+                    {% else %}
+                     <a class="navbar-brand" href="{{ 'home'|page }}"><img src="{{ ('assets/images/glueup-logo-en.svg') | theme }}" class="logo img-fluid lazyload" alt="logo" /></a>
+                     {% endif %}
+                     <div class="navbar-brand eb" style="    padding: 0;
+    text-align: left;
+    height: 35px;
+    display: grid;"href="{{ 'home'|page }}"><span style="    font-size: 10px;
+    font-weight: 300;
+    height:15px;
+    float: left;
+    text-align: left;
+    display: inline;">{{'Formerly'|_}}</span> <img src="{{ ('eventbank-logo.svg') | media }}" class="logo lazyload" style="" alt="logo" /></div>
+                    <button class="navbar-toggler hambutton" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        {#<span class="icon-hamburger navbar-toggler-icon icon-default"></span>#}
+                        <div id="nav-icon3">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
+                    </button>
+                    {#here mega menu#}
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown position-static d-none d-sm-block">
+                                <a class="nav-link different {% if this.page.nav_highlight == 'features' %}active{% endif %}" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ 'Why Glue Up?'|_ }} </a>
+
+                                <ul class="dropdown-menu w-100 shadow p-0" id="navbarDropdownMega">
+                                    <li class="glueupmenu">
+                                        <div class="row">
+                                            <div class="col-md-8 pr-5 pb-4">
+                                                <div class="row pt-2 pb-3">
+                                                    <div class="col-md-12 mr-auto">
+                                                        <h6 class="intro">{{ 'Platform Modules'|_ }}</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/crm'|page }}">
+                                                            <i class="icon-crm"></i>
+                                                            <span>{{ 'CRM'|_ }}</span>
+            
+                                                        </a>
+                                                    </div>
+                                                     <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/community'|page }}">
+                                                            <i class="icon-social-share"></i>
+                                                            <span>{{ 'Community'|_ }}</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/event-management'|page }}">
+                                                            <i class="icon-events"></i>
+                                                            <span>{{ 'Online & Offline Events'|_ }}</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/membership-management'|page }}">
+                                                            <i class="icon-memberships"></i>
+                                                            <span>{{ 'Memberships'|_ }}</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/email-campaigns'|page }}">
+                                                            <i class="icon-email-campaigns"></i>
+                                                            <span>{{ 'Email Campaigns'|_ }}</span>
+                                                            
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/finance'|page }}">
+                                                            <i class="icon-invoice"></i>
+                                                            <span>{{ 'Finance & Invoicing'|_ }}</span>
+                                
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/tasks'|page }}">
+                                                            <i class="icon-task-icon"></i>
+                                                            <span>{{ 'Tasks'|_ }}</span>
+                                    
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/surveys'|page }}">
+                                                            <i class="icon-thumb-full"></i>
+                                                            <span>{{ 'Surveys'|_ }}</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/cpe-cpd'|page }}">
+                                                            <i class="icon-credits"></i>
+                                                            <span>{{ 'CPE/CPD Credits'|_ }}</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/website'|page }}">
+                                                            <i class="icon-website-dev"></i>
+                                                            <span>{{ 'Website'|_ }}</span>
+                                                        </a>
+                                                    </div>
+                                                    {#<div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/integrations'|page }}">
+                                                            <i class="icon-overview"></i>
+                                                            <span>{{ 'Integrations'|_ }}</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/payments'|page }}">
+                                                            <i class="icon-payments"></i>
+                                                            <span>{{ 'Payments'|_ }}</span>
+                                                        </a>
+                                                    </div>#}
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 bg-grey right">
+                                                <div class="row pt-2">
+                                                    <div class="col-md-12 mr-auto">
+                                                        <h6 class="intro">{{ 'Mobile Apps'|_ }}</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-10 pb-2 right-panel">
+                                                        <a class="dropdown-item" href="{{ 'platform/glue-up-app'|page }}">
+                                                        <img src="{{ ('assets/images/glueup-app-icon.svg') | theme }}" class="app-icon img-fluid lazyload" alt="logo" />
+                                                        <p class="link-title mt-3 mb-2">{{ 'My Glue'|_ }}</p>
+                                                            <p class="small mb-0">{{ 'User-friendly mobile app for your attendees and members. '|_ }}</p>
+                                                        </a>
+                                                        <a class="dropdown-item" href="{{ 'platform/glue-up-manager-app'|page }}">
+                                                        <img src="{{ ('assets/images/glueup-manager-icon.svg') | theme }}" class="app-icon img-fluid lazyload" alt="logo" />
+                                                        <p class="link-title mt-3 mb-2">{{ 'Manager App'|_ }}</p>
+                                                            <p class="small mb-0">{{ 'Manage your operations and stay in the know from anywhere.'|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown position-static d-none d-sm-block">
+                                <a class="nav-link different {% if this.page.nav_highlight == 'products' %}active{% endif %}" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ 'Products'|_ }} </a>
+
+                                <ul class="dropdown-menu w-100 shadow p-0" id="navbarDropdownMega">
+                                    <li class="glueupmenu">
+                                        <div class="row">
+                                            <div class="col-md-8 pb-4">
+                                                <div class="row pt-2">
+                                                    <div class="col-md-12 mr-auto">
+                                                        <h6 class="intro">{{ 'All-in-One Solutions'|_ }}</h6>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item" href="{{ 'solutions/event-management-suite'|page }}">
+                                                            <p class="link-title mb-2">{{ 'Event Management Suite'|_ }}</p>
+                                                            <p class="small mb-0">{{ 'Plan, promote, execute and evaluate all of your events. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item" href="{{ 'solutions/membership-management-suite'|page }}">
+                                                            <p class="link-title mb-2">{{ 'Membership Management Suite'|_ }}</p>
+                                                            <p class="small mb-0">{{ 'Retain, engage and grow your member community. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item" href="{{ 'solutions/virtual-events-management-suite'|page }}">
+                                                            <p class="link-title mb-2">{{ 'Virtual Events Management Suite'|_ }}</p>
+                                                            <p class="small mb-0">{{ 'Monetize and enhance your online events and webinars. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item" href="{{ 'solutions/community-management-suite'|page }}">
+                                                            <p class="link-title mb-2">{{ 'Community Management Suite'|_ }}</p>
+                                                            <p class="small mb-0">{{ 'Enable your community to thrive and amplify engagement. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item" href="{{ 'solutions/training-management-suite'|page }}">
+                                                            <p class="link-title mb-2">{{ 'Training Management Suite'|_ }}</p>
+                                                            <p class="small mb-0">{{ 'Build, market, sell, and analyze courses with ease.'|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item disabled" href="" disabled>
+                                                            <p class="link-title mb-2">{{ 'Donations Management Suite'|_ }} <span class="badge badge-soon">{{ 'Coming Soon'|_ }}</span></p>
+                                                            <p class="small mb-0">{{ 'Collect and manage all your donations effortlessly. '|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                {#<div class="row pt-4">
+                                                    <div class="col-md-12 mr-auto">
+                                                        <h6 class="intro">{{ 'Additional Features'|_ }}</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="row pt-3">
+                                                    <div class="col-md-4">
+                                                        <a class="dropdown-item less" href="#">{{ 'Website Solution'|_ }}</a>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <a class="dropdown-item less" href="#">{{ 'Surveys'|_ }}</a>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <a class="dropdown-item less" href="#">{{ 'White Labeling'|_ }}</a>
+                                                    </div>
+                                                </div>#}
+                                            </div>
+                                            <div class="col ml-5 bg-grey right">
+                                                <div class="row pt-2">
+                                                    <div class="col-md-12 mr-auto">
+                                                        <h6 class="intro">{{ 'For your Industry'|_ }}</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                        <div class="col-md-10 pb-2">
+                                                        <a class="dropdown-item " href="{{ 'industries/association-management-software'|page }}">
+                                                        {{ 'Associations'|_ }}</a>
+                                                        <a class="dropdown-item" href="{{ 'industries/chamber-management-software'|page }}">
+                                                        {{ 'Chambers of Commerce'|_ }}</a>
+                                                        <a class="dropdown-item" href="{{ 'industries/conference-management-software'|page }}">
+                                                        {{ 'Conference Organizers'|_ }}</a>
+                                                        <a class="dropdown-item" href="{{ 'industries/corporations-management-software'|page }}">
+                                                        {{ 'Corporations'|_ }}</a>
+                                                        <a class="dropdown-item" href="{{ 'industries/non-profit-management-software'|page }}">
+                                                        {{ 'Non-Profits'|_ }}</a>
+                                                        <a class="dropdown-item" href="{{ 'industries/financial-services-management-software'|page }}">
+                                                        {{ 'Financial Services'|_ }}</a>
+                                                        <a class="dropdown-item" href="{{ 'industries/consultancy-firm-management-software'|page }}">
+                                                        {{ 'Consultancy Firms'|_ }}</a>
+                                                        <a class="dropdown-item" href="{{ 'industries/training-management-software'|page }}">
+                                                        {{ 'Training & Development'|_ }}</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item d-none d-sm-block"><a class="nav-link different  {% if this.page.id == 'pricing' %}active{% endif %}" href="{{ 'pricing'|page }}">{{ 'Pricing'|_ }}</a></li>
+                            <li class="nav-item d-none d-sm-block"><a class="nav-link different {% if this.page.id == 'about' %}active{% endif %}" href="{{ 'about'|page }}">{{ 'About'|_ }}</a></li>
+                            <li class="nav-item dropdown position-static d-none d-sm-block">
+                                <a class="nav-link different {% if this.page.nav_highlight == 'resources' %}active{% endif %}{% if this.page.id == 'blog' or this.page.id == 'case-studies' %}active{% endif %}" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{ 'Resources'|_ }} </a>
+
+                                <ul class="dropdown-menu w-100 shadow p-0" id="navbarDropdownMega">
+                                    <li class="glueupmenu">
+                                        <div class="row">
+                                            <div class="col-md-8 pr-5 pb-4">
+                                                <div class="row pt-2">
+                                                    <div class="col-md-12 mr-auto">
+                                                        <h6 class="intro">{{ 'Resources'|_ }}</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="row pb-4">
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'blog'|page }}">
+                                                                <i class="align-middle icon-content"></i>
+                                                            <span class="align-middle">{{ 'Blog'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Expert insights, tips, and articles to help you become smarter.'|_ }}</p>
+    
+                                                        </a>
+                                                    </div>
+                                                    {#<div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'blog'|page }}">
+                                                                <i class="align-middle icon-contacts"></i>
+                                                            <span class="align-middle">{{ 'Partners'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Become Glue Up referral or reseller partner. '|_ }}</p>
+    
+                                                        </a>
+                                                    </div>#}
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'resources/case-studies'|page }}">
+                                                                <i class="align-middle icon-documents"></i>
+                                                            <span class="align-middle">{{ 'Case Studies'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Find out why customers stick with Glue Up.'|_ }}</p>
+        
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'resources/whitepapers'|page }}">
+                                                                <i class="align-middle icon-documents"></i>
+                                                            <span class="align-middle">{{ 'Whitepapers'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Broaden your knowledge with industry whitepapers.'|_ }}</p>
+        
+                                                        </a>
+                                                    </div>
+                                                   {# <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'resources/academy'|page }}">
+                                                                <i class="align-middle icon-onsite-tools"></i>
+                                                            <span class="align-middle">{{ 'Academy'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Elevate your skills and become Glue Up certified.'|_ }}</p>
+                    
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'resources/events'|page }}">
+                                                                <i class="align-middle icon-events"></i>
+                                                            <span class="align-middle">{{ 'Events'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Register for our upcoming events & webinars around the world.'|_ }}</p>
+                                                        </a>
+                                                    </div>#}
+                                                    {#<div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'blog'|page }}">
+                                                                <i class="align-middle icon-events"></i>
+                                                            <span class="align-middle">{{ 'Media'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Videos'|_ }}</p>
+                                                        </a>
+                                                    </div>#}
+                                                    <div class="col-md-6">
+                                                        <a class="dropdown-item with-icon" href="{{ 'platform/integrations'|page }}">
+                                                                <i class="align-middle icon-overview"></i>
+                                                            <span class="align-middle">{{ 'Integrations'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Connect the tools you love and use every day with Glue Up.'|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           <div class="col-md-4 bg-grey right pr-5 pb-4">
+                                               <div class="row pt-2">
+                                                    <div class="col-md-12 mr-auto">
+                                                        <h6 class="intro"><span style="color:#fafafa;">_</span> {#{{ 'Resources'|_ }}#} </h6>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12 pb-2 right-panel">
+                                                            {#<a class="dropdown-item with-icon py-4 my-2" href="{{ 'support'|page }}">
+                                                                    <i class="align-middle icon-support"></i>
+                                                                <span class="align-middle">{{ 'Support'|_ }}</span>
+                                                                <p class="small pt-2 mb-0 d-flex">{{ 'Get quick help with tutorials, FAQs or contact us. '|_ }}</p>
+    
+                                                            </a>#}
+                                                            <a class="dropdown-item with-icon py-4 my-2" href="{{ 'platform/security'|page }}">
+                                                                <i class="align-middle icon-lock"></i>
+                                                            <span class="align-middle">{{ 'Security'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ 'Learn about how we protect you and your data.'|_ }}</p>
+                                                            </a>
+                                                            <a class="dropdown-item with-icon py-4 my-2" href="{{ 'contact'|page }}">
+                                                                <i class="align-middle icon-chat"></i>
+                                                            <span class="align-middle">{{ 'Contact'|_ }}</span>
+                                                            <p class="small pt-2 mb-0 d-flex">{{ "We're here for you. Get in touch if you have any questions or feedback."|_ }}</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                              {% partial 'site/mobile-nav.htm'%}
+                        </ul>
+			{% if this.page.url == '/download-my-glue' %}                         
+			{% elseif this.page.url == '/legal/privacy-policy' %}  
+			{% elseif this.page.url == '/download-manager-app' %}  
+                        {% else %}
+                         <li class="nav-item">
+                                <a href="" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3 ml-auto" data-toggle="modal" data-target="#contact-paygage">{{ 'Book a Demo'|_ }}</a>
+                            </li> 
+                        {% endif %}                       
+                     </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+     {% if blogPost.post %}
+     <div class="progress-container">
+                            <div class="progress-bar" id="myBar" value="0" max="100"></div>
+                      </div>
+    {% endif %}
+</div>";s:4:"code";N;s:11:"description";s:18:"menu header - main";s:7:"viewBag";a:0:{}s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"0";}s:20:"extendedLocalePicker";a:0:{}}}

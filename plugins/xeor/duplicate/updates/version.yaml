@@ -1,0 +1,6 @@
+1.0.1: First version of Duplicate.
+1.0.2: Now you can clone partials, layouts and etc.
+1.0.3: Fixed issue with redirect.
+1.0.4: Added Hungarian locale.
+1.0.5: Fixed issue with backendUri.
+1.0.6: Add middleware web to route.

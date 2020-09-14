@@ -1,0 +1,133 @@
+1600067169a:1:{s:44:"association-awards-2020-application-form.htm";a:12:{s:8:"fileName";s:44:"association-awards-2020-application-form.htm";s:7:"content";s:3391:"title = "Association Awards 2020 Application form"
+url = "/lp/association-awards-2020"
+layout = "glueup-home"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[genericForm awards]
+rules[full_name] = "required"
+rules[position] = "required"
+rules[email] = "required|email"
+rules[phone] = "required|regex:/[0-9]{6}/"
+rules[assoc_authorization] = "required"
+rules[assoc_name] = "required"
+rules[assoc_web] = "required|regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/"
+rules[assoc_head] = "required"
+rules[email_assoc] = "required|email"
+rules[phone_assoc] = "required|regex:/[0-9]{6}/"
+rules[assoc_employees] = "required"
+rules[assoc_pt_employees] = "required"
+rules[assoc_members] = "required"
+rules[assoc_new_members] = "required"
+rules[assoc_ren_rate] = "required"
+rules[assoc_events_year] = "required"
+rules[assoc_emails_month] = "required"
+rules[assoc_accomplishment] = "required"
+rules[assoc_3_programs] = "required"
+rules[assoc_strategy] = "required"
+rules[assoc_changes_challenges] = "required"
+rules[assoc_changes_pandemic] = "required"
+rules[assoc_forward] = "required"
+rules[assoc_success] = "required"
+rules[assoc_goals] = "required"
+rules[assoc_extra] = "required"
+rules[assoc_verification] = "required"
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+mail_enabled = 1
+mail_subject = "New Application to APAC Association Awards!"
+mail_recipients[] = "events@glueup.com"
+mail_replyto = "events@glueup.com"
+mail_resp_enabled = 1
+mail_resp_field = "email"
+mail_resp_from = "evnts@glueup.com"
+inline_errors = "disabled"
+js_on_success = "window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'formLocation': 'modal',
+ 'event': 'award'
+});
+window.location.replace('/thank-you');"
+mail_resp_enabled = 1
+mail_resp_field = "email"
+mail_resp_from = "events@glueup.com"
+mail_resp_template = "martin.forms::awards"
+inline_errors = "display"
+sanitize_data = "htmlspecialchars"
+anonymize_ip = "disabled"
+recaptcha_enabled = 1
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
+==
+<div class="generic " id="generic">  
+        <div class="container">
+            <div class="row pt-5">
+                
+                <div class="col-md-6 hero align-self-center text-center mx-auto pt-5">
+                      <h1>APAC Association <span class="line"><ins>Awards</ins></span> 2020</h1>
+                       {#<p class="tagline pb-3"> {{ 'See how are we transforming professional communities through digital solutions focusing on automation and engagement.'|_ }} </p>#}
+
+
+                </div>
+               <img class="col-md-offset-12 d-none d-sm-block img-fluid hero-home" style="" src="{{ 'glueup-hero1.svg' | media }}" alt="Glue Up helps you with events, memberships, CRM, email campaigns, finance and marketing tools.">
+            </div>
+            <div class="row mx-auto">
+             <div class="col-md-7 hero align-self-center text-center mx-auto">
+                 
+                </div>
+            </div>
+        </div> 
+</div>
+
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-8 mx-auto pb-4">
+                       	{% component 'awards' %}
+
+                
+           		    </div>
+       		 </div>
+
+    </div>
+</section>
+";s:5:"mtime";i:1600055847;s:6:"markup";s:1243:"<div class="generic " id="generic">  
+        <div class="container">
+            <div class="row pt-5">
+                
+                <div class="col-md-6 hero align-self-center text-center mx-auto pt-5">
+                      <h1>APAC Association <span class="line"><ins>Awards</ins></span> 2020</h1>
+                       {#<p class="tagline pb-3"> {{ 'See how are we transforming professional communities through digital solutions focusing on automation and engagement.'|_ }} </p>#}
+
+
+                </div>
+               <img class="col-md-offset-12 d-none d-sm-block img-fluid hero-home" style="" src="{{ 'glueup-hero1.svg' | media }}" alt="Glue Up helps you with events, memberships, CRM, email campaigns, finance and marketing tools.">
+            </div>
+            <div class="row mx-auto">
+             <div class="col-md-7 hero align-self-center text-center mx-auto">
+                 
+                </div>
+            </div>
+        </div> 
+</div>
+
+<section class="section">
+        <div class="container">
+            <div class="row">
+                    <div class="col-lg-8 mx-auto pb-4">
+                       	{% component 'awards' %}
+
+                
+           		    </div>
+       		 </div>
+
+    </div>
+</section>";s:4:"code";N;s:5:"title";s:40:"Association Awards 2020 Application form";s:3:"url";s:27:"/lp/association-awards-2020";s:6:"layout";s:11:"glueup-home";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:18:"genericForm awards";a:20:{s:5:"rules";a:27:{s:9:"full_name";s:8:"required";s:8:"position";s:8:"required";s:5:"email";s:14:"required|email";s:5:"phone";s:25:"required|regex:/[0-9]{6}/";s:19:"assoc_authorization";s:8:"required";s:10:"assoc_name";s:8:"required";s:9:"assoc_web";s:79:"required|regex:/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/";s:10:"assoc_head";s:8:"required";s:11:"email_assoc";s:14:"required|email";s:11:"phone_assoc";s:25:"required|regex:/[0-9]{6}/";s:15:"assoc_employees";s:8:"required";s:18:"assoc_pt_employees";s:8:"required";s:13:"assoc_members";s:8:"required";s:17:"assoc_new_members";s:8:"required";s:14:"assoc_ren_rate";s:8:"required";s:17:"assoc_events_year";s:8:"required";s:18:"assoc_emails_month";s:8:"required";s:20:"assoc_accomplishment";s:8:"required";s:16:"assoc_3_programs";s:8:"required";s:14:"assoc_strategy";s:8:"required";s:24:"assoc_changes_challenges";s:8:"required";s:22:"assoc_changes_pandemic";s:8:"required";s:13:"assoc_forward";s:8:"required";s:13:"assoc_success";s:8:"required";s:11:"assoc_goals";s:8:"required";s:11:"assoc_extra";s:8:"required";s:18:"assoc_verification";s:8:"required";}s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:12:"mail_enabled";s:1:"1";s:12:"mail_subject";s:43:"New Application to APAC Association Awards!";s:15:"mail_recipients";a:1:{i:0;s:17:"events@glueup.com";}s:12:"mail_replyto";s:17:"events@glueup.com";s:17:"mail_resp_enabled";s:1:"1";s:15:"mail_resp_field";s:5:"email";s:14:"mail_resp_from";s:17:"events@glueup.com";s:13:"inline_errors";s:7:"display";s:13:"js_on_success";s:153:"window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+ 'formLocation': 'modal',
+ 'event': 'award'
+});
+window.location.replace('/thank-you');";s:18:"mail_resp_template";s:20:"martin.forms::awards";s:13:"sanitize_data";s:16:"htmlspecialchars";s:12:"anonymize_ip";s:8:"disabled";s:17:"recaptcha_enabled";s:1:"1";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}}}
