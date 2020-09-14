@@ -1,5 +1,5 @@
 <?php 
-use RainLab\Translate\Classes\Translator;use RainLab\Translate\Components;use Raccoon\GeoLocation\Facades\Geo;use October\Rain\Router\Router as RainRouter;use Cms\Classes\ComponentBase;class Cms5f5f0cc4db1ab626080359_c4d747c61fa9a87aa0928e11d19679fbClass extends Cms\Classes\PartialCode
+use RainLab\Translate\Classes\Translator;use RainLab\Translate\Components;use Raccoon\GeoLocation\Facades\Geo;use October\Rain\Router\Router as RainRouter;use Cms\Classes\ComponentBase;class Cms5f5f1d4d39c26907235379_80451075d84bc7ea9533507eb604e99dClass extends Cms\Classes\PartialCode
 {
 
 

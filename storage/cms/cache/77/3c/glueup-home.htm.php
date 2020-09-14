@@ -1,12 +1,12 @@
 <?php 
-use RainLab\Translate\Classes\Translator;use RainLab\Translate\Components;use Raccoon\GeoLocation\Facades\Geo;use October\Rain\Router\Router as RainRouter;use Cms\Classes\ComponentBase;class Cms5f5f11a1d64e8928273950_6212b4d6ec5c5ec9e813044b7f62b5f9Class extends Cms\Classes\LayoutCode
+use RainLab\Translate\Classes\Translator;
+use RainLab\Translate\Components;
+use Raccoon\GeoLocation\Facades\Geo;
+use October\Rain\Router\Router as RainRouter;
+use Cms\Classes\ComponentBase;
+class Cms5f5f1d4d03d2a431971970_9e5064aa0c731ca586aabc45833d12f5Class extends Cms\Classes\LayoutCode
 {
-
-
-
-//
-//
-protected $redirect;
+////protected $redirect;
 
 protected $translator;
 public function onStart() {

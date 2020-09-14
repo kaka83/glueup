@@ -1,4 +1,4 @@
-1600067169a:1:{s:13:"blog/post.htm";a:14:{s:8:"fileName";s:13:"blog/post.htm";s:7:"content";s:5428:"title = "Blog Post"
+1600069540a:1:{s:13:"blog/post.htm";a:14:{s:8:"fileName";s:13:"blog/post.htm";s:7:"content";s:5428:"title = "Blog Post"
 url = "/blog/:slug"
 layout = "glueup-home"
 is_hidden = 0

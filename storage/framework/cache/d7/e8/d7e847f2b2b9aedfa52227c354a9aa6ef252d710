@@ -1,4 +1,4 @@
-1600067237a:1:{s:15:"glueup-home.htm";a:16:{s:8:"fileName";s:15:"glueup-home.htm";s:7:"content";s:12732:"description = "glueup-home-layout"
+1600069541a:1:{s:15:"glueup-home.htm";a:16:{s:8:"fileName";s:15:"glueup-home.htm";s:7:"content";s:12527:"description = "glueup-home-layout"
 
 [genericForm]
 rules[full_name] = "required"
@@ -7,8 +7,8 @@ rules[email] = "required|email"
 messages_success = "Your form was successfully submitted"
 messages_errors = "There were errors with your submission"
 mail_enabled = 1
-mail_recipients[] = "sales@eventbank.com"
-mail_replyto = "sales@eventbank.com"
+mail_recipients[] = "sales@glueup.com"
+mail_replyto = "sales@glueup.com"
 mail_resp_enabled = 1
 mail_resp_field = "email"
 mail_resp_from = "sales@glueup.com"
@@ -56,8 +56,8 @@ messages_success = "Your form was successfully submitted"
 messages_errors = "There were errors with your submission"
 mail_enabled = 1
 mail_subject = "New lead on Glue Up!"
-mail_recipients[] = "sales@eventbank.com"
-mail_replyto = "sales@eventbank.com"
+mail_recipients[] = "sales@glueup.com"
+mail_replyto = "sales@glueup.com"
 mail_resp_enabled = 1
 mail_resp_field = "email"
 mail_resp_from = "sales@glueup.com"
@@ -96,11 +96,11 @@ messages_success = "Your form was successfully submitted"
 messages_errors = "There were errors with your submission"
 mail_enabled = 1
 mail_subject = "New ticket from Glue Up Website!"
-mail_recipients[] = "support@eventbank.com"
-mail_replyto = "support@eventbank.com"
+mail_recipients[] = "support@glueup.com"
+mail_replyto = "support@glueup.com"
 mail_resp_enabled = 0
 mail_resp_field = "email"
-mail_resp_from = "support@eventbank.com"
+mail_resp_from = "support@glueup.com"
 inline_errors = "disabled"
 js_on_success = "window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
@@ -127,11 +127,11 @@ messages_success = "Your form was successfully submitted"
 messages_errors = "There were errors with your submission"
 mail_enabled = 1
 mail_subject = "New Submission to Glue Up!"
-mail_recipients[] = "pr@eventbank.com"
-mail_replyto = "pr@eventbank.com"
+mail_recipients[] = "pr@glueup.com"
+mail_replyto = "pr@glueup.com"
 mail_resp_enabled = 1
 mail_resp_field = "email"
-mail_resp_from = "pr@eventbank.com"
+mail_resp_from = "pr@glueup.com"
 mail_resp_subject = "Welcome to Glue Up"
 inline_errors = "disabled"
 js_on_success = "$('#general').modal('hide');
@@ -163,8 +163,8 @@ messages_success = "Your form was successfully submitted"
 messages_errors = "There were errors with your submission"
 mail_enabled = 1
 mail_subject = "New Submission to Glue Up!"
-mail_recipients[] = "sales@eventbank.com"
-mail_replyto = "sales@eventbank.com"
+mail_recipients[] = "sales@glueup.com"
+mail_replyto = "sales@glueup.com"
 mail_resp_enabled = 1
 mail_resp_field = "email"
 mail_resp_from = "sales@glueup.com"
@@ -359,7 +359,8 @@ LATAM:
 {% component 'hubspotTrackingCode' %}
 </body>
 <!-- HIC SUNT LEONES VOLANTES -->
-</html>";s:5:"mtime";i:1600065949;s:6:"markup";s:1298:"{##}
+</html>
+";s:5:"mtime";i:1600067390;s:6:"markup";s:1257:"{##}
 <!doctype html>
 <html lang="{{ activeLocale }}">
 {% set CurrentLanguage = SelectedLanguage %}
@@ -400,7 +401,7 @@ LATAM:
 {% component 'hubspotTrackingCode' %}
 </body>
 <!-- HIC SUNT LEONES VOLANTES -->
-</html>";s:4:"code";s:5444:"use RainLab\Translate\Classes\Translator;
+</html>";s:4:"code";s:5315:"use RainLab\Translate\Classes\Translator;
 use RainLab\Translate\Components;
 use Raccoon\GeoLocation\Facades\Geo;
 //use October\Rain\Router\Router as RainRouter;
@@ -529,7 +530,7 @@ LATAM:
     }
 
     return true;
-  }";s:11:"description";s:18:"glueup-home-layout";s:11:"genericForm";a:18:{s:5:"rules";a:3:{s:9:"full_name";s:8:"required";s:5:"phone";s:8:"required";s:5:"email";s:14:"required|email";}s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:12:"mail_enabled";s:1:"1";s:15:"mail_recipients";a:1:{i:0;s:19:"sales@eventbank.com";}s:12:"mail_replyto";s:19:"sales@eventbank.com";s:17:"mail_resp_enabled";s:1:"1";s:15:"mail_resp_field";s:5:"email";s:14:"mail_resp_from";s:16:"sales@glueup.com";s:13:"inline_errors";s:8:"disabled";s:13:"js_on_success";s:801:"window.dataLayer = window.dataLayer || [];
+  }";s:11:"description";s:18:"glueup-home-layout";s:11:"genericForm";a:18:{s:5:"rules";a:3:{s:9:"full_name";s:8:"required";s:5:"phone";s:8:"required";s:5:"email";s:14:"required|email";}s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:12:"mail_enabled";s:1:"1";s:15:"mail_recipients";a:1:{i:0;s:16:"sales@glueup.com";}s:12:"mail_replyto";s:16:"sales@glueup.com";s:17:"mail_resp_enabled";s:1:"1";s:15:"mail_resp_field";s:5:"email";s:14:"mail_resp_from";s:16:"sales@glueup.com";s:13:"inline_errors";s:8:"disabled";s:13:"js_on_success";s:801:"window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
  'formLocation': 'modal',
  'event': 'form_submission'
@@ -546,7 +547,7 @@ window.dataLayer.push({
 $('#contact-paygage').modal('hide');
  $('#success').modal('show');
 $('.input-group').hide();
-$('#success').modal().addClass('d-flex');";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:17:"recaptcha_enabled";s:1:"0";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}s:19:"hubspotTrackingCode";a:0:{}s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"0";}s:10:"SeoCmsPage";a:0:{}s:11:"geoLocation";a:0:{}s:19:"genericForm pricing";a:19:{s:5:"rules";a:3:{s:9:"full_name";s:8:"required";s:5:"phone";s:8:"required";s:5:"email";s:14:"required|email";}s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:12:"mail_enabled";s:1:"1";s:12:"mail_subject";s:20:"New lead on Glue Up!";s:15:"mail_recipients";a:1:{i:0;s:19:"sales@eventbank.com";}s:12:"mail_replyto";s:19:"sales@eventbank.com";s:17:"mail_resp_enabled";s:1:"1";s:15:"mail_resp_field";s:5:"email";s:14:"mail_resp_from";s:16:"sales@glueup.com";s:13:"inline_errors";s:8:"disabled";s:13:"js_on_success";s:793:"window.dataLayer = window.dataLayer || [];
+$('#success').modal().addClass('d-flex');";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:17:"recaptcha_enabled";s:1:"0";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}s:19:"hubspotTrackingCode";a:0:{}s:12:"localePicker";a:1:{s:8:"forceUrl";s:1:"0";}s:10:"SeoCmsPage";a:0:{}s:11:"geoLocation";a:0:{}s:19:"genericForm pricing";a:19:{s:5:"rules";a:3:{s:9:"full_name";s:8:"required";s:5:"phone";s:8:"required";s:5:"email";s:14:"required|email";}s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:12:"mail_enabled";s:1:"1";s:12:"mail_subject";s:20:"New lead on Glue Up!";s:15:"mail_recipients";a:1:{i:0;s:16:"sales@glueup.com";}s:12:"mail_replyto";s:16:"sales@glueup.com";s:17:"mail_resp_enabled";s:1:"1";s:15:"mail_resp_field";s:5:"email";s:14:"mail_resp_from";s:16:"sales@glueup.com";s:13:"inline_errors";s:8:"disabled";s:13:"js_on_success";s:793:"window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
  'formLocation': 'modal',
  'event': 'form_submission'
@@ -563,7 +564,7 @@ window.dataLayer.push({
 $('#pricing').modal('hide');
  $('#success').modal('show');
 $('.input-group').hide();
-$('#success').modal().addClass('d-flex');";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:17:"recaptcha_enabled";s:1:"0";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}s:19:"genericForm support";a:19:{s:5:"rules";a:3:{s:9:"full_name";s:8:"required";s:5:"phone";s:8:"required";s:5:"email";s:14:"required|email";}s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:12:"mail_enabled";s:1:"1";s:12:"mail_subject";s:32:"New ticket from Glue Up Website!";s:15:"mail_recipients";a:1:{i:0;s:21:"support@eventbank.com";}s:12:"mail_replyto";s:21:"support@eventbank.com";s:17:"mail_resp_enabled";s:1:"0";s:15:"mail_resp_field";s:5:"email";s:14:"mail_resp_from";s:21:"support@eventbank.com";s:13:"inline_errors";s:8:"disabled";s:13:"js_on_success";s:243:"window.dataLayer = window.dataLayer || [];
+$('#success').modal().addClass('d-flex');";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:17:"recaptcha_enabled";s:1:"0";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}s:19:"genericForm support";a:19:{s:5:"rules";a:3:{s:9:"full_name";s:8:"required";s:5:"phone";s:8:"required";s:5:"email";s:14:"required|email";}s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:12:"mail_enabled";s:1:"1";s:12:"mail_subject";s:32:"New ticket from Glue Up Website!";s:15:"mail_recipients";a:1:{i:0;s:18:"support@glueup.com";}s:12:"mail_replyto";s:18:"support@glueup.com";s:17:"mail_resp_enabled";s:1:"0";s:15:"mail_resp_field";s:5:"email";s:14:"mail_resp_from";s:18:"support@glueup.com";s:13:"inline_errors";s:8:"disabled";s:13:"js_on_success";s:243:"window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
  'formLocation': 'modal',
  'event': 'support'
@@ -571,10 +572,10 @@ window.dataLayer.push({
 $('#support').modal('hide');
  $('#success').modal('show');
 $('.input-group').hide();
-$('#success').modal().addClass('d-flex');";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:17:"recaptcha_enabled";s:1:"0";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}s:19:"genericForm general";a:20:{s:5:"rules";a:3:{s:9:"full_name";s:8:"required";s:5:"phone";s:8:"required";s:5:"email";s:14:"required|email";}s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:12:"mail_enabled";s:1:"1";s:12:"mail_subject";s:26:"New Submission to Glue Up!";s:15:"mail_recipients";a:1:{i:0;s:16:"pr@eventbank.com";}s:12:"mail_replyto";s:16:"pr@eventbank.com";s:17:"mail_resp_enabled";s:1:"1";s:15:"mail_resp_field";s:5:"email";s:14:"mail_resp_from";s:16:"pr@eventbank.com";s:17:"mail_resp_subject";s:18:"Welcome to Glue Up";s:13:"inline_errors";s:8:"disabled";s:13:"js_on_success";s:126:"$('#general').modal('hide');
+$('#success').modal().addClass('d-flex');";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:17:"recaptcha_enabled";s:1:"0";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}s:19:"genericForm general";a:20:{s:5:"rules";a:3:{s:9:"full_name";s:8:"required";s:5:"phone";s:8:"required";s:5:"email";s:14:"required|email";}s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:12:"mail_enabled";s:1:"1";s:12:"mail_subject";s:26:"New Submission to Glue Up!";s:15:"mail_recipients";a:1:{i:0;s:13:"pr@glueup.com";}s:12:"mail_replyto";s:13:"pr@glueup.com";s:17:"mail_resp_enabled";s:1:"1";s:15:"mail_resp_field";s:5:"email";s:14:"mail_resp_from";s:13:"pr@glueup.com";s:17:"mail_resp_subject";s:18:"Welcome to Glue Up";s:13:"inline_errors";s:8:"disabled";s:13:"js_on_success";s:126:"$('#general').modal('hide');
  $('#success').modal('show');
 $('.input-group').hide();
-$('#success').modal().addClass('d-flex');";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:17:"recaptcha_enabled";s:1:"0";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}s:26:"genericForm whitepaperform";a:9:{s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:13:"inline_errors";s:8:"disabled";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}s:22:"genericForm newsletter";a:19:{s:5:"rules";a:1:{s:5:"email";s:14:"required|email";}s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:12:"mail_enabled";s:1:"1";s:12:"mail_subject";s:26:"New Submission to Glue Up!";s:15:"mail_recipients";a:1:{i:0;s:19:"sales@eventbank.com";}s:12:"mail_replyto";s:19:"sales@eventbank.com";s:17:"mail_resp_enabled";s:1:"1";s:15:"mail_resp_field";s:5:"email";s:14:"mail_resp_from";s:16:"sales@glueup.com";s:13:"inline_errors";s:8:"disabled";s:13:"js_on_success";s:228:"window.dataLayer = window.dataLayer || [];
+$('#success').modal().addClass('d-flex');";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:17:"recaptcha_enabled";s:1:"0";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}s:26:"genericForm whitepaperform";a:9:{s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:13:"inline_errors";s:8:"disabled";s:13:"sanitize_data";s:8:"disabled";s:12:"anonymize_ip";s:8:"disabled";s:15:"recaptcha_theme";s:5:"light";s:14:"recaptcha_type";s:5:"image";s:14:"recaptcha_size";s:6:"normal";s:18:"emails_date_format";s:5:"Y-m-d";}s:22:"genericForm newsletter";a:19:{s:5:"rules";a:1:{s:5:"email";s:14:"required|email";}s:16:"messages_success";s:36:"Your form was successfully submitted";s:15:"messages_errors";s:38:"There were errors with your submission";s:12:"mail_enabled";s:1:"1";s:12:"mail_subject";s:26:"New Submission to Glue Up!";s:15:"mail_recipients";a:1:{i:0;s:16:"sales@glueup.com";}s:12:"mail_replyto";s:16:"sales@glueup.com";s:17:"mail_resp_enabled";s:1:"1";s:15:"mail_resp_field";s:5:"email";s:14:"mail_resp_from";s:16:"sales@glueup.com";s:13:"inline_errors";s:8:"disabled";s:13:"js_on_success";s:228:"window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({
  'formLocation': 'modal',
  'event': 'newsletter'
